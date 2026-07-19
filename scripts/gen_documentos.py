@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-"""Genera miniaturas de la 1.ª página de cada PDF de programas/ y emite js/documentos.js."""
+"""Genera miniaturas de la 1.ª página de cada PDF de Programas/ y emite js/documentos.js."""
 import fitz, os, json, sys, re
 sys.stdout.reconfigure(encoding='utf-8')
 
 BASE = 'C:/Users/Chery/OneDrive/Desktop/Framework recuperacion/actas-recuperacion'
-PROG = os.path.join(BASE, 'programas')
+PROG = os.path.join(BASE, 'Programas')
 THUMBS = os.path.join(PROG, 'thumbs')
 os.makedirs(THUMBS, exist_ok=True)
 
@@ -67,7 +67,7 @@ for fn in sorted(os.listdir(PROG)):
         orden = 999
     else:
         titulo, categoria, slug, orden = meta
-    thumb_rel = f'programas/thumbs/{slug}.png'
+    thumb_rel = f'Programas/thumbs/{slug}.png'
     sz = render_thumb(os.path.join(PROG, fn), os.path.join(THUMBS, f'{slug}.png'))
     items.append({'titulo': titulo, 'categoria': categoria, 'archivo': fn, 'thumb': thumb_rel, 'orden': orden, '_kb': round(sz/1024)})
 
@@ -82,7 +82,7 @@ out = items
 for it in out:
     del it['orden']; del it['_kb']
 js = '// Documentos descargables (programas de estudio + Manual). Rutas relativas para GitHub Pages.\n'
-js += '// Estructura: DOCUMENTOS = [ {titulo, categoria, archivo, thumb} ]  — el PDF está en programas/<archivo>\n'
+js += '// Estructura: DOCUMENTOS = [ {titulo, categoria, archivo, thumb} ]  — el PDF está en Programas/<archivo>\n'
 js += 'window.DOCUMENTOS = ' + json.dumps(out, ensure_ascii=False, indent=1) + ';\n'
 open(os.path.join(BASE, 'js', 'documentos.js'), 'w', encoding='utf-8').write(js)
 print('WROTE js/documentos.js con', len(out), 'documentos')
