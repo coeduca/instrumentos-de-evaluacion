@@ -1,13 +1,15 @@
 // Base de datos del curriculo nacional (MINED/MINEDUCYT, El Salvador)
 // Generado automaticamente desde los programas de estudio oficiales.
-// Estructura: CURRICULO[asignatura][grado] = [ {unidad, nombre, objetivo, indicadores:[{codigo,texto}]} ]
+// Estructura: CURRICULO[asignatura][grado] = [ {unidad, nombre, objetivos:[str], indicadores:[{codigo,texto}]} ]
 window.CURRICULO = {
  "Matemática": {
   "Séptimo": [
    {
     "unidad": 1,
     "nombre": "Números positivos, negativos y el cero",
-    "objetivo": null,
+    "objetivos": [
+     "Conocer el significado de los números positivos, negativos y el cero representando una Competencia ubicación respecto a un punto de referencia o una diferencia respecto a una cantidad de de unidad referencia, y reconocer la utilidad de los números negativos, para representar situaciones del entorno."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -46,7 +48,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Suma y resta de números positivos, negativos y el cero",
-    "objetivo": null,
+    "objetivos": [
+     "Utilizar las operaciones de suma y resta de números positivos, negativos y el cero e identificar situaciones del entorno en las que se pueden aplicar."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -93,7 +97,10 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Multiplicación y división de números positivos, negativos y el cero",
-    "objetivo": null,
+    "objetivos": [
+     "Efectuar las operaciones de multiplicación y división de números positivos, negativos y el cero, e identificar situaciones del entorno en las que se puedan aplicar.",
+     "Conocer los números primos y aplicarlos en el cálculo del máximo común divisor y el mínimo común múltiplo."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -192,7 +199,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Comunicación con símbolos",
-    "objetivo": null,
+    "objetivos": [
+     "Modelar situaciones del entorno a través de la utilización de expresiones algebraicas para resolver problemas."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -319,7 +328,10 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Ecuaciones de primer grado",
-    "objetivo": null,
+    "objetivos": [
+     "Conocer las propiedades de una igualdad matemática y utilizarlas para la resolución de una ecuación de primer grado.",
+     "Identificar por iniciativa propia, situaciones del entorno, en las que a través del planteamiento y solución de una ecuación de primer grado pueda dar respuesta a una interrogante que se presente."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -414,7 +426,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Proporcionalidad directa e inversa",
-    "objetivo": null,
+    "objetivos": [
+     "Aplicar los conceptos de proporcionalidad directa e inversa, para modelar situaciones del entorno."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -466,11 +480,11 @@ window.CURRICULO = {
      },
      {
       "codigo": "6.13",
-      "texto": "Representa en la forma y = , dos x variables que están en una relación de proporcionalidad inversa, a partir de una tabla. a"
+      "texto": "Representa en la forma y = a/x, dos variables que están en una relación de proporcionalidad inversa, a partir de una tabla."
      },
      {
       "codigo": "6.14",
-      "texto": "Representa en la forma y = , dos vax riables que están en una relación de proporcionalidad inversa a partir de un par de valores de y y x."
+      "texto": "Representa en la forma y = a/x, dos variables que están en una relación de proporcionalidad inversa, a partir de un par de valores de y y x."
      },
      {
       "codigo": "6.15",
@@ -501,7 +515,9 @@ window.CURRICULO = {
    {
     "unidad": 7,
     "nombre": "Gráfica de faja y circular",
-    "objetivo": null,
+    "objetivos": [
+     "Analizar e interpretar la información presentada en gráficas de faja y circulares, a fin de utilizarla en la toma de decisiones personales y sociales, valorando críticamente las opiniones de los demás."
+    ],
     "indicadores": [
      {
       "codigo": "7.1",
@@ -524,7 +540,12 @@ window.CURRICULO = {
    {
     "unidad": 8,
     "nombre": "Figuras planas y construcción de cuerpos geométricos",
-    "objetivo": null,
+    "objetivos": [
+     "Utilizar los instrumentos de geometría para hacer traslación, reflexión y rotación de figuras planas.",
+     "Aplicar las características de los círculos que se intersectan para determinar la mediatriz de un segmento y la bisectriz de un ángulo.",
+     "Aplicar la regla de tres simple directa para calcular la longitud de arco y el área de un segmento circular.",
+     "Desarrollar el plano de un prisma, pirámide y cilindro para calcular su área total."
+    ],
     "indicadores": [
      {
       "codigo": "8.1",
@@ -637,7 +658,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Operaciones algebraicas",
-    "objetivo": null,
+    "objetivos": [
+     "Realizar operaciones de polinomios, utilizando las diferentes operaciones de números y las propiedades de potencia, para modelar situaciones en las cuales se use el lenguaje algebraico de los polinomios."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -696,7 +719,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Sistemas de ecuaciones de primer grado con dos incógnitas",
-    "objetivo": null,
+    "objetivos": [
+     "Utilizar los sistemas de ecuaciones de primer grado con dos incógnitas, para resolver situaciones del entorno, aplicando el método de solución que considere más adecuado."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -775,7 +800,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Función lineal",
-    "objetivo": null,
+    "objetivos": [
+     "Resolver situaciones del entorno mediante el uso de la función lineal, identificando, modelando, interpretando y graficando correctamente las relaciones entre las variables."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -894,7 +921,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Paralelismo y ángulos de un polígono",
-    "objetivo": null,
+    "objetivos": [
+     "Utilizar la relación entre ángulos internos y externos de los polígonos, así como de los ángulos entre paralelas para caracterizar figuras y resolver situaciones del entorno."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -945,7 +974,9 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Criterios de congruencia de triángulos",
-    "objetivo": null,
+    "objetivos": [
+     "Utilizar los criterios para determinar la congruencia entre triángulos, caracterizar algunas figuras planas y resolver situaciones matemáticas de la vida cotidiana."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -976,7 +1007,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Características de los triángulos y cuadriláteros",
-    "objetivo": null,
+    "objetivos": [
+     "Identificar figuras planas utilizando criterios de congruencias para obtener características de triángulos y cuadriláteros."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -1071,7 +1104,9 @@ window.CURRICULO = {
    {
     "unidad": 7,
     "nombre": "Área y volumen de sólidos geométricos",
-    "objetivo": null,
+    "objetivos": [
+     "Utilizar el área y el volumen de cuerpos geométricos para proponer soluciones a situaciones del entorno."
+    ],
     "indicadores": [
      {
       "codigo": "7.1",
@@ -1130,7 +1165,10 @@ window.CURRICULO = {
    {
     "unidad": 8,
     "nombre": "Organización y análisis de datos estadísticos",
-    "objetivo": null,
+    "objetivos": [
+     "Organizar, graficar e interpretar la información del entorno, a fin de utilizarla en la toma de decisiones personales y/o sociales, valorando con criticidad la opinión de los demás.",
+     "Resolver problemas aplicando las medidas de tendencia central a datos estadísticos para analizar, opinar y obtener conclusiones de manera crítica."
+    ],
     "indicadores": [
      {
       "codigo": "8.1",
@@ -1199,7 +1237,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Multiplicación de polinomios",
-    "objetivo": null,
+    "objetivos": [
+     "Adquirir habilidades del dominio del álgebra elemental, a través de los procesos de multiplicación y factorización de polinomios, apoyándose en justificaciones geométricas que faciliten su visualización; para resolver problemas de matemática y de su entorno."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -1310,7 +1350,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Raíz cuadrada",
-    "objetivo": null,
+    "objetivos": [
+     "Conocer el sentido, representación y definición de raíces cuadradas, realizando operaciones algorítmicas y de simplificación para poder enfrentarse a futuros problemas matemáticos y del entorno."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -1393,7 +1435,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Ecuación cuadrática",
-    "objetivo": null,
+    "objetivos": [
+     "Resolver ecuaciones cuadráticas, utilizando diferentes métodos de resolución, para modelar y solucionar problemáticas de la vida cotidiana."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -1405,7 +1449,7 @@ window.CURRICULO = {
      },
      {
       "codigo": "3.3",
-      "texto": "Resuelve ecuaciones de la forma x2 = c. ax2"
+      "texto": "Resuelve ecuaciones de la forma x2 = c."
      },
      {
       "codigo": "3.4",
@@ -1468,7 +1512,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Función cuadrática de la forma y = ax2 + c",
-    "objetivo": null,
+    "objetivos": [
+     "Determinar las características de la función y = ax2+c, trazando con precisión la gráfica y resolviendo problemas sobre la variación de la función."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -1480,15 +1526,15 @@ window.CURRICULO = {
      },
      {
       "codigo": "4.3",
-      "texto": "Describe las características de la función x2 y = a partir de los puntos ubicados en el plano cartesiano. ax2"
+      "texto": "Describe las características de la función y = x2 a partir de los puntos ubicados en el plano cartesiano."
      },
      {
       "codigo": "4.4",
-      "texto": "Elabora la gráfica y = con a > 1 o x2. 0 < a < 1 a partir de la gráfica y ="
+      "texto": "Elabora la gráfica y = ax2 con a > 1 o 0 < a < 1, a partir de la gráfica y = x2."
      },
      {
       "codigo": "4.5",
-      "texto": "Elabora la gráfica y = −ax2 con a > 0 a x2. partir de la gráfica y ="
+      "texto": "Elabora la gráfica y = −ax2 con a > 0, a partir de la gráfica y = x2."
      },
      {
       "codigo": "4.6",
@@ -1496,7 +1542,7 @@ window.CURRICULO = {
      },
      {
       "codigo": "4.7",
-      "texto": "Describe el cambio en los valores de ax2. la función y ="
+      "texto": "Describe el cambio en los valores de la función y = ax2."
      },
      {
       "codigo": "4.8",
@@ -1508,11 +1554,11 @@ window.CURRICULO = {
      },
      {
       "codigo": "4.10",
-      "texto": "Grafica la función y = ax2+c, con c > 0 y realizando desplazamientos verticales en c unidades, a partir de la gráfica de ax2. y = ax2+c,"
+      "texto": "Grafica la función y = ax2 + c, con c > 0, realizando desplazamientos verticales en c unidades, a partir de la gráfica de y = ax2."
      },
      {
       "codigo": "4.11",
-      "texto": "Grafica la función y = con c < 0 y realizando desplazamientos verticales en c unidades, a partir de la gráfica de y = ax2."
+      "texto": "Grafica la función y = ax2 + c, con c < 0, realizando desplazamientos verticales en c unidades, a partir de la gráfica de y = ax2."
      },
      {
       "codigo": "4.12",
@@ -1523,7 +1569,10 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Figuras semejantes",
-    "objetivo": null,
+    "objetivos": [
+     "Identificar y construir figuras semejantes a partir de las características de sus lados y sus ángulos.",
+     "Utilizar semejanza de triángulos, para deducir y aplicar propiedades de figuras y sólidos semejantes en la resolución de situaciones problemáticas."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -1610,7 +1659,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Teorema de Pitágoras",
-    "objetivo": null,
+    "objetivos": [
+     "Utilizar el teorema de Pitágoras para calcular longitudes desconocidas en figuras y cuerpos geométricos y aplicarlo en la resolución de problemas del entorno."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -1677,7 +1728,9 @@ window.CURRICULO = {
    {
     "unidad": 7,
     "nombre": "Ángulo inscrito y central",
-    "objetivo": null,
+    "objetivos": [
+     "Determinar la medida de los ángulos inscritos y semiinscritos en una circunferencia, utilizando los teoremas y relaciones sobre cuerdas y arcos en una circunferencia, para estudiar las características y propiedades de figuras planas."
+    ],
     "indicadores": [
      {
       "codigo": "7.1",
@@ -1732,7 +1785,9 @@ window.CURRICULO = {
    {
     "unidad": 8,
     "nombre": "Medidas de dispersión",
-    "objetivo": null,
+    "objetivos": [
+     "Calcula e interpreta las medidas de dispersión para analizar críticamente situaciones de su contexto que requieran del análisis de datos."
+    ],
     "indicadores": [
      {
       "codigo": "8.1",
@@ -1765,7 +1820,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Números reales",
-    "objetivo": null,
+    "objetivos": [
+     "Utilizar las propiedades de orden, escritura y operaciones de los números reales para resolver problemas."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -1808,7 +1865,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Operaciones con polinomios y números complejos",
-    "objetivo": null,
+    "objetivos": [
+     "Adquirir habilidades en la factorización y división de polinomios, identificando las condiciones necesarias para la aplicación de los mismos y utilizarlos en la verificación de teoremas en álgebra y la resolución de problemas de matemática."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -1943,7 +2002,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Desigualdades",
-    "objetivo": null,
+    "objetivos": [
+     "Resolver desigualdades lineales y no lineales con una variable haciendo uso de las propiedades de desigualdad para la demostración o comprobación de teoremas matemáticos, así como la interpretación y resolución de situaciones del entorno que impliquen el uso de las mismas."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -2002,7 +2063,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Funciones reales",
-    "objetivo": null,
+    "objetivos": [
+     "Identificar los elementos y características de las funciones cuadráticas, cúbicas de la forma f(x) = ax3, racionales e irracionales, haciendo uso de tablas de valores y de sus gráficas para resolver problemas sobre monotonía y situaciones de la vida cotidiana, e interpretar gráficamente la solución de una desigualdad cuadrática."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -2026,7 +2089,7 @@ window.CURRICULO = {
      },
      {
       "codigo": "4.6",
-      "texto": "Grafica y encuentra el dominio y el h)2 rango de la función g(x) = a(x – para h 0 usando desplazamientos horizontales de f(x) = ax2. <"
+      "texto": "Grafica y encuentra el dominio y el rango de la función g(x) = a(x – h)2, para h < 0, usando desplazamientos horizontales de f(x) = ax2."
      },
      {
       "codigo": "4.7",
@@ -2034,7 +2097,7 @@ window.CURRICULO = {
      },
      {
       "codigo": "4.8",
-      "texto": "Grafica y encuentra el dominio y el rango de la función g(x) = a(x – h)2 + k usando desplazamientos horizontales ax2. y verticales de f(x) ="
+      "texto": "Grafica y encuentra el dominio y el rango de la función g(x) = a(x – h)2 + k, usando desplazamientos horizontales y verticales de f(x) = ax2."
      },
      {
       "codigo": "4.9",
@@ -2149,7 +2212,9 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Resolución de triángulos oblicuángulos",
-    "objetivo": null,
+    "objetivos": [
+     "Resolver triángulos utilizando las herramientas de la trigonometría y aplicarlo a diferentes situaciones del entorno."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -2260,7 +2325,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Identidades y ecuaciones trigonométricas",
-    "objetivo": null,
+    "objetivos": [
+     "Deducir identidades trigonométricas básicas mediante propiedades de simetría en el plano, para el cálculo de valores trigonométricos exactos y la resolución de ecuaciones trigonométricas."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -2315,7 +2382,9 @@ window.CURRICULO = {
    {
     "unidad": 7,
     "nombre": "Vectores y números complejos",
-    "objetivo": null,
+    "objetivos": [
+     "Conocer los conceptos básicos sobre vectores, sus operaciones y relacionarlos con la representación geométrica de los números complejos, comparando la representación y las operaciones de vectores en el plano cartesiano con los números complejos en el plano complejo, para fundamentar los resultados más importantes sobre vectores y aplicarlos en otras áreas."
+    ],
     "indicadores": [
      {
       "codigo": "7.1",
@@ -2402,7 +2471,9 @@ window.CURRICULO = {
    {
     "unidad": 8,
     "nombre": "Estadística descriptiva",
-    "objetivo": null,
+    "objetivos": [
+     "Analizar series de datos de fenómenos de la realidad, aplicando conceptos y definiciones sobre estadística descriptiva, para tomar decisiones adecuadas en los momentos oportunos."
+    ],
     "indicadores": [
      {
       "codigo": "8.1",
@@ -2463,7 +2534,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Ecuaciones",
-    "objetivo": null,
+    "objetivos": [
+     "Resolver ecuaciones bicuadráticas, radicales, racionales y sistemas de ecuaciones lineales y cuadráticas, utilizando herramientas de resolución de ecuaciones lineales y cuadráticas para aplicarlo en problemas algebraicos."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -2502,7 +2575,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Línea recta",
-    "objetivo": null,
+    "objetivos": [
+     "Deducir los conceptos sobre pendiente y ecuación de una línea recta a partir de sus características en el plano cartesiano para utilizarlo en la determinación de las posiciones relativas entre rectas y aplicarlo en la resolución de problemas y teoremas sobre geometría."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -2593,7 +2668,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Secciones cónicas",
-    "objetivo": null,
+    "objetivos": [
+     "Determinar la estructura, elementos y propiedades de las cuatro secciones cónicas, deduciendo y analizando las ecuaciones de cada una de ellas, para utilizarlo en la resolución de problemas de aplicación en diferentes áreas científicas."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -2728,7 +2805,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Funciones trascendentales I",
-    "objetivo": null,
+    "objetivos": [
+     "Realizar operaciones con potencias de números reales, utilizando las propiedades que facilitan su desarrollo, para resolver ecuaciones y describir las características de las funciones exponenciales."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -2803,7 +2882,9 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Funciones trascendentales II",
-    "objetivo": null,
+    "objetivos": [
+     "Describir los elementos y características de la función logaritmo y de las funciones trigonométricas seno, coseno y tangente por medio de su definición o gráfica para interpretar situaciones modeladas por funciones."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -2942,7 +3023,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Sucesiones aritméticas y geométricas",
-    "objetivo": null,
+    "objetivos": [
+     "Establecer el término general de una sucesión aritmética y geométrica para calcular términos o sumas parciales, utilizando las propiedades de estas sucesiones."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -2997,7 +3080,9 @@ window.CURRICULO = {
    {
     "unidad": 7,
     "nombre": "Métodos de conteo",
-    "objetivo": null,
+    "objetivos": [
+     "Plantear estrategias para realizar conteos sobre diferentes situaciones del entorno, utilizando los principios básicos de conteo, las permutaciones y combinaciones."
+    ],
     "indicadores": [
      {
       "codigo": "7.1",
@@ -3096,7 +3181,9 @@ window.CURRICULO = {
    {
     "unidad": 8,
     "nombre": "Probabilidad",
-    "objetivo": null,
+    "objetivos": [
+     "Aplicar los conceptos básicos sobre probabilidad, resolviendo problemas del entorno y calculando probabilidades para tomar decisiones acertadas y oportunas en situaciones específicas de la vida cotidiana."
+    ],
     "indicadores": [
      {
       "codigo": "8.1",
@@ -3159,7 +3246,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Compuestos inorgánicos",
-    "objetivo": "Emplear nomenclatura química y métodos de balanceo, para representar ecuaciones de reacción de síntesis de compuestos inorgánicos de uso cotidiano.",
+    "objetivos": [
+     "Emplear nomenclatura química y métodos de balanceo, para representar ecuaciones de reacción de síntesis de compuestos inorgánicos de uso cotidiano."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -3190,7 +3279,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Genética y evolución",
-    "objetivo": "Explicar las características e interacciones fundamentales del material genético a nivel de individuos y poblaciones, a partir de resultados experimentales y del análisis de situaciones cotidianas desde la perspectiva de la genética clásica y la biología evolutiva.",
+    "objetivos": [
+     "Explicar las características e interacciones fundamentales del material genético a nivel de individuos y poblaciones, a partir de resultados experimentales y del análisis de situaciones cotidianas desde la perspectiva de la genética clásica y la biología evolutiva."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -3221,7 +3312,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Biodiversidad",
-    "objetivo": "Emplear nomenclatura biológica y técnicas de agrupamiento de biodiversidad para describir y representar grupos de organismos de ocurrencia local.",
+    "objetivos": [
+     "Emplear nomenclatura biológica y técnicas de agrupamiento de biodiversidad para describir y representar grupos de organismos de ocurrencia local."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -3260,7 +3353,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Ecología",
-    "objetivo": "Exponer argumentos propios acerca del funcionamiento y la importancia de los ecosistemas, a partir de la observación experimental del entorno y de la investigación documental.",
+    "objetivos": [
+     "Exponer argumentos propios acerca del funcionamiento y la importancia de los ecosistemas, a partir de la observación experimental del entorno y de la investigación documental."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -3295,7 +3390,9 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Recurso hídrico",
-    "objetivo": "Interpretar información acerca de la dinámica hídrica global y local, a partir de la medición directa de parámetros hídricos y meteorológicos, y la exploración de la distribución hídrica nacional.",
+    "objetivos": [
+     "Interpretar información acerca de la dinámica hídrica global y local, a partir de la medición directa de parámetros hídricos y meteorológicos, y la exploración de la distribución hídrica nacional."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -3330,7 +3427,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Ambiente y energía",
-    "objetivo": "Proponer adecuaciones a dispositivos de experimentación o a prácticas cotidianas para aumentar su productividad o eficiencia y reducir así los impactos ambientales inherentes al aprovechamiento de los recursos energéticos.",
+    "objetivos": [
+     "Proponer adecuaciones a dispositivos de experimentación o a prácticas cotidianas para aumentar su productividad o eficiencia y reducir así los impactos ambientales inherentes al aprovechamiento de los recursos energéticos."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -3363,7 +3462,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Mecánica",
-    "objetivo": "Emplear diagramas de cuerpo libre, tabulación y gráfica de datos, para explicar las relaciones entre las cantidades físicas involucradas en los movimientos unidimensional, bidimensional y de rotación.",
+    "objetivos": [
+     "Emplear diagramas de cuerpo libre, tabulación y gráfica de datos, para explicar las relaciones entre las cantidades físicas involucradas en los movimientos unidimensional, bidimensional y de rotación."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -3394,7 +3495,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Energía",
-    "objetivo": "Emplear estrategias de medición directa, interpretación y cálculo de variables que intervienen en el movimiento, para analizar y resolver problemas que involucren energía potencial, energía cinética traslacional y rotacional, y sus transformaciones.",
+    "objetivos": [
+     "Emplear estrategias de medición directa, interpretación y cálculo de variables que intervienen en el movimiento, para analizar y resolver problemas que involucren energía potencial, energía cinética traslacional y rotacional, y sus transformaciones."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -3429,7 +3532,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Ondas mecánicas",
-    "objetivo": "Formular conclusiones propias acerca del funcionamiento de sistemas mecánicos ondulatorios en diferentes medios, a partir del montaje de dispositivos y la medición de variables obtenidas por experimentación.",
+    "objetivos": [
+     "Formular conclusiones propias acerca del funcionamiento de sistemas mecánicos ondulatorios en diferentes medios, a partir del montaje de dispositivos y la medición de variables obtenidas por experimentación."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -3460,7 +3565,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Estequiometría y dispersiones",
-    "objetivo": "Aplicar principios de estequiometría y propiedades de las soluciones para determinar cantidades de sustancias y preparar soluciones de uso común en el hogar o la industria.",
+    "objetivos": [
+     "Aplicar principios de estequiometría y propiedades de las soluciones para determinar cantidades de sustancias y preparar soluciones de uso común en el hogar o la industria."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -3495,7 +3602,9 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Minerales",
-    "objetivo": "Formular conclusiones propias acerca de la estructura y las propiedades de los minerales, y de su distribución en El Salvador, a partir de la experimentación y el cotejo de información documental.",
+    "objetivos": [
+     "Formular conclusiones propias acerca de la estructura y las propiedades de los minerales, y de su distribución en El Salvador, a partir de la experimentación y el cotejo de información documental."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -3530,7 +3639,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Anatomía y fisiología vegetal",
-    "objetivo": "Aplicar procedimientos de observación sistemática y experimentación con organismos vegetales, para evidenciar la estructura y el funcionamiento de los sistemas biológicos presentes en las plantas vasculares.",
+    "objetivos": [
+     "Aplicar procedimientos de observación sistemática y experimentación con organismos vegetales, para evidenciar la estructura y el funcionamiento de los sistemas biológicos presentes en las plantas vasculares."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -3565,7 +3676,9 @@ window.CURRICULO = {
    {
     "unidad": 7,
     "nombre": "Anatomía y fisiología animal",
-    "objetivo": "Obtener información propia acerca de la estructura y el funcionamiento de tejidos, órganos y sistemas de órganos de los animales vertebrados, a partir de la observación directa de muestras y la elaboración de modelos anatómicos.",
+    "objetivos": [
+     "Obtener información propia acerca de la estructura y el funcionamiento de tejidos, órganos y sistemas de órganos de los animales vertebrados, a partir de la observación directa de muestras y la elaboración de modelos anatómicos."
+    ],
     "indicadores": [
      {
       "codigo": "7.1",
@@ -3598,7 +3711,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Mecánica de fluidos",
-    "objetivo": "Aplicar análisis gráficos de magnitudes físicas relacionadas con la mecánica de fluidos para efectuar cálculos de variables y explicar resultados experimentales.",
+    "objetivos": [
+     "Aplicar análisis gráficos de magnitudes físicas relacionadas con la mecánica de fluidos para efectuar cálculos de variables y explicar resultados experimentales."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -3629,7 +3744,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Calor y temperatura",
-    "objetivo": "Formular conclusiones propias acerca de los procesos termodinámicos y la eficiencia de máquinas térmicas, a partir de la experimentación y la resolución de problemas.",
+    "objetivos": [
+     "Formular conclusiones propias acerca de los procesos termodinámicos y la eficiencia de máquinas térmicas, a partir de la experimentación y la resolución de problemas."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -3664,7 +3781,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Equilibrio químico",
-    "objetivo": "Aplicar principios de equilibrio químico para predecir la dirección de una reacción y explicar la importancia del equilibrio ácido base en procesos habituales.",
+    "objetivos": [
+     "Aplicar principios de equilibrio químico para predecir la dirección de una reacción y explicar la importancia del equilibrio ácido base en procesos habituales."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -3699,7 +3818,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Oceanografía",
-    "objetivo": "Formular conclusiones propias acerca de las características y la dinámica del océano como un sistema global, a partir de la experimentación, el uso de simuladores y el cotejo de información relacionada con el ambiente marino.",
+    "objetivos": [
+     "Formular conclusiones propias acerca de las características y la dinámica del océano como un sistema global, a partir de la experimentación, el uso de simuladores y el cotejo de información relacionada con el ambiente marino."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -3734,7 +3855,9 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Geología de El Salvador",
-    "objetivo": "Aplicar técnicas de registro, representación y síntesis de información, para explicar las estructuras y procesos geológicos que ocurren en El Salvador, sus potencialidades y riesgos asociados.",
+    "objetivos": [
+     "Aplicar técnicas de registro, representación y síntesis de información, para explicar las estructuras y procesos geológicos que ocurren en El Salvador, sus potencialidades y riesgos asociados."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -3769,7 +3892,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Electricidad",
-    "objetivo": "Construir circuitos eléctricos funcionales que incorporen componentes electrónicos, a partir de la aplicación de fundamentos de electricidad, el ensamblaje de prototipos y el uso de software.",
+    "objetivos": [
+     "Construir circuitos eléctricos funcionales que incorporen componentes electrónicos, a partir de la aplicación de fundamentos de electricidad, el ensamblaje de prototipos y el uso de software."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -3800,7 +3925,9 @@ window.CURRICULO = {
    {
     "unidad": 7,
     "nombre": "Magnetismo aplicado",
-    "objetivo": "Formular conclusiones propias acerca del funcionamiento de tecnologías basadas en el magnetismo a partir del cotejo de información documental, el análisis de situaciones cotidianas y la construcción de dispositivos.",
+    "objetivos": [
+     "Formular conclusiones propias acerca del funcionamiento de tecnologías basadas en el magnetismo a partir del cotejo de información documental, el análisis de situaciones cotidianas y la construcción de dispositivos."
+    ],
     "indicadores": [
      {
       "codigo": "7.1",
@@ -3837,7 +3964,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Electroquímica",
-    "objetivo": "Contrastar observaciones experimentales de procesos redox con los valores de potencial estándar de reducción, para deducir la espontaneidad de una reacción y las aplicaciones de la electroquímica junto a sus consideraciones ambientales.",
+    "objetivos": [
+     "Contrastar observaciones experimentales de procesos redox con los valores de potencial estándar de reducción, para deducir la espontaneidad de una reacción y las aplicaciones de la electroquímica junto a sus consideraciones ambientales."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -3872,7 +4001,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Electromagnetismo",
-    "objetivo": "Proponer adecuaciones al diseño, materiales o proceso de construcción de un dispositivo de comunicación inalámbrica, para mejorar su alcance o desempeño según su propósito de uso.",
+    "objetivos": [
+     "Proponer adecuaciones al diseño, materiales o proceso de construcción de un dispositivo de comunicación inalámbrica, para mejorar su alcance o desempeño según su propósito de uso."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -3907,7 +4038,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Óptica",
-    "objetivo": "Contrastar sus resultados de la experimentación con fenómenos de la luz con los principios de óptica física y geométrica, para generalizar el comportamiento dual de la luz y sus aplicaciones.",
+    "objetivos": [
+     "Contrastar sus resultados de la experimentación con fenómenos de la luz con los principios de óptica física y geométrica, para generalizar el comportamiento dual de la luz y sus aplicaciones."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -3946,7 +4079,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Introducción a la química orgánica",
-    "objetivo": "Representa apropiadamente los orbitales del carbono y las estructuras que puede conformar, para explicar las funciones químicas, propiedades y aplicaciones de los hidrocarburos alifáticos.",
+    "objetivos": [
+     "Representa apropiadamente los orbitales del carbono y las estructuras que puede conformar, para explicar las funciones químicas, propiedades y aplicaciones de los hidrocarburos alifáticos."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -3985,7 +4120,9 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Compuestos orgánicos",
-    "objetivo": "Aplica la nomenclatura IUPAC para la denominación de compuestos orgánicos y técnicas de laboratorio, para identificar las propiedades físicas y químicas de las funciones orgánicas y sus aplicaciones.",
+    "objetivos": [
+     "Aplica la nomenclatura IUPAC para la denominación de compuestos orgánicos y técnicas de laboratorio, para identificar las propiedades físicas y químicas de las funciones orgánicas y sus aplicaciones."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -4020,7 +4157,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Biomoléculas",
-    "objetivo": "Desarrollar estrategias experimentales o proyectos colaborativos para identificar, extraer o demostrar las propiedades de un grupo de biomoléculas, o representar su estructura y funciones metabólicas.",
+    "objetivos": [
+     "Desarrollar estrategias experimentales o proyectos colaborativos para identificar, extraer o demostrar las propiedades de un grupo de biomoléculas, o representar su estructura y funciones metabólicas."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -4063,7 +4202,9 @@ window.CURRICULO = {
    {
     "unidad": 7,
     "nombre": "Biología celular",
-    "objetivo": "Compara sus observaciones e interpretaciones de un experimento o simulación con los fundamentos de biología celular, bioenergética y metabolismo, para generalizar la naturaleza del flujo de energía e información molecular en los seres vivos.",
+    "objetivos": [
+     "Compara sus observaciones e interpretaciones de un experimento o simulación con los fundamentos de biología celular, bioenergética y metabolismo, para generalizar la naturaleza del flujo de energía e información molecular en los seres vivos."
+    ],
     "indicadores": [
      {
       "codigo": "7.1",
@@ -4098,7 +4239,9 @@ window.CURRICULO = {
    {
     "unidad": 8,
     "nombre": "Anatomía y fisiología humana",
-    "objetivo": "Aplicar técnicas de registro, representación y síntesis de información con lenguaje científico, para comunicar sus hallazgos y conclusiones acerca de la anatomía, funcionamiento y medidas de autocuido de los sistemas nervioso, endocrino e inmunitario.",
+    "objetivos": [
+     "Aplicar técnicas de registro, representación y síntesis de información con lenguaje científico, para comunicar sus hallazgos y conclusiones acerca de la anatomía, funcionamiento y medidas de autocuido de los sistemas nervioso, endocrino e inmunitario."
+    ],
     "indicadores": [
      {
       "codigo": "8.1",
@@ -4131,7 +4274,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Ciencias del espacio",
-    "objetivo": "Contrastar razonamientos y conclusiones propias con los principios y teorías de la astronomía, para generalizar el comportamiento de sistemas conformados por objetos astronómicos.",
+    "objetivos": [
+     "Contrastar razonamientos y conclusiones propias con los principios y teorías de la astronomía, para generalizar el comportamiento de sistemas conformados por objetos astronómicos."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -4166,7 +4311,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Introducción a la física moderna",
-    "objetivo": "Aplicar técnicas de representación y síntesis de información, con nomenclatura y lenguaje científico, para analizar o comunicar los conceptos fundamentales y las aplicaciones cotidianas de la física moderna.",
+    "objetivos": [
+     "Aplicar técnicas de representación y síntesis de información, con nomenclatura y lenguaje científico, para analizar o comunicar los conceptos fundamentales y las aplicaciones cotidianas de la física moderna."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -4197,7 +4344,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Bases genéticas de la evolución",
-    "objetivo": "Manipular herramientas de búsqueda, representación y simulación virtual de procesos genéticos o celulares como medios para explicar el funcionamiento general de los mecanismos evolutivos clásicos o de edición y transferencia genética horizontal.",
+    "objetivos": [
+     "Manipular herramientas de búsqueda, representación y simulación virtual de procesos genéticos o celulares como medios para explicar el funcionamiento general de los mecanismos evolutivos clásicos o de edición y transferencia genética horizontal."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -4236,7 +4385,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Análisis de biodiversidad",
-    "objetivo": "Aplica técnicas estadísticas de registro, representación y síntesis de datos de biodiversidad para inferir o analizar relaciones entre organismos o comunidades biológicas.",
+    "objetivos": [
+     "Aplica técnicas estadísticas de registro, representación y síntesis de datos de biodiversidad para inferir o analizar relaciones entre organismos o comunidades biológicas."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -4275,7 +4426,9 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Biotecnología microbiana",
-    "objetivo": "Contrastar sus propias observaciones y resultados de la experimentación con microorganismos con principios de la microbiología, genética y bioquímica; para generalizar las aplicaciones y métodos de producción empleados en la biotecnología microbiana.",
+    "objetivos": [
+     "Contrastar sus propias observaciones y resultados de la experimentación con microorganismos con principios de la microbiología, genética y bioquímica; para generalizar las aplicaciones y métodos de producción empleados en la biotecnología microbiana."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -4306,7 +4459,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Biotecnología vegetal y agroindustria",
-    "objetivo": "Emplear sus propias adecuaciones tecnológicas o estrategias de experimentación vegetal para evidenciar procesos fisiológicos de las plantas, o implementar técnicas agrícolas modernas para el establecimiento y mejora de cultivos.",
+    "objetivos": [
+     "Emplear sus propias adecuaciones tecnológicas o estrategias de experimentación vegetal para evidenciar procesos fisiológicos de las plantas, o implementar técnicas agrícolas modernas para el establecimiento y mejora de cultivos."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -4345,7 +4500,9 @@ window.CURRICULO = {
    {
     "unidad": 7,
     "nombre": "Ciencia de materiales",
-    "objetivo": "Contrastar sus propias observaciones y resultados experimentales con principios físicos y químicos empleados en la ciencia de materiales, para generalizar la estructura, propiedades y aplicaciones principales de los metales, cerámicos y polímeros sintéticos.",
+    "objetivos": [
+     "Contrastar sus propias observaciones y resultados experimentales con principios físicos y químicos empleados en la ciencia de materiales, para generalizar la estructura, propiedades y aplicaciones principales de los metales, cerámicos y polímeros sintéticos."
+    ],
     "indicadores": [
      {
       "codigo": "7.1",
@@ -4380,7 +4537,9 @@ window.CURRICULO = {
    {
     "unidad": 8,
     "nombre": "Ecología y ambiente",
-    "objetivo": "Aplicar técnicas de registro, representación y síntesis de información cuantitativa sobre biodiversidad y ecosistemas para analizar problemáticas ambientales y defender propuestas o posturas para reducir sus impactos.",
+    "objetivos": [
+     "Aplicar técnicas de registro, representación y síntesis de información cuantitativa sobre biodiversidad y ecosistemas para analizar problemáticas ambientales y defender propuestas o posturas para reducir sus impactos."
+    ],
     "indicadores": [
      {
       "codigo": "8.1",
@@ -4419,7 +4578,11 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "El cuento maravilloso",
-    "objetivo": "1. Participar en diferentes situaciones comunicativas, identificando los elementos del proceso de comunicación, con la finalidad de interactuar de manera respetuosa y adecuada al contexto. 2. Leer y comprender distintos tipos de párrafos, reconociendo sus elementos y características, y analizando su contenido, a fin de fortalecer la comprensión lectora de textos literarios y no literarios. 3. Escribir cuentos maravillosos siguiendo los pasos del proceso de escritura, y entender la construcción de palabras a partir de unidades mínimas de significación y del énfasis de la sílaba tónica, con el propósito de consolidar las habilidades de expresión.",
+    "objetivos": [
+     "Participar en diferentes situaciones comunicativas, identificando los elementos del proceso de comunicación, con la finalidad de interactuar de manera respetuosa y adecuada al contexto.",
+     "Leer y comprender distintos tipos de párrafos, reconociendo sus elementos y características, y analizando su contenido, a fin de fortalecer la comprensión lectora de textos literarios y no literarios.",
+     "Escribir cuentos maravillosos siguiendo los pasos del proceso de escritura, y entender la construcción de palabras a partir de unidades mínimas de significación y del énfasis de la sílaba tónica, con el propósito de consolidar las habilidades de expresión."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -4482,7 +4645,11 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "El mundo de la novela",
-    "objetivo": "1. Participar en actividades de comunicación oral, tomando en cuenta los rasgos o características de cada una, con el propósito de interactuar con respeto al escuchar las opiniones de los demás. 2. Interpretar novelas fantásticas y comentarios críticos a partir de sus características, estructura y contenido, y establecer las diferencias y semejanzas entre el cuento y la novela, a fin de fortalecer la comprensión lectora y el disfrute de textos literarios y no literarios. 3. Escribir textos, aplicando las reglas sobre el acento ortográfico y diacrítico, con la finalidad de consolidar las habilidades de expresión escrita y compresión de textos.",
+    "objetivos": [
+     "Participar en actividades de comunicación oral, tomando en cuenta los rasgos o características de cada una, con el propósito de interactuar con respeto al escuchar las opiniones de los demás.",
+     "Interpretar novelas fantásticas y comentarios críticos a partir de sus características, estructura y contenido, y establecer las diferencias y semejanzas entre el cuento y la novela, a fin de fortalecer la comprensión lectora y el disfrute de textos literarios y no literarios.",
+     "Escribir textos, aplicando las reglas sobre el acento ortográfico y diacrítico, con la finalidad de consolidar las habilidades de expresión escrita y compresión de textos."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -4537,7 +4704,11 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Conozcamos el teatro",
-    "objetivo": "1. Participar en diálogos sobre temas de interés colectivo, atendiendo a su contexto e intención comunicativa, a fin de fortalecer sus habilidades de expresión y comprensión oral, mediante la interacción con otros. 2. Comprender textos dramáticos y textos no literarios, a partir de su estructura, elementos y características, analizando su contenido e intención comunicativa, con el propósito de consolidar la comprensión de textos. 3. Elaborar resúmenes aplicando las reglas del uso de la tilde y la recurrencia léxica y la sustitución como mecanismos de cohesión de ideas, con la finalidad de fortalecer las habilidades de expresión escrita.",
+    "objetivos": [
+     "Participar en diálogos sobre temas de interés colectivo, atendiendo a su contexto e intención comunicativa, a fin de fortalecer sus habilidades de expresión y comprensión oral, mediante la interacción con otros.",
+     "Comprender textos dramáticos y textos no literarios, a partir de su estructura, elementos y características, analizando su contenido e intención comunicativa, con el propósito de consolidar la comprensión de textos.",
+     "Elaborar resúmenes aplicando las reglas del uso de la tilde y la recurrencia léxica y la sustitución como mecanismos de cohesión de ideas, con la finalidad de fortalecer las habilidades de expresión escrita."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -4592,7 +4763,11 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "La poesía",
-    "objetivo": "1. Conocer las características del lenguaje, lengua y habla, a fin de comprender la diferencia entre la facultad innata del ser humano, el idioma que se adquiere y cómo este se concreta para que haya comunicación entre las personas. 2. Analizar textos poéticos teniendo en cuenta sus características y contenido y reconocer el efecto estético de figuras literarias, con el propósito de fortalecer las habilidades de comprensión lectora. 3. Leer y redactar textos periodísticos, utilizando criterios para la selección de información y conectores discursivos, aplicando las reglas del uso de la tilde en palabras simples y compuestas, a fin de consolidar el desarrollo del pensamiento crítico y fortalecer las habilidades comunicativas relacionadas con la escritura de textos.",
+    "objetivos": [
+     "Conocer las características del lenguaje, lengua y habla, a fin de comprender la diferencia entre la facultad innata del ser humano, el idioma que se adquiere y cómo este se concreta para que haya comunicación entre las personas.",
+     "Analizar textos poéticos teniendo en cuenta sus características y contenido y reconocer el efecto estético de figuras literarias, con el propósito de fortalecer las habilidades de comprensión lectora.",
+     "Leer y redactar textos periodísticos, utilizando criterios para la selección de información y conectores discursivos, aplicando las reglas del uso de la tilde en palabras simples y compuestas, a fin de consolidar el desarrollo del pensamiento crítico y fortalecer las habilidades comunicativas relacionadas con la escritura de textos."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -4643,7 +4818,10 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "El cuento de terror",
-    "objetivo": "1. Comprender cuentos de terror y crónicas, teniendo en cuenta sus características, elementos y contenido, con el fin de fortalecer las habilidades de comprensión lectora. 2. Escribir y corregir textos propios o ajenos, aplicando las normas del uso de mayúsculas y utilizando mecanismos de cohesión de ideas, con el propósito de consolidar las habilidades de expresión escrita.",
+    "objetivos": [
+     "Comprender cuentos de terror y crónicas, teniendo en cuenta sus características, elementos y contenido, con el fin de fortalecer las habilidades de comprensión lectora.",
+     "Escribir y corregir textos propios o ajenos, aplicando las normas del uso de mayúsculas y utilizando mecanismos de cohesión de ideas, con el propósito de consolidar las habilidades de expresión escrita."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -4698,7 +4876,11 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "El mundo de la ciencia ficción",
-    "objetivo": "1. Participar en situaciones comunicativas orales y escritas, utilizando conectores discursivos, adverbios o locuciones adverbiales al expresar ideas, con el propósito de consolidar las habilidades de expresión en diversos contextos. 2. Comprender novelas e historietas de ciencia ficción y artículos de opinión, reconociendo sus elementos, características y estructura, y analizando su contenido, con el fin de fortalecer las habilidades de comprensión lectora. 3. Elaborar historietas de ciencia ficción con secuencias narrativas completas, atendiendo a sus características, elementos y estructura, y aplicando las normas ortográficas del uso de b y v, mediante los pasos del proceso de escritura.",
+    "objetivos": [
+     "Participar en situaciones comunicativas orales y escritas, utilizando conectores discursivos, adverbios o locuciones adverbiales al expresar ideas, con el propósito de consolidar las habilidades de expresión en diversos contextos.",
+     "Comprender novelas e historietas de ciencia ficción y artículos de opinión, reconociendo sus elementos, características y estructura, y analizando su contenido, con el fin de fortalecer las habilidades de comprensión lectora.",
+     "Elaborar historietas de ciencia ficción con secuencias narrativas completas, atendiendo a sus características, elementos y estructura, y aplicando las normas ortográficas del uso de b y v, mediante los pasos del proceso de escritura."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -4749,7 +4931,11 @@ window.CURRICULO = {
    {
     "unidad": 7,
     "nombre": "Información en movimiento",
-    "objetivo": "1. Participar en conversaciones orales y virtuales, reconociendo la diferencia entre los actos locutivo, ilocutivo y perlocutivo, utilizando emoticonos y emojis para complementar o sustituir el mensaje escrito en las redes sociales, con el fin de consolidar la competencia comunicativa en diversos contextos. 2. Analizar textos dramáticos a partir de sus elementos primarios y secundarios y de su estructura interna, con el propósito de desarrollar el pensamiento crítico mediante el fortalecimiento de las habilidades de comprensión. 3. Leer y producir textos propagandísticos atendiendo a sus elementos y función, y utilizando determinantes, preposiciones y conjunciones en la redacción de ideas, con la finalidad de fortalecer la competencia de expresión escrita.",
+    "objetivos": [
+     "Participar en conversaciones orales y virtuales, reconociendo la diferencia entre los actos locutivo, ilocutivo y perlocutivo, utilizando emoticonos y emojis para complementar o sustituir el mensaje escrito en las redes sociales, con el fin de consolidar la competencia comunicativa en diversos contextos.",
+     "Analizar textos dramáticos a partir de sus elementos primarios y secundarios y de su estructura interna, con el propósito de desarrollar el pensamiento crítico mediante el fortalecimiento de las habilidades de comprensión.",
+     "Leer y producir textos propagandísticos atendiendo a sus elementos y función, y utilizando determinantes, preposiciones y conjunciones en la redacción de ideas, con la finalidad de fortalecer la competencia de expresión escrita."
+    ],
     "indicadores": [
      {
       "codigo": "7.1",
@@ -4796,7 +4982,11 @@ window.CURRICULO = {
    {
     "unidad": 8,
     "nombre": "A la luz de las palabras",
-    "objetivo": "1. Participar en mesas redondas, utilizando conectores discursivos para expresar las ideas de manera coherente, con la finalidad de consolidar las habilidades de expresión y comprensión oral. 2. Analizar textos poéticos, reconociendo sus elementos, características y estructura, y evaluar su contenido teniendo en cuenta el tema que plantean, con el fin de fortalecer las habilidades de comprensión lectora. 3. Analizar y redactar textos argumentativos, atendiendo a sus elementos e intención comunicativa, y utilizando signos de puntuación y conectores discursivos, con el propósito de reforzar las habilidades de expresión escrita.",
+    "objetivos": [
+     "Participar en mesas redondas, utilizando conectores discursivos para expresar las ideas de manera coherente, con la finalidad de consolidar las habilidades de expresión y comprensión oral.",
+     "Analizar textos poéticos, reconociendo sus elementos, características y estructura, y evaluar su contenido teniendo en cuenta el tema que plantean, con el fin de fortalecer las habilidades de comprensión lectora.",
+     "Analizar y redactar textos argumentativos, atendiendo a sus elementos e intención comunicativa, y utilizando signos de puntuación y conectores discursivos, con el propósito de reforzar las habilidades de expresión escrita."
+    ],
     "indicadores": [
      {
       "codigo": "8.1",
@@ -4849,7 +5039,11 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Entre el mito y la leyenda",
-    "objetivo": "1. Participar en situaciones comunicativas, reflexionando sobre su rol como sujeto comunicador, haciendo uso efectivo del lenguaje verbal y no verbal, con el fin de transmitir ideas eficientemente. 2. Leer y analizar mitos y leyendas, identificando sus diferencias, similitudes y características, a través de narraciones representativas de la cultura universal, con la finalidad conocer y comprender la influencia de estas narraciones en la identidad cultural. 3. Analizar y escribir textos informativos como el boletín, poniendo en práctica sus conocimientos sobre la elipsis, organizando la información y aplicando mecanismos de cohesión textual, con el propósito de consolidar sus habilidades comunicativas.",
+    "objetivos": [
+     "Participar en situaciones comunicativas, reflexionando sobre su rol como sujeto comunicador, haciendo uso efectivo del lenguaje verbal y no verbal, con el fin de transmitir ideas eficientemente.",
+     "Leer y analizar mitos y leyendas, identificando sus diferencias, similitudes y características, a través de narraciones representativas de la cultura universal, con la finalidad conocer y comprender la influencia de estas narraciones en la identidad cultural.",
+     "Analizar y escribir textos informativos como el boletín, poniendo en práctica sus conocimientos sobre la elipsis, organizando la información y aplicando mecanismos de cohesión textual, con el propósito de consolidar sus habilidades comunicativas."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -4904,7 +5098,11 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "El poema",
-    "objetivo": "1. Participar en situaciones comunicativas orales y escritas, identificando la intención comunicativa de los hablantes, a fin de fortalecer las habilidades de comunicación oral. 2. Leer y comprender textos poéticos, identificando sus elementos fónicos, así como las formas de la métrica clásica y versificación, e interpretando el efecto estético de las figuras literarias en muestras de autores representativos de la poesía del Romanticismo, a fin de desarrollar habilidades de comprensión lectora. 3. Analizar y escribir textos periodísticos como la columna de opinión, poniendo en práctica sus conocimientos sobre el uso de palabras con h inicial o intercalada, organizando la información y aplicando mecanismos de cohesión textual, con el propósito de consolidar sus habilidades comunicativas.",
+    "objetivos": [
+     "Participar en situaciones comunicativas orales y escritas, identificando la intención comunicativa de los hablantes, a fin de fortalecer las habilidades de comunicación oral.",
+     "Leer y comprender textos poéticos, identificando sus elementos fónicos, así como las formas de la métrica clásica y versificación, e interpretando el efecto estético de las figuras literarias en muestras de autores representativos de la poesía del Romanticismo, a fin de desarrollar habilidades de comprensión lectora.",
+     "Analizar y escribir textos periodísticos como la columna de opinión, poniendo en práctica sus conocimientos sobre el uso de palabras con h inicial o intercalada, organizando la información y aplicando mecanismos de cohesión textual, con el propósito de consolidar sus habilidades comunicativas."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -4959,7 +5157,11 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "La novela histórica",
-    "objetivo": "1. Participar en situaciones comunicativas identificando las funciones del lenguaje utilizadas, según la intencionalidad de los hablantes, con la finalidad de fortalecer las habilidades de comunicación oral. 2. Analizar textos novelísticos identificando sus elementos, características y tipos de personajes, mediante la lectura de novelas históricas, valorando oralmente y por escrito los recursos expresivos y las situaciones comunicativas, y construyendo el significado y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de textos. 3. Analizar y producir reportajes periodísticos, poniendo en práctica sus conocimientos sobre la tilde en palabras compuestas, organizando la información y aplicando mecanismos de coherencia pragmática, con el propósito de consolidar sus habilidades comunicativas.",
+    "objetivos": [
+     "Participar en situaciones comunicativas identificando las funciones del lenguaje utilizadas, según la intencionalidad de los hablantes, con la finalidad de fortalecer las habilidades de comunicación oral.",
+     "Analizar textos novelísticos identificando sus elementos, características y tipos de personajes, mediante la lectura de novelas históricas, valorando oralmente y por escrito los recursos expresivos y las situaciones comunicativas, y construyendo el significado y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de textos.",
+     "Analizar y producir reportajes periodísticos, poniendo en práctica sus conocimientos sobre la tilde en palabras compuestas, organizando la información y aplicando mecanismos de coherencia pragmática, con el propósito de consolidar sus habilidades comunicativas."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -5022,7 +5224,11 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "El texto dramático",
-    "objetivo": "1. Participar en situaciones comunicativas al escribir textos o desarrollar prácticas discursivas del lenguaje, con la finalidad de fortalecer las habilidades de comunicación oral. 2. Analizar obras representativas del teatro europeo, valorando oralmente y por escrito los recursos expresivos y las situaciones comunicativas, y construyendo el significado y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de textos. 3. Producir textos dramáticos con intención literaria, poniendo en práctica sus conocimientos sobre el uso del paréntesis y la raya, organizando la información y aplicando mecanismos de cohesión textual, con el propósito de consolidar sus habilidades comunicativas.",
+    "objetivos": [
+     "Participar en situaciones comunicativas al escribir textos o desarrollar prácticas discursivas del lenguaje, con la finalidad de fortalecer las habilidades de comunicación oral.",
+     "Analizar obras representativas del teatro europeo, valorando oralmente y por escrito los recursos expresivos y las situaciones comunicativas, y construyendo el significado y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de textos.",
+     "Producir textos dramáticos con intención literaria, poniendo en práctica sus conocimientos sobre el uso del paréntesis y la raya, organizando la información y aplicando mecanismos de cohesión textual, con el propósito de consolidar sus habilidades comunicativas."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -5073,7 +5279,11 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "La novela gótica",
-    "objetivo": "1. Participar en disertaciones orales, haciendo uso efectivo del lenguaje verbal y no verbal, con el fin de exponer de manera congruente su perspectiva sobre un tema de interés y fortalecer sus habilidades de comunicación oral. 2. Leer y analizar novelas góticas, identificando sus características, elementos, autores y obras, valorando oralmente y por escrito los recursos expresivos y las situaciones comunicativas, y construyendo, el significado y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar competentemente toda clase de textos. 3. Analizar y producir textos argumentativos escritos u orales, atendiendo a las normas ortográficas y de redacción, comprendiendo el contenido y función de estos textos, con el propósito de desarrollar la capacidad de argumentación a través de diversos medios y contextos comunicativos.",
+    "objetivos": [
+     "Participar en disertaciones orales, haciendo uso efectivo del lenguaje verbal y no verbal, con el fin de exponer de manera congruente su perspectiva sobre un tema de interés y fortalecer sus habilidades de comunicación oral.",
+     "Leer y analizar novelas góticas, identificando sus características, elementos, autores y obras, valorando oralmente y por escrito los recursos expresivos y las situaciones comunicativas, y construyendo, el significado y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar competentemente toda clase de textos.",
+     "Analizar y producir textos argumentativos escritos u orales, atendiendo a las normas ortográficas y de redacción, comprendiendo el contenido y función de estos textos, con el propósito de desarrollar la capacidad de argumentación a través de diversos medios y contextos comunicativos."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -5120,7 +5330,11 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "La poesía",
-    "objetivo": "1. Participar en exposiciones orales, practicando la escucha activa y haciendo uso efectivo del lenguaje verbal y no verbal, con el propósito de transmitir eficientemente sus ideas y fortalecer sus habilidades de comunicación oral. 2. Analizar textos poéticos, identificando la métrica clásica, las licencias poéticas, el tipo de verso y las estrofas, así como el efecto estético causado por las figuras literarias, y construyendo, el significado y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de textos. 3. Analizar y producir textos expositivos, poniendo en práctica sus conocimientos sobre la norma gramatical, organizando la información y aplicando mecanismos de cohesión textual, con el propósito de consolidar sus habilidades comunicativas.",
+    "objetivos": [
+     "Participar en exposiciones orales, practicando la escucha activa y haciendo uso efectivo del lenguaje verbal y no verbal, con el propósito de transmitir eficientemente sus ideas y fortalecer sus habilidades de comunicación oral.",
+     "Analizar textos poéticos, identificando la métrica clásica, las licencias poéticas, el tipo de verso y las estrofas, así como el efecto estético causado por las figuras literarias, y construyendo, el significado y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de textos.",
+     "Analizar y producir textos expositivos, poniendo en práctica sus conocimientos sobre la norma gramatical, organizando la información y aplicando mecanismos de cohesión textual, con el propósito de consolidar sus habilidades comunicativas."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -5171,7 +5385,11 @@ window.CURRICULO = {
    {
     "unidad": 7,
     "nombre": "La novela realista",
-    "objetivo": "1. Participar en simposios sobre temas de interés, con el fin de comunicar eficientemente sus ideas y fortalecer sus habilidades de comunicación oral. 2. Analizar y producir textos novelísticos del realismo, atendiendo a sus elementos, características, tipos de personajes y recursos estilísticos, con el propósito de fortalecer sus habilidades de comprensión lectora. 3. Analizar textos argumentativos, tomando en cuenta sus características y estructura, con el fin de consolidar las habilidades comunicativas mediante argumentos que sustenten los temas en discusión, mostrando criticidad en la información.",
+    "objetivos": [
+     "Participar en simposios sobre temas de interés, con el fin de comunicar eficientemente sus ideas y fortalecer sus habilidades de comunicación oral.",
+     "Analizar y producir textos novelísticos del realismo, atendiendo a sus elementos, características, tipos de personajes y recursos estilísticos, con el propósito de fortalecer sus habilidades de comprensión lectora.",
+     "Analizar textos argumentativos, tomando en cuenta sus características y estructura, con el fin de consolidar las habilidades comunicativas mediante argumentos que sustenten los temas en discusión, mostrando criticidad en la información."
+    ],
     "indicadores": [
      {
       "codigo": "7.1",
@@ -5234,7 +5452,11 @@ window.CURRICULO = {
    {
     "unidad": 8,
     "nombre": "La poesía lírica",
-    "objetivo": "1. Participar en declamaciones y situaciones donde utilice la comunicación oral, practicando la escucha activa y haciendo uso efectivo del lenguaje verbal y no verbal, con el fin de transmitir eficientemente sus sentimientos y fortalecer sus habilidades de comunicación oral. 2. Analizar poesía lírica identificando sus características, temáticas, estructura y formas, interpretando muestras de autores representativos y el efecto estético de las figuras literarias, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos. 3. Producir textos poéticos con intención literaria, atendiendo a su estructura, características y recursos retóricos, organizando la información y aplicando mecanismos de cohesión textual, con el propósito de consolidar sus habilidades comunicativas.",
+    "objetivos": [
+     "Participar en declamaciones y situaciones donde utilice la comunicación oral, practicando la escucha activa y haciendo uso efectivo del lenguaje verbal y no verbal, con el fin de transmitir eficientemente sus sentimientos y fortalecer sus habilidades de comunicación oral.",
+     "Analizar poesía lírica identificando sus características, temáticas, estructura y formas, interpretando muestras de autores representativos y el efecto estético de las figuras literarias, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Producir textos poéticos con intención literaria, atendiendo a su estructura, características y recursos retóricos, organizando la información y aplicando mecanismos de cohesión textual, con el propósito de consolidar sus habilidades comunicativas."
+    ],
     "indicadores": [
      {
       "codigo": "8.1",
@@ -5287,7 +5509,10 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "El cuento policial",
-    "objetivo": "1. Leer y analizar textos narrativos del género policíaco, interpretando sus características, estilo, contenido y tipos de personajes, con la finalidad de consolidar hábitos lectores y el disfrute de la lectura de cuentos policiales. 2. Escribir textos de interacción social aplicando sus conocimientos sobre las redes sociales, el correo electrónico y el uso del lenguaje icónico-verbal, tomando en cuenta la corrección ortográfica, la coherencia y la cohesión textual y aplicando los criterios de rigor para la selección y organización de la información, a fin de consolidar las habilidades para comprender la intención comunicativa de los textos.",
+    "objetivos": [
+     "Leer y analizar textos narrativos del género policíaco, interpretando sus características, estilo, contenido y tipos de personajes, con la finalidad de consolidar hábitos lectores y el disfrute de la lectura de cuentos policiales.",
+     "Escribir textos de interacción social aplicando sus conocimientos sobre las redes sociales, el correo electrónico y el uso del lenguaje icónico-verbal, tomando en cuenta la corrección ortográfica, la coherencia y la cohesión textual y aplicando los criterios de rigor para la selección y organización de la información, a fin de consolidar las habilidades para comprender la intención comunicativa de los textos."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -5334,7 +5559,10 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "El teatro griego",
-    "objetivo": "1. Analizar textos dramáticos, sus características y los elementos representativos de la tragedia griega, a partir de la interpretación de situaciones comunicativas y la valoración del uso de figuras retóricas, con el propósito de desarrollar la comprensión de textos literarios y de recursos estéticos para enriquecer la expresión oral y escrita. 2. Distinguir las características, los elementos y el propósito de los textos publicitarios, interpretando su cont enido, tomando consciencia de las normas ortográficas, de redacción y de comunicación, a fin de fortalec er la comprensión de textos del entorno en situaciones comunicativas reales.",
+    "objetivos": [
+     "Analizar textos dramáticos, sus características y los elementos representativos de la tragedia griega, a partir de la interpretación de situaciones comunicativas y la valoración del uso de figuras retóricas, con el propósito de desarrollar la comprensión de textos literarios y de recursos estéticos para enriquecer la expresión oral y escrita.",
+     "Distinguir las características, los elementos y el propósito de los textos publicitarios, interpretando su cont enido, tomando consciencia de las normas ortográficas, de redacción y de comunicación, a fin de fortalec er la comprensión de textos del entorno en situaciones comunicativas reales."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -5385,7 +5613,11 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "La novela policial",
-    "objetivo": "1. Participar en situaciones comunicativas, adecuando su expresión y el registro al contexto (formal o informal) y negociando el significado de los discursos orales, con el propósito de consolidar sus habilidades de comunicación, con seguridad y respeto hacia las opiniones de los demás. 2. Comprender textos narrativos del género policial, diferenciando la novela policial a partir de su definición, características y contexto e interpretando fragmentos, con la finalidad de lograr el disfrute de los textos literarios y el hábito de la lectura. 3. Escribir textos ensayísticos en los que utilice los conectores discursivos de opinión, con el propósito de consolidar habilidades comunicativas.",
+    "objetivos": [
+     "Participar en situaciones comunicativas, adecuando su expresión y el registro al contexto (formal o informal) y negociando el significado de los discursos orales, con el propósito de consolidar sus habilidades de comunicación, con seguridad y respeto hacia las opiniones de los demás.",
+     "Comprender textos narrativos del género policial, diferenciando la novela policial a partir de su definición, características y contexto e interpretando fragmentos, con la finalidad de lograr el disfrute de los textos literarios y el hábito de la lectura.",
+     "Escribir textos ensayísticos en los que utilice los conectores discursivos de opinión, con el propósito de consolidar habilidades comunicativas."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -5436,7 +5668,11 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "El teatro romántico",
-    "objetivo": "1. Comprender y analizar textos dramáticos del Romanticismo, identificando el contexto, las características, los representantes y sus obras, distinguiendo el efecto estético causado por las figuras literarias, a fin de expresar sus sentimientos y emociones, teniendo en cuenta la intención comunicativa de los textos. 2. Analizar y producir artículos científicos, tomando en cuenta su estructura textual y características, a fin de consolidar las habilidades comunicativas mediante argumentos que sustenten los temas en discusión, mostrando criticidad en la información. 3. Participar en conferencias o discursos orales mediante conferencias o paneles, tomando en cuenta las características de esta modalidad, con la finalidad de interpretar eficientemente el contenido y la forma del discurso.",
+    "objetivos": [
+     "Comprender y analizar textos dramáticos del Romanticismo, identificando el contexto, las características, los representantes y sus obras, distinguiendo el efecto estético causado por las figuras literarias, a fin de expresar sus sentimientos y emociones, teniendo en cuenta la intención comunicativa de los textos.",
+     "Analizar y producir artículos científicos, tomando en cuenta su estructura textual y características, a fin de consolidar las habilidades comunicativas mediante argumentos que sustenten los temas en discusión, mostrando criticidad en la información.",
+     "Participar en conferencias o discursos orales mediante conferencias o paneles, tomando en cuenta las características de esta modalidad, con la finalidad de interpretar eficientemente el contenido y la forma del discurso."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -5483,7 +5719,10 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "La novela negra",
-    "objetivo": "1. Analizar e interpretar obras narrativas a partir de la estructura, el contenido y las situaciones comunicativas que las integran, con énfasis en la novela negra, sus características y demás elementos representativos que la diferencian de otros textos narrativos. 2. Interactuar en discursos orales negociando el significado y comprendiendo el uso de textos no literarios: la entrevista y la carta de solicitud de empleo, como herramientas para la comunicación humana y aplicando adecuadamente las normas ortográficas, gramaticales y de redacción.",
+    "objetivos": [
+     "Analizar e interpretar obras narrativas a partir de la estructura, el contenido y las situaciones comunicativas que las integran, con énfasis en la novela negra, sus características y demás elementos representativos que la diferencian de otros textos narrativos.",
+     "Interactuar en discursos orales negociando el significado y comprendiendo el uso de textos no literarios: la entrevista y la carta de solicitud de empleo, como herramientas para la comunicación humana y aplicando adecuadamente las normas ortográficas, gramaticales y de redacción."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -5526,7 +5765,11 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "El teatro existencialista",
-    "objetivo": "1. Leer y comprender obras dramáticas del existencialismo, identificando sus características y los principales autores y sus obras, a fin de conocer el efecto estético causado por la expresión de sentimientos y emociones en la intención comunicativa de estos textos. 2. Analizar morfosintácticamente oraciones simples en textos literarios o no literarios, identificado sus categorías y funciones, a fin de conocer distintas formas de enunciación según la intención comunicativa para expresar ideas de forma oral y escrita adecuadamente. 3. Elaborar textos de investigación, formulando argumentaciones de acuerdo con los temas propuestos y autocorrigiéndose con responsabilidad, con el propósito de desarrollar y consolidar sus habilidades para la comunicación.",
+    "objetivos": [
+     "Leer y comprender obras dramáticas del existencialismo, identificando sus características y los principales autores y sus obras, a fin de conocer el efecto estético causado por la expresión de sentimientos y emociones en la intención comunicativa de estos textos.",
+     "Analizar morfosintácticamente oraciones simples en textos literarios o no literarios, identificado sus categorías y funciones, a fin de conocer distintas formas de enunciación según la intención comunicativa para expresar ideas de forma oral y escrita adecuadamente.",
+     "Elaborar textos de investigación, formulando argumentaciones de acuerdo con los temas propuestos y autocorrigiéndose con responsabilidad, con el propósito de desarrollar y consolidar sus habilidades para la comunicación."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -5577,7 +5820,11 @@ window.CURRICULO = {
    {
     "unidad": 7,
     "nombre": "La poesía contemporánea",
-    "objetivo": "1. Interpretar obras poéticas de la época contemporánea, identificando sus características, elementos, autores y obras, a fin de escribir un texto poético en el que se utilicen diversos recursos literarios. 2. Organizar y participar en declamaciones de poemas, respetando los principios y las normas implícitas del lenguaje verbal y no verbal, con el fin de mejorar la expresión oral. 3. Analizar el contenido y la función de los editoriales, considerando su estructura, características y contenidos, a fin de desarrollar el pensamiento crítico.",
+    "objetivos": [
+     "Interpretar obras poéticas de la época contemporánea, identificando sus características, elementos, autores y obras, a fin de escribir un texto poético en el que se utilicen diversos recursos literarios.",
+     "Organizar y participar en declamaciones de poemas, respetando los principios y las normas implícitas del lenguaje verbal y no verbal, con el fin de mejorar la expresión oral.",
+     "Analizar el contenido y la función de los editoriales, considerando su estructura, características y contenidos, a fin de desarrollar el pensamiento crítico."
+    ],
     "indicadores": [
      {
       "codigo": "7.1",
@@ -5628,7 +5875,11 @@ window.CURRICULO = {
    {
     "unidad": 8,
     "nombre": "El teatro realista",
-    "objetivo": "1. Participar en técnicas de actuación, como el sociodrama, identificando y clasificando las variables que afectan la puesta en escena con el fin de lograr una representación clara y efectiva, mostrando seguridad en sí mismo y respeto hacia las participaciones de otros. 2. Leer textos dramáticos del movimiento realista atendiendo a sus características, estilo, contenido y tipos de personajes, con la finalidad de consolidar hábitos lectores y fomentar la valoración y el disfrute de la lectura del teatro realista. 3. Escribir textos jurídicos aplicando conocimientos de su estructura, características y función, así como de elementos cohesivos, a fin de consolidar habilidades para expresar ideas de forma clara y concisa y comprender su intención comunicativa.",
+    "objetivos": [
+     "Participar en técnicas de actuación, como el sociodrama, identificando y clasificando las variables que afectan la puesta en escena con el fin de lograr una representación clara y efectiva, mostrando seguridad en sí mismo y respeto hacia las participaciones de otros.",
+     "Leer textos dramáticos del movimiento realista atendiendo a sus características, estilo, contenido y tipos de personajes, con la finalidad de consolidar hábitos lectores y fomentar la valoración y el disfrute de la lectura del teatro realista.",
+     "Escribir textos jurídicos aplicando conocimientos de su estructura, características y función, así como de elementos cohesivos, a fin de consolidar habilidades para expresar ideas de forma clara y concisa y comprender su intención comunicativa."
+    ],
     "indicadores": [
      {
       "codigo": "8.1",
@@ -5681,7 +5932,12 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Literatura griega",
-    "objetivo": null,
+    "objetivos": [
+     "Participar en interacciones orales, aplicando estrategias de comprensión y negociación del significado, con el fin de fortalecer sus habilidades de comunicación.",
+     "Interpretar epopeyas y comedias representativas de la literatura del clasicismo grecolatino, identificando los valores épicos implícitos, mediante el reconocimiento de las características y los valores épicos presentes en las muestras, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Analizar y escribir diferentes textos de comunicación masiva o de interacción social, identificando sus características, finalidad y estructura, sistematizando la información en fichas de resumen y haciendo uso correcto de las palabras homónimas, homófonas y parónimas, las abreviaturas, las siglas y los acrónimos, a fin de desarrollar habilidades para analizar críticamente y producir textos de diversa clase.",
+     "Producir textos de comunicación masiva o interacción social, utilizando frases, líneas, texturas, colores, formas y tamaños para elaborar imágenes que transmitan mensajes específicos, a fin de comprender que la expresión artística se relaciona con la vida social de un país y desarrollar un juicio crítico para valorar las producciones artísticas propias y ajenas."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -5732,7 +5988,12 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Literatura medieval",
-    "objetivo": "1. Escuchar textos orales mediante la práctica de una serie de estrategias y tomar apuntes del discurso con el fin de desarrollar habilidades relacionadas con la construcción de significados en la comunicación oral. 2. Interpretar obras de la literatura universal de la época medieval, valorándolas oralmente y por escrito, según criterios de literariedad y de comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos y producir escritos de cualquier tipo, respetando las propiedades de coherencia, cohesión, adecuación y corrección. 3. Escribir y corregir textos literarios y no literarios atendiendo las reglas de uso de la sílaba tónica y átona: diptongos, triptongos e hiatos, a fin de alcanzar la corrección en la producción textual. 4. Elaborar informes académicos basados en un plan de investigación y organizando la información con el apoyo de cuadros sinópticos y de red, a fin de alcanzar el dominio de la producción de este tipo de textos.",
+    "objetivos": [
+     "Escuchar textos orales mediante la práctica de una serie de estrategias y tomar apuntes del discurso con el fin de desarrollar habilidades relacionadas con la construcción de significados en la comunicación oral.",
+     "Interpretar obras de la literatura universal de la época medieval, valorándolas oralmente y por escrito, según criterios de literariedad y de comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos y producir escritos de cualquier tipo, respetando las propiedades de coherencia, cohesión, adecuación y corrección.",
+     "Escribir y corregir textos literarios y no literarios atendiendo las reglas de uso de la sílaba tónica y átona: diptongos, triptongos e hiatos, a fin de alcanzar la corrección en la producción textual.",
+     "Elaborar informes académicos basados en un plan de investigación y organizando la información con el apoyo de cuadros sinópticos y de red, a fin de alcanzar el dominio de la producción de este tipo de textos."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -5779,7 +6040,13 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Literatura barroca",
-    "objetivo": null,
+    "objetivos": [
+     "Hablar en conferencias y exposiciones practicando el Decálogo del hablante perfecto, con el fin de desarrollar habilidades relacionadas con la construcción de significados explícitos e implícitos en la comunicación del hablante.",
+     "Interpretar obras literarias del barroco español, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Reconocer el blog, Twitter, Facebook, YouTube y el chat, analizando sus características, finalidad, y las formas de interacción de los usuarios en cada red social a fin de mejorar la participación en estos medios.",
+     "Corregir el uso de los signos de puntuación y aplicar las normas de coherencia en la creación de textos, a fin de producir escritos de cualquier tipo, respetando las propiedades de la escritura.",
+     "Elaborar e interpretar organizadores gráficos de la información, partiendo de textos informativos y datos recolectados, para desarrollar habilidades de análisis crítico de la información y el uso de textos discontinuos."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -5838,7 +6105,11 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Literatura del manierismo",
-    "objetivo": "1. Elaborar diferentes textos orales y escritos relacionados con la oratoria, para acomodarlos a una situación de comunicación definida con anterioridad, cuidando las estructuras de cada uno, su registro particular, los elementos de cohesión necesarios, el desarrollo coherente de las ideas y la corrección gramatical. 2. Interpretar obras de la literatura universal propias del Manierismo, valorándolas oralmente y por escrito, según criterios de literariedad y de comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos y producir escritos de cualquier tipo, respetando las propiedades de coherencia, cohesión, adecuación y corrección. 3. Investigar diferentes temas aplicando criterios de selección de fuentes y las normas para referenciarlas, apoyándose en el diario de campo y la bitácora como herramientas para sistematizar la información, a fin de fortalecer las habilidades para el uso de la lengua escrita en este tipo de textos.",
+    "objetivos": [
+     "Elaborar diferentes textos orales y escritos relacionados con la oratoria, para acomodarlos a una situación de comunicación definida con anterioridad, cuidando las estructuras de cada uno, su registro particular, los elementos de cohesión necesarios, el desarrollo coherente de las ideas y la corrección gramatical.",
+     "Interpretar obras de la literatura universal propias del Manierismo, valorándolas oralmente y por escrito, según criterios de literariedad y de comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos y producir escritos de cualquier tipo, respetando las propiedades de coherencia, cohesión, adecuación y corrección.",
+     "Investigar diferentes temas aplicando criterios de selección de fuentes y las normas para referenciarlas, apoyándose en el diario de campo y la bitácora como herramientas para sistematizar la información, a fin de fortalecer las habilidades para el uso de la lengua escrita en este tipo de textos."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -5889,7 +6160,11 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Literatura del Romanticismo",
-    "objetivo": "1. Planificar exposiciones orales sobre temas investigados previamente, con el fin de desarrollar habilidades relacionadas con la construcción de significados explícitos e implícitos en la comunicación del hablante e interpretar adecuadamente este tipo de discursos. 2. Interpretar obras de la literatura universal propias del Romanticismo, valorándolas oralmente y por escrito, según criterios de literariedad y de comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos y producir escritos de cualquier tipo, respetando las propiedades de coherencia, cohesión, adecuación y corrección. 3. Elaborar y analizar textos argumentativos en los que se utilizan argumentos de autoridad, tesis y contraargumentos, con el fin de fundamentar eficientemente los mensajes en cualquier situación de comunicación.",
+    "objetivos": [
+     "Planificar exposiciones orales sobre temas investigados previamente, con el fin de desarrollar habilidades relacionadas con la construcción de significados explícitos e implícitos en la comunicación del hablante e interpretar adecuadamente este tipo de discursos.",
+     "Interpretar obras de la literatura universal propias del Romanticismo, valorándolas oralmente y por escrito, según criterios de literariedad y de comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos y producir escritos de cualquier tipo, respetando las propiedades de coherencia, cohesión, adecuación y corrección.",
+     "Elaborar y analizar textos argumentativos en los que se utilizan argumentos de autoridad, tesis y contraargumentos, con el fin de fundamentar eficientemente los mensajes en cualquier situación de comunicación."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -5932,7 +6207,11 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Literatura del realismo",
-    "objetivo": "1. Participar en situaciones comunicativas orales identificando la intención comunicativa de los hablantes mediante la interpretación de los actos del habla, a fin de fortalecer las habilidades de comunicación oral. 2. Interpretar obras de la literatura universal propias del realismo, valorándolas oralmente y por escrito, según criterios de literariedad y de comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos. 3. Producir instrumentos de recolección de información reconociendo sus partes y elementos, atendiendo al uso de sino, si no; porque, porqué, por qué, por que como recursos de cohesión para fortalecer las habilidades en el uso de la lengua escrita en este tipo de textos.",
+    "objetivos": [
+     "Participar en situaciones comunicativas orales identificando la intención comunicativa de los hablantes mediante la interpretación de los actos del habla, a fin de fortalecer las habilidades de comunicación oral.",
+     "Interpretar obras de la literatura universal propias del realismo, valorándolas oralmente y por escrito, según criterios de literariedad y de comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Producir instrumentos de recolección de información reconociendo sus partes y elementos, atendiendo al uso de sino, si no; porque, porqué, por qué, por que como recursos de cohesión para fortalecer las habilidades en el uso de la lengua escrita en este tipo de textos."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -5987,7 +6266,11 @@ window.CURRICULO = {
    {
     "unidad": 7,
     "nombre": "Literatura del siglo XX",
-    "objetivo": "1. Participar en tertulias literarias atendiendo la estructura y estilo del discurso, a fin de fortalecer las habilidades de comunicación oral. 2. Interpretar obras de la literatura universal pertenecientes al siglo XX, valorándolas oralmente y por escrito, según criterios de literariedad y comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos. 3. Elaborar artículos de divulgación científica, resultado de rigurosos procesos de investigación, atendiendo a su estructura y divulgándolos con el apoyo de diapositivas, con el fin de fundamentar eficientemente los mensajes en cualquier situación de comunicación y atendiendo a las normas de escritura de las palabras haciendo uso correcto de a, ha, a ver y haber.",
+    "objetivos": [
+     "Participar en tertulias literarias atendiendo la estructura y estilo del discurso, a fin de fortalecer las habilidades de comunicación oral.",
+     "Interpretar obras de la literatura universal pertenecientes al siglo XX, valorándolas oralmente y por escrito, según criterios de literariedad y comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Elaborar artículos de divulgación científica, resultado de rigurosos procesos de investigación, atendiendo a su estructura y divulgándolos con el apoyo de diapositivas, con el fin de fundamentar eficientemente los mensajes en cualquier situación de comunicación y atendiendo a las normas de escritura de las palabras haciendo uso correcto de a, ha, a ver y haber."
+    ],
     "indicadores": [
      {
       "codigo": "7.1",
@@ -6038,7 +6321,11 @@ window.CURRICULO = {
    {
     "unidad": 8,
     "nombre": "Literatura latinoamericana",
-    "objetivo": "1. Participar en mesas redondas atendiendo a la estructura y estilo del discurso, y apoyando sus comentarios en fichas previamente elaboradas, a fin de fortalecer las habilidades de comunicación oral. 2. Interpretar obras de la literatura latinoamericana pertenecientes al siglo XX, valorándolas oralmente y por escrito, según criterios de literariedad y comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos y producir escritos de cualquier tipo. 3. Elaborar materiales para exposición, atendiendo a la estructura y características particulares de cada uno, con el fin de fundamentar eficientemente los mensajes en cualquier situación de comunicación.",
+    "objetivos": [
+     "Participar en mesas redondas atendiendo a la estructura y estilo del discurso, y apoyando sus comentarios en fichas previamente elaboradas, a fin de fortalecer las habilidades de comunicación oral.",
+     "Interpretar obras de la literatura latinoamericana pertenecientes al siglo XX, valorándolas oralmente y por escrito, según criterios de literariedad y comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos y producir escritos de cualquier tipo.",
+     "Elaborar materiales para exposición, atendiendo a la estructura y características particulares de cada uno, con el fin de fundamentar eficientemente los mensajes en cualquier situación de comunicación."
+    ],
     "indicadores": [
      {
       "codigo": "8.1",
@@ -6091,7 +6378,11 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Literatura precolombina",
-    "objetivo": "1. Participar en situaciones comunicativas orales, organizando el discurso y gestionando el tiempo en sus participaciones, con el fin de fortalecer sus habilidades de comunicación. 2. Interpretar obras literarias del período precolombino, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos. 3. Comprender y producir diferentes tipos de textos literarios y no literarios, como los reportes administrativos, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección a fin de fortalecer su dominio de la lengua escrita.",
+    "objetivos": [
+     "Participar en situaciones comunicativas orales, organizando el discurso y gestionando el tiempo en sus participaciones, con el fin de fortalecer sus habilidades de comunicación.",
+     "Interpretar obras literarias del período precolombino, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios, como los reportes administrativos, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección a fin de fortalecer su dominio de la lengua escrita."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -6138,7 +6429,11 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Literatura colonial",
-    "objetivo": "1. Participar en situaciones comunicativas orales, desarrollando mecanismos de adecuación del ritmo del discurso y la prosodia, con el fin de fortalecer sus habilidades de comunicación frente al público. 2. Interpretar obras literarias representativas del Barroco en América, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos. 3. Comprender y producir diferentes tipos de textos literarios y no literarios como los comentarios de texto, publicidad radiofónica y textos explicativos, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección a fin de fortalecer su dominio de la lengua escrita.",
+    "objetivos": [
+     "Participar en situaciones comunicativas orales, desarrollando mecanismos de adecuación del ritmo del discurso y la prosodia, con el fin de fortalecer sus habilidades de comunicación frente al público.",
+     "Interpretar obras literarias representativas del Barroco en América, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios como los comentarios de texto, publicidad radiofónica y textos explicativos, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección a fin de fortalecer su dominio de la lengua escrita."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -6189,7 +6484,11 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Literatura salvadoreña I",
-    "objetivo": "1. Participar en interacciones orales atendiendo a la planificación, los aspectos no verbales, la conducción del discurso, la producción y negociación del significado, con el fin de fortalecer sus habilidades de comunicación. 2. Interpretar obras literarias salvadoreñas, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos. 3. Comprender y producir diferentes tipos de textos literarios y no literarios en diferentes formatos, como diagramas de Venn, encuestas y formularios, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección, a fin de fortalecer su dominio de la lengua escrita en papel y en soportes tecnológicos.",
+    "objetivos": [
+     "Participar en interacciones orales atendiendo a la planificación, los aspectos no verbales, la conducción del discurso, la producción y negociación del significado, con el fin de fortalecer sus habilidades de comunicación.",
+     "Interpretar obras literarias salvadoreñas, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios en diferentes formatos, como diagramas de Venn, encuestas y formularios, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección, a fin de fortalecer su dominio de la lengua escrita en papel y en soportes tecnológicos."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -6232,7 +6531,11 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Literatura salvadoreña II",
-    "objetivo": "1. Participar en representaciones de entrevistas laborales atendiendo a la planificación, los aspectos no verbales, la conducción del discurso, la producción y negociación del significado, con el fin de fortalecer sus habilidades de comunicación. 2. Interpretar obras literarias salvadoreñas propias de la época de la posguerra hasta la actualidad, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos. 3. Comprender y producir diferentes tipos de textos literarios y no literarios, como guiones de entrevista o correspondencia electrónica en diferentes formatos, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección, a fin de fortalecer su dominio de la lengua escrita en papel y en soportes tecnológicos.",
+    "objetivos": [
+     "Participar en representaciones de entrevistas laborales atendiendo a la planificación, los aspectos no verbales, la conducción del discurso, la producción y negociación del significado, con el fin de fortalecer sus habilidades de comunicación.",
+     "Interpretar obras literarias salvadoreñas propias de la época de la posguerra hasta la actualidad, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios, como guiones de entrevista o correspondencia electrónica en diferentes formatos, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección, a fin de fortalecer su dominio de la lengua escrita en papel y en soportes tecnológicos."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -6275,7 +6578,11 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Romanticismo y modernismo en América",
-    "objetivo": "1. Participar en ponencias orales, apoyándose en un borrador previamente elaborado, atendiendo a sus características y finalidad, para fortalecer sus habilidades de comunicación frente al público. 2. Interpretar obras literarias representativas del Romanticismo y el modernismo en América, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos. 3. Comprender y producir diferentes tipos de textos literarios y no literarios, como ensayos académicos y textos argumentativos, publicitarios y propagandísticos, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección, a fin de fortalecer su dominio de la lengua escrita.",
+    "objetivos": [
+     "Participar en ponencias orales, apoyándose en un borrador previamente elaborado, atendiendo a sus características y finalidad, para fortalecer sus habilidades de comunicación frente al público.",
+     "Interpretar obras literarias representativas del Romanticismo y el modernismo en América, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios, como ensayos académicos y textos argumentativos, publicitarios y propagandísticos, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección, a fin de fortalecer su dominio de la lengua escrita."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -6330,7 +6637,11 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "El realismo en América",
-    "objetivo": "1. Participar en debates sobre temas de interés, atendiendo a su estructura, elementos e intención comunicativa, para fortalecer sus habilidades de comunicación frente al público. 2. Interpretar obras literarias representativas del realismo regionalista, crítico y social en América, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos. 3. Comprender y producir diferentes tipos de textos literarios y no literarios como reseñas críticas, reportajes periodísticos y ensayos académicos, atendiendo a sus características, respetando las propiedades de coherencia, cohesión, adecuación y corrección, a fin de fortalecer su dominio de la lengua escrita.",
+    "objetivos": [
+     "Participar en debates sobre temas de interés, atendiendo a su estructura, elementos e intención comunicativa, para fortalecer sus habilidades de comunicación frente al público.",
+     "Interpretar obras literarias representativas del realismo regionalista, crítico y social en América, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios como reseñas críticas, reportajes periodísticos y ensayos académicos, atendiendo a sus características, respetando las propiedades de coherencia, cohesión, adecuación y corrección, a fin de fortalecer su dominio de la lengua escrita."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -6377,7 +6688,11 @@ window.CURRICULO = {
    {
     "unidad": 7,
     "nombre": "El boom latinoamericano",
-    "objetivo": "1. Participar en la expresión de discursos persuasivos, atendiendo a su estructura, elementos e intención comunicativa, al promocionar un producto o solicitar una beca o empleo, con el fin de fortalecer sus habilidades de comunicación frente al público. 2. Interpretar obras literarias representativas del realismo mágico en Latinoamérica, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos. 3. Comprender y producir diferentes tipos de textos literarios y no literarios como: cartas de motivación, llenado de formularios, curriculum vitae y organigramas, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección, a fin de fortalecer su dominio de la lengua escrita.",
+    "objetivos": [
+     "Participar en la expresión de discursos persuasivos, atendiendo a su estructura, elementos e intención comunicativa, al promocionar un producto o solicitar una beca o empleo, con el fin de fortalecer sus habilidades de comunicación frente al público.",
+     "Interpretar obras literarias representativas del realismo mágico en Latinoamérica, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios como: cartas de motivación, llenado de formularios, curriculum vitae y organigramas, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección, a fin de fortalecer su dominio de la lengua escrita."
+    ],
     "indicadores": [
      {
       "codigo": "7.1",
@@ -6428,7 +6743,11 @@ window.CURRICULO = {
    {
     "unidad": 8,
     "nombre": "La vanguardia en Latinoamérica",
-    "objetivo": "1. Participar en el análisis crítico del discurso cotidiano, atendiendo a su estructura, elementos e intención comunicativa para fortalecer sus habilidades de comunicación. 2. Interpretar obras literarias representativas de la literatura de vanguardia en Latinoamérica, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos. 3. Comprender y producir diferentes tipos de textos literarios y no literarios, como editoriales, y comentarios críticos de noticias, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección a fin de fortalecer su dominio de la lengua escrita.",
+    "objetivos": [
+     "Participar en el análisis crítico del discurso cotidiano, atendiendo a su estructura, elementos e intención comunicativa para fortalecer sus habilidades de comunicación.",
+     "Interpretar obras literarias representativas de la literatura de vanguardia en Latinoamérica, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios, como editoriales, y comentarios críticos de noticias, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección a fin de fortalecer su dominio de la lengua escrita."
+    ],
     "indicadores": [
      {
       "codigo": "8.1",
@@ -6471,7 +6790,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Recursos naturales y desafíos globales",
-    "objetivo": "Interpretar las consecuencias sociales y ambientales que resultan de la administración de los recursos en las distintas regiones y territorios.",
+    "objetivos": [
+     "Interpretar las consecuencias sociales y ambientales que resultan de la administración de los recursos en las distintas regiones y territorios."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -6494,7 +6815,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Dinámicas poblacionales en el siglo XXI",
-    "objetivo": "Identificar las dinámicas de crecimiento poblacional del mundo con el propósito de tener una visión integral de la geografía humana.",
+    "objetivos": [
+     "Identificar las dinámicas de crecimiento poblacional del mundo con el propósito de tener una visión integral de la geografía humana."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -6517,7 +6840,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Edades, ideas e industrialización",
-    "objetivo": "Caracterizar los diferentes períodos históricos en que se divide la historia mundial mediante la interpretación de fuentes primarias y secundarias.",
+    "objetivos": [
+     "Caracterizar los diferentes períodos históricos en que se divide la historia mundial mediante la interpretación de fuentes primarias y secundarias."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -6540,7 +6865,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Independencias, revoluciones y luchas",
-    "objetivo": "Analizar las causas, consecuencias, continuidades y rupturas de las revoluciones atlánticas a través de la interpretación de fuentes primarias y secundarias.",
+    "objetivos": [
+     "Analizar las causas, consecuencias, continuidades y rupturas de las revoluciones atlánticas a través de la interpretación de fuentes primarias y secundarias."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -6563,7 +6890,9 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Interculturalidad y derechos humanos",
-    "objetivo": "Reconocer la importancia de la interculturalidad y los derechos humanos en contextos globales con el propósito de fomentar una ciudadanía integral y responsable.",
+    "objetivos": [
+     "Reconocer la importancia de la interculturalidad y los derechos humanos en contextos globales con el propósito de fomentar una ciudadanía integral y responsable."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -6586,7 +6915,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Participación ciudadana en los espacios públicos",
-    "objetivo": "Analizar los componentes que debe desarrollar una ciudadanía integral por medio de la ciberseguridad, la sostenibilidad, la gestión de riesgos y la cultura fiscal.",
+    "objetivos": [
+     "Analizar los componentes que debe desarrollar una ciudadanía integral por medio de la ciberseguridad, la sostenibilidad, la gestión de riesgos y la cultura fiscal."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -6611,7 +6942,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Territorios, Estados y dinámicas ambientales",
-    "objetivo": "Analizar el rol de los Estados en el contexto de la administración y organización política, económica, social y cultural entre territorios, en la gobernanza local y nacional.",
+    "objetivos": [
+     "Analizar el rol de los Estados en el contexto de la administración y organización política, económica, social y cultural entre territorios, en la gobernanza local y nacional."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -6634,7 +6967,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Retos ambientales, alimenticios y de",
-    "objetivo": "Analizar el impacto ambiental causado por el extractivismo a partir de la identificación de las dinámicas de crecimiento poblacional y los procesos de urbanización mundial.",
+    "objetivos": [
+     "Analizar el impacto ambiental causado por el extractivismo a partir de la identificación de las dinámicas de crecimiento poblacional y los procesos de urbanización mundial."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -6661,7 +6996,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Transformaciones políticas, económicas y",
-    "objetivo": "Interpretar las transformaciones políticas, económicas y culturales en los siglos xix y xx; con el propósito de identificar procesos, dinámicas, cambios y continuidades a través del uso de fuentes históricas.",
+    "objetivos": [
+     "Interpretar las transformaciones políticas, económicas y culturales en los siglos xix y xx; con el propósito de identificar procesos, dinámicas, cambios y continuidades a través del uso de fuentes históricas."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -6684,7 +7021,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Período entre guerras y el Holocausto",
-    "objetivo": "Analizar las causas, consecuencias, experiencias y diferentes perspectivas frente al nazismo en Europa antes de la Segunda Guerra Mundial, con la finalidad de fomentar habilidades de pensamiento histórico.",
+    "objetivos": [
+     "Analizar las causas, consecuencias, experiencias y diferentes perspectivas frente al nazismo en Europa antes de la Segunda Guerra Mundial, con la finalidad de fomentar habilidades de pensamiento histórico."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -6711,7 +7050,9 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Convivencia intercultural y derechos humanos",
-    "objetivo": "Participar en espacios de convivencia intercultural con el propósito de fomentar el respeto al pluralismo cultural y el cumplimiento de los derechos humanos.",
+    "objetivos": [
+     "Participar en espacios de convivencia intercultural con el propósito de fomentar el respeto al pluralismo cultural y el cumplimiento de los derechos humanos."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -6738,7 +7079,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Ciudadanía digital y ambiental para el",
-    "objetivo": "Proponer acciones de compromiso ambiental y uso responsable de las nuevas tecnologías; para el ejercicio de la ciudadanía digital y ambiental.",
+    "objetivos": [
+     "Proponer acciones de compromiso ambiental y uso responsable de las nuevas tecnologías; para el ejercicio de la ciudadanía digital y ambiental."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -6763,7 +7106,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Tierra, recursos hídricos y seguridad alimentaria",
-    "objetivo": "Valorar el rol de los Estados y otros actores, en la preservación y sostenibilidad de los recursos naturales rumbo a una gobernanza efectiva.",
+    "objetivos": [
+     "Valorar el rol de los Estados y otros actores, en la preservación y sostenibilidad de los recursos naturales rumbo a una gobernanza efectiva."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -6786,7 +7131,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Dinámicas poblacionales",
-    "objetivo": "Identificar factores demográficos que inciden en las condiciones de vida de las poblaciones, destacando poblaciones vulnerables.",
+    "objetivos": [
+     "Identificar factores demográficos que inciden en las condiciones de vida de las poblaciones, destacando poblaciones vulnerables."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -6813,7 +7160,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "La Segunda Guerra Mundial y la Guerra Fría",
-    "objetivo": "Analizar la Segunda Guerra Mundial y la Guerra Fría considerando diferentes perspectivas de los bloques en conflicto a través de diferentes fuentes históricas.",
+    "objetivos": [
+     "Analizar la Segunda Guerra Mundial y la Guerra Fría considerando diferentes perspectivas de los bloques en conflicto a través de diferentes fuentes históricas."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -6840,7 +7189,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Cambios y permanencias en el siglo y",
-    "objetivo": "Comparar cambios y permanencias en diferentes periodos históricos con el fin de comprender la relación entre pasado, presente y futuro, a partir de la interpretación de fuentes históricas.",
+    "objetivos": [
+     "Comparar cambios y permanencias en diferentes periodos históricos con el fin de comprender la relación entre pasado, presente y futuro, a partir de la interpretación de fuentes históricas."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -6863,7 +7214,9 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "La interculturalidad, derechos humanos",
-    "objetivo": "Analizar la importancia de la interculturalidad en los procesos económicos, sociales y culturales con el propósito de fortalecer la agencia ciudadana global.",
+    "objetivos": [
+     "Analizar la importancia de la interculturalidad en los procesos económicos, sociales y culturales con el propósito de fortalecer la agencia ciudadana global."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -6886,7 +7239,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Ciudadanía digital, medioambiente y sostenibilidad",
-    "objetivo": "Analizar la ciudadanía digital considerando los diferentes mecanismos y espacios de participación haciendo uso de las nuevas tecnologías con el propósito de desarrollar habilidades comunicativas y de empatía.",
+    "objetivos": [
+     "Analizar la ciudadanía digital considerando los diferentes mecanismos y espacios de participación haciendo uso de las nuevas tecnologías con el propósito de desarrollar habilidades comunicativas y de empatía."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -6911,7 +7266,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "El territorio salvadoreño: oportunidades y",
-    "objetivo": "unidad Comprender la organización territorial de El Salvador, reconociendo la interrelación entre sus diferentes dimensiones y proponiendo soluciones sostenibles para los desafíos actuales.",
+    "objetivos": [
+     "unidad Comprender la organización territorial de El Salvador, reconociendo la interrelación entre sus diferentes dimensiones y proponiendo soluciones sostenibles para los desafíos actuales."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -6930,7 +7287,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Recursos naturales y gobernanza ambiental",
-    "objetivo": "Analizar las problemáticas ambientales que afectan la disponibilidad y calidad de recursos esenciales, relacionándolas con sus consecuencias para la población salvadoreña.",
+    "objetivos": [
+     "Analizar las problemáticas ambientales que afectan la disponibilidad y calidad de recursos esenciales, relacionándolas con sus consecuencias para la población salvadoreña."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -6949,7 +7308,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "El proceso de independencia y la República",
-    "objetivo": "Comprender los procesos vinculados a la independencia, la anexión a México y la República Federal considerando cambios y continuidades en aspectos políticos, económicos y sociales, a través de la interpretación de fuentes primarias y secundarias.",
+    "objetivos": [
+     "Comprender los procesos vinculados a la independencia, la anexión a México y la República Federal considerando cambios y continuidades en aspectos políticos, económicos y sociales, a través de la interpretación de fuentes primarias y secundarias."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -6972,7 +7333,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "La conformación y consolidación del Estado de",
-    "objetivo": "Analizar la conformación y consolidación del Estado de El Salvador durante la segunda mitad del siglo XIX por medio de la interpretación de fuentes primarias y secundarias.",
+    "objetivos": [
+     "Analizar la conformación y consolidación del Estado de El Salvador durante la segunda mitad del siglo XIX por medio de la interpretación de fuentes primarias y secundarias."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -6991,7 +7354,9 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Sistema democrático y derechos humanos",
-    "objetivo": "Comprender la importancia de la democracia en la construcción de sociedades justas y participativas, así como la relevancia del cumplimiento de los derechos humanos para la dignidad humana.",
+    "objetivos": [
+     "Comprender la importancia de la democracia en la construcción de sociedades justas y participativas, así como la relevancia del cumplimiento de los derechos humanos para la dignidad humana."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -7010,7 +7375,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Participación ciudadana y realización personal",
-    "objetivo": "Participar activamente en los espacios de actuación ciudadana gestionando las emociones en diferentes situaciones y buscando la realización personal.",
+    "objetivos": [
+     "Participar activamente en los espacios de actuación ciudadana gestionando las emociones en diferentes situaciones y buscando la realización personal."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -7035,7 +7402,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Geografía económica de El Salvador",
-    "objetivo": "Caracterizar la situación económica de El Salvador, a partir de la interrelación entre los sectores productivos y la estructura macroeconómica, para evaluar sus efectos en la calidad de vida de la población.",
+    "objetivos": [
+     "Caracterizar la situación económica de El Salvador, a partir de la interrelación entre los sectores productivos y la estructura macroeconómica, para evaluar sus efectos en la calidad de vida de la población."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -7050,7 +7419,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Dinámicas poblacionales y Desarrollo",
-    "objetivo": "Comprender las condiciones de vida de la población salvadoreña mediante el análisis de los indicadores de desarrollo humano, las desigualdades sociales y el impacto de las políticas públicas.",
+    "objetivos": [
+     "Comprender las condiciones de vida de la población salvadoreña mediante el análisis de los indicadores de desarrollo humano, las desigualdades sociales y el impacto de las políticas públicas."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -7069,7 +7440,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "El Salvador a inicios del siglo XX",
-    "objetivo": "Analizar los procesos políticos y sociales a inicios del siglo XX, mediante fuentes primarias y secundarias.",
+    "objetivos": [
+     "Analizar los procesos políticos y sociales a inicios del siglo XX, mediante fuentes primarias y secundarias."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -7088,7 +7461,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "El Salvador a mediados del siglo XX",
-    "objetivo": "Evaluar los aspectos políticos, económicos y sociales a mediados del siglo XX, incorporando la interpretación de fuentes primarias y secundarias.",
+    "objetivos": [
+     "Evaluar los aspectos políticos, económicos y sociales a mediados del siglo XX, incorporando la interpretación de fuentes primarias y secundarias."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -7107,7 +7482,9 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Los derechos humanos: aportes y desafíos",
-    "objetivo": "Valorar el rol de los diferentes actores en el cumplimiento de los derechos humanos y en la consolidación de la democracia en El Salvador.",
+    "objetivos": [
+     "Valorar el rol de los diferentes actores en el cumplimiento de los derechos humanos y en la consolidación de la democracia en El Salvador."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -7130,7 +7507,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "La sociedad del conocimiento y espacios para",
-    "objetivo": "Promover las oportunidades de desarrollo de la juventud mediante la participación y el desarrollo de habilidades de la sociedad de la información para el cumplimiento del proyecto de vida.",
+    "objetivos": [
+     "Promover las oportunidades de desarrollo de la juventud mediante la participación y el desarrollo de habilidades de la sociedad de la información para el cumplimiento del proyecto de vida."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -7153,7 +7532,11 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Estilos de vida saludables y fundamentos del movimiento",
-    "objetivo": "1. Analiza y argumenta la importancia de la actividad física, la higiene, la alimentación y el descanso como componentes esenciales de un estilo de vida saludable, valorando su impacto en la prevención del sedentarismo y en su bienestar integral. 2. Reconoce y aplica pruebas simples para evaluar sus capacidades físicas básicas, interpretando sus resultados y comprendiendo su relación con la salud y la eficiencia en el movimiento en la vida diaria. 3. Ejecuta y adapta formas básicas de desplazamiento, salto y lanzamiento del atletismo, así como acciones fundamentales y reglas básicas del softbol, participando activamente en juegos y actividades recreativas, con respeto por las normas, el entorno y los compañeros.",
+    "objetivos": [
+     "Analiza y argumenta la importancia de la actividad física, la higiene, la alimentación y el descanso como componentes esenciales de un estilo de vida saludable, valorando su impacto en la prevención del sedentarismo y en su bienestar integral.",
+     "Reconoce y aplica pruebas simples para evaluar sus capacidades físicas básicas, interpretando sus resultados y comprendiendo su relación con la salud y la eficiencia en el movimiento en la vida diaria.",
+     "Ejecuta y adapta formas básicas de desplazamiento, salto y lanzamiento del atletismo, así como acciones fundamentales y reglas básicas del softbol, participando activamente en juegos y actividades recreativas, con respeto por las normas, el entorno y los compañeros."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -7176,7 +7559,11 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Iniciación deportiva y cooperación en el juego",
-    "objetivo": "1. Desarrolla y aplica las capacidades físicas de fuerza general y velocidad mediante ejercicios y juegos adaptados, reconociendo su utilidad en la vida cotidiana y en la mejora del rendimiento físico. 2. Comprende y aplica de forma básica reglas, técnicas y roles fundamentales en juegos modificados de balonmano y voleibol, demostrando actitud cooperativa y respeto a las normas. 3. Participa activamente en actividades físicas recreativas, cooperativas y deportivas, demostrando disposición para colaborar, resolver conflictos y promover la convivencia.",
+    "objetivos": [
+     "Desarrolla y aplica las capacidades físicas de fuerza general y velocidad mediante ejercicios y juegos adaptados, reconociendo su utilidad en la vida cotidiana y en la mejora del rendimiento físico.",
+     "Comprende y aplica de forma básica reglas, técnicas y roles fundamentales en juegos modificados de balonmano y voleibol, demostrando actitud cooperativa y respeto a las normas.",
+     "Participa activamente en actividades físicas recreativas, cooperativas y deportivas, demostrando disposición para colaborar, resolver conflictos y promover la convivencia."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -7203,7 +7590,11 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Habilidades motrices y fundamentos estratégicos en el juego",
-    "objetivo": "1. Aplica ejercicios de flexibilidad y actividades físicas de baja y moderada intensidad como parte de su preparación física, reconociendo sus beneficios para la salud, el bienestar y el autocuidado corporal. 2. Reconoce y aplica fundamentos técnicos básicos del baloncesto y del fútbol en juegos adaptados, demostrando respeto por las reglas y disposición cooperativa en situaciones de juego. 3. Participa en actividades lúdicas con elementos del ajedrez, identificando piezas, reglas básicas y turnos de juego, fortaleciendo la atención, la toma de decisiones y la convivencia pacífica.",
+    "objetivos": [
+     "Aplica ejercicios de flexibilidad y actividades físicas de baja y moderada intensidad como parte de su preparación física, reconociendo sus beneficios para la salud, el bienestar y el autocuidado corporal.",
+     "Reconoce y aplica fundamentos técnicos básicos del baloncesto y del fútbol en juegos adaptados, demostrando respeto por las reglas y disposición cooperativa en situaciones de juego.",
+     "Participa en actividades lúdicas con elementos del ajedrez, identificando piezas, reglas básicas y turnos de juego, fortaleciendo la atención, la toma de decisiones y la convivencia pacífica."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -7232,7 +7623,11 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Bienestar integral y rendimiento físico en la adolescencia",
-    "objetivo": "1. Explica la relación entre alimentación, ejercicio y descanso como base para prevenir enfermedades y afrontar los cambios físicos y emocionales propios de la adolescencia. 2. Aplica pruebas físicas para valorar su condición física general, registrando y comparando sus resultados con el fin de identificar avances personales y orientar su mejora continua. 3. Ejecuta técnicas básicas de atletismo y softbol en juegos y actividades adaptadas, respetando normas básicas y demostrando esfuerzo por mejorar su desempeño.",
+    "objetivos": [
+     "Explica la relación entre alimentación, ejercicio y descanso como base para prevenir enfermedades y afrontar los cambios físicos y emocionales propios de la adolescencia.",
+     "Aplica pruebas físicas para valorar su condición física general, registrando y comparando sus resultados con el fin de identificar avances personales y orientar su mejora continua.",
+     "Ejecuta técnicas básicas de atletismo y softbol en juegos y actividades adaptadas, respetando normas básicas y demostrando esfuerzo por mejorar su desempeño."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -7255,7 +7650,11 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Técnicas deportivas y fortalecimiento de la cooperación",
-    "objetivo": "1. Diseña y ejecuta rutinas de fuerza-resistencia y ejercicios de velocidad con componentes de coordinación, utilizando el cuerpo y materiales alternativos, con conciencia de su importancia para el rendimiento físico y la prevención de lesiones. 2. Aplica técnicas básicas y principios tácticos elementales en juegos adaptados de balonmano y voleibol, respetando reglas esenciales y roles en situaciones de juego reducido. 3. Participa activamente en actividades físicas y recreativas, demostrando habilidades de comunicación, cooperación y resolución pacífica de conflictos para fortalecer la convivencia.",
+    "objetivos": [
+     "Diseña y ejecuta rutinas de fuerza-resistencia y ejercicios de velocidad con componentes de coordinación, utilizando el cuerpo y materiales alternativos, con conciencia de su importancia para el rendimiento físico y la prevención de lesiones.",
+     "Aplica técnicas básicas y principios tácticos elementales en juegos adaptados de balonmano y voleibol, respetando reglas esenciales y roles en situaciones de juego reducido.",
+     "Participa activamente en actividades físicas y recreativas, demostrando habilidades de comunicación, cooperación y resolución pacífica de conflictos para fortalecer la convivencia."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -7282,7 +7681,11 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Desarrollo físico integral y práctica estratégica",
-    "objetivo": "1. Aplica rutinas de estiramiento y actividades de resistencia física con mayor duración e intensidad, autorregulando su esfuerzo y reconociendo su impacto en el rendimiento, la recuperación y el bienestar general. 2. Aplica fundamentos técnicos del baloncesto y del fútbol en situaciones lúdicas y juegos adaptados, demostrando coordinación, respeto por las reglas y comprensión de roles en el juego. 3. Aplica principios básicos del ajedrez en partidas o ejercicios guiados, desarrollando la toma de decisiones, el análisis de situaciones y la práctica del respeto y el juego limpio.",
+    "objetivos": [
+     "Aplica rutinas de estiramiento y actividades de resistencia física con mayor duración e intensidad, autorregulando su esfuerzo y reconociendo su impacto en el rendimiento, la recuperación y el bienestar general.",
+     "Aplica fundamentos técnicos del baloncesto y del fútbol en situaciones lúdicas y juegos adaptados, demostrando coordinación, respeto por las reglas y comprensión de roles en el juego.",
+     "Aplica principios básicos del ajedrez en partidas o ejercicios guiados, desarrollando la toma de decisiones, el análisis de situaciones y la práctica del respeto y el juego limpio."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -7311,7 +7714,11 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Autogestión de la salud y condición física",
-    "objetivo": "1. Mantener una autoimagen y un autoconcepto satisfactorios, mediante la creación y ejecución de estrategias que integren la alimentación nutritiva y la ejercitación física constante, para un desarrollo socioemocional saludable. 2. Identificar y registrar signos fisiológicos que se manifiestan con la ejercitación física, para valorar el nivel de función del organismo en la actividad física. 3. Explicar y demostrar medidas básicas para proteger el organismo, antes, durante y después de la actividad física, así como procedimientos de atención primaria al sufrir lesiones en la práctica, para mantenerse activo y saludable.",
+    "objetivos": [
+     "Mantener una autoimagen y un autoconcepto satisfactorios, mediante la creación y ejecución de estrategias que integren la alimentación nutritiva y la ejercitación física constante, para un desarrollo socioemocional saludable.",
+     "Identificar y registrar signos fisiológicos que se manifiestan con la ejercitación física, para valorar el nivel de función del organismo en la actividad física.",
+     "Explicar y demostrar medidas básicas para proteger el organismo, antes, durante y después de la actividad física, así como procedimientos de atención primaria al sufrir lesiones en la práctica, para mantenerse activo y saludable."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -7334,7 +7741,11 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Estrategias colectivas y fortalecimiento del rendimiento",
-    "objetivo": "1. Planifica, ejecuta y ajusta rutinas personales de entrenamiento para fortalecer su condición física y mejorar su velocidad de reacción y desplazamiento, con base en objetivos definidos, el entorno disponible y la evaluación continua del progreso. 2. Aplica técnicas fundamentales y principios tácticos básicos del balonmano y del voleibol en situaciones de juego adaptado, demostrando comprensión del reglamento, cooperación, autonomía y capacidad de adaptación al contexto escolar. 3. Diseña y participa en actividades físicas cooperativas y recreativas que promuevan la inclusión, la solidaridad, el respeto a la diversidad y el bienestar grupal dentro del entorno escolar.",
+    "objetivos": [
+     "Planifica, ejecuta y ajusta rutinas personales de entrenamiento para fortalecer su condición física y mejorar su velocidad de reacción y desplazamiento, con base en objetivos definidos, el entorno disponible y la evaluación continua del progreso.",
+     "Aplica técnicas fundamentales y principios tácticos básicos del balonmano y del voleibol en situaciones de juego adaptado, demostrando comprensión del reglamento, cooperación, autonomía y capacidad de adaptación al contexto escolar.",
+     "Diseña y participa en actividades físicas cooperativas y recreativas que promuevan la inclusión, la solidaridad, el respeto a la diversidad y el bienestar grupal dentro del entorno escolar."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -7361,7 +7772,11 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Autogestión del rendimiento y aplicación táctica en el juego",
-    "objetivo": "1. Diseña, aplica y ajusta rutinas de flexibilidad y resistencia de forma individual o grupal, en función de sus necesidades personales, condiciones físicas y recursos disponibles, como parte de un estilo de vida activo y saludable. 2. Participa activamente en juegos y partidos adaptados de baloncesto y fútbol aplicando estrategias básicas ofensivas y defensivas, cooperando con el equipo, respetando las reglas y adecuando su desempeño al entorno escolar. 3. Participa con responsabilidad en juegos organizados aplicando estrategias simples, anticipando consecuencias y tomando decisiones con autocontrol, lógica y respeto por las normas del juego.",
+    "objetivos": [
+     "Diseña, aplica y ajusta rutinas de flexibilidad y resistencia de forma individual o grupal, en función de sus necesidades personales, condiciones físicas y recursos disponibles, como parte de un estilo de vida activo y saludable.",
+     "Participa activamente en juegos y partidos adaptados de baloncesto y fútbol aplicando estrategias básicas ofensivas y defensivas, cooperando con el equipo, respetando las reglas y adecuando su desempeño al entorno escolar.",
+     "Participa con responsabilidad en juegos organizados aplicando estrategias simples, anticipando consecuencias y tomando decisiones con autocontrol, lógica y respeto por las normas del juego."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -7390,7 +7805,10 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Salud, entrenamiento y liderazgo activo procedimentales y actitudinales.",
-    "objetivo": "1. Analiza críticamente su condición física y hábitos de vida, estableciendo una línea base personal y diseñando estrategias de autorregulación que integren la actividad física regular y prácticas saludables para el bienestar integral. 2. Diseña, aplica y ajusta un plan de acondicionamiento físico basado en los principios del método FITT y la sobrecarga progresiva, integrando ejercicios de resistencia, fuerza funcional y flexibilidad, y explica los efectos fisiológicos del ejercicio en los sistemas corporales, relacionándolos con la salud y el rendimiento.",
+    "objetivos": [
+     "Analiza críticamente su condición física y hábitos de vida, estableciendo una línea base personal y diseñando estrategias de autorregulación que integren la actividad física regular y prácticas saludables para el bienestar integral.",
+     "Diseña, aplica y ajusta un plan de acondicionamiento físico basado en los principios del método FITT y la sobrecarga progresiva, integrando ejercicios de resistencia, fuerza funcional y flexibilidad, y explica los efectos fisiológicos del ejercicio en los sistemas corporales, relacionándolos con la salud y el rendimiento."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -7413,7 +7831,10 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Principios técnicos y tácticos en deportes de invasión",
-    "objetivo": "1. Aplica principios tácticos ofensivos y defensivos en situaciones de juego reducido, transfiriendo estrategias entre diferentes deportes de invasión y evaluando su desempeño técnico-táctico mediante observación estructurada para identificar fortalezas y áreas de mejora. 2. Ejecuta combinaciones técnicas básicas bajo presión defensiva y diseña, dirige y participa en actividades integradoras que promuevan la cooperación, la equidad y el aprendizaje de principios tácticos básicos en contextos colectivos.",
+    "objetivos": [
+     "Aplica principios tácticos ofensivos y defensivos en situaciones de juego reducido, transfiriendo estrategias entre diferentes deportes de invasión y evaluando su desempeño técnico-táctico mediante observación estructurada para identificar fortalezas y áreas de mejora.",
+     "Ejecuta combinaciones técnicas básicas bajo presión defensiva y diseña, dirige y participa en actividades integradoras que promuevan la cooperación, la equidad y el aprendizaje de principios tácticos básicos en contextos colectivos."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -7436,7 +7857,10 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Principios técnicos y tácticos en deportes de red/muro",
-    "objetivo": "1. Aplica progresivamente los principios técnicos y las secuencias de juego de los deportes de red/muro, integrando roles ofensivos y defensivos, rotación y dinámica colectiva, demostrando comprensión de la construcción del punto y la flexibilidad táctica. 2. Analiza y compara los principios tácticos de los deportes de red/muro con los de invasión, argumentando diferencias y similitudes mediante ejemplos prácticos y reflexiones basadas en su práctica escolar.",
+    "objetivos": [
+     "Aplica progresivamente los principios técnicos y las secuencias de juego de los deportes de red/muro, integrando roles ofensivos y defensivos, rotación y dinámica colectiva, demostrando comprensión de la construcción del punto y la flexibilidad táctica.",
+     "Analiza y compara los principios tácticos de los deportes de red/muro con los de invasión, argumentando diferencias y similitudes mediante ejemplos prácticos y reflexiones basadas en su práctica escolar."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -7459,7 +7883,10 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Habilidades cognitivas, ética y gestión básica",
-    "objetivo": "1. Aplica los principios básicos del ajedrez para fortalecer la anticipación, la planificación estratégica y la toma de decisiones, transfiriendo estas habilidades cognitivas a contextos deportivos y colectivos. 2. Aplica las reglas, realiza arbitrajes y utiliza herramientas de registro cuantitativo en actividades deportivas escolares, demostrando imparcialidad, responsabilidad y capacidad de análisis para mejorar el desempeño individual y grupal.",
+    "objetivos": [
+     "Aplica los principios básicos del ajedrez para fortalecer la anticipación, la planificación estratégica y la toma de decisiones, transfiriendo estas habilidades cognitivas a contextos deportivos y colectivos.",
+     "Aplica las reglas, realiza arbitrajes y utiliza herramientas de registro cuantitativo en actividades deportivas escolares, demostrando imparcialidad, responsabilidad y capacidad de análisis para mejorar el desempeño individual y grupal."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -7480,7 +7907,10 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Liderazgo, proyecto y salud comunitaria",
-    "objetivo": "1. Evalúa sus capacidades físicas y técnicas en un deporte de elección mediante pruebas e instrumentos de autoevaluación, estableciendo metas de mejora personal y argumentando la relación entre entrenamiento, nutrición y prevención de lesiones para optimizar su rendimiento y bienestar. 2. Diseña y presenta una propuesta de intervención comunitaria orientada a la promoción de estilos de vida activos, aplicando habilidades de liderazgo, organización y gestión, fomentando la participación y el impacto positivo en el entorno escolar o comunitario.",
+    "objetivos": [
+     "Evalúa sus capacidades físicas y técnicas en un deporte de elección mediante pruebas e instrumentos de autoevaluación, estableciendo metas de mejora personal y argumentando la relación entre entrenamiento, nutrición y prevención de lesiones para optimizar su rendimiento y bienestar.",
+     "Diseña y presenta una propuesta de intervención comunitaria orientada a la promoción de estilos de vida activos, aplicando habilidades de liderazgo, organización y gestión, fomentando la participación y el impacto positivo en el entorno escolar o comunitario."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -7499,7 +7929,10 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Estrategia en deportes de invasión",
-    "objetivo": "1. Aplica sistemas tácticos ofensivos y defensivos en deportes de invasión, analizando situaciones de juego y adaptando decisiones individuales y colectivas para optimizar el rendimiento durante minijuegos o simulaciones. 2. Asume roles rotativos de liderazgo en la conducción táctica del equipo y realiza análisis técnico-táctico de situaciones de juego, proponiendo planes de acción fundamentados para mejorar la ejecución y la cooperación grupal.",
+    "objetivos": [
+     "Aplica sistemas tácticos ofensivos y defensivos en deportes de invasión, analizando situaciones de juego y adaptando decisiones individuales y colectivas para optimizar el rendimiento durante minijuegos o simulaciones.",
+     "Asume roles rotativos de liderazgo en la conducción táctica del equipo y realiza análisis técnico-táctico de situaciones de juego, proponiendo planes de acción fundamentados para mejorar la ejecución y la cooperación grupal."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -7518,7 +7951,10 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Deportes de red/muro y optimización del rendimiento",
-    "objetivo": "1. Diseña y aplica ejercicios de preparación física específicos para deportes de red/muro, integrando aspectos técnicos y tácticos y aplicando medidas de prevención de lesiones para optimizar el rendimiento individual y colectivo. 2. Aplica sistemas básicos de juego en deportes de red/muro y adapta decisiones tácticas durante minijuegos o simulaciones, identificando riesgos de lesión y proponiendo estrategias preventivas para garantizar seguridad y eficiencia en la práctica deportiva.",
+    "objetivos": [
+     "Diseña y aplica ejercicios de preparación física específicos para deportes de red/muro, integrando aspectos técnicos y tácticos y aplicando medidas de prevención de lesiones para optimizar el rendimiento individual y colectivo.",
+     "Aplica sistemas básicos de juego en deportes de red/muro y adapta decisiones tácticas durante minijuegos o simulaciones, identificando riesgos de lesión y proponiendo estrategias preventivas para garantizar seguridad y eficiencia en la práctica deportiva."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -7537,7 +7973,10 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Ética, metacognición y proyecto de vida activa",
-    "objetivo": "1. Aplica principios estratégicos del ajedrez y juegos de resolución de problemas para analizar, planificar y tomar decisiones en contextos deportivos y de vida activa, considerando alternativas, riesgos y consecuencias. 2. Argumenta posturas éticas en el deporte y construye un portafolio de evidencias que documente su evolución física, técnica, cognitiva y ética, integrando reflexión metacognitiva para la planificación de un proyecto de vida activa y saludable.",
+    "objetivos": [
+     "Aplica principios estratégicos del ajedrez y juegos de resolución de problemas para analizar, planificar y tomar decisiones en contextos deportivos y de vida activa, considerando alternativas, riesgos y consecuencias.",
+     "Argumenta posturas éticas en el deporte y construye un portafolio de evidencias que documente su evolución física, técnica, cognitiva y ética, integrando reflexión metacognitiva para la planificación de un proyecto de vida activa y saludable."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -7560,7 +7999,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "El autoconocimiento",
-    "objetivo": "Valorar los elementos de la identidad personal que contribuyen al autoconocimiento y al fortalecimiento de habilidades para el desarrollo personal y social.",
+    "objetivos": [
+     "Valorar los elementos de la identidad personal que contribuyen al autoconocimiento y al fortalecimiento de habilidades para el desarrollo personal y social."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -7583,7 +8024,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Las habilidades sociales",
-    "objetivo": "Fomentar las habilidades sociales que le permiten desempeñarse como agente de cambio en las interacciones que se realizan en los diferentes contextos.",
+    "objetivos": [
+     "Fomentar las habilidades sociales que le permiten desempeñarse como agente de cambio en las interacciones que se realizan en los diferentes contextos."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -7602,7 +8045,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "La exploración vocacional",
-    "objetivo": "Indagar los intereses vocacionales con la finalidad de orientar la toma de decisiones, de manera que permita prepararse y desempeñarse en un campo que le garantice la satisfacción personal, profesional y ocupacional.",
+    "objetivos": [
+     "Indagar los intereses vocacionales con la finalidad de orientar la toma de decisiones, de manera que permita prepararse y desempeñarse en un campo que le garantice la satisfacción personal, profesional y ocupacional."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -7621,7 +8066,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Planificación y gestión del tiempo",
-    "objetivo": "Establecer los propósitos de vida considerando el perfil personal y profesional, considerando el potencial de desarrollo y trazando una ruta viable para alcanzar lo propuesto.",
+    "objetivos": [
+     "Establecer los propósitos de vida considerando el perfil personal y profesional, considerando el potencial de desarrollo y trazando una ruta viable para alcanzar lo propuesto."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -7642,7 +8089,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Autoconocimiento y desarrollo personal",
-    "objetivo": "Implementar estrategias de autocuidado y motivación que fomenten el desarrollo personal y permitan incidir de forma positiva en las relaciones interpersonales.",
+    "objetivos": [
+     "Implementar estrategias de autocuidado y motivación que fomenten el desarrollo personal y permitan incidir de forma positiva en las relaciones interpersonales."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -7665,7 +8114,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Habilidades interpersonales y colaboración",
-    "objetivo": "Fortalecer las habilidades para el desarrollo social incidiendo en los espacios de participación como un agente de transformación y promotor de la cultura de paz.",
+    "objetivos": [
+     "Fortalecer las habilidades para el desarrollo social incidiendo en los espacios de participación como un agente de transformación y promotor de la cultura de paz."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -7684,7 +8135,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Orientación vocacional y proyección para el desarrollo laboral",
-    "objetivo": "Analizar las oportunidades de formación y los espacios laborales afines a las aspiraciones vocacionales con la finalidad de tomar decisiones para su vida académica y laboral.",
+    "objetivos": [
+     "Analizar las oportunidades de formación y los espacios laborales afines a las aspiraciones vocacionales con la finalidad de tomar decisiones para su vida académica y laboral."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -7703,7 +8156,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Proyecto de vida y organización personal",
-    "objetivo": "Establecer un proyecto de vida considerando los elementos que intervienen para su cumplimiento, así como el camino a seguir para alcanzar con éxito la autorrealización.",
+    "objetivos": [
+     "Establecer un proyecto de vida considerando los elementos que intervienen para su cumplimiento, así como el camino a seguir para alcanzar con éxito la autorrealización."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -7726,7 +8181,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Introducción a las ciencias de la computación",
-    "objetivo": "Aplicar los conceptos fundamentales del pensamiento computacional, enfatizando en el reconocimiento de patrones, la abstracción y los algoritmos, para resolver problemas sencillos y comprender el funcionamiento básico de una computadora y su sistema operativo.",
+    "objetivos": [
+     "Aplicar los conceptos fundamentales del pensamiento computacional, enfatizando en el reconocimiento de patrones, la abstracción y los algoritmos, para resolver problemas sencillos y comprender el funcionamiento básico de una computadora y su sistema operativo."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -7761,7 +8218,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Lógica de programación",
-    "objetivo": "Diseñar algoritmos con estructuras de control, representándolos en pseudocódigo y diagramas de flujo, para resolver problemas lógicos y prácticos implementándolos en un entorno de programación visual.",
+    "objetivos": [
+     "Diseñar algoritmos con estructuras de control, representándolos en pseudocódigo y diagramas de flujo, para resolver problemas lógicos y prácticos implementándolos en un entorno de programación visual."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -7792,7 +8251,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Estructuras de datos",
-    "objetivo": "Implementar estructuras de datos básicas en un entorno de programación visual para organizar información y resolver problemas cotidianos aplicando métodos de búsqueda y algoritmos de ordenamiento.",
+    "objetivos": [
+     "Implementar estructuras de datos básicas en un entorno de programación visual para organizar información y resolver problemas cotidianos aplicando métodos de búsqueda y algoritmos de ordenamiento."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -7823,7 +8284,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Desarrollo básico de software",
-    "objetivo": "Desarrollar programas básicos utilizando estructuras de control, funciones y manejo de datos para implementar soluciones a problemas sencillos y explorar las posibilidades de la programación como herramienta de innovación.",
+    "objetivos": [
+     "Desarrollar programas básicos utilizando estructuras de control, funciones y manejo de datos para implementar soluciones a problemas sencillos y explorar las posibilidades de la programación como herramienta de innovación."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -7858,7 +8321,9 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Ciberseguridad y ciudadanía digital",
-    "objetivo": "Aplicar principios y herramientas de ciberseguridad para proteger la información personal, detectar y evitar ciberamenazas y navegar de forma segura y ética en internet.",
+    "objetivos": [
+     "Aplicar principios y herramientas de ciberseguridad para proteger la información personal, detectar y evitar ciberamenazas y navegar de forma segura y ética en internet."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -7893,7 +8358,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Fundamentos de inteligencia artificial (IA)",
-    "objetivo": "Explorar los fundamentos de la inteligencia artificial y sus aplicaciones, incluyendo el aprendizaje automático y la visión artificial, para comprender su impacto en la sociedad y proponer ideas innovadoras que utilicen estas tecnologías.",
+    "objetivos": [
+     "Explorar los fundamentos de la inteligencia artificial y sus aplicaciones, incluyendo el aprendizaje automático y la visión artificial, para comprender su impacto en la sociedad y proponer ideas innovadoras que utilicen estas tecnologías."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -7926,7 +8393,9 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Introducción a las ciencias de la computación",
-    "objetivo": "Aplicar los conceptos fundamentales del pensamiento computacional, enfatizando en el reconocimiento de patrones, la abstracción y los algoritmos, para resolver problemas sencillos y comprender el funcionamiento básico de una computadora y su sistema operativo.",
+    "objetivos": [
+     "Aplicar los conceptos fundamentales del pensamiento computacional, enfatizando en el reconocimiento de patrones, la abstracción y los algoritmos, para resolver problemas sencillos y comprender el funcionamiento básico de una computadora y su sistema operativo."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
@@ -7961,7 +8430,9 @@ window.CURRICULO = {
    {
     "unidad": 2,
     "nombre": "Lógica de programación",
-    "objetivo": "Diseñar algoritmos con estructuras de control, representándolos en pseudocódigo y diagramas de flujo, para resolver problemas lógicos y prácticos implementándolos en un entorno de programación visual.",
+    "objetivos": [
+     "Diseñar algoritmos con estructuras de control, representándolos en pseudocódigo y diagramas de flujo, para resolver problemas lógicos y prácticos implementándolos en un entorno de programación visual."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
@@ -7992,7 +8463,9 @@ window.CURRICULO = {
    {
     "unidad": 3,
     "nombre": "Estructuras de datos",
-    "objetivo": "Implementar estructuras de datos básicas en un entorno de programación visual para organizar información y resolver problemas cotidianos aplicando métodos de búsqueda y algoritmos de ordenamiento.",
+    "objetivos": [
+     "Implementar estructuras de datos básicas en un entorno de programación visual para organizar información y resolver problemas cotidianos aplicando métodos de búsqueda y algoritmos de ordenamiento."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
@@ -8023,7 +8496,9 @@ window.CURRICULO = {
    {
     "unidad": 4,
     "nombre": "Desarrollo básico de software",
-    "objetivo": "Desarrollar programas básicos utilizando estructuras de control, funciones y manejo de datos para implementar soluciones a problemas sencillos y explorar las posibilidades de la programación como herramienta de innovación.",
+    "objetivos": [
+     "Desarrollar programas básicos utilizando estructuras de control, funciones y manejo de datos para implementar soluciones a problemas sencillos y explorar las posibilidades de la programación como herramienta de innovación."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
@@ -8058,7 +8533,9 @@ window.CURRICULO = {
    {
     "unidad": 5,
     "nombre": "Ciberseguridad y ciudadanía digital",
-    "objetivo": "Aplicar principios y herramientas de ciberseguridad para proteger la información personal, detectar y evitar ciberamenazas y navegar de forma segura y ética en internet.",
+    "objetivos": [
+     "Aplicar principios y herramientas de ciberseguridad para proteger la información personal, detectar y evitar ciberamenazas y navegar de forma segura y ética en internet."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
@@ -8093,7 +8570,9 @@ window.CURRICULO = {
    {
     "unidad": 6,
     "nombre": "Fundamentos de inteligencia artificial (IA)",
-    "objetivo": "Explorar los fundamentos de la inteligencia artificial y sus aplicaciones, incluyendo el aprendizaje automático y la visión artificial, para comprender su impacto en la sociedad y proponer ideas innovadoras que utilicen estas tecnologías.",
+    "objetivos": [
+     "Explorar los fundamentos de la inteligencia artificial y sus aplicaciones, incluyendo el aprendizaje automático y la visión artificial, para comprender su impacto en la sociedad y proponer ideas innovadoras que utilicen estas tecnologías."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
@@ -8128,142 +8607,411 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "Hello, my name is…",
-    "objetivo": "Unit competences 1. Introduce oneself by providing personal information, at a low pace, when meeting someone for the first time. 2. Express basic personal information, at a low pace, by using vocabulary learnt along the unit to simulate real life scenarios. Procedural content",
+    "objetivos": [
+     "Presentarse proporcionando información personal, a un ritmo pausado, al conocer a alguien por primera vez.",
+     "Expresar información personal básica, a un ritmo pausado, utilizando el vocabulario aprendido a lo largo de la unidad para simular situaciones de la vida real."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
-      "texto": "follow and use basic classroom expressions properly,"
+      "texto": "Sigue y utiliza adecuadamente expresiones básicas del aula."
      },
      {
       "codigo": "1.2",
-      "texto": "associate short and simple classroom instructions such as \"stop\", \"close the door\", \"sit down\", among others, with pictures;"
+      "texto": "Asocia instrucciones cortas y sencillas del aula como \"stop\", \"close the door\", \"sit down\", entre otras, con imágenes."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Reconoce y responde apropiadamente saludos sencillos en bienvenidas y despedidas."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Saluda a las personas, dice su nombre y se despide de manera sencilla."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Pronuncia con precisión los nombres de las vocales y consonantes."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Utiliza los nombres de las letras del alfabeto para deletrear correctamente palabras cortas y largas."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Cuenta del 0 al 20 en el orden correcto."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Intercambia números de teléfono en interacciones sociales diciendo correctamente los dígitos uno por uno."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Intercambia direcciones de correo electrónico usando con precisión la terminología de los símbolos, de forma oral y escrita."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Formula y responde con precisión preguntas básicas de información personal utilizando palabras interrogativas."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Se presenta exitosamente al conocer a alguien por primera vez."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Escribe diálogos coherentes intercambiando información personal básica al conocer a alguien por primera vez."
      }
     ]
    },
    {
     "unidad": 2,
     "nombre": "My classroom",
-    "objetivo": "1. Describe classroom supplies by mentioning their definite numeral adjectives and colors in order to have school-related oral exchanges. 2. Illustrate their classroom by pointing out school supplies while using the new language when interacting with others.",
+    "objetivos": [
+     "Describir útiles escolares mencionando su cantidad y colores, con el fin de sostener intercambios orales relacionados con la escuela.",
+     "Ilustrar su salón de clases señalando los útiles escolares, utilizando el nuevo idioma al interactuar con los demás."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
-      "texto": "distinguish classroom supplies both orally and in writing in a proper way,"
+      "texto": "Distingue adecuadamente los útiles escolares de forma oral y escrita."
      },
      {
       "codigo": "2.2",
-      "texto": "spell classroom supplies both orally and in writing successfully,"
+      "texto": "Deletrea exitosamente los útiles escolares de forma oral y escrita."
      },
      {
       "codigo": "2.3",
-      "texto": "name classroom objects with correct pronunciation,"
+      "texto": "Nombra los objetos del aula con la pronunciación correcta."
      },
      {
       "codigo": "2.4",
-      "texto": "identify the singular and plural form of classroom supplies both orally and in writing correctly,"
+      "texto": "Identifica correctamente la forma singular y plural de los útiles escolares, de forma oral y escrita."
      },
      {
       "codigo": "2.5",
-      "texto": "spell the singular and plural form of classroom supplies accurately,"
+      "texto": "Deletrea con precisión la forma singular y plural de los útiles escolares."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Pronuncia correctamente los colores."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Asocia con precisión los útiles escolares con sus colores."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Señala un objeto y pregunta apropiadamente qué es."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Utiliza la forma correcta del verbo be con sustantivos en singular y plural."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Cuenta con precisión los útiles escolares."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Identifica con precisión los números del 21 al 100, de forma oral y escrita."
+     },
+     {
+      "codigo": "2.12",
+      "texto": "Pronuncia adecuadamente los números del 21 al 100."
+     },
+     {
+      "codigo": "2.13",
+      "texto": "Deletrea con precisión los números del 21 al 100."
+     },
+     {
+      "codigo": "2.14",
+      "texto": "Resuelve correctamente problemas sencillos de suma y resta con números del 21 al 100."
+     },
+     {
+      "codigo": "2.15",
+      "texto": "Discrimina exitosamente los sonidos corto /ɪ/ y largo /i:/ en this y these."
+     },
+     {
+      "codigo": "2.16",
+      "texto": "Pronuncia correctamente this y these."
+     },
+     {
+      "codigo": "2.17",
+      "texto": "Identifica la distancia de un objeto utilizando los pronombres demostrativos adecuados."
+     },
+     {
+      "codigo": "2.18",
+      "texto": "Pregunta y responde qué es algo utilizando el pronombre demostrativo adecuado."
+     },
+     {
+      "codigo": "2.19",
+      "texto": "Describe con precisión los útiles escolares utilizando pronombres demostrativos y mencionando su color."
      }
     ]
    },
    {
     "unidad": 3,
     "nombre": "My family",
-    "objetivo": "1. Describe a family representation by indicating the relationship among its members using possessive adjectives. 2. Introduce a family member by providing their basic personal information with the purpose of stating who their favorite relative is.",
+    "objetivos": [
+     "Describir una representación de la familia indicando la relación entre sus miembros mediante adjetivos posesivos.",
+     "Presentar a un miembro de la familia proporcionando su información personal básica, con el propósito de expresar quién es su pariente favorito."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
-      "texto": "recognize vocabulary related to family members both orally and in writing successfully,"
+      "texto": "Reconoce exitosamente el vocabulario relacionado con los miembros de la familia, de forma oral y escrita."
      },
      {
       "codigo": "3.2",
-      "texto": "deduce the meaning of a family-related word from an accompanying picture or icon satisfactorily,"
+      "texto": "Deduce satisfactoriamente el significado de una palabra relacionada con la familia a partir de la imagen o ícono que la acompaña."
      },
      {
       "codigo": "3.3",
-      "texto": "use the suitable vocabulary to identify family members in a nuclear family tree,"
+      "texto": "Utiliza el vocabulario adecuado para identificar a los miembros de la familia en un árbol genealógico de familia nuclear."
      },
      {
       "codigo": "3.4",
-      "texto": "identify gender and number in subject pronouns accurately,"
+      "texto": "Identifica con precisión el género y número de los pronombres personales."
      },
      {
       "codigo": "3.5",
-      "texto": "use the accurate subject pronoun with the corresponding form of the verb be when making sentences and questions,"
+      "texto": "Utiliza el pronombre personal correcto con la forma correspondiente del verbo be al construir oraciones y preguntas."
      },
      {
       "codigo": "3.6",
-      "texto": "exchange coherent information about family members in short dialogues,"
+      "texto": "Intercambia información coherente sobre los miembros de la familia en diálogos cortos."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Nombra con precisión a los miembros de la familia extendida."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Identifica correctamente las relaciones familiares en imágenes o en un álbum de fotos."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Asocia los pronombres personales con su adjetivo posesivo correcto."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Produce frases cortas y precisas sobre los miembros de su familia, dando información personal básica como su nombre."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Describe a un miembro de la familia (nombre, edad y parentesco) utilizando adecuadamente palabras sencillas y expresiones aprendidas, siempre que pueda prepararse con anticipación."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Relaciona adjetivos comunes con sus apoyos visuales correspondientes."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Escribe oraciones precisas sobre la descripción física de los miembros de la familia."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Describe a un miembro de la familia utilizando diferentes adjetivos con la forma correcta del verbo be."
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Identifica con precisión las ocupaciones en imágenes."
+     },
+     {
+      "codigo": "3.16",
+      "texto": "Escribe adecuadamente las ocupaciones."
+     },
+     {
+      "codigo": "3.17",
+      "texto": "Utiliza adecuadamente los artículos indefinidos a/an antes de las ocupaciones."
+     },
+     {
+      "codigo": "3.18",
+      "texto": "Describe a su pariente favorito con los adjetivos apropiados y la forma correcta del verbo be."
      }
     ]
    },
    {
     "unidad": 4,
     "nombre": "My house",
-    "objetivo": "1. Detail rooms in a house by listing their common furniture and appliances using singular and plural nouns. 2. Describe a house by locating its furniture and appliances.",
+    "objetivos": [
+     "Detallar las habitaciones de una casa enumerando sus muebles y electrodomésticos comunes, utilizando sustantivos en singular y plural.",
+     "Describir una casa ubicando sus muebles y electrodomésticos."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
-      "texto": "identify vocabulary related to rooms and appliances in a house appropriately,"
+      "texto": "Identifica apropiadamente el vocabulario relacionado con las habitaciones y electrodomésticos de una casa."
      },
      {
       "codigo": "4.2",
-      "texto": "spell rooms and appliances in a house both orally and in writing properly,"
+      "texto": "Deletrea adecuadamente las habitaciones y electrodomésticos de una casa, de forma oral y escrita."
      },
      {
       "codigo": "4.3",
-      "texto": "recognize spelling rules of regular plural nouns successfully,"
+      "texto": "Reconoce exitosamente las reglas ortográficas de los sustantivos plurales regulares."
      },
      {
       "codigo": "4.4",
-      "texto": "spell regular plural nouns following the appropriate spelling rules,"
+      "texto": "Escribe sustantivos plurales regulares siguiendo las reglas ortográficas apropiadas."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Ofrece de manera coherente una descripción breve y sencilla de lo que hay en una habitación."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Describe los objetos de una habitación utilizando apropiadamente there is y there are."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Describe con precisión la ubicación de muebles y electrodomésticos comunes de una casa utilizando preposiciones de lugar."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Formula preguntas adecuadas para averiguar los muebles y electrodomésticos que hay en las casas, utilizando los patrones Is there a/an...? Are there any...?"
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Intercambia adecuadamente información sobre las habitaciones de una casa."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Ofrece una descripción corta y precisa de las habitaciones y electrodomésticos de una casa, de forma oral y escrita."
      }
     ]
    },
    {
     "unidad": 5,
     "nombre": "My day",
-    "objetivo": "1. Exchange information about one's routine by including daily activities and frequency time expressions.",
+    "objetivos": [
+     "Intercambiar información sobre la propia rutina, incluyendo actividades diarias y expresiones de frecuencia."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
-      "texto": "recognize daily activities from different input successfully,"
+      "texto": "Reconoce exitosamente actividades diarias a partir de diferentes fuentes."
      },
      {
       "codigo": "5.2",
-      "texto": "spell daily activities both orally and in writing accurately,"
+      "texto": "Deletrea con precisión las actividades diarias, de forma oral y escrita."
      },
      {
       "codigo": "5.3",
-      "texto": "associate daily routines to their appropriate pictures or gestures,"
+      "texto": "Asocia las rutinas diarias con sus imágenes o gestos correspondientes."
      },
      {
       "codigo": "5.4",
-      "texto": "pronounce the days of the week properly,"
+      "texto": "Pronuncia adecuadamente los días de la semana."
      },
      {
       "codigo": "5.5",
-      "texto": "write the days of the week correctly,"
+      "texto": "Escribe correctamente los días de la semana."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Expresa su rutina diaria en orden cronológico, de forma oral y escrita."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Escribe oraciones completas para expresar rutinas diarias en orden cronológico."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Formula y responde correctamente preguntas sobre rutinas diarias utilizando el patrón Do you...?"
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Describe con precisión las actividades que no realiza durante su día."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Dice correctamente los números del 1 al 100."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Deletrea números con precisión, de forma oral y escrita."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Dicta números a sus compañeros con precisión."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Toma dictado de números del 1 al 100 al escuchar a sus compañeros u otras fuentes."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Lee correctamente la hora en relojes analógicos y digitales."
+     },
+     {
+      "codigo": "5.15",
+      "texto": "Dice la hora apropiadamente."
+     },
+     {
+      "codigo": "5.16",
+      "texto": "Formula y responde adecuadamente preguntas sobre la hora en que realiza sus actividades diarias."
+     },
+     {
+      "codigo": "5.17",
+      "texto": "Identifica correctamente expresiones de frecuencia a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "5.18",
+      "texto": "Escribe oraciones precisas sobre rutinas diarias indicando la frecuencia con que se realizan."
+     },
+     {
+      "codigo": "5.19",
+      "texto": "Escribe ideas completas describiendo su rutina diaria utilizando conectores de secuencia."
+     },
+     {
+      "codigo": "5.20",
+      "texto": "Intercambia con sus compañeros información pertinente sobre sus rutinas diarias, a un ritmo pausado."
      }
     ]
    },
    {
     "unidad": 6,
     "nombre": "All about me",
-    "objetivo": "1. State preferences by using the simple present tense in order to exchange facts about personal likes and dislikes. 2. Express likes and dislikes related to food, music, and hobbies while creating visual resources to support written and oral ideas.",
+    "objetivos": [
+     "Expresar preferencias utilizando el presente simple, con el fin de intercambiar información sobre gustos y disgustos personales.",
+     "Expresar gustos y disgustos relacionados con la comida, la música y los pasatiempos, creando recursos visuales para apoyar las ideas escritas y orales."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
-      "texto": "name different types of food, fruit, music, pets and hobbies appropriately;"
+      "texto": "Nombra apropiadamente diferentes tipos de comida, frutas, música, mascotas y pasatiempos."
      },
      {
       "codigo": "6.2",
-      "texto": "spell types of food, music genres, pets and hobbies accurately;"
+      "texto": "Deletrea con precisión tipos de comida, géneros musicales, mascotas y pasatiempos."
      },
      {
       "codigo": "6.3",
-      "texto": "associate different types of food, fruit, music, pets and hobbies with pictures accordingly;"
+      "texto": "Asocia correctamente diferentes tipos de comida, frutas, música, mascotas y pasatiempos con imágenes."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Expresa preferencias relacionadas con comida, frutas, música, pasatiempos y mascotas, a un ritmo pausado."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Formula preguntas sobre preferencias personales siguiendo un modelo."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Intercambia adecuadamente información sobre preferencias personales."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Ilustra sus preferencias personales elaborando un cartel."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Selecciona información adecuada sobre preferencias personales."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Expresa de manera coherente información sobre preferencias personales."
      }
     ]
    }
@@ -8272,118 +9020,367 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "This is me",
-    "objetivo": null,
+    "objetivos": [
+     "Presentarse ante los demás proporcionando información personal básica al conocer a alguien por primera vez.",
+     "Interactuar en conversaciones colaborativas intercambiando información personal para completar un formulario.",
+     "Describir personas, lugares y cosas utilizando el verbo be para mencionar sus características."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
-      "texto": "use and respond to common greetings appropriately according to different social contexts,"
+      "texto": "Utiliza y responde apropiadamente saludos comunes según los diferentes contextos sociales."
      },
      {
       "codigo": "1.2",
-      "texto": "recognize and name letters of the alphabet in and out of sequence to demonstrate understanding of letter forms and sounds,"
+      "texto": "Reconoce y nombra las letras del alfabeto en orden y en desorden, demostrando comprensión de sus formas y sonidos."
      },
      {
       "codigo": "1.3",
-      "texto": "produce familiar words that begin with given letters using visual or oral prompts to reinforce sound-letter correspondence,"
+      "texto": "Produce palabras conocidas que comienzan con letras dadas, utilizando apoyos visuales u orales para reforzar la correspondencia sonido-letra."
      },
      {
       "codigo": "1.4",
-      "texto": "engage in short guided dialogues to spell and confirm common short and long English words accurately,"
+      "texto": "Participa en diálogos cortos guiados para deletrear y confirmar con precisión palabras comunes cortas y largas en inglés."
      },
      {
       "codigo": "1.5",
-      "texto": "spell common short and long words in English while having brief oral exchanges, /ˌɑː(r)kiəˈlɒdʒɪk(ə)l/"
+      "texto": "Identifica y pronuncia con precisión los días de la semana en intercambios orales sencillos."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Ordena los días de la semana cronológicamente, demostrando comprensión de su secuencia."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Describe horarios escolares nombrando correctamente las asignaturas que se estudian cada día de la semana."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Intercambia con claridad información personal básica con sus compañeros mediante interacciones cortas y guiadas en contextos conocidos."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Completa con precisión formularios sencillos de registro utilizando sus datos personales."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Identifica con precisión el vocabulario relacionado con las ocupaciones utilizando apoyos visuales como imágenes o íconos."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Deletrea correctamente ocupaciones comunes en actividades orales y escritas."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Formula y responde con precisión preguntas básicas para obtener y compartir información sobre la ocupación de alguien."
+     },
+     {
+      "codigo": "1.13",
+      "texto": "Identifica con precisión los sonidos vocálicos y consonánticos en palabras habladas."
+     },
+     {
+      "codigo": "1.14",
+      "texto": "Reconoce y agrupa correctamente las ocupaciones según su sonido inicial vocálico o consonántico."
+     },
+     {
+      "codigo": "1.15",
+      "texto": "Aplica apropiadamente los artículos indefinidos a y an al describir ocupaciones."
+     },
+     {
+      "codigo": "1.16",
+      "texto": "Describe con claridad las ocupaciones de otras personas utilizando el vocabulario apropiado."
+     },
+     {
+      "codigo": "1.17",
+      "texto": "Formula con precisión oraciones afirmativas y negativas sobre ocupaciones con el verbo be en presente simple."
+     },
+     {
+      "codigo": "1.18",
+      "texto": "Participa activamente en intercambios cortos e interactivos para preguntar y responder apropiadamente sobre la ocupación de alguien, utilizando el verbo be en presente simple."
+     },
+     {
+      "codigo": "1.19",
+      "texto": "Presenta a sus compañeros sus datos personales —lugar de residencia, escuela y actividades de tiempo libre— de manera eficaz y con confianza, utilizando un cartel como apoyo visual."
      }
     ]
    },
    {
     "unidad": 2,
     "nombre": "Countries of the world",
-    "objetivo": null,
+    "objetivos": [
+     "Describir datos básicos de un país, incluyendo su nombre, nacionalidad y bandera, en intercambios culturales sencillos.",
+     "Detallar un recuerdo (souvenir) explicando sus características principales en intercambios sencillos relacionados con el turismo."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
-      "texto": "identify and pronounce countries and nationalities with precision using visual references, apply capitalization rules appropriately in written form, and engage confidently in short exchanges to demonstrate correct spelling and pronunciation;"
+      "texto": "Identifica y pronuncia con precisión países y nacionalidades utilizando referencias visuales, aplica apropiadamente las reglas de mayúsculas en la forma escrita y participa con confianza en intercambios cortos demostrando ortografía y pronunciación correctas."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Identifica correctamente banderas del mundo nombrando y deletreando sus colores de forma oral y escrita, y participa con confianza en conversaciones breves para preguntar y responder sobre los colores de las banderas."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Clasifica con precisión y distingue con claridad recuerdos (souvenirs) comunes presentados en textos, videos, audios e imágenes."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Diferencia eficazmente sustantivos plurales regulares e irregulares mediante tareas orales, escritas y visuales."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Cuantifica con precisión diversos tipos de recuerdos (souvenirs) utilizando números y las formas plurales adecuadas."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Presenta recuerdos (souvenirs) aplicando el orden correcto de los adjetivos para indicar su tamaño, color y país de origen, interactuando de manera significativa en intercambios guiados."
      }
     ]
    },
    {
     "unidad": 3,
     "nombre": "My leisure time",
-    "objetivo": null,
+    "objetivos": [
+     "Expresar ideas sobre datos personales, hábitos diarios y pasatiempos comunes utilizando el presente simple en conversaciones informales con compañeros sobre actividades de tiempo libre."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
-      "texto": "produce and list accurately common free-time activities from memory, demonstrating clear oral articulation, and correct written spelling of vocabulary;"
+      "texto": "Produce y enumera con precisión, de memoria, actividades comunes de tiempo libre, demostrando una articulación oral clara y una escritura correcta del vocabulario."
      },
      {
       "codigo": "3.2",
-      "texto": "identify and extract effectively freetime activity vocabulary presented through various modalities, such as listening, reading, and viewing visual materials;"
+      "texto": "Identifica y extrae eficazmente el vocabulario de actividades de tiempo libre presentado en diversas modalidades, como audios, lecturas y materiales visuales."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Reconoce con precisión los componentes principales de las oraciones en presente simple."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Expresa de manera consistente actividades de tiempo libre mediante oraciones afirmativas en presente simple."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Construye apropiadamente oraciones negativas sobre actividades de tiempo libre siguiendo la estructura gramatical correcta."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Describe con claridad actividades de tiempo libre utilizando enunciados afirmativos y negativos."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Responde y formula con confianza preguntas de sí/no sobre actividades de tiempo libre en presente simple."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Comparte eficazmente información sobre sus actividades de tiempo libre para identificar intereses comunes con sus compañeros."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Utiliza con precisión las reglas ortográficas de los verbos en tercera persona del singular en presente simple."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Produce de manera consistente oraciones afirmativas en tercera persona del singular, de forma oral y escrita."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Distingue y pronuncia con precisión las terminaciones verbales de la tercera persona del singular /ɪz/, /s/, /z/, siguiendo las reglas de pronunciación."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Identifica con claridad la estructura y los componentes de las oraciones negativas en presente simple para la tercera persona del singular."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Construye apropiadamente enunciados negativos sobre actividades de tiempo libre en presente simple."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Formula y responde con confianza preguntas de sí/no sobre actividades de tiempo libre en presente simple."
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Interpreta textos cortos ilustrados sobre actividades de tiempo libre y los relaciona eficazmente con pasatiempos comunes al aire libre."
+     },
+     {
+      "codigo": "3.16",
+      "texto": "Genera e ilustra detalles sobre sus pasatiempos favoritos utilizando creativamente ejemplos, cuadros e imágenes como apoyo visual para una presentación oral."
+     },
+     {
+      "codigo": "3.17",
+      "texto": "Redacta párrafos descriptivos cortos sobre un pasatiempo favorito para estructurar eficazmente las ideas de una presentación oral autónoma."
      }
     ]
    },
    {
     "unidad": 4,
     "nombre": "My family's and friends’ habits",
-    "objetivo": null,
+    "objetivos": [
+     "Describir relaciones familiares mediante el uso de adjetivos y sustantivos posesivos para intercambiar información sobre los parientes.",
+     "Expresar la frecuencia de las actividades diarias utilizando adverbios y expresiones de frecuencia apropiados para compartir rutinas personales."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
-      "texto": "identify nuclear and extended family members through visuals, audios, and short texts accurately;"
+      "texto": "Identifica con precisión a los miembros de la familia nuclear y extendida mediante recursos visuales, audios y textos cortos."
      },
      {
       "codigo": "4.2",
-      "texto": "spell family-related words both orally and in writing consistently,"
+      "texto": "Deletrea de manera consistente palabras relacionadas con la familia, de forma oral y escrita."
      },
      {
       "codigo": "4.3",
-      "texto": "use possessive adjectives to express possession appropriately,"
+      "texto": "Utiliza apropiadamente los adjetivos posesivos para expresar posesión."
      },
      {
       "codigo": "4.4",
-      "texto": "describe family relationships using possessive adjectives clearly to show family ties,"
+      "texto": "Describe con claridad las relaciones familiares utilizando adjetivos posesivos para mostrar los lazos familiares."
      },
      {
       "codigo": "4.5",
-      "texto": "formulate and respond to questions about relationships among family members in a family tree confidently,"
+      "texto": "Formula y responde con confianza preguntas sobre las relaciones entre los miembros de la familia en un árbol genealógico."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Reconoce con precisión sustantivos posesivos en singular y plural en textos cortos o grabaciones de audio."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Construye apropiadamente oraciones con sustantivos posesivos para mostrar las relaciones familiares en un árbol genealógico."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Identifica eficazmente adverbios de frecuencia en recursos visuales, grabaciones de audio y textos cortos."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Asocia correctamente los adverbios de frecuencia con su grado de regularidad correspondiente."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Formula de manera consistente oraciones sencillas con adverbios de frecuencia siguiendo el orden correcto de las palabras."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Formula con precisión preguntas sencillas para indagar sobre la frecuencia de los hábitos diarios, utilizando el orden correcto de las palabras."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Intercambia eficazmente información sobre la frecuencia de las actividades personales y familiares mediante interacciones cortas."
+     },
+     {
+      "codigo": "4.13",
+      "texto": "Describe con claridad los hábitos de los miembros de la familia y parientes, de forma oral y escrita."
+     },
+     {
+      "codigo": "4.14",
+      "texto": "Redacta de manera coherente párrafos cortos sobre la información personal y los hábitos diarios de un pariente."
      }
     ]
    },
    {
     "unidad": 5,
     "nombre": "My vacation",
-    "objetivo": null,
+    "objetivos": [
+     "Describir acciones en progreso utilizando el presente continuo para indicar eventos que ocurren en el momento del habla.",
+     "Ilustrar atracciones turísticas identificando actividades bajo techo y al aire libre para crear una breve descripción de vacaciones."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
-      "texto": "identify and order the months of the year using calendars or short texts accurately,"
+      "texto": "Identifica y ordena con precisión los meses del año utilizando calendarios o textos cortos."
      },
      {
       "codigo": "5.2",
-      "texto": "spell and write the months of the year and ordinal numbers accurately, using capital letters where required;"
+      "texto": "Deletrea y escribe con precisión los meses del año y los números ordinales, utilizando mayúsculas donde se requiere."
      },
      {
       "codigo": "5.3",
-      "texto": "construct ordinal numbers by adding the correct endings appropriately,"
+      "texto": "Construye apropiadamente los números ordinales agregando las terminaciones correctas."
      },
      {
       "codigo": "5.4",
-      "texto": "share birthday-related information through short interactions confidently,"
+      "texto": "Comparte con confianza información sobre cumpleaños mediante interacciones cortas."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Reconoce adecuadamente celebraciones significativas de El Salvador a partir de apoyos visuales o descripciones sencillas."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Menciona fechas siguiendo el orden correcto de las palabras y las preposiciones de tiempo."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Identifica los componentes de las oraciones afirmativas en presente continuo."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Escribe correctamente los verbos en su forma de participio presente durante actividades de ortografía y construcción de oraciones."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Describe con claridad acciones en progreso, de forma oral y escrita, utilizando imágenes o gestos como referencia."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Relaciona apropiadamente actividades vacacionales bajo techo y al aire libre con ilustraciones o gestos."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Transmite con precisión actividades vacacionales en progreso mostradas en apoyos visuales, utilizando los verbos de acción adecuados."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Reconoce correctamente la estructura y los componentes de las oraciones negativas y preguntas en presente continuo."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Construye de manera consistente oraciones negativas y preguntas en presente continuo para describir acciones observadas en apoyos visuales."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Genera y organiza ideas sobre atracciones turísticas populares, enumerando posibles actividades bajo techo y al aire libre relacionadas con cada destino."
+     },
+     {
+      "codigo": "5.15",
+      "texto": "Redacta una postal breve que retrate con claridad una experiencia de vacaciones, incluyendo detalles clave sobre una atracción turística."
      }
     ]
    },
    {
     "unidad": 6,
     "nombre": "My abilities",
-    "objetivo": null,
+    "objetivos": [
+     "Compartir información sobre habilidades personales utilizando adverbios de modo para explicar cómo se realizan diferentes acciones."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
-      "texto": "recognize and spell ability-related vocabulary accurately through oral or written exercises supported by visual input, can can’t"
+      "texto": "Reconoce y deletrea con precisión el vocabulario relacionado con habilidades mediante ejercicios orales o escritos apoyados en recursos visuales."
      },
      {
       "codigo": "6.2",
-      "texto": "apply and appropriately to convey personal abilities using the correct sentence structure in short oral or written exchanges,"
+      "texto": "Aplica apropiadamente can y can't para expresar habilidades personales, utilizando la estructura correcta de la oración en intercambios cortos orales o escritos."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Construye preguntas de sí/no con can y responde apropiadamente para intercambiar información sobre habilidades propias o de otros."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Produce diálogos cortos para transmitir información sobre habilidades utilizando can con estructura y pronunciación precisas."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Emplea eficazmente adverbios de modo para describir cómo se realizan las acciones, con apoyo de señales visuales o físicas."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Redacta un párrafo corto sobre habilidades, integrando adverbios de modo y demostrando coherencia y precisión."
      }
     ]
    }
@@ -8392,114 +9389,430 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "My day yesterday",
-    "objetivo": "Unit competences 1. Provide facts about a person's past to describe someone's background. 2. Detail past activities to illustrate actions using regular and irregular verbs.",
+    "objetivos": [
+     "Proporcionar datos sobre el pasado de una persona para describir su historia personal.",
+     "Detallar actividades pasadas para ilustrar acciones utilizando verbos regulares e irregulares."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
-      "texto": "recognize adjectives to describe people from oral/written sources and visual aids correctly,"
+      "texto": "Reconoce correctamente adjetivos para describir personas a partir de fuentes orales o escritas y apoyos visuales."
      },
      {
       "codigo": "1.2",
-      "texto": "spell accurately common adjectives used to describe people,"
+      "texto": "Deletrea con precisión adjetivos comunes utilizados para describir personas."
      },
      {
       "codigo": "1.3",
-      "texto": "pronounce common adjectives appropriately,"
+      "texto": "Pronuncia apropiadamente adjetivos comunes."
      },
      {
       "codigo": "1.4",
-      "texto": "form complete sentences using was/were following word order and subject-verb agreement appropriately,"
+      "texto": "Forma oraciones completas con was/were, respetando apropiadamente el orden de las palabras y la concordancia sujeto-verbo."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Proporciona con precisión datos personales sobre alguien utilizando was y were."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Reconoce con precisión expresiones de tiempo pasado a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Deletrea con precisión expresiones de tiempo pasado, de forma oral y escrita."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Pronuncia apropiadamente expresiones de tiempo pasado."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Escribe oraciones negativas con was/were siguiendo adecuadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Formula apropiadamente preguntas sobre datos de alguien utilizando was/were."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Identifica exitosamente verbos regulares comunes en pasado simple a partir de fuentes visuales y escritas."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Forma verbos regulares en pasado simple siguiendo las reglas ortográficas apropiadas."
+     },
+     {
+      "codigo": "1.13",
+      "texto": "Asocia adecuadamente verbos regulares con sus representaciones visuales o gestos correspondientes."
+     },
+     {
+      "codigo": "1.14",
+      "texto": "Clasifica correctamente los sonidos vocálicos y consonánticos como sonoros y sordos."
+     },
+     {
+      "codigo": "1.15",
+      "texto": "Pronuncia apropiadamente los sonidos /t/, /d/ e /ɪd/ al final de los verbos regulares."
+     },
+     {
+      "codigo": "1.16",
+      "texto": "Construye oraciones afirmativas en pasado simple utilizando verbos regulares y respetando apropiadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.17",
+      "texto": "Reconoce correctamente verbos irregulares comunes en pasado simple a partir de fuentes visuales y escritas."
+     },
+     {
+      "codigo": "1.18",
+      "texto": "Forma oraciones afirmativas en pasado simple utilizando verbos irregulares y respetando apropiadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.19",
+      "texto": "Escribe adecuadamente los verbos irregulares en pasado simple."
+     },
+     {
+      "codigo": "1.20",
+      "texto": "Ilustra con precisión y coherencia las actividades realizadas el día anterior utilizando verbos regulares e irregulares en pasado simple."
      }
     ]
    },
    {
     "unidad": 2,
     "nombre": "People and life stories",
-    "objetivo": "1. Express dates to describe an event in the past. 2. Highlight facts about an important person in the history of El Salvador to describe their background following the basic organization of a biographical text.",
+    "objetivos": [
+     "Expresar fechas para describir un evento en el pasado.",
+     "Destacar datos sobre una persona importante en la historia de El Salvador para describir su trayectoria, siguiendo la organización básica de un texto biográfico."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
-      "texto": "identify occupations from visual aids accurately,"
+      "texto": "Identifica con precisión ocupaciones a partir de apoyos visuales."
      },
      {
       "codigo": "2.2",
-      "texto": "pronounce occupations properly,"
+      "texto": "Pronuncia adecuadamente las ocupaciones."
      },
      {
       "codigo": "2.3",
-      "texto": "describe a person's job using verbs related to occupations coherently,"
+      "texto": "Describe de manera coherente el trabajo de una persona utilizando verbos relacionados con las ocupaciones."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Produce enunciados negativos en pasado simple utilizando el orden correcto de la oración."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Nombra con precisión los días de la semana y los meses del año."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Identifica exitosamente números ordinales a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Pronuncia adecuadamente los números ordinales."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Deletrea correctamente los números ordinales."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Escribe fechas correctamente siguiendo los diferentes formatos estadounidenses."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Utiliza los patrones correctos para formular preguntas en pasado simple."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Intercambia información con precisión utilizando el pasado simple."
+     },
+     {
+      "codigo": "2.12",
+      "texto": "Reconoce apropiadamente la información clave de una biografía."
+     },
+     {
+      "codigo": "2.13",
+      "texto": "Selecciona cronológicamente información clave sobre la vida de un salvadoreño importante."
+     },
+     {
+      "codigo": "2.14",
+      "texto": "Organiza ideas para escribir una biografía utilizando adecuadamente el pasado simple."
+     },
+     {
+      "codigo": "2.15",
+      "texto": "Presenta de manera coherente una biografía detallada de un personaje salvadoreño."
+     },
+     {
+      "codigo": "2.16",
+      "texto": "Investiga con precisión información sobre una persona importante en la historia de El Salvador, señalando aspectos relevantes de su vida."
+     },
+     {
+      "codigo": "2.17",
+      "texto": "Escribe con claridad un párrafo biográfico sobre un personaje famoso de El Salvador."
+     },
+     {
+      "codigo": "2.18",
+      "texto": "Presenta de manera coherente la biografía de un salvadoreño famoso."
      }
     ]
    },
    {
     "unidad": 3,
     "nombre": "Going grocery shopping",
-    "objetivo": "1. Identify the five basic food groups to describe meals mentioning fruit, vegetables, meat, dairy products, and grains. 2. Use shopping-related expressions to develop functional language and vocabulary when making purchases.",
+    "objetivos": [
+     "Identificar los cinco grupos básicos de alimentos para describir comidas mencionando frutas, verduras, carnes, lácteos y granos.",
+     "Utilizar expresiones relacionadas con las compras para desarrollar lenguaje funcional y vocabulario al realizar compras."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
-      "texto": "relate food vocabulary to different kinds of word representations such as illustrations, descriptions, or definitions."
+      "texto": "Relaciona el vocabulario de alimentos con diferentes tipos de representaciones, como ilustraciones, descripciones o definiciones."
      },
      {
       "codigo": "3.2",
-      "texto": "pronounce food-related words properly,"
+      "texto": "Pronuncia adecuadamente palabras relacionadas con los alimentos."
      },
      {
       "codigo": "3.3",
-      "texto": "categorize food in the five basic food groups accordingly,"
+      "texto": "Clasifica correctamente los alimentos en los cinco grupos básicos."
      },
      {
       "codigo": "3.4",
-      "texto": "describe what they usually have for their meals using food-related vocabulary properly,"
+      "texto": "Describe adecuadamente lo que suele consumir en sus comidas utilizando vocabulario relacionado con los alimentos."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Nombra adecuadamente sustantivos contables e incontables presentados en fuentes variadas."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Clasifica apropiadamente sustantivos contables e incontables."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Forma sustantivos plurales siguiendo sus reglas ortográficas correctas."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Clasifica adecuadamente los sustantivos que llevan los artículos indefinidos a o an."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Construye adecuadamente oraciones afirmativas y negativas sobre alimentos utilizando los cuantificadores a/an, some o any."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Demuestra comprensión del vocabulario de partitivos aportando ilustraciones apropiadas que representen con precisión cada palabra o frase (p. ej., a slice of bread, a piece of cake, a can of soup), asegurando que cada ilustración asocie claramente el término partitivo con su significado visual correcto."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Identifica con precisión alimentos y sus partitivos a partir de fuentes variadas."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Lee adecuadamente los precios."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Escribe correctamente los precios durante intercambios orales."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Reconoce apropiadamente expresiones básicas relacionadas con las compras a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Dramatiza situaciones de compra en una tienda o mercado utilizando las expresiones adecuadas relacionadas con las compras."
      }
     ]
    },
    {
     "unidad": 4,
     "nombre": "My city",
-    "objetivo": "1. Give directions using prepositions of place and common verbs to identify places and buildings in the city or town. 2. Describe a favorite Salvadoran city to promote local tourism using the vocabulary and structures studied along the unit.",
+    "objetivos": [
+     "Dar direcciones utilizando preposiciones de lugar y verbos comunes para identificar lugares y edificios de la ciudad o el pueblo.",
+     "Describir una ciudad salvadoreña favorita para promover el turismo local, utilizando el vocabulario y las estructuras estudiadas a lo largo de la unidad."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
-      "texto": "recognize words related to places in town from visual aids accurately,"
+      "texto": "Reconoce con precisión palabras relacionadas con lugares de la ciudad a partir de apoyos visuales."
      },
      {
       "codigo": "4.2",
-      "texto": "spell adjectives used to describe places both orally and in writing properly,"
+      "texto": "Deletrea adecuadamente adjetivos utilizados para describir lugares, de forma oral y escrita."
      },
      {
       "codigo": "4.3",
-      "texto": "describe places displayed in visual aids using the appropriate adjectives,"
+      "texto": "Describe lugares mostrados en apoyos visuales utilizando los adjetivos apropiados."
      },
      {
       "codigo": "4.4",
-      "texto": "identify in visual aids prepositions of place accurately,"
+      "texto": "Identifica con precisión preposiciones de lugar en apoyos visuales."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Responde correctamente preguntas sobre la ubicación de lugares utilizando preposiciones."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Identifica con precisión los verbos utilizados para dar direcciones."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Sigue con precisión las direcciones hacia distintos lugares."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Da direcciones utilizando correctamente el vocabulario de lugares y las expresiones comunes correspondientes."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Identifica con precisión gramatical las reglas ortográficas de los adjetivos comparativos y superlativos."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Forma apropiadamente los adjetivos en su grado comparativo y superlativo."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Realiza correctamente comparaciones sobre lugares de un pueblo o ciudad utilizando la forma comparativa o superlativa."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Escribe de manera coherente un párrafo corto describiendo una ciudad o pueblo de El Salvador, utilizando comparativos, superlativos y preposiciones de lugar."
      }
     ]
    },
    {
     "unidad": 5,
     "nombre": "My favorite book/movie",
-    "objetivo": "1. Provide general facts about a movie or book to describe a summary of it using suitable vocabulary.",
+    "objetivos": [
+     "Proporcionar datos generales sobre una película o libro para describir un resumen de este utilizando el vocabulario adecuado."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
-      "texto": "spell book and movie-related vocabulary accurately,"
+      "texto": "Deletrea con precisión el vocabulario relacionado con libros y películas."
      },
      {
       "codigo": "5.2",
-      "texto": "associate vocabulary related to books and movies with input from varied sources,"
+      "texto": "Asocia el vocabulario relacionado con libros y películas con información de fuentes variadas."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Deletrea correctamente verbos regulares en participio pasado, de forma oral y escrita."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Pronuncia apropiadamente verbos regulares en participio pasado."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Reconoce apropiadamente verbos irregulares en participio pasado."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Deletrea con precisión verbos irregulares en participio pasado."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Reconoce el orden correcto de la estructura gramatical de oraciones afirmativas y negativas en presente perfecto."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Forma oraciones afirmativas y negativas en presente perfecto siguiendo el orden apropiado de las palabras."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Intercambia correctamente información sobre experiencias de vida utilizando oraciones afirmativas y negativas en presente perfecto."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Construye con precisión preguntas de sí/no en presente perfecto."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Indaga apropiadamente sobre las experiencias de vida de alguien utilizando el presente perfecto."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Contrasta de manera coherente experiencias de vida personales con sus compañeros en un intercambio oral sencillo."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Enumera eficazmente datos generales sobre una película o libro favorito."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Escribe descripciones sencillas y coherentes relacionadas con una película o libro favorito."
+     },
+     {
+      "codigo": "5.15",
+      "texto": "Intercambia satisfactoriamente información general con sus compañeros sobre un libro o película favorito."
      }
     ]
    },
    {
     "unidad": 6,
     "nombre": "Life experiences",
-    "objetivo": "1. Highlight meaningful information, found in different sources, to describe a famous person's accomplishments.",
+    "objetivos": [
+     "Destacar información significativa, encontrada en diferentes fuentes, para describir los logros de una persona famosa."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
-      "texto": "identify vocabulary related to life experiences precisely,"
+      "texto": "Identifica con precisión el vocabulario relacionado con experiencias de vida."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Identifica con precisión verbos relacionados con experiencias de vida en su forma de participio pasado."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Forma correctamente enunciados afirmativos, negativos y preguntas de sí/no en presente perfecto."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Habla sobre experiencias utilizando la forma correcta del presente perfecto."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Pronuncia con precisión los sonidos /t/, /d/ e /ɪd/ al final de los verbos regulares en participio pasado."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Discrimina exitosamente los sonidos de la terminación -ed al final de los verbos regulares en participio pasado, a partir de fuentes variadas."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Asocia expresiones de tiempo con for y since al describir la duración de las actividades."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Indaga la duración de una actividad construyendo correctamente preguntas precisas en presente perfecto."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Expresa correctamente la duración de una actividad utilizando el presente perfecto con for/since."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Identifica satisfactoriamente logros comunes en diferentes fuentes como revistas, libros y biografías, entre otras."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Describe de manera coherente sus logros personales."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Elabora una descripción breve y coherente sobre los logros de alguien."
+     },
+     {
+      "codigo": "6.13",
+      "texto": "Describe exitosamente los principales logros de una persona utilizando apoyos visuales para sustentar las ideas."
      }
     ]
    }
@@ -8508,114 +9821,430 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "My day yesterday",
-    "objetivo": "Unit competences 1. Provide facts about a person's past to describe someone's background. 2. Detail past activities to illustrate actions using regular and irregular verbs.",
+    "objetivos": [
+     "Proporcionar datos sobre el pasado de una persona para describir su historia personal.",
+     "Detallar actividades pasadas para ilustrar acciones utilizando verbos regulares e irregulares."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
-      "texto": "recognize adjectives to describe people from oral/written sources and visual aids correctly,"
+      "texto": "Reconoce correctamente adjetivos para describir personas a partir de fuentes orales o escritas y apoyos visuales."
      },
      {
       "codigo": "1.2",
-      "texto": "spell accurately common adjectives used to describe people,"
+      "texto": "Deletrea con precisión adjetivos comunes utilizados para describir personas."
      },
      {
       "codigo": "1.3",
-      "texto": "pronounce common adjectives appropriately,"
+      "texto": "Pronuncia apropiadamente adjetivos comunes."
      },
      {
       "codigo": "1.4",
-      "texto": "form complete sentences using was/were following word order and subject-verb agreement appropriately,"
+      "texto": "Forma oraciones completas con was/were, respetando apropiadamente el orden de las palabras y la concordancia sujeto-verbo."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Proporciona con precisión datos personales sobre alguien utilizando was y were."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Reconoce con precisión expresiones de tiempo pasado a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Deletrea con precisión expresiones de tiempo pasado, de forma oral y escrita."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Pronuncia apropiadamente expresiones de tiempo pasado."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Escribe oraciones negativas con was/were siguiendo adecuadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Formula apropiadamente preguntas sobre datos de alguien utilizando was/were."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Identifica exitosamente verbos regulares comunes en pasado simple a partir de fuentes visuales y escritas."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Forma verbos regulares en pasado simple siguiendo las reglas ortográficas apropiadas."
+     },
+     {
+      "codigo": "1.13",
+      "texto": "Asocia adecuadamente verbos regulares con sus representaciones visuales o gestos correspondientes."
+     },
+     {
+      "codigo": "1.14",
+      "texto": "Clasifica correctamente los sonidos vocálicos y consonánticos como sonoros y sordos."
+     },
+     {
+      "codigo": "1.15",
+      "texto": "Pronuncia apropiadamente los sonidos /t/, /d/ e /ɪd/ al final de los verbos regulares."
+     },
+     {
+      "codigo": "1.16",
+      "texto": "Construye oraciones afirmativas en pasado simple utilizando verbos regulares y respetando apropiadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.17",
+      "texto": "Reconoce correctamente verbos irregulares comunes en pasado simple a partir de fuentes visuales y escritas."
+     },
+     {
+      "codigo": "1.18",
+      "texto": "Forma oraciones afirmativas en pasado simple utilizando verbos irregulares y respetando apropiadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.19",
+      "texto": "Escribe adecuadamente los verbos irregulares en pasado simple."
+     },
+     {
+      "codigo": "1.20",
+      "texto": "Ilustra con precisión y coherencia las actividades realizadas el día anterior utilizando verbos regulares e irregulares en pasado simple."
      }
     ]
    },
    {
     "unidad": 2,
     "nombre": "People and life stories",
-    "objetivo": "1. Express dates to describe an event in the past. 2. Highlight facts about an important person in the history of El Salvador to describe their background following the basic organization of a biographical text.",
+    "objetivos": [
+     "Expresar fechas para describir un evento en el pasado.",
+     "Destacar datos sobre una persona importante en la historia de El Salvador para describir su trayectoria, siguiendo la organización básica de un texto biográfico."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
-      "texto": "identify occupations from visual aids accurately,"
+      "texto": "Identifica con precisión ocupaciones a partir de apoyos visuales."
      },
      {
       "codigo": "2.2",
-      "texto": "pronounce occupations properly,"
+      "texto": "Pronuncia adecuadamente las ocupaciones."
      },
      {
       "codigo": "2.3",
-      "texto": "describe a person's job using verbs related to occupations coherently,"
+      "texto": "Describe de manera coherente el trabajo de una persona utilizando verbos relacionados con las ocupaciones."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Produce enunciados negativos en pasado simple utilizando el orden correcto de la oración."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Nombra con precisión los días de la semana y los meses del año."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Identifica exitosamente números ordinales a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Pronuncia adecuadamente los números ordinales."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Deletrea correctamente los números ordinales."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Escribe fechas correctamente siguiendo los diferentes formatos estadounidenses."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Utiliza los patrones correctos para formular preguntas en pasado simple."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Intercambia información con precisión utilizando el pasado simple."
+     },
+     {
+      "codigo": "2.12",
+      "texto": "Reconoce apropiadamente la información clave de una biografía."
+     },
+     {
+      "codigo": "2.13",
+      "texto": "Selecciona cronológicamente información clave sobre la vida de un salvadoreño importante."
+     },
+     {
+      "codigo": "2.14",
+      "texto": "Organiza ideas para escribir una biografía utilizando adecuadamente el pasado simple."
+     },
+     {
+      "codigo": "2.15",
+      "texto": "Presenta de manera coherente una biografía detallada de un personaje salvadoreño."
+     },
+     {
+      "codigo": "2.16",
+      "texto": "Investiga con precisión información sobre una persona importante en la historia de El Salvador, señalando aspectos relevantes de su vida."
+     },
+     {
+      "codigo": "2.17",
+      "texto": "Escribe con claridad un párrafo biográfico sobre un personaje famoso de El Salvador."
+     },
+     {
+      "codigo": "2.18",
+      "texto": "Presenta de manera coherente la biografía de un salvadoreño famoso."
      }
     ]
    },
    {
     "unidad": 3,
     "nombre": "Going grocery shopping",
-    "objetivo": "1. Identify the five basic food groups to describe meals mentioning fruit, vegetables, meat, dairy products, and grains. 2. Use shopping-related expressions to develop functional language and vocabulary when making purchases.",
+    "objetivos": [
+     "Identificar los cinco grupos básicos de alimentos para describir comidas mencionando frutas, verduras, carnes, lácteos y granos.",
+     "Utilizar expresiones relacionadas con las compras para desarrollar lenguaje funcional y vocabulario al realizar compras."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
-      "texto": "relate food vocabulary to different kinds of word representations such as illustrations, descriptions, or definitions."
+      "texto": "Relaciona el vocabulario de alimentos con diferentes tipos de representaciones, como ilustraciones, descripciones o definiciones."
      },
      {
       "codigo": "3.2",
-      "texto": "pronounce food-related words properly,"
+      "texto": "Pronuncia adecuadamente palabras relacionadas con los alimentos."
      },
      {
       "codigo": "3.3",
-      "texto": "categorize food in the five basic food groups accordingly,"
+      "texto": "Clasifica correctamente los alimentos en los cinco grupos básicos."
      },
      {
       "codigo": "3.4",
-      "texto": "describe what they usually have for their meals using food-related vocabulary properly,"
+      "texto": "Describe adecuadamente lo que suele consumir en sus comidas utilizando vocabulario relacionado con los alimentos."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Nombra adecuadamente sustantivos contables e incontables presentados en fuentes variadas."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Clasifica apropiadamente sustantivos contables e incontables."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Forma sustantivos plurales siguiendo sus reglas ortográficas correctas."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Clasifica adecuadamente los sustantivos que llevan los artículos indefinidos a o an."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Construye adecuadamente oraciones afirmativas y negativas sobre alimentos utilizando los cuantificadores a/an, some o any."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Demuestra comprensión del vocabulario de partitivos aportando ilustraciones apropiadas que representen con precisión cada palabra o frase (p. ej., a slice of bread, a piece of cake, a can of soup), asegurando que cada ilustración asocie claramente el término partitivo con su significado visual correcto."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Identifica con precisión alimentos y sus partitivos a partir de fuentes variadas."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Lee adecuadamente los precios."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Escribe correctamente los precios durante intercambios orales."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Reconoce apropiadamente expresiones básicas relacionadas con las compras a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Dramatiza situaciones de compra en una tienda o mercado utilizando las expresiones adecuadas relacionadas con las compras."
      }
     ]
    },
    {
     "unidad": 4,
     "nombre": "My city",
-    "objetivo": "1. Give directions using prepositions of place and common verbs to identify places and buildings in the city or town. 2. Describe a favorite Salvadoran city to promote local tourism using the vocabulary and structures studied along the unit.",
+    "objetivos": [
+     "Dar direcciones utilizando preposiciones de lugar y verbos comunes para identificar lugares y edificios de la ciudad o el pueblo.",
+     "Describir una ciudad salvadoreña favorita para promover el turismo local, utilizando el vocabulario y las estructuras estudiadas a lo largo de la unidad."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
-      "texto": "recognize words related to places in town from visual aids accurately,"
+      "texto": "Reconoce con precisión palabras relacionadas con lugares de la ciudad a partir de apoyos visuales."
      },
      {
       "codigo": "4.2",
-      "texto": "spell adjectives used to describe places both orally and in writing properly,"
+      "texto": "Deletrea adecuadamente adjetivos utilizados para describir lugares, de forma oral y escrita."
      },
      {
       "codigo": "4.3",
-      "texto": "describe places displayed in visual aids using the appropriate adjectives,"
+      "texto": "Describe lugares mostrados en apoyos visuales utilizando los adjetivos apropiados."
      },
      {
       "codigo": "4.4",
-      "texto": "identify in visual aids prepositions of place accurately,"
+      "texto": "Identifica con precisión preposiciones de lugar en apoyos visuales."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Responde correctamente preguntas sobre la ubicación de lugares utilizando preposiciones."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Identifica con precisión los verbos utilizados para dar direcciones."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Sigue con precisión las direcciones hacia distintos lugares."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Da direcciones utilizando correctamente el vocabulario de lugares y las expresiones comunes correspondientes."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Identifica con precisión gramatical las reglas ortográficas de los adjetivos comparativos y superlativos."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Forma apropiadamente los adjetivos en su grado comparativo y superlativo."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Realiza correctamente comparaciones sobre lugares de un pueblo o ciudad utilizando la forma comparativa o superlativa."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Escribe de manera coherente un párrafo corto describiendo una ciudad o pueblo de El Salvador, utilizando comparativos, superlativos y preposiciones de lugar."
      }
     ]
    },
    {
     "unidad": 5,
     "nombre": "My favorite book/movie",
-    "objetivo": "1. Provide general facts about a movie or book to describe a summary of it using suitable vocabulary.",
+    "objetivos": [
+     "Proporcionar datos generales sobre una película o libro para describir un resumen de este utilizando el vocabulario adecuado."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
-      "texto": "spell book and movie-related vocabulary accurately,"
+      "texto": "Deletrea con precisión el vocabulario relacionado con libros y películas."
      },
      {
       "codigo": "5.2",
-      "texto": "associate vocabulary related to books and movies with input from varied sources,"
+      "texto": "Asocia el vocabulario relacionado con libros y películas con información de fuentes variadas."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Deletrea correctamente verbos regulares en participio pasado, de forma oral y escrita."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Pronuncia apropiadamente verbos regulares en participio pasado."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Reconoce apropiadamente verbos irregulares en participio pasado."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Deletrea con precisión verbos irregulares en participio pasado."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Reconoce el orden correcto de la estructura gramatical de oraciones afirmativas y negativas en presente perfecto."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Forma oraciones afirmativas y negativas en presente perfecto siguiendo el orden apropiado de las palabras."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Intercambia correctamente información sobre experiencias de vida utilizando oraciones afirmativas y negativas en presente perfecto."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Construye con precisión preguntas de sí/no en presente perfecto."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Indaga apropiadamente sobre las experiencias de vida de alguien utilizando el presente perfecto."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Contrasta de manera coherente experiencias de vida personales con sus compañeros en un intercambio oral sencillo."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Enumera eficazmente datos generales sobre una película o libro favorito."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Escribe descripciones sencillas y coherentes relacionadas con una película o libro favorito."
+     },
+     {
+      "codigo": "5.15",
+      "texto": "Intercambia satisfactoriamente información general con sus compañeros sobre un libro o película favorito."
      }
     ]
    },
    {
     "unidad": 6,
     "nombre": "Life experiences",
-    "objetivo": "1. Highlight meaningful information, found in different sources, to describe a famous person's accomplishments.",
+    "objetivos": [
+     "Destacar información significativa, encontrada en diferentes fuentes, para describir los logros de una persona famosa."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
-      "texto": "identify vocabulary related to life experiences precisely,"
+      "texto": "Identifica con precisión el vocabulario relacionado con experiencias de vida."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Identifica con precisión verbos relacionados con experiencias de vida en su forma de participio pasado."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Forma correctamente enunciados afirmativos, negativos y preguntas de sí/no en presente perfecto."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Habla sobre experiencias utilizando la forma correcta del presente perfecto."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Pronuncia con precisión los sonidos /t/, /d/ e /ɪd/ al final de los verbos regulares en participio pasado."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Discrimina exitosamente los sonidos de la terminación -ed al final de los verbos regulares en participio pasado, a partir de fuentes variadas."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Asocia expresiones de tiempo con for y since al describir la duración de las actividades."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Indaga la duración de una actividad construyendo correctamente preguntas precisas en presente perfecto."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Expresa correctamente la duración de una actividad utilizando el presente perfecto con for/since."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Identifica satisfactoriamente logros comunes en diferentes fuentes como revistas, libros y biografías, entre otras."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Describe de manera coherente sus logros personales."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Elabora una descripción breve y coherente sobre los logros de alguien."
+     },
+     {
+      "codigo": "6.13",
+      "texto": "Describe exitosamente los principales logros de una persona utilizando apoyos visuales para sustentar las ideas."
      }
     ]
    }
@@ -8624,114 +10253,430 @@ window.CURRICULO = {
    {
     "unidad": 1,
     "nombre": "My day yesterday",
-    "objetivo": "Unit competences 1. Provide facts about a person's past to describe someone's background. 2. Detail past activities to illustrate actions using regular and irregular verbs.",
+    "objetivos": [
+     "Proporcionar datos sobre el pasado de una persona para describir su historia personal.",
+     "Detallar actividades pasadas para ilustrar acciones utilizando verbos regulares e irregulares."
+    ],
     "indicadores": [
      {
       "codigo": "1.1",
-      "texto": "recognize adjectives to describe people from oral/written sources and visual aids correctly,"
+      "texto": "Reconoce correctamente adjetivos para describir personas a partir de fuentes orales o escritas y apoyos visuales."
      },
      {
       "codigo": "1.2",
-      "texto": "spell accurately common adjectives used to describe people,"
+      "texto": "Deletrea con precisión adjetivos comunes utilizados para describir personas."
      },
      {
       "codigo": "1.3",
-      "texto": "pronounce common adjectives appropriately,"
+      "texto": "Pronuncia apropiadamente adjetivos comunes."
      },
      {
       "codigo": "1.4",
-      "texto": "form complete sentences using was/were following word order and subject-verb agreement appropriately,"
+      "texto": "Forma oraciones completas con was/were, respetando apropiadamente el orden de las palabras y la concordancia sujeto-verbo."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Proporciona con precisión datos personales sobre alguien utilizando was y were."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Reconoce con precisión expresiones de tiempo pasado a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Deletrea con precisión expresiones de tiempo pasado, de forma oral y escrita."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Pronuncia apropiadamente expresiones de tiempo pasado."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Escribe oraciones negativas con was/were siguiendo adecuadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Formula apropiadamente preguntas sobre datos de alguien utilizando was/were."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Identifica exitosamente verbos regulares comunes en pasado simple a partir de fuentes visuales y escritas."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Forma verbos regulares en pasado simple siguiendo las reglas ortográficas apropiadas."
+     },
+     {
+      "codigo": "1.13",
+      "texto": "Asocia adecuadamente verbos regulares con sus representaciones visuales o gestos correspondientes."
+     },
+     {
+      "codigo": "1.14",
+      "texto": "Clasifica correctamente los sonidos vocálicos y consonánticos como sonoros y sordos."
+     },
+     {
+      "codigo": "1.15",
+      "texto": "Pronuncia apropiadamente los sonidos /t/, /d/ e /ɪd/ al final de los verbos regulares."
+     },
+     {
+      "codigo": "1.16",
+      "texto": "Construye oraciones afirmativas en pasado simple utilizando verbos regulares y respetando apropiadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.17",
+      "texto": "Reconoce correctamente verbos irregulares comunes en pasado simple a partir de fuentes visuales y escritas."
+     },
+     {
+      "codigo": "1.18",
+      "texto": "Forma oraciones afirmativas en pasado simple utilizando verbos irregulares y respetando apropiadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.19",
+      "texto": "Escribe adecuadamente los verbos irregulares en pasado simple."
+     },
+     {
+      "codigo": "1.20",
+      "texto": "Ilustra con precisión y coherencia las actividades realizadas el día anterior utilizando verbos regulares e irregulares en pasado simple."
      }
     ]
    },
    {
     "unidad": 2,
     "nombre": "People and life stories",
-    "objetivo": "1. Express dates to describe an event in the past. 2. Highlight facts about an important person in the history of El Salvador to describe their background following the basic organization of a biographical text.",
+    "objetivos": [
+     "Expresar fechas para describir un evento en el pasado.",
+     "Destacar datos sobre una persona importante en la historia de El Salvador para describir su trayectoria, siguiendo la organización básica de un texto biográfico."
+    ],
     "indicadores": [
      {
       "codigo": "2.1",
-      "texto": "identify occupations from visual aids accurately,"
+      "texto": "Identifica con precisión ocupaciones a partir de apoyos visuales."
      },
      {
       "codigo": "2.2",
-      "texto": "pronounce occupations properly,"
+      "texto": "Pronuncia adecuadamente las ocupaciones."
      },
      {
       "codigo": "2.3",
-      "texto": "describe a person's job using verbs related to occupations coherently,"
+      "texto": "Describe de manera coherente el trabajo de una persona utilizando verbos relacionados con las ocupaciones."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Produce enunciados negativos en pasado simple utilizando el orden correcto de la oración."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Nombra con precisión los días de la semana y los meses del año."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Identifica exitosamente números ordinales a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Pronuncia adecuadamente los números ordinales."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Deletrea correctamente los números ordinales."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Escribe fechas correctamente siguiendo los diferentes formatos estadounidenses."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Utiliza los patrones correctos para formular preguntas en pasado simple."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Intercambia información con precisión utilizando el pasado simple."
+     },
+     {
+      "codigo": "2.12",
+      "texto": "Reconoce apropiadamente la información clave de una biografía."
+     },
+     {
+      "codigo": "2.13",
+      "texto": "Selecciona cronológicamente información clave sobre la vida de un salvadoreño importante."
+     },
+     {
+      "codigo": "2.14",
+      "texto": "Organiza ideas para escribir una biografía utilizando adecuadamente el pasado simple."
+     },
+     {
+      "codigo": "2.15",
+      "texto": "Presenta de manera coherente una biografía detallada de un personaje salvadoreño."
+     },
+     {
+      "codigo": "2.16",
+      "texto": "Investiga con precisión información sobre una persona importante en la historia de El Salvador, señalando aspectos relevantes de su vida."
+     },
+     {
+      "codigo": "2.17",
+      "texto": "Escribe con claridad un párrafo biográfico sobre un personaje famoso de El Salvador."
+     },
+     {
+      "codigo": "2.18",
+      "texto": "Presenta de manera coherente la biografía de un salvadoreño famoso."
      }
     ]
    },
    {
     "unidad": 3,
     "nombre": "Going grocery shopping",
-    "objetivo": "1. Identify the five basic food groups to describe meals mentioning fruit, vegetables, meat, dairy products, and grains. 2. Use shopping-related expressions to develop functional language and vocabulary when making purchases.",
+    "objetivos": [
+     "Identificar los cinco grupos básicos de alimentos para describir comidas mencionando frutas, verduras, carnes, lácteos y granos.",
+     "Utilizar expresiones relacionadas con las compras para desarrollar lenguaje funcional y vocabulario al realizar compras."
+    ],
     "indicadores": [
      {
       "codigo": "3.1",
-      "texto": "relate food vocabulary to different kinds of word representations such as illustrations, descriptions, or definitions."
+      "texto": "Relaciona el vocabulario de alimentos con diferentes tipos de representaciones, como ilustraciones, descripciones o definiciones."
      },
      {
       "codigo": "3.2",
-      "texto": "pronounce food-related words properly,"
+      "texto": "Pronuncia adecuadamente palabras relacionadas con los alimentos."
      },
      {
       "codigo": "3.3",
-      "texto": "categorize food in the five basic food groups accordingly,"
+      "texto": "Clasifica correctamente los alimentos en los cinco grupos básicos."
      },
      {
       "codigo": "3.4",
-      "texto": "describe what they usually have for their meals using food-related vocabulary properly,"
+      "texto": "Describe adecuadamente lo que suele consumir en sus comidas utilizando vocabulario relacionado con los alimentos."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Nombra adecuadamente sustantivos contables e incontables presentados en fuentes variadas."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Clasifica apropiadamente sustantivos contables e incontables."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Forma sustantivos plurales siguiendo sus reglas ortográficas correctas."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Clasifica adecuadamente los sustantivos que llevan los artículos indefinidos a o an."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Construye adecuadamente oraciones afirmativas y negativas sobre alimentos utilizando los cuantificadores a/an, some o any."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Demuestra comprensión del vocabulario de partitivos aportando ilustraciones apropiadas que representen con precisión cada palabra o frase (p. ej., a slice of bread, a piece of cake, a can of soup), asegurando que cada ilustración asocie claramente el término partitivo con su significado visual correcto."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Identifica con precisión alimentos y sus partitivos a partir de fuentes variadas."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Lee adecuadamente los precios."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Escribe correctamente los precios durante intercambios orales."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Reconoce apropiadamente expresiones básicas relacionadas con las compras a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Dramatiza situaciones de compra en una tienda o mercado utilizando las expresiones adecuadas relacionadas con las compras."
      }
     ]
    },
    {
     "unidad": 4,
     "nombre": "My city",
-    "objetivo": "1. Give directions using prepositions of place and common verbs to identify places and buildings in the city or town. 2. Describe a favorite Salvadoran city to promote local tourism using the vocabulary and structures studied along the unit.",
+    "objetivos": [
+     "Dar direcciones utilizando preposiciones de lugar y verbos comunes para identificar lugares y edificios de la ciudad o el pueblo.",
+     "Describir una ciudad salvadoreña favorita para promover el turismo local, utilizando el vocabulario y las estructuras estudiadas a lo largo de la unidad."
+    ],
     "indicadores": [
      {
       "codigo": "4.1",
-      "texto": "recognize words related to places in town from visual aids accurately,"
+      "texto": "Reconoce con precisión palabras relacionadas con lugares de la ciudad a partir de apoyos visuales."
      },
      {
       "codigo": "4.2",
-      "texto": "spell adjectives used to describe places both orally and in writing properly,"
+      "texto": "Deletrea adecuadamente adjetivos utilizados para describir lugares, de forma oral y escrita."
      },
      {
       "codigo": "4.3",
-      "texto": "describe places displayed in visual aids using the appropriate adjectives,"
+      "texto": "Describe lugares mostrados en apoyos visuales utilizando los adjetivos apropiados."
      },
      {
       "codigo": "4.4",
-      "texto": "identify in visual aids prepositions of place accurately,"
+      "texto": "Identifica con precisión preposiciones de lugar en apoyos visuales."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Responde correctamente preguntas sobre la ubicación de lugares utilizando preposiciones."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Identifica con precisión los verbos utilizados para dar direcciones."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Sigue con precisión las direcciones hacia distintos lugares."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Da direcciones utilizando correctamente el vocabulario de lugares y las expresiones comunes correspondientes."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Identifica con precisión gramatical las reglas ortográficas de los adjetivos comparativos y superlativos."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Forma apropiadamente los adjetivos en su grado comparativo y superlativo."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Realiza correctamente comparaciones sobre lugares de un pueblo o ciudad utilizando la forma comparativa o superlativa."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Escribe de manera coherente un párrafo corto describiendo una ciudad o pueblo de El Salvador, utilizando comparativos, superlativos y preposiciones de lugar."
      }
     ]
    },
    {
     "unidad": 5,
     "nombre": "My favorite book/movie",
-    "objetivo": "1. Provide general facts about a movie or book to describe a summary of it using suitable vocabulary.",
+    "objetivos": [
+     "Proporcionar datos generales sobre una película o libro para describir un resumen de este utilizando el vocabulario adecuado."
+    ],
     "indicadores": [
      {
       "codigo": "5.1",
-      "texto": "spell book and movie-related vocabulary accurately,"
+      "texto": "Deletrea con precisión el vocabulario relacionado con libros y películas."
      },
      {
       "codigo": "5.2",
-      "texto": "associate vocabulary related to books and movies with input from varied sources,"
+      "texto": "Asocia el vocabulario relacionado con libros y películas con información de fuentes variadas."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Deletrea correctamente verbos regulares en participio pasado, de forma oral y escrita."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Pronuncia apropiadamente verbos regulares en participio pasado."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Reconoce apropiadamente verbos irregulares en participio pasado."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Deletrea con precisión verbos irregulares en participio pasado."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Reconoce el orden correcto de la estructura gramatical de oraciones afirmativas y negativas en presente perfecto."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Forma oraciones afirmativas y negativas en presente perfecto siguiendo el orden apropiado de las palabras."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Intercambia correctamente información sobre experiencias de vida utilizando oraciones afirmativas y negativas en presente perfecto."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Construye con precisión preguntas de sí/no en presente perfecto."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Indaga apropiadamente sobre las experiencias de vida de alguien utilizando el presente perfecto."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Contrasta de manera coherente experiencias de vida personales con sus compañeros en un intercambio oral sencillo."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Enumera eficazmente datos generales sobre una película o libro favorito."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Escribe descripciones sencillas y coherentes relacionadas con una película o libro favorito."
+     },
+     {
+      "codigo": "5.15",
+      "texto": "Intercambia satisfactoriamente información general con sus compañeros sobre un libro o película favorito."
      }
     ]
    },
    {
     "unidad": 6,
     "nombre": "Life experiences",
-    "objetivo": "1. Highlight meaningful information, found in different sources, to describe a famous person's accomplishments.",
+    "objetivos": [
+     "Destacar información significativa, encontrada en diferentes fuentes, para describir los logros de una persona famosa."
+    ],
     "indicadores": [
      {
       "codigo": "6.1",
-      "texto": "identify vocabulary related to life experiences precisely,"
+      "texto": "Identifica con precisión el vocabulario relacionado con experiencias de vida."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Identifica con precisión verbos relacionados con experiencias de vida en su forma de participio pasado."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Forma correctamente enunciados afirmativos, negativos y preguntas de sí/no en presente perfecto."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Habla sobre experiencias utilizando la forma correcta del presente perfecto."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Pronuncia con precisión los sonidos /t/, /d/ e /ɪd/ al final de los verbos regulares en participio pasado."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Discrimina exitosamente los sonidos de la terminación -ed al final de los verbos regulares en participio pasado, a partir de fuentes variadas."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Asocia expresiones de tiempo con for y since al describir la duración de las actividades."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Indaga la duración de una actividad construyendo correctamente preguntas precisas en presente perfecto."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Expresa correctamente la duración de una actividad utilizando el presente perfecto con for/since."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Identifica satisfactoriamente logros comunes en diferentes fuentes como revistas, libros y biografías, entre otras."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Describe de manera coherente sus logros personales."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Elabora una descripción breve y coherente sobre los logros de alguien."
+     },
+     {
+      "codigo": "6.13",
+      "texto": "Describe exitosamente los principales logros de una persona utilizando apoyos visuales para sustentar las ideas."
      }
     ]
    }

@@ -23,7 +23,7 @@
         (u.indicadores || []).forEach((ind) => {
           INDEX.push({
             asignatura: asig, grado, unidad: u.unidad, unidadNombre: u.nombre,
-            objetivo: u.objetivo, codigo: ind.codigo, texto: ind.texto, norm: norm(ind.texto),
+            objetivos: u.objetivos, codigo: ind.codigo, texto: ind.texto, norm: norm(ind.texto),
           });
         });
       });
@@ -51,11 +51,8 @@
         <p class="text-xs text-slate mt-1">Filtra dentro de la asignatura/grado elegidos (o en todo el currículo si no eliges ninguno).</p>
       </div>
       <div data-cur="objetivo-wrap" class="hidden bg-navy-50 border border-navy/10 rounded-sm p-4">
-        <div class="flex items-start justify-between gap-3">
-          <div><span class="field-label mb-1">Objetivo / competencia de la unidad</span>
-            <p data-cur="objetivo-text" class="text-sm text-navy-900"></p></div>
-          <button type="button" data-cur="add-objetivo" class="btn-accent shrink-0">+ Usar objetivo</button>
-        </div>
+        <span class="field-label mb-1">Objetivos / competencias de la unidad</span>
+        <div data-cur="objetivo-list" class="space-y-2"></div>
       </div>
       <div>
         <div class="flex items-center justify-between mb-2">
@@ -109,9 +106,8 @@
     if (options.selLabel) q('sel-ind-label').textContent = options.selLabel;
 
     const selAsig = q('asignatura'), selGrado = q('grado'), selUnidad = q('unidad');
-    const search = q('search'), objWrap = q('objetivo-wrap'), objText = q('objetivo-text');
+    const search = q('search'), objWrap = q('objetivo-wrap'), objList = q('objetivo-list');
     const listInd = q('indicadores'), selIndBox = q('sel-indicadores'), selObjBox = q('sel-objetivos');
-    const btnAddObjetivo = q('add-objetivo');
 
     const seleccion = { indicadores: [], objetivos: [] };
     function loadSel() {
@@ -158,19 +154,40 @@
       return (CURRICULO[asig][grado] || []).find((x) => String(x.unidad) === u) || null;
     }
 
+    // ---------- objetivos de la unidad (uno o varios, cada uno con su boton) ----------
+    function renderObjetivos() {
+      const unit = currentUnit();
+      const objetivos = (unit && unit.objetivos) || [];
+      if (!objetivos.length) { objWrap.classList.add('hidden'); return; }
+      objWrap.classList.remove('hidden');
+      objList.innerHTML = '';
+      objetivos.forEach((texto, i) => {
+        const enUso = seleccion.objetivos.some((o) => o.texto === texto);
+        const row = document.createElement('div');
+        row.className = 'flex items-start justify-between gap-3';
+        row.innerHTML = `<p class="text-sm text-navy-900 flex-1">${objetivos.length > 1 ? `<span class="font-mono text-xs text-navy">${i + 1}.</span> ` : ''}${esc(texto)}</p>`;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'btn-accent shrink-0' + (enUso ? ' is-used' : '');
+        btn.disabled = enUso;
+        btn.textContent = enUso ? '✓ En uso' : '+ Usar';
+        btn.addEventListener('click', () => { addObjetivo(texto); renderObjetivos(); });
+        row.appendChild(btn);
+        objList.appendChild(row);
+      });
+    }
+
     function renderIndicadores() {
       const query = norm(search.value.trim());
       const asig = selAsig.value, grado = selGrado.value;
       const unit = currentUnit();
-      if (unit && unit.objetivo) { objText.textContent = unit.objetivo; objWrap.classList.remove('hidden'); }
-      else objWrap.classList.add('hidden');
-      updateObjetivoBtn();
+      renderObjetivos();
 
       let rows = [];
       if (query.length >= 2) {
         rows = INDEX.filter((r) => (!asig || r.asignatura === asig) && (!grado || r.grado === grado) && r.norm.includes(query)).slice(0, 200);
       } else if (unit) {
-        rows = unit.indicadores.map((ind) => ({ asignatura: asig, grado, unidad: unit.unidad, unidadNombre: unit.nombre, objetivo: unit.objetivo, codigo: ind.codigo, texto: ind.texto }));
+        rows = unit.indicadores.map((ind) => ({ asignatura: asig, grado, unidad: unit.unidad, unidadNombre: unit.nombre, objetivos: unit.objetivos, codigo: ind.codigo, texto: ind.texto }));
       }
 
       listInd.innerHTML = '';
@@ -211,15 +228,6 @@
       });
       if (added) { saveSel(); renderSeleccion(); renderIndicadores(); }
     });
-    function updateObjetivoBtn() {
-      const unit = currentUnit();
-      const enUso = !!(unit && unit.objetivo && seleccion.objetivos.some((o) => o.texto === unit.objetivo));
-      btnAddObjetivo.classList.toggle('is-used', enUso);
-      btnAddObjetivo.disabled = enUso;
-      btnAddObjetivo.textContent = enUso ? '✓ Objetivo en uso' : '+ Usar objetivo';
-    }
-    btnAddObjetivo.addEventListener('click', () => { const unit = currentUnit(); if (unit && unit.objetivo) { addObjetivo(unit.objetivo); updateObjetivoBtn(); } });
-
     q('toggle-manual').addEventListener('click', () => q('manual').classList.toggle('hidden'));
     q('manual-ind-add').addEventListener('click', () => {
       const t = q('manual-ind').value.trim();
@@ -259,9 +267,9 @@
 
       selObjBox.innerHTML = '';
       if (!seleccion.objetivos.length) selObjBox.innerHTML = '<p class="text-sm text-slate">Aún no has agregado objetivos.</p>';
-      else seleccion.objetivos.forEach((o) => selObjBox.appendChild(chip(o.texto, '', () => { seleccion.objetivos = seleccion.objetivos.filter((x) => x !== o); saveSel(); renderSeleccion(); updateObjetivoBtn(); })));
+      else seleccion.objetivos.forEach((o) => selObjBox.appendChild(chip(o.texto, '', () => { seleccion.objetivos = seleccion.objetivos.filter((x) => x !== o); saveSel(); renderSeleccion(); renderObjetivos(); })));
       q('sel-obj-count').textContent = String(seleccion.objetivos.length);
-      updateObjetivoBtn();
+      renderObjetivos();
     }
 
     loadSel(); renderSeleccion(); renderIndicadores();
