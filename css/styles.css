@@ -757,6 +757,16 @@ body.dark .status-badge.pendiente { background: rgba(169, 180, 192, 0.18); color
   border-bottom-color: rgba(255, 255, 255, 0.15);
 }
 
+/* Evita el parpadeo de "Inicio" al recargar directamente en una vista (p. ej. al
+   continuar un proceso). El script del <head> marca data-initial-view en <html> y
+   aquí se muestra la vista correcta antes de que el JS tome el control (initRouter
+   retira el atributo y a partir de ahí gobierna con el atributo [hidden]). */
+html[data-initial-view] #view-home { display: none !important; }
+html[data-initial-view="ordinaria"]    #view-ordinaria,
+html[data-initial-view="recuperacion"] #view-recuperacion,
+html[data-initial-view="documentos"]   #view-documentos,
+html[data-initial-view="expedientes"]  #view-expedientes { display: block !important; }
+
 /* Título de marca del encabezado — tipografía Anton, en mayúsculas */
 .brand-title {
   font-family: 'Anton', 'Inter', system-ui, sans-serif;
