@@ -80,10 +80,11 @@ def detect_unit(txt, english=False):
         if len(name)<3: name=None
     # objetivo / competencia(s) de unidad
     if english:
-        mo = re.search(r'UNIT COMPETENCES?\s*(.+?)(?:\d\s*Unit|Conceptual Content|Performance Indicators)', txt, re.S)
+        # los programas usan 'UNIT COMPETENCES' o 'UNIT COMPETENCIES' segun edicion
+        mo = re.search(r'UNIT COMPETENC(?:IE|E)S?\s*(.+?)(?:\d\s*Unit|Conceptual Content|Performance Indicators)', txt, re.S)
         if mo:
             cand=clean(mo.group(1))
-            if 8 < len(cand) < 700: obj=cand
+            if 8 < len(cand) < 900: obj=cand
     else:
         mo = re.search(r'Competencias?\s+de\s+(?:la\s+)?unidad\s*:?\s*(.+)', txt, re.S|re.I)
         if not mo:
@@ -91,7 +92,7 @@ def detect_unit(txt, english=False):
         if mo:
             cand=re.split(r'Contenidos|CONTENIDOS|Indicadores de logro|Conceptos claves|Tiempo probable|Eje integrador|Duración\s*:|▪', mo.group(1))[0]
             cand=clean(cand)
-            if len(cand) > 900:   # sin marcador de corte: recorta al último ítem numerado
+            if len(cand) > 2200:   # sin marcador de corte: recorta al último ítem numerado
                 mlast = list(re.finditer(r'\b\d\.\s', cand))
                 if len(mlast) >= 2:
                     # corta en el punto final de la última competencia numerada
@@ -100,7 +101,8 @@ def detect_unit(txt, english=False):
                     cand = cand[:mlast[-1].end()+ (dot+1 if dot>0 else len(tail))].strip()
                 else:
                     cand = cand[:900]
-            if 8 < len(cand) < 1200: obj=cand
+            # las unidades con 2-3 competencias numeradas superan facil los 1200
+            if 8 < len(cand) < 2600: obj=cand
     return num, name, obj
 
 def names_from_summary(pdf, allowed):
@@ -163,7 +165,10 @@ def is_unit_page(txt, english=False):
     low = txt.lower()
     if txt.count('....') >= 3: return False
     if english:
-        return 'performance indicator' in low and 'content' in low
+        if 'performance indicator' in low and 'content' in low: return True
+        # paginas de continuacion de la tabla: sin encabezado, pero con codigos
+        # de indicador N.N seguidos de minuscula ('students can ...')
+        return len(re.findall(r'(?m)(?:^|\s)\d{1,2}\.\d{1,2}\s+[a-z]', txt)) >= 1
     if 'indicadores de logro' not in low: return False
     if 'contenidos' not in low: return False
     if any(m in low for m in INTRO_MARKERS): return False
@@ -175,10 +180,20 @@ def polish(t, english=False):
     """Quita basura de pie de pagina / cajas laterales del final del indicador."""
     t = decorrupt(t)   # elimina basura de columnas mezcladas
     if english:
-        for mk in ['Approximate time','UNIT COMPETENCES','Keywords','Attitudinal competenc']:
+        for mk in ['Approximate time','UNIT COMPETENCES','UNIT COMPETENCIES','Keywords','Attitudinal competenc']:
             i=t.find(mk)
             if i>0: t=t[:i]
+        # caja lateral de vocabulario con pronunciacion pegada al final del
+        # indicador: tras un punto de cierre siguen pares 'palabra /ipa/'.
+        # OJO: no cortar menciones legitimas de fonemas a mitad de oracion
+        # ('pronounce /t/, /d/, and /ɪd/ sounds...').
+        for m in re.finditer(r'[.!?]\s', t):
+            tail=t[m.end():]
+            if len(re.findall(r'/[^/\s][^/]{0,49}/', tail)) >= 2:
+                t=t[:m.start()+1]
+                break
         t=re.sub(r'\s+(PreA1|A1\+|A1|A2\+|A2|B1)\s*$','',t)
+        t=re.sub(r'[,;]\s*$', '.', t.strip())
         return t.strip()
     for mk in SIDEBAR_MARKERS:
         i = t.find(mk)
@@ -189,7 +204,42 @@ def polish(t, english=False):
     # numero de pagina + encabezado de grado al final
     t = re.sub(r'\s+\d{1,4}\s*(Séptimo|Octavo|Noveno|Primer año|Segundo año)?\s*(grado)?\s*$', '', t)
     t = re.sub(r'\s+(Séptimo|Octavo|Noveno|Primer año|Segundo año)\s+grado\s*$', '', t)
+    # ningun indicador debe terminar en coma o punto y coma
+    t = re.sub(r'[,;]\s*$', '.', t.strip())
     return t.strip()
+
+def competencia_posicional(page):
+    """Matemática no rotula 'Unidad N' en la página: el título va en un cajetín
+    a la izquierda y la competencia a la derecha bajo 'COMPETENCIA(S) DE UNIDAD',
+    entremezclados en el texto plano. Se extrae por posición: palabras a la
+    derecha del encabezado, entre este y 'Tiempo probable'/'CONTENIDOS'."""
+    words = [w for w in page.extract_words() if w.get('upright', True)]
+    # el encabezado a veces sale duplicado y entrelazado caracter a caracter
+    # ('COMPCEOTMENPCEITAE...'), por eso basta con el prefijo COMP + longitud
+    hdr = [w for w in words if w['text'].upper().startswith('COMPETENCIA')
+           or (w['text'].upper().startswith('COMP') and len(w['text']) >= 12)]
+    if not hdr: return None
+    h = hdr[0]
+    x_min = h['x0'] - 8
+    top0 = h['bottom']
+    stops = [w['top'] for w in words
+             if w['text'] in ('Tiempo','CONTENIDOS','Contenidos') and w['top'] > top0]
+    bot = min(stops) if stops else page.height
+    sel = [w for w in words if w['x0'] >= x_min and top0 - 2 < w['top'] < bot - 2]
+    if not sel: return None
+    sel.sort(key=lambda w:(round(w['top']), w['x0']))
+    lines=[]; cur=[]; last=None
+    for w in sel:
+        if last is None or abs(w['top']-last) <= 4: cur.append(w)
+        else: lines.append(cur); cur=[w]
+        last=w['top']
+    if cur: lines.append(cur)
+    txt=' '.join(' '.join(w['text'] for w in ln) for ln in lines)
+    txt=clean(txt)
+    # descartar capturas rotas (paginas de estructura/muestra)
+    if len(txt) < 40: return None
+    if not (txt[:1].isupper() or txt[:1] in '–—-'): return None
+    return txt
 
 def right_col_indicators(page, english=False):
     h = page.height
@@ -293,6 +343,12 @@ def extract_pdf(path, allowed=None, default_grade=None, names_summary=False, eng
                 if key not in units:
                     units[key]={'grade':grade,'unit':pref,'name':namemap.get(key),'objetivo':objmap.get(key),'indicadores':[]}
                     order.append(key)
+                # Matemática: la competencia esta en la misma pagina de la tabla,
+                # sin encabezado 'Unidad N' -> extraccion por posicion (la propia
+                # funcion localiza el encabezado COMPETENCIA(S) y devuelve None si no hay)
+                if not units[key]['objetivo'] and not english:
+                    cp=competencia_posicional(pg)
+                    if cp: units[key]['objetivo']=cp
                 lst=units[key]['indicadores']
                 idx={c:i for i,(c,_) in enumerate(lst)}
                 for c,t in inds:
