@@ -15,7 +15,7 @@
     grid.innerHTML = '';
     window.DOCUMENTOS.forEach((doc) => {
       // Los nombres tienen espacios/acentos/paréntesis → se codifican para la URL.
-      const href = 'programas/' + encodeURIComponent(doc.archivo);
+      const href = 'Programas/' + encodeURIComponent(doc.archivo);
       const card = document.createElement('div');
       card.className = 'doc-card';
       card.innerHTML = `
