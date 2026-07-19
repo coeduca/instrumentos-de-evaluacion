@@ -1148,6 +1148,9 @@ function showView(name) {
   window.scrollTo(0, 0);
 }
 function initRouter() {
+  // El CSS mostró la vista destino vía [data-initial-view] para evitar el parpadeo
+  // de "Inicio" al recargar; a partir de aquí la navegación la gobierna showView.
+  document.documentElement.removeAttribute('data-initial-view');
   document.querySelectorAll('[data-nav]').forEach((b) => {
     b.addEventListener('click', () => showView(b.dataset.nav));
   });
