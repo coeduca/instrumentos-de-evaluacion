@@ -29,6 +29,7 @@ const state = {
   actividades: [],   // { id, titulo, instrucciones, tabla }
   refuerzo: { inicio: '', fin: '', descripcion: '' },
   generados: {},     // { refuerzo|paquete|cierre: fecha ISO de última generación }
+  checklist: {},     // { <clave del ítem manual>: fecha ISO en que el docente lo marcó }
 };
 
 // Nota mínima de aprobación según nivel (Manual, num. 13.2.c y 34 ss.)
@@ -115,6 +116,7 @@ function loadState() {
     state.actividades = Array.isArray(parsed.actividades) ? parsed.actividades : [];
     Object.assign(state.refuerzo, parsed.refuerzo || {});
     Object.assign(state.generados, parsed.generados || {});
+    Object.assign(state.checklist, parsed.checklist || {});
   } catch (e) {
     console.error('No se pudo restaurar el estado guardado:', e);
   }
@@ -532,24 +534,69 @@ function fmtFechaCortaApp(iso) {
   return `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
 }
 
+// Lista de verificación del expediente (Manual, num. 15 pág. 55 y num. 34.c).
+// 'auto': se marca solo al generar el documento (state.generados).
+// 'manual': el docente lo marca con un clic cuando el paso ya está cumplido
+// en papel (state.checklist); se guarda con el proceso en la base de datos.
+const CHECKLIST_ITEMS = [
+  { key: 'refuerzo', tipo: 'auto', label: 'Constancia de refuerzo educativo generada', ref: 'num. 15.a' },
+  { key: 'paquete', tipo: 'auto', label: 'Acta de compromiso + instructivo + instrumento generados', ref: 'num. 15.d' },
+  { key: 'firmasAval', tipo: 'manual', label: 'Acta de compromiso firmada por director/a, docente y Equipo de Evaluación', ref: 'num. 15.d' },
+  { key: 'acuseEstudiante', tipo: 'manual', label: 'Acuse de recibido — firma del estudiante en su acta', ref: 'num. 15.c' },
+  { key: 'evidencias', tipo: 'manual', label: 'Trabajos o evidencias de la recuperación archivados', ref: 'num. 15.b' },
+  { key: 'cierre', tipo: 'auto', label: 'Acta de cierre generada — resultado o incumplimiento', ref: 'num. 15.b' },
+  { key: 'notasRegistradas', tipo: 'manual', label: 'Notas finales registradas en el cuadro oficial', ref: 'num. 13.1.c / 13.2.c' },
+  { key: 'justificacion', tipo: 'manual', label: 'Justificación escrita por cada estudiante que reprueba', ref: 'num. 34.c · si reprueba' },
+  { key: 'archivoFisico', tipo: 'manual', label: 'Expediente impreso y archivado en el centro educativo', ref: 'num. 15' },
+];
+
 function renderChecklist() {
   const panel = document.getElementById('expediente-checklist');
   if (!panel) return;
-  const items = [
-    { key: 'refuerzo', label: 'Constancia de refuerzo educativo', ref: 'num. 15.a · opcional' },
-    { key: 'paquete', label: 'Acta de compromiso + instructivo + instrumento', ref: 'num. 15.d' },
-    { key: 'cierre', label: 'Acta de cierre — resultado o incumplimiento', ref: 'num. 15.b' },
-  ];
-  const rows = items.map((it) => {
-    const fecha = state.generados[it.key];
+
+  let completados = 0;
+  const rows = CHECKLIST_ITEMS.map((it) => {
+    const fecha = it.tipo === 'auto' ? state.generados[it.key] : state.checklist[it.key];
     const done = !!fecha;
-    return `<div class="check-item${done ? ' done' : ''}">
-      <span class="check-mark">${done ? '✓' : '○'}</span>
+    if (done) completados++;
+    const derecha = done
+      ? `<span class="check-date">${fmtFechaCortaApp(fecha)}</span>`
+      : `<span class="check-ref">${it.ref}</span>`;
+    if (it.tipo === 'auto') {
+      return `<div class="check-item${done ? ' done' : ''}">
+        <span class="check-mark">${done ? '✓' : '○'}</span>
+        <span class="flex-1">${it.label}</span>
+        ${derecha}
+      </div>`;
+    }
+    return `<button type="button" class="check-item manual${done ? ' done' : ''}" data-check-key="${it.key}"
+      role="checkbox" aria-checked="${done}" title="${done ? 'Clic para desmarcar' : 'Clic para marcar como cumplido'}">
+      <span class="check-mark">${done ? '✓' : '□'}</span>
       <span class="flex-1">${it.label}</span>
-      ${done ? `<span class="check-date">${fmtFechaCortaApp(fecha)}</span>` : `<span class="check-ref">${it.ref}</span>`}
-    </div>`;
+      ${derecha}
+    </button>`;
   }).join('');
-  panel.innerHTML = `<div class="checklist-title">Expediente del proceso — Normativa de Evaluación, num. 15</div>${rows}`;
+
+  const pct = Math.round((completados / CHECKLIST_ITEMS.length) * 100);
+  panel.innerHTML = `
+    <div class="checklist-title">Lista de verificación del expediente — Normativa de Evaluación, num. 15</div>
+    <div class="checklist-progress-row">
+      <div class="checklist-progress"><span style="width:${pct}%"></span></div>
+      <span class="checklist-progress-label">${completados} de ${CHECKLIST_ITEMS.length}</span>
+    </div>
+    ${rows}
+    <p class="checklist-hint">Los pasos con casilla □ se marcan con un clic cuando ya están cumplidos en papel; quedan guardados con el proceso.</p>`;
+
+  panel.querySelectorAll('[data-check-key]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const k = btn.dataset.checkKey;
+      if (state.checklist[k]) delete state.checklist[k];
+      else state.checklist[k] = new Date().toISOString();
+      saveState();
+      renderChecklist();
+    });
+  });
+
   if (typeof updateFaseChecks === 'function') updateFaseChecks();
 }
 
@@ -1312,6 +1359,7 @@ document.getElementById('btn-clear-data').addEventListener('click', () => {
   state.actividades = [];
   state.refuerzo = { inicio: '', fin: '', descripcion: '' };
   state.generados = {};
+  state.checklist = {};
 
   Object.entries(CONFIG_FIELD_IDS).forEach(([key, id]) => {
     document.getElementById(id).value = state.configuracion[key] || '';

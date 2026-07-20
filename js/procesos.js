@@ -113,7 +113,7 @@
   function workspaceTieneDatos() {
     const data = snapshotWorkspace();
     const p = parseKey(data, 'actas-recuperacion:v1');
-    if (p && ((p.estudiantes || []).length || (p.actividades || []).length || (p.configuracion && (p.configuracion.materia || '').trim()))) return true;
+    if (p && ((p.estudiantes || []).length || (p.actividades || []).length || (p.configuracion && (p.configuracion.materia || '').trim()) || Object.keys(p.checklist || {}).length)) return true;
     const o = parseKey(data, 'actas-recuperacion:ordinaria:v1');
     if (o && (o.titulo || '').trim()) return true;
     const cr = parseKey(data, 'actas-recuperacion:curriculo:rec:v1');
