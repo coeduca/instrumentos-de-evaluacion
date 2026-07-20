@@ -1120,6 +1120,64 @@ body.dark .fase-tab.active .fase-check { color: #1F5744; }
   white-space: nowrap;
 }
 
+/* Ítems manuales: el docente los marca con un clic */
+.check-item.manual {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 6px;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+  margin-left: -0.35rem;
+  margin-right: -0.35rem;
+  transition: background-color 0.15s ease;
+}
+
+.check-item.manual:hover,
+.check-item.manual:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  outline: none;
+}
+
+.checklist-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.checklist-progress {
+  flex: 1;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+}
+
+.checklist-progress span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: #7FE0BC;
+  transition: width 0.3s ease;
+}
+
+.checklist-progress-label {
+  font-size: 0.7rem;
+  font-family: 'IBM Plex Mono', monospace;
+  color: rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+}
+
+.checklist-hint {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.6rem;
+}
+
 /* ---------------------------------------------------------
    Expedientes de estudiantes
 --------------------------------------------------------- */
