@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/styles.css?v=27">
+<link rel="stylesheet" href="css/styles.css?v=28">
 
 <script>
   tailwind.config = {
@@ -209,7 +209,7 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <div>
               <label for="cfg-codigo" class="field-label">Código</label>
               <input id="cfg-codigo" type="text" class="field-input font-mono" placeholder="00000">
@@ -223,6 +223,13 @@
             <div>
               <label for="cfg-materia" class="field-label">Materia</label>
               <input id="cfg-materia" type="text" class="field-input" placeholder="Matemática">
+            </div>
+            <div>
+              <label for="cfg-grado" class="field-label">Grado</label>
+              <select id="cfg-grado" class="field-input">
+                <option value="">Seleccionar</option>
+              </select>
+              <p class="text-xs text-slate mt-1">De aquí se toma la lista de estudiantes al copiar el código del instrumento.</p>
             </div>
           </div>
 
@@ -756,17 +763,18 @@
 <!-- docx: generación de Word (.docx) en el navegador -->
 <script src="https://cdn.jsdelivr.net/npm/docx@9.7.1/dist/index.iife.js"></script>
 
-<script src="js/students.js?v=27"></script>
-<script src="js/curriculo.js?v=27"></script>
-<script src="js/documentos.js?v=27"></script>
-<script src="js/pdfGenerator.js?v=27"></script>
-<script src="js/wordGenerator.js?v=27"></script>
-<script src="js/curriculo-ui.js?v=27"></script>
-<script src="js/instrumento-ui.js?v=27"></script>
-<script src="js/expediente.js?v=27"></script>
-<script src="js/procesos.js?v=27"></script>
-<script src="js/app.js?v=27"></script>
-<script src="js/ordinaria-ui.js?v=27"></script>
-<script src="js/documentos-ui.js?v=27"></script>
+<script src="js/students.js?v=28"></script>
+<script src="js/curriculo.js?v=28"></script>
+<script src="js/documentos.js?v=28"></script>
+<script src="js/pdfGenerator.js?v=28"></script>
+<script src="js/wordGenerator.js?v=28"></script>
+<script src="js/curriculo-ui.js?v=28"></script>
+<script src="js/instrumento-ui.js?v=28"></script>
+<script src="js/appscript-gen.js?v=28"></script>
+<script src="js/expediente.js?v=28"></script>
+<script src="js/procesos.js?v=28"></script>
+<script src="js/app.js?v=28"></script>
+<script src="js/ordinaria-ui.js?v=28"></script>
+<script src="js/documentos-ui.js?v=28"></script>
 </body>
 </html>
