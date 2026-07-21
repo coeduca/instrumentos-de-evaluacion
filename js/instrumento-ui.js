@@ -1,8 +1,10 @@
 // =========================================================
 // Instrumento de evaluación — rúbrica o lista de cotejo
-// Factory reutilizable: createInstrumento(rootEl, storageKey, getIndicadores)
+// Factory reutilizable: createInstrumento(rootEl, storageKey, getIndicadores, opts)
 // construye su propio DOM y devuelve { get }. Instanciable de forma
 // independiente (ordinaria y recuperación).
+// opts.contexto: función que devuelve los datos (config, actividad,
+// estudiantes, indicadores…) para generar el código de Google Apps Script.
 // =========================================================
 (function () {
   'use strict';
@@ -40,9 +42,23 @@
         </div>
         <p data-inst="empty" class="text-sm text-slate text-center py-2">Agrega criterios o siémbralos desde los indicadores.</p>
       </div>
+      <div data-inst="gs" class="hidden border-t border-navy/10 pt-4 space-y-2">
+        <div class="flex flex-wrap items-center gap-2">
+          <button type="button" data-inst="gs-copy" class="btn-secondary">⧉ Copiar código para Google Apps Script</button>
+          <button type="button" data-inst="gs-toggle" class="text-xs text-navy underline underline-offset-2 hover:text-navy-700">Ver código</button>
+          <span data-inst="gs-status" class="text-xs text-slate" role="status"></span>
+        </div>
+        <p class="text-xs text-slate">
+          Copia el código y pégalo en <span class="font-mono">script.google.com</span>: crea en tu Drive
+          <strong class="text-navy">un archivo por estudiante</strong> con este instrumento y la nota calculada
+          automáticamente. Toma la lista del grado, los criterios, el objetivo y los datos de la actividad.
+        </p>
+        <textarea data-inst="gs-code" class="hidden field-input font-mono text-xs h-64 whitespace-pre" readonly spellcheck="false"></textarea>
+      </div>
     </div>`;
 
-  function createInstrumento(rootEl, storageKey, getIndicadores) {
+  function createInstrumento(rootEl, storageKey, getIndicadores, opts) {
+    opts = opts || {};
     const name = `inst-tipo-${++counter}`;
     rootEl.innerHTML = TEMPLATE.replace(/__NAME__/g, name);
     const q = (sel) => rootEl.querySelector(`[data-inst="${sel}"]`);
@@ -52,6 +68,7 @@
     const save = debounce(() => {
       try { localStorage.setItem(storageKey, JSON.stringify(inst)); }
       catch (e) { console.error('No se pudo guardar el instrumento:', e); }
+      invalidarCodigo();
     }, 250);
     function load() {
       try {
@@ -75,6 +92,63 @@
       editor.classList.toggle('hidden', !activo);
       escalaHint.classList.toggle('hidden', inst.tipo !== 'rubrica');
       if (activo) renderTabla();
+    }
+
+    // ---------- código para Google Apps Script ----------
+    const gsBox = q('gs'), gsCode = q('gs-code'), gsStatus = q('gs-status'), gsToggle = q('gs-toggle');
+    const puedeGenerar = typeof opts.contexto === 'function' && window.AppsScriptGen;
+    gsBox.classList.toggle('hidden', !puedeGenerar);
+
+    let gsStatusTimer;
+    function estado(msg, ok) {
+      gsStatus.textContent = msg;
+      gsStatus.classList.toggle('text-green-700', ok === true);
+      clearTimeout(gsStatusTimer);
+      if (msg) gsStatusTimer = setTimeout(() => { gsStatus.textContent = ''; gsStatus.classList.remove('text-green-700'); }, 6000);
+    }
+
+    // Devuelve el código o null (avisando) si faltan datos.
+    function codigoActual() {
+      const r = window.AppsScriptGen.generar(inst, opts.contexto());
+      if (!r.ok) { estado(''); alert(r.error); return null; }
+      return r;
+    }
+
+    if (puedeGenerar) {
+      q('gs-copy').addEventListener('click', async () => {
+        const r = codigoActual();
+        if (!r) return;
+        gsCode.value = r.codigo;
+        let copiado = false;
+        try {
+          await navigator.clipboard.writeText(r.codigo);
+          copiado = true;
+        } catch (e) {
+          // Sin permiso de portapapeles (p. ej. al abrir el archivo con file://):
+          // se muestra el código ya seleccionado para copiarlo con Ctrl+C.
+          gsCode.classList.remove('hidden');
+          gsToggle.textContent = 'Ocultar código';
+          gsCode.focus();
+          gsCode.select();
+          try { copiado = document.execCommand('copy'); } catch (e2) { copiado = false; }
+        }
+        estado(copiado
+          ? `✓ Copiado · ${r.totalEstudiantes} estudiante${r.totalEstudiantes === 1 ? '' : 's'} · carpeta «${r.carpeta}»`
+          : 'Selecciona el código de abajo y cópialo con Ctrl+C.', copiado);
+      });
+
+      gsToggle.addEventListener('click', () => {
+        if (gsCode.classList.contains('hidden')) {
+          const r = codigoActual();
+          if (!r) return;
+          gsCode.value = r.codigo;
+          gsCode.classList.remove('hidden');
+          gsToggle.textContent = 'Ocultar código';
+        } else {
+          gsCode.classList.add('hidden');
+          gsToggle.textContent = 'Ver código';
+        }
+      });
     }
 
     q('seed').addEventListener('click', () => {
@@ -104,7 +178,17 @@
       const el = document.createElement('td'); el.contentEditable = 'true'; el.className = cls || ''; el.textContent = value || '';
       el.addEventListener('input', () => onInput(el.textContent)); return el;
     }
+    // El código mostrado deja de ser válido al tocar los criterios: se colapsa
+    // para que nadie copie una versión vieja.
+    function invalidarCodigo() {
+      if (!gsCode || gsCode.classList.contains('hidden')) return;
+      gsCode.classList.add('hidden');
+      gsToggle.textContent = 'Ver código';
+      estado('El instrumento cambió: vuelve a copiar el código.');
+    }
+
     function renderTabla() {
+      invalidarCodigo();
       tabla.innerHTML = '';
       empty.classList.toggle('hidden', inst.criterios.length > 0);
       const thead = document.createElement('thead'); const htr = document.createElement('tr');

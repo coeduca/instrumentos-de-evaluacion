@@ -12,6 +12,7 @@ const DEFAULT_CONFIG = {
   codigo: '12379',
   docente: '',
   materia: '',
+  grado: '',
   trimestre: '',
   anio: '2026',
   fechaLimite: '',
@@ -141,6 +142,7 @@ const CONFIG_FIELD_IDS = {
   codigo: 'cfg-codigo',
   docente: 'cfg-docente',
   materia: 'cfg-materia',
+  grado: 'cfg-grado',
   trimestre: 'cfg-trimestre',
   anio: 'cfg-anio',
   fechaLimite: 'cfg-fecha-limite',
@@ -171,8 +173,40 @@ function populateTeacherOptions() {
   });
 }
 
+// Orden pedagógico de los grados (los que no estén aquí van al final).
+const ORDEN_GRADOS = ['Séptimo', 'Octavo', 'Noveno', 'Primer Año de Bachillerato', 'Segundo Año de Bachillerato'];
+
+function gradosDisponibles() {
+  const grados = [...new Set(STUDENT_INDEX.map((s) => s.grade).filter(Boolean))];
+  return grados.sort((a, b) => {
+    const ia = ORDEN_GRADOS.indexOf(a), ib = ORDEN_GRADOS.indexOf(b);
+    return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib) || a.localeCompare(b, 'es');
+  });
+}
+
+function populateGradeOptions() {
+  const select = document.getElementById('cfg-grado');
+  if (!select) return;
+  gradosDisponibles().forEach((grado) => {
+    const opt = document.createElement('option');
+    opt.value = grado;
+    opt.textContent = grado;
+    select.appendChild(opt);
+  });
+}
+
+// Lista completa del grado, en orden alfabético (así se numera igual que el registro).
+function estudiantesDelGrado(grado) {
+  if (!grado) return [];
+  return STUDENT_INDEX
+    .filter((s) => s.grade === grado)
+    .sort((a, b) => a.name.localeCompare(b.name, 'es'))
+    .map((s) => ({ nie: s.nie, name: s.name, grade: s.grade }));
+}
+
 function bindConfigFields() {
   populateTeacherOptions();
+  populateGradeOptions();
   Object.entries(CONFIG_FIELD_IDS).forEach(([key, id]) => {
     const el = document.getElementById(id);
     el.value = state.configuracion[key] || '';
@@ -1131,6 +1165,46 @@ document.getElementById('btn-ordinaria-word').addEventListener('click', () => {
 });
 
 // =========================================================
+// CONTEXTO PARA EL CÓDIGO DE GOOGLE APPS SCRIPT
+// (lo consume el botón «Copiar código» del instrumento de evaluación)
+// =========================================================
+
+// Ordinaria: la lista completa del grado elegido en Configuración general.
+function ctxOrdinaria() {
+  const ord = (window.ActividadOrdinaria && window.ActividadOrdinaria.get()) || {};
+  const sel = ordPicker ? ordPicker.get() : { indicadores: [], objetivos: [] };
+  return {
+    origen: 'ordinaria',
+    config: state.configuracion,
+    grado: state.configuracion.grado,
+    actividad: { tipoLabel: ord.tipoLabel || '', titulo: ord.titulo || '', ponderacion: ord.ponderacion || '' },
+    estudiantes: estudiantesDelGrado(state.configuracion.grado),
+    indicadores: sel.indicadores,
+    objetivos: sel.objetivos,
+  };
+}
+
+// Recuperación: solo los estudiantes de la tabla (los que están en proceso).
+function ctxRecuperacion() {
+  const sel = recPicker ? recPicker.get() : { indicadores: [], objetivos: [] };
+  const cfg = state.configuracion;
+  const actividad = state.actividades.find((a) => (a.titulo || '').trim());
+  return {
+    origen: 'recuperacion',
+    config: cfg,
+    grado: cfg.grado || (state.estudiantes[0] && state.estudiantes[0].grade) || '',
+    actividad: {
+      tipoLabel: cfg.tipoRecuperacion === 'extraordinaria' ? 'Recuperación extraordinaria' : 'Recuperación ordinaria',
+      titulo: actividad ? actividad.titulo.trim() : '',
+      ponderacion: '',
+    },
+    estudiantes: state.estudiantes,
+    indicadores: sel.indicadores,
+    objetivos: sel.objetivos,
+  };
+}
+
+// =========================================================
 // PICKERS INDEPENDIENTES + ROUTER DE VISTAS
 // =========================================================
 function initPickers() {
@@ -1141,10 +1215,12 @@ function initPickers() {
     { selLabel: 'Indicadores no alcanzados seleccionados' });
   ordInstr = window.createInstrumento(
     document.getElementById('ord-instrumento'), 'actas-recuperacion:instrumento:ord:v1',
-    () => ordPicker.get().indicadores);
+    () => ordPicker.get().indicadores,
+    { contexto: ctxOrdinaria });
   recInstr = window.createInstrumento(
     document.getElementById('rec-instrumento'), 'actas-recuperacion:instrumento:rec:v1',
-    () => recPicker.get().indicadores);
+    () => recPicker.get().indicadores,
+    { contexto: ctxRecuperacion });
 
   // Autollenar "Materia" con la asignatura elegida en el buscador de currículo
   // (solo si el campo está vacío, para no pisar lo que escribió el docente).
