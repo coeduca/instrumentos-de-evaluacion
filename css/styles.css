@@ -1269,3 +1269,109 @@ body.dark .fase-tab.active .fase-check { color: #1F5744; }
 .exp-btn:hover { background: var(--color-hover); border-color: var(--color-navy); }
 .exp-btn.danger { color: var(--color-slate); }
 .exp-btn.danger:hover { color: #B54708; border-color: #B54708; }
+
+/* ---------- Chip de Google Apps Script (instrumento de evaluación) ---------- */
+.gs-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.2rem 0.35rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  box-shadow: 0 1px 2px rgba(14, 31, 48, 0.06);
+}
+
+.gs-chip-logo {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  margin: 0 0.2rem 0 0.25rem;
+  flex-shrink: 0;
+}
+
+.gs-chip-sep {
+  width: 1px;
+  height: 16px;
+  background: var(--color-border-soft);
+  margin-right: 0.15rem;
+}
+
+.gs-chip-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  color: var(--color-slate);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.gs-chip-btn svg { width: 15px; height: 15px; }
+.gs-chip-btn:hover { background: var(--color-hover); color: var(--color-navy); }
+.gs-chip-btn:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 1px; }
+
+.gs-status-ok { color: #2F6F5E; }
+body.dark .gs-status-ok { color: #7FD1B9; }
+
+/* Modal del código generado */
+.gs-modal-box { max-width: 52rem; }
+
+.gs-modal-code {
+  height: 22rem;
+  white-space: pre;
+  overflow: auto;
+  line-height: 1.45;
+  resize: vertical;
+}
+
+/* ---------- Botón de información (mensaje al tocarlo) ---------- */
+.info-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  margin-left: 0.3rem;
+  vertical-align: -2px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 0.62rem;
+  font-style: italic;
+  font-weight: 700;
+  text-transform: none;
+  line-height: 1;
+  color: var(--color-slate);
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.info-btn:hover,
+.info-btn[aria-expanded="true"] {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  color: var(--color-surface);
+}
+
+.info-msg {
+  margin-top: 0.4rem;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--color-slate);
+  background: var(--color-hover);
+  border-left: 2px solid var(--color-navy);
+  border-radius: 2px;
+}
+
+.gs-chip-link {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.15rem;
+  transition: background 0.15s ease;
+}
+
+.gs-chip-link:hover { background: var(--color-hover); }
+.gs-chip-link:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 1px; }
