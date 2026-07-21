@@ -80,7 +80,7 @@
     L.push(`var TIPO_ACTIVIDAD  = ${lit(d.tipoActividad)};`);
     L.push(`var TEMA            = ${lit(d.tema)};`);
     L.push(`var PONDERACION     = ${lit(d.ponderacion)};`);
-    L.push(`var FECHA_LIMITE    = ${lit(d.fechaLimite)};`);
+    L.push(`var FECHA_EVALUACION = ${lit(d.fechaEvaluacion)};`);
     L.push(`var OBJETIVO        = ${lit(d.objetivo)};`);
     L.push('');
     L.push('// Indicadores de logro evaluados (Manual de Evaluación, num. 15).');
@@ -269,8 +269,7 @@ function encabezado(hoja, totalCols, numLista, nombre, nie) {
   fila = filaInfo(hoja, fila, totalCols, [
     ["N° de lista", String(numLista)],
     ["NIE", nie],
-    ["Fecha límite", FECHA_LIMITE || "—"],
-    ["Fecha de evaluación", "____ / ____ / " + ANIO]
+    ["Fecha de evaluación", FECHA_EVALUACION]
   ], 18, 8);
   fila = filaInfo(hoja, fila, totalCols, [["Estudiante", nombre]], 20, 10);
 
@@ -663,7 +662,9 @@ function ocultarSobrante(hoja) {
       tipoActividad: act.tipoLabel ? `${act.tipoLabel}${ponderacion ? ' (' + ponderacion + ')' : ''}` : '',
       tema: act.titulo || '',
       ponderacion,
-      fechaLimite: fechaCorta(cfg.fechaLimite),
+      // La fecha límite del framework es la fecha en que se evalúa la actividad.
+      // Si no se ha fijado, la hoja queda con espacios para llenarla a mano.
+      fechaEvaluacion: fechaCorta(cfg.fechaLimite) || `____ / ____ / ${cfg.anio || ''}`.trim(),
       objetivo: (ctx.objetivos || []).map(stripHtml).filter(Boolean).join('  '),
       indicadores: sembrados ? [] : indicadores,
       estudiantes,

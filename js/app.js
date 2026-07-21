@@ -1282,6 +1282,20 @@ function initRouter() {
 }
 
 // =========================================================
+// BOTONES DE INFORMACIÓN (la «i» junto a una etiqueta)
+// =========================================================
+function initInfoButtons() {
+  document.querySelectorAll('[data-info-target]').forEach((btn) => {
+    const msg = document.getElementById(btn.dataset.infoTarget);
+    if (!msg) return;
+    btn.addEventListener('click', () => {
+      const oculto = msg.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(!oculto));
+    });
+  });
+}
+
+// =========================================================
 // DRAWER DE OPCIONES (respaldo · restaurar · tema)
 // =========================================================
 const drawer = document.getElementById('drawer');
@@ -1461,6 +1475,7 @@ renderActivities();
 renderChecklist();
 initFases();
 initPickers();
+initInfoButtons();
 initRouter();
 loadLogo();
 initTheme();

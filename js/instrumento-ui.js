@@ -19,6 +19,10 @@
   function debounce(fn, ms) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; }
   let counter = 0;
 
+  // Iconos en línea (heredan el color del texto, así sirven en claro y oscuro)
+  const ICON_COPY = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"></path></svg>`;
+  const ICON_OPEN = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path></svg>`;
+
   const TEMPLATE = `
     <div class="p-6 space-y-5">
       <p class="text-sm text-slate">
@@ -35,6 +39,19 @@
         <div class="flex flex-wrap items-center gap-2">
           <button type="button" data-inst="seed" class="btn-secondary">↧ Sembrar criterios desde los indicadores seleccionados</button>
           <button type="button" data-inst="add-criterio" class="btn-secondary">+ Agregar criterio</button>
+          <div class="ml-auto flex items-center gap-2">
+          <span data-inst="gs-status" class="text-xs text-slate text-right" role="status"></span>
+          <div data-inst="gs" class="gs-chip hidden" title="Genera este instrumento en Google Sheets, uno por estudiante">
+            <a href="https://script.google.com/home/projects/create" target="_blank" rel="noopener noreferrer"
+               class="gs-chip-link" title="Abrir Google Apps Script en una pestaña nueva"
+               aria-label="Abrir Google Apps Script en una pestaña nueva">
+              <img src="apps_script_1x_48dp.png" alt="Google Apps Script" class="gs-chip-logo">
+            </a>
+            <span class="gs-chip-sep"></span>
+            <button type="button" data-inst="gs-copy" class="gs-chip-btn" title="Copiar el código" aria-label="Copiar el código para Google Apps Script">${ICON_COPY}</button>
+            <button type="button" data-inst="gs-open" class="gs-chip-btn" title="Ver el código" aria-label="Ver el código">${ICON_OPEN}</button>
+          </div>
+          </div>
         </div>
         <p data-inst="escala-hint" class="hidden text-xs text-slate">Toca el nombre de un nivel en el encabezado de la tabla para editarlo.</p>
         <div class="overflow-x-auto border border-navy/10 rounded-sm">
@@ -42,18 +59,31 @@
         </div>
         <p data-inst="empty" class="text-sm text-slate text-center py-2">Agrega criterios o siémbralos desde los indicadores.</p>
       </div>
-      <div data-inst="gs" class="hidden border-t border-navy/10 pt-4 space-y-2">
-        <div class="flex flex-wrap items-center gap-2">
-          <button type="button" data-inst="gs-copy" class="btn-secondary">⧉ Copiar código para Google Apps Script</button>
-          <button type="button" data-inst="gs-toggle" class="text-xs text-navy underline underline-offset-2 hover:text-navy-700">Ver código</button>
-          <span data-inst="gs-status" class="text-xs text-slate" role="status"></span>
+    </div>
+    <div data-inst="gs-modal" class="modal-overlay hidden">
+      <div class="modal-box gs-modal-box">
+        <div class="modal-header">
+          <span class="flex items-center gap-2">
+            <a href="https://script.google.com/home/projects/create" target="_blank" rel="noopener noreferrer"
+               class="gs-chip-link" title="Abrir Google Apps Script en una pestaña nueva">
+              <img src="apps_script_1x_48dp.png" alt="Google Apps Script" class="gs-chip-logo">
+            </a>
+            Código para Google Apps Script
+          </span>
+          <button type="button" data-inst="gs-modal-close" class="modal-close" title="Cerrar">✕</button>
         </div>
-        <p class="text-xs text-slate">
-          Copia el código y pégalo en <span class="font-mono">script.google.com</span>: crea en tu Drive
-          <strong class="text-navy">un archivo por estudiante</strong> con este instrumento y la nota calculada
-          automáticamente. Toma la lista del grado, los criterios, el objetivo y los datos de la actividad.
-        </p>
-        <textarea data-inst="gs-code" class="hidden field-input font-mono text-xs h-64 whitespace-pre" readonly spellcheck="false"></textarea>
+        <div class="p-5 space-y-3">
+          <p class="text-sm text-slate">
+            Pega este código en <span class="font-mono text-navy">script.google.com</span> y ejecuta
+            <span class="font-mono text-navy">generarTodos</span>: crea en tu Drive
+            <strong class="text-navy">un archivo por estudiante</strong>, con la nota calculada automáticamente.
+          </p>
+          <p data-inst="gs-resumen" class="text-xs text-slate"></p>
+          <textarea data-inst="gs-code" class="field-input font-mono text-xs gs-modal-code" readonly spellcheck="false"></textarea>
+          <div class="flex items-center justify-end gap-2">
+            <button type="button" data-inst="gs-modal-copy" class="btn-secondary">⧉ Copiar código</button>
+          </div>
+        </div>
       </div>
     </div>`;
 
@@ -68,7 +98,6 @@
     const save = debounce(() => {
       try { localStorage.setItem(storageKey, JSON.stringify(inst)); }
       catch (e) { console.error('No se pudo guardar el instrumento:', e); }
-      invalidarCodigo();
     }, 250);
     function load() {
       try {
@@ -95,16 +124,17 @@
     }
 
     // ---------- código para Google Apps Script ----------
-    const gsBox = q('gs'), gsCode = q('gs-code'), gsStatus = q('gs-status'), gsToggle = q('gs-toggle');
+    const gsChip = q('gs'), gsCode = q('gs-code'), gsStatus = q('gs-status');
+    const gsModal = q('gs-modal'), gsResumen = q('gs-resumen');
     const puedeGenerar = typeof opts.contexto === 'function' && window.AppsScriptGen;
-    gsBox.classList.toggle('hidden', !puedeGenerar);
+    gsChip.classList.toggle('hidden', !puedeGenerar);
 
     let gsStatusTimer;
     function estado(msg, ok) {
       gsStatus.textContent = msg;
-      gsStatus.classList.toggle('text-green-700', ok === true);
+      gsStatus.classList.toggle('gs-status-ok', ok === true);
       clearTimeout(gsStatusTimer);
-      if (msg) gsStatusTimer = setTimeout(() => { gsStatus.textContent = ''; gsStatus.classList.remove('text-green-700'); }, 6000);
+      if (msg) gsStatusTimer = setTimeout(() => { gsStatus.textContent = ''; gsStatus.classList.remove('gs-status-ok'); }, 6000);
     }
 
     // Devuelve el código o null (avisando) si faltan datos.
@@ -114,40 +144,52 @@
       return r;
     }
 
+    // Copia al portapapeles; si el navegador no lo permite, deja el código
+    // seleccionado en el modal para copiarlo con Ctrl+C.
+    async function copiar(r) {
+      try {
+        await navigator.clipboard.writeText(r.codigo);
+        estado(`✓ Copiado · ${r.totalEstudiantes} estudiante${r.totalEstudiantes === 1 ? '' : 's'} · carpeta «${r.carpeta}»`, true);
+        return true;
+      } catch (e) {
+        abrirModal(r);
+        gsCode.focus();
+        gsCode.select();
+        let ok = false;
+        try { ok = document.execCommand('copy'); } catch (e2) { ok = false; }
+        estado(ok ? '✓ Copiado' : 'Cópialo con Ctrl+C.', ok);
+        return ok;
+      }
+    }
+
+    function abrirModal(r) {
+      gsCode.value = r.codigo;
+      gsResumen.textContent =
+        `${r.tituloInstrumento} · ${r.totalEstudiantes} archivo${r.totalEstudiantes === 1 ? '' : 's'} en la carpeta «${r.carpeta}»`;
+      gsModal.classList.remove('hidden');
+    }
+    function cerrarModal() { gsModal.classList.add('hidden'); }
+
     if (puedeGenerar) {
-      q('gs-copy').addEventListener('click', async () => {
+      q('gs-copy').addEventListener('click', () => {
         const r = codigoActual();
-        if (!r) return;
-        gsCode.value = r.codigo;
-        let copiado = false;
-        try {
-          await navigator.clipboard.writeText(r.codigo);
-          copiado = true;
-        } catch (e) {
-          // Sin permiso de portapapeles (p. ej. al abrir el archivo con file://):
-          // se muestra el código ya seleccionado para copiarlo con Ctrl+C.
-          gsCode.classList.remove('hidden');
-          gsToggle.textContent = 'Ocultar código';
-          gsCode.focus();
-          gsCode.select();
-          try { copiado = document.execCommand('copy'); } catch (e2) { copiado = false; }
-        }
-        estado(copiado
-          ? `✓ Copiado · ${r.totalEstudiantes} estudiante${r.totalEstudiantes === 1 ? '' : 's'} · carpeta «${r.carpeta}»`
-          : 'Selecciona el código de abajo y cópialo con Ctrl+C.', copiado);
+        if (r) copiar(r);
       });
 
-      gsToggle.addEventListener('click', () => {
-        if (gsCode.classList.contains('hidden')) {
-          const r = codigoActual();
-          if (!r) return;
-          gsCode.value = r.codigo;
-          gsCode.classList.remove('hidden');
-          gsToggle.textContent = 'Ocultar código';
-        } else {
-          gsCode.classList.add('hidden');
-          gsToggle.textContent = 'Ver código';
-        }
+      q('gs-open').addEventListener('click', () => {
+        const r = codigoActual();
+        if (r) abrirModal(r);
+      });
+
+      q('gs-modal-copy').addEventListener('click', () => {
+        const r = codigoActual();
+        if (r) copiar(r);
+      });
+
+      q('gs-modal-close').addEventListener('click', cerrarModal);
+      gsModal.addEventListener('click', (e) => { if (e.target === gsModal) cerrarModal(); });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !gsModal.classList.contains('hidden')) cerrarModal();
       });
     }
 
@@ -178,17 +220,7 @@
       const el = document.createElement('td'); el.contentEditable = 'true'; el.className = cls || ''; el.textContent = value || '';
       el.addEventListener('input', () => onInput(el.textContent)); return el;
     }
-    // El código mostrado deja de ser válido al tocar los criterios: se colapsa
-    // para que nadie copie una versión vieja.
-    function invalidarCodigo() {
-      if (!gsCode || gsCode.classList.contains('hidden')) return;
-      gsCode.classList.add('hidden');
-      gsToggle.textContent = 'Ver código';
-      estado('El instrumento cambió: vuelve a copiar el código.');
-    }
-
     function renderTabla() {
-      invalidarCodigo();
       tabla.innerHTML = '';
       empty.classList.toggle('hidden', inst.criterios.length > 0);
       const thead = document.createElement('thead'); const htr = document.createElement('tr');
