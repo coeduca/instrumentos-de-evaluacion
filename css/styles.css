@@ -568,6 +568,34 @@ body.dark .size-btn.active { color: var(--color-bg); }
 
 .modal-close:hover { background: var(--color-hover); color: var(--color-navy); }
 
+/* Opciones del modal de restaurar respaldo (unir / reemplazar) */
+.restore-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.restore-option:hover { background: var(--color-hover); border-color: var(--color-navy); }
+.restore-option-title {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 600;
+  color: var(--color-navy);
+  font-size: 0.92rem;
+}
+.restore-option-desc { font-size: 0.78rem; color: var(--color-slate); line-height: 1.35; }
+
+.restore-option.danger:hover { border-color: #B54708; background: rgba(181, 71, 8, 0.06); }
+.restore-option.danger .restore-option-title { color: #B54708; }
+body.dark .restore-option.danger .restore-option-title { color: #FBBF24; }
+body.dark .restore-option.danger:hover { border-color: #FBBF24; background: rgba(251, 191, 36, 0.08); }
+
 .dropzone {
   margin: 1.1rem;
   padding: 2rem 1.25rem;
@@ -936,6 +964,50 @@ body.dark .fase-seg--ok { background: rgba(110, 231, 183, 0.18); color: #6EE7B7;
 body.dark .fase-seg--pendiente { background: rgba(251, 191, 36, 0.2); color: #FBBF24; }
 
 .proceso-actions { display: flex; gap: 0.4rem; flex-shrink: 0; }
+
+.fav-star {
+  font-size: 1.05rem;
+  line-height: 1;
+  color: var(--color-slate);
+  padding: 0.1rem 0.2rem;
+  border-radius: 2px;
+  transition: color 0.15s ease, transform 0.1s ease;
+}
+.fav-star:hover { color: #D99E0C; transform: scale(1.12); }
+.fav-star.active { color: #D99E0C; }
+body.dark .fav-star.active { color: #FBBF24; }
+
+/* ---------------------------------------------------------
+   Filtros y buscador de "Mis procesos"
+--------------------------------------------------------- */
+.mp-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+.mp-filtros .field-input { width: auto; }
+.mp-filtro-search { flex: 1 1 12rem; min-width: 9rem; }
+#mp-filtro-tipo, #mp-filtro-grado, #mp-filtro-trimestre { flex: 0 1 10rem; min-width: 8rem; }
+
+.mp-fav-toggle {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-slate);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  background: var(--color-surface);
+  white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.mp-fav-toggle:hover { background: var(--color-hover); border-color: var(--color-navy); }
+.mp-fav-toggle.active {
+  background: rgba(217, 158, 12, 0.14);
+  border-color: #D99E0C;
+  color: #92720B;
+}
+body.dark .mp-fav-toggle.active { background: rgba(251, 191, 36, 0.18); border-color: #FBBF24; color: #FBBF24; }
 
 .back-btn {
   display: inline-flex;
