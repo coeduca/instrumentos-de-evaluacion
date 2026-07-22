@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/styles.css?v=30">
+<link rel="stylesheet" href="css/styles.css?v=31">
 
 <script>
   tailwind.config = {
@@ -182,6 +182,17 @@
           Cada proceso guarda automáticamente todo lo que ingresas (estudiantes, indicadores, actividades,
           instrumento, fase...). Retómalo cuando toque la siguiente fase, aunque pasen días.
         </p>
+        <div id="mis-procesos-filtros" class="mp-filtros">
+          <input id="mp-search" type="text" autocomplete="off" class="field-input mp-filtro-search" placeholder="Buscar proceso...">
+          <select id="mp-filtro-tipo" class="field-input">
+            <option value="">Todos los tipos</option>
+            <option value="ordinaria">Ordinaria</option>
+            <option value="recuperacion">Recuperación</option>
+          </select>
+          <select id="mp-filtro-grado" class="field-input"><option value="">Todos los grados</option></select>
+          <select id="mp-filtro-trimestre" class="field-input"><option value="">Todos los períodos</option></select>
+          <button type="button" id="mp-filtro-favoritos" class="mp-fav-toggle" aria-pressed="false">☆ Favoritos</button>
+        </div>
         <div id="mis-procesos-list" class="space-y-2.5"></div>
       </div>
     </div>
@@ -761,6 +772,29 @@
   </div>
 </div>
 
+<!-- Modal para restaurar un respaldo: unir o reemplazar -->
+<div id="restore-modal" class="modal-overlay hidden">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span>Restaurar respaldo</span>
+      <button type="button" id="restore-modal-close" class="modal-close" title="Cerrar">✕</button>
+    </div>
+    <div class="p-5 space-y-3">
+      <p id="restore-modal-summary" class="text-sm text-slate"></p>
+      <div class="space-y-2.5">
+        <button type="button" id="restore-modal-unir" class="restore-option">
+          <span class="restore-option-title">⤵ Unir con mis datos actuales</span>
+          <span class="restore-option-desc">Los procesos y expedientes del archivo se agregan a los que ya tienes. Si algún proceso o documento coincide, se actualiza con la versión del respaldo.</span>
+        </button>
+        <button type="button" id="restore-modal-reemplazar" class="restore-option danger">
+          <span class="restore-option-title">⚠ Reemplazar todo</span>
+          <span class="restore-option-desc">Borra TODOS tus procesos y expedientes actuales y los sustituye por los del archivo. No se puede deshacer.</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- pdfmake: generación de PDF en el navegador -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
@@ -768,18 +802,18 @@
 <!-- docx: generación de Word (.docx) en el navegador -->
 <script src="https://cdn.jsdelivr.net/npm/docx@9.7.1/dist/index.iife.js"></script>
 
-<script src="js/students.js?v=30"></script>
-<script src="js/curriculo.js?v=30"></script>
-<script src="js/documentos.js?v=30"></script>
-<script src="js/pdfGenerator.js?v=30"></script>
-<script src="js/wordGenerator.js?v=30"></script>
-<script src="js/curriculo-ui.js?v=30"></script>
-<script src="js/instrumento-ui.js?v=30"></script>
-<script src="js/appscript-gen.js?v=30"></script>
-<script src="js/expediente.js?v=30"></script>
-<script src="js/procesos.js?v=30"></script>
-<script src="js/app.js?v=30"></script>
-<script src="js/ordinaria-ui.js?v=30"></script>
-<script src="js/documentos-ui.js?v=30"></script>
+<script src="js/students.js?v=31"></script>
+<script src="js/curriculo.js?v=31"></script>
+<script src="js/documentos.js?v=31"></script>
+<script src="js/pdfGenerator.js?v=31"></script>
+<script src="js/wordGenerator.js?v=31"></script>
+<script src="js/curriculo-ui.js?v=31"></script>
+<script src="js/instrumento-ui.js?v=31"></script>
+<script src="js/appscript-gen.js?v=31"></script>
+<script src="js/expediente.js?v=31"></script>
+<script src="js/procesos.js?v=31"></script>
+<script src="js/app.js?v=31"></script>
+<script src="js/ordinaria-ui.js?v=31"></script>
+<script src="js/documentos-ui.js?v=31"></script>
 </body>
 </html>
