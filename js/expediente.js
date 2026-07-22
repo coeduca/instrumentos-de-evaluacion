@@ -80,7 +80,15 @@
     return n;
   }
 
-  window.Expediente = { guardar, listar, eliminar, exportAll: listar, importAll };
+  // Vacía por completo el expediente (usado al "Reemplazar" con un respaldo).
+  async function clearAll() {
+    const db = await openDb();
+    const tx = db.transaction(STORE, 'readwrite');
+    tx.objectStore(STORE).clear();
+    return txDone(tx, db);
+  }
+
+  window.Expediente = { guardar, listar, eliminar, exportAll: listar, importAll, clearAll };
 
   // =========================================================
   // Interfaz — vista "Expedientes de estudiantes"

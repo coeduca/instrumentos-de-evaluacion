@@ -84,13 +84,45 @@ function debounce(fn, ms) {
   };
 }
 
+// Orden pedagógico de los grados (los que no estén aquí van al final). Se usa
+// para ordenar tanto el índice de estudiantes como los selectores de grado.
+const ORDEN_GRADOS = ['Séptimo', 'Octavo', 'Noveno', 'Primer Año de Bachillerato', 'Segundo Año de Bachillerato'];
+
+function indiceGrado(grade) {
+  const i = ORDEN_GRADOS.indexOf(grade);
+  return i === -1 ? 99 : i;
+}
+
 // ---------- Índice de búsqueda de estudiantes (desde students.js) ----------
-const STUDENT_INDEX = Object.entries(window.STUDENTS || {}).map(([nie, info]) => ({
-  nie,
-  name: info.name,
-  grade: info.grade,
-  normName: normalize(info.name),
-}));
+// Los NIE son claves numéricas: JavaScript itera Object.entries() de un objeto
+// con claves enteras SIEMPRE en orden ascendente por valor, sin importar cómo
+// estén escritas en students.js. Por eso el orden real (alfabético por
+// apellido, igual que el registro oficial) se reconstruye aquí a partir del
+// campo `order` de cada estudiante, no del orden de inserción ni del nombre.
+const STUDENT_INDEX = Object.entries(window.STUDENTS || {})
+  .map(([nie, info]) => ({
+    nie,
+    name: info.name,
+    grade: info.grade,
+    order: info.order || 0,
+    normName: normalize(info.name),
+  }))
+  .sort((a, b) => indiceGrado(a.grade) - indiceGrado(b.grade) || a.order - b.order);
+
+// Compara dos filas de la tabla de estudiantes (sección Estudiantes) según el
+// orden oficial del registro: por grado, luego por posición dentro del grado
+// (`order`, tomado de STUDENTS por NIE); los estudiantes agregados a mano (sin
+// NIE en la base) van al final de su grado, ordenados por nombre.
+function compararEstudiantesTabla(a, b) {
+  const cmpGrado = indiceGrado(a.grade) - indiceGrado(b.grade);
+  if (cmpGrado) return cmpGrado;
+  const infoA = a.nie && window.STUDENTS[a.nie];
+  const infoB = b.nie && window.STUDENTS[b.nie];
+  if (infoA && infoB) return infoA.order - infoB.order;
+  if (infoA) return -1;
+  if (infoB) return 1;
+  return (a.name || '').localeCompare(b.name || '', 'es');
+}
 
 // ---------- Persistencia (localStorage) ----------
 function saveStateRaw() {
@@ -114,6 +146,7 @@ function loadState() {
     if (!state.configuracion.director) state.configuracion.director = DEFAULT_CONFIG.director;
     if (!state.configuracion.evaluador) state.configuracion.evaluador = DEFAULT_CONFIG.evaluador;
     state.estudiantes = Array.isArray(parsed.estudiantes) ? parsed.estudiantes : [];
+    state.estudiantes.sort(compararEstudiantesTabla);
     state.actividades = Array.isArray(parsed.actividades) ? parsed.actividades : [];
     Object.assign(state.refuerzo, parsed.refuerzo || {});
     Object.assign(state.generados, parsed.generados || {});
@@ -173,15 +206,9 @@ function populateTeacherOptions() {
   });
 }
 
-// Orden pedagógico de los grados (los que no estén aquí van al final).
-const ORDEN_GRADOS = ['Séptimo', 'Octavo', 'Noveno', 'Primer Año de Bachillerato', 'Segundo Año de Bachillerato'];
-
 function gradosDisponibles() {
   const grados = [...new Set(STUDENT_INDEX.map((s) => s.grade).filter(Boolean))];
-  return grados.sort((a, b) => {
-    const ia = ORDEN_GRADOS.indexOf(a), ib = ORDEN_GRADOS.indexOf(b);
-    return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib) || a.localeCompare(b, 'es');
-  });
+  return grados.sort((a, b) => indiceGrado(a) - indiceGrado(b) || a.localeCompare(b, 'es'));
 }
 
 function populateGradeOptions() {
@@ -195,12 +222,13 @@ function populateGradeOptions() {
   });
 }
 
-// Lista completa del grado, en orden alfabético (así se numera igual que el registro).
+// Lista completa del grado, en el orden oficial del registro (alfabético por
+// apellido). STUDENT_INDEX ya viene ordenado por grado+order, así que filtrar
+// conserva ese orden sin necesidad de volver a ordenar por nombre.
 function estudiantesDelGrado(grado) {
   if (!grado) return [];
   return STUDENT_INDEX
     .filter((s) => s.grade === grado)
-    .sort((a, b) => a.name.localeCompare(b.name, 'es'))
     .map((s) => ({ nie: s.nie, name: s.name, grade: s.grade }));
 }
 
@@ -289,6 +317,7 @@ function selectStudent(match) {
     calificacion: null,
     manual: false,
   });
+  state.estudiantes.sort(compararEstudiantesTabla);
   searchInput.value = '';
   autocompleteList.classList.add('hidden');
   manualAddHint.classList.add('hidden');
@@ -311,6 +340,7 @@ function addManualStudent(rawName, rawNie = '', rawGrade = '') {
     calificacion: null,
     manual: true,
   });
+  state.estudiantes.sort(compararEstudiantesTabla);
   searchInput.value = '';
   autocompleteList.classList.add('hidden');
   manualAddHint.classList.add('hidden');
@@ -1386,6 +1416,55 @@ async function exportBackup() {
   }
 }
 
+// El respaldo se valida y se guarda aquí mientras el docente elige, en el
+// modal, si quiere unir o reemplazar; se descarta al cerrar sin elegir.
+let pendingBackup = null;
+
+function resumenBackup(data) {
+  const nDocs = Array.isArray(data.expediente) ? data.expediente.length : 0;
+  const nProcs = Array.isArray(data.procesos) ? data.procesos.length : 0;
+  return `Respaldo del ${fmtFechaCortaApp(data.fecha) || 'sin fecha'} con ${nDocs} documento(s) de expediente y ${nProcs} proceso(s) guardado(s). Elige cómo aplicarlo:`;
+}
+
+function openRestoreModal(data) {
+  pendingBackup = data;
+  document.getElementById('restore-modal-summary').textContent = resumenBackup(data);
+  document.getElementById('restore-modal').classList.remove('hidden');
+}
+
+function closeRestoreModal() {
+  document.getElementById('restore-modal').classList.add('hidden');
+  pendingBackup = null;
+}
+
+// modo 'unir': agrega/actualiza procesos y expedientes del archivo sobre los
+// actuales (upsert). modo 'reemplazar': borra TODO lo actual primero, así el
+// resultado final es exactamente el contenido del archivo.
+async function aplicarBackup(data, modo) {
+  try {
+    if (modo === 'reemplazar') {
+      for (let i = localStorage.length - 1; i >= 0; i--) {
+        const k = localStorage.key(i);
+        if (k && k.startsWith('actas-recuperacion:')) localStorage.removeItem(k);
+      }
+      if (window.Expediente) await window.Expediente.clearAll();
+      if (window.Procesos) await window.Procesos.clearAll();
+    }
+    Object.entries(data.localStorage || {}).forEach(([k, v]) => {
+      if (k.startsWith('actas-recuperacion:')) localStorage.setItem(k, v);
+    });
+    const nDocs = Array.isArray(data.expediente) ? data.expediente.length : 0;
+    const nProcs = Array.isArray(data.procesos) ? data.procesos.length : 0;
+    if (window.Expediente && nDocs) await window.Expediente.importAll(data.expediente);
+    if (window.Procesos && nProcs) await window.Procesos.importAll(data.procesos);
+    alert('Respaldo restaurado. La página se recargará para aplicar los cambios.');
+    location.reload();
+  } catch (e) {
+    console.error('No se pudo importar el respaldo:', e);
+    alert('Ocurrió un error al restaurar el respaldo. Revisa la consola.');
+  }
+}
+
 async function importBackup(file) {
   let data;
   try {
@@ -1398,28 +1477,29 @@ async function importBackup(file) {
     alert('El archivo no es un respaldo de esta plataforma.');
     return;
   }
-  const nDocs = Array.isArray(data.expediente) ? data.expediente.length : 0;
-  const nProcs = Array.isArray(data.procesos) ? data.procesos.length : 0;
-  const confirmado = confirm(
-    `Respaldo del ${fmtFechaCortaApp(data.fecha) || 'sin fecha'} con ${nDocs} documento(s) de expediente y ${nProcs} proceso(s).\n\n` +
-    'Esto REEMPLAZARÁ tu configuración y selecciones actuales, y COMBINARÁ los expedientes y procesos ' +
-    '(los del respaldo se agregan a los tuyos). ¿Continuar?'
-  );
-  if (!confirmado) return;
-
-  try {
-    Object.entries(data.localStorage || {}).forEach(([k, v]) => {
-      if (k.startsWith('actas-recuperacion:')) localStorage.setItem(k, v);
-    });
-    if (window.Expediente && nDocs) await window.Expediente.importAll(data.expediente);
-    if (window.Procesos && nProcs) await window.Procesos.importAll(data.procesos);
-    alert('Respaldo restaurado. La página se recargará para aplicar los cambios.');
-    location.reload();
-  } catch (e) {
-    console.error('No se pudo importar el respaldo:', e);
-    alert('Ocurrió un error al restaurar el respaldo. Revisa la consola.');
-  }
+  openRestoreModal(data);
 }
+
+document.getElementById('restore-modal-unir').addEventListener('click', () => {
+  const data = pendingBackup;
+  closeRestoreModal();
+  if (data) aplicarBackup(data, 'unir');
+});
+document.getElementById('restore-modal-reemplazar').addEventListener('click', () => {
+  const data = pendingBackup;
+  if (!data) return;
+  if (!confirm('Esto BORRARÁ todos tus procesos y expedientes actuales y los sustituirá por los del archivo. Esta acción no se puede deshacer. ¿Continuar?')) return;
+  closeRestoreModal();
+  aplicarBackup(data, 'reemplazar');
+});
+document.getElementById('restore-modal-close').addEventListener('click', closeRestoreModal);
+document.getElementById('restore-modal').addEventListener('click', (e) => {
+  if (e.target.id === 'restore-modal') closeRestoreModal();
+});
+document.addEventListener('keydown', (e) => {
+  const rm = document.getElementById('restore-modal');
+  if (e.key === 'Escape' && rm && !rm.classList.contains('hidden')) closeRestoreModal();
+});
 
 document.getElementById('btn-export-backup').addEventListener('click', exportBackup);
 const importInput = document.getElementById('import-backup-input');

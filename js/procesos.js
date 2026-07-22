@@ -80,9 +80,18 @@
     return txDone(tx, db);
   }
 
+  // Vacía por completo el almacén de procesos (usado al "Reemplazar" un respaldo).
+  async function dbClear() {
+    const db = await openDb();
+    const tx = db.transaction(STORE, 'readwrite');
+    tx.objectStore(STORE).clear();
+    return txDone(tx, db);
+  }
+
   // ---------- utilidades ----------
   function uid() { return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`; }
   function esc(s) { const d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
+  function norm(s) { return (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
   function getActivoId() { return localStorage.getItem(ACTIVO_KEY) || ''; }
   function setActivoId(id) {
     if (id) localStorage.setItem(ACTIVO_KEY, id);
@@ -130,6 +139,7 @@
     if (p) {
       const c = p.configuracion || {};
       r.materia = c.materia || '';
+      r.grado = c.grado || '';
       r.trimestre = c.trimestre || '';
       r.anio = c.anio || '';
       r.nEstudiantes = (p.estudiantes || []).length;
@@ -145,7 +155,7 @@
     if (rec.nombre) return rec.nombre;
     const r = rec.resumen || {};
     const periodo = [r.trimestre, r.anio].filter(Boolean).join(' ');
-    const partes = [r.materia, periodo].filter(Boolean);
+    const partes = [r.grado, r.materia, periodo].filter(Boolean);
     if (rec.tipo === 'ordinaria' && r.tituloOrdinaria) partes.push(`«${r.tituloOrdinaria}»`);
     return partes.length ? partes.join(' · ') : 'Proceso nuevo (sin datos aún)';
   }
@@ -229,6 +239,15 @@
     return n;
   }
 
+  // Marca/desmarca un proceso como favorito (se guarda en el registro mismo).
+  async function toggleFavorito(id) {
+    const rec = await dbGet(id);
+    if (!rec) return;
+    rec.favorito = !rec.favorito;
+    await dbPut(rec);
+    render();
+  }
+
   // ---------- interfaz: "Mis procesos" en el inicio ----------
   const TIPO_LABEL = { ordinaria: 'Ordinaria', recuperacion: 'Recuperación' };
   const FASES_CHIPS = [
@@ -236,6 +255,47 @@
     { key: 'paquete', label: 'Compromiso' },
     { key: 'cierre', label: 'Cierre' },
   ];
+
+  // Repuebla un <select> de filtro conservando la selección actual si sigue
+  // existiendo entre los nuevos valores (mismo patrón que Expedientes).
+  function fillSelectOptions(select, values) {
+    if (!select) return;
+    const current = select.value;
+    const first = select.querySelector('option');
+    select.innerHTML = '';
+    if (first) select.appendChild(first);
+    values.forEach((v) => {
+      const o = document.createElement('option');
+      o.value = v; o.textContent = v;
+      select.appendChild(o);
+    });
+    if (values.includes(current)) select.value = current;
+  }
+
+  function leerFiltros() {
+    const $ = (id) => document.getElementById(id);
+    const fav = $('mp-filtro-favoritos');
+    return {
+      q: norm((($('mp-search') || {}).value || '').trim()),
+      tipo: ($('mp-filtro-tipo') || {}).value || '',
+      grado: ($('mp-filtro-grado') || {}).value || '',
+      trimestre: ($('mp-filtro-trimestre') || {}).value || '',
+      soloFav: !!(fav && fav.classList.contains('active')),
+    };
+  }
+
+  function pasaFiltros(rec, f) {
+    if (f.soloFav && !rec.favorito) return false;
+    if (f.tipo && rec.tipo !== f.tipo) return false;
+    const r = rec.resumen || {};
+    if (f.grado && r.grado !== f.grado) return false;
+    if (f.trimestre && r.trimestre !== f.trimestre) return false;
+    if (f.q) {
+      const texto = norm([labelDe(rec), r.materia, r.grado, r.trimestre, r.anio, (r.nombres || []).join(' ')].filter(Boolean).join(' '));
+      if (!texto.includes(f.q)) return false;
+    }
+    return true;
+  }
 
   async function render() {
     const wrap = document.getElementById('mis-procesos');
@@ -248,23 +308,41 @@
 
     procesos.sort((a, b) => (b.actualizado || '').localeCompare(a.actualizado || ''));
     wrap.classList.toggle('hidden', !procesos.length);
-    document.getElementById('mis-procesos-count').textContent =
-      procesos.length ? `${procesos.length} proceso${procesos.length === 1 ? '' : 's'}` : '';
+
+    // Opciones de grado/período según lo que exista realmente guardado.
+    const grados = [...new Set(procesos.map((p) => (p.resumen || {}).grado).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'es'));
+    const trimestres = [...new Set(procesos.map((p) => (p.resumen || {}).trimestre).filter(Boolean))];
+    fillSelectOptions(document.getElementById('mp-filtro-grado'), grados);
+    fillSelectOptions(document.getElementById('mp-filtro-trimestre'), trimestres);
+
+    const f = leerFiltros();
+    const visibles = procesos.filter((rec) => pasaFiltros(rec, f));
+
+    const countEl = document.getElementById('mis-procesos-count');
+    if (!procesos.length) countEl.textContent = '';
+    else if (visibles.length !== procesos.length) countEl.textContent = `${visibles.length} de ${procesos.length} procesos`;
+    else countEl.textContent = `${procesos.length} proceso${procesos.length === 1 ? '' : 's'}`;
+
     list.innerHTML = '';
     if (!procesos.length) return;
+    if (!visibles.length) {
+      list.innerHTML = '<p class="text-sm text-slate text-center py-6">Ningún proceso coincide con la búsqueda o los filtros.</p>';
+      return;
+    }
 
     const activoId = getActivoId();
 
-    procesos.forEach((rec) => {
+    visibles.forEach((rec) => {
       const r = rec.resumen || {};
       const esActivo = rec.id === activoId;
+      const esFav = !!rec.favorito;
       const row = document.createElement('div');
       row.className = 'proceso-row';
 
       const fases = rec.tipo === 'recuperacion'
-        ? `<span class="fase-chip">${FASES_CHIPS.map((f) => {
-            const ok = (r.generados || []).includes(f.key);
-            return `<span class="fase-seg ${ok ? 'fase-seg--ok' : 'fase-seg--pendiente'}">${ok ? '✓ ' : ''}${f.label}</span>`;
+        ? `<span class="fase-chip">${FASES_CHIPS.map((f2) => {
+            const ok = (r.generados || []).includes(f2.key);
+            return `<span class="fase-seg ${ok ? 'fase-seg--ok' : 'fase-seg--pendiente'}">${ok ? '✓ ' : ''}${f2.label}</span>`;
           }).join('')}</span>`
         : '';
 
@@ -275,6 +353,8 @@
       row.innerHTML = `
         <div class="proceso-main">
           <div class="proceso-titulo-row">
+            <button type="button" class="fav-star${esFav ? ' active' : ''}" data-proc="favorito"
+              aria-pressed="${esFav ? 'true' : 'false'}" title="${esFav ? 'Quitar de favoritos' : 'Marcar como favorito'}">${esFav ? '★' : '☆'}</button>
             <span class="proceso-tipo ${rec.tipo}">${TIPO_LABEL[rec.tipo] || rec.tipo}</span>
             <span class="proceso-nombre">${esc(labelDe(rec))}</span>
             ${esActivo ? '<span class="proceso-activo-chip">EN USO</span>' : ''}
@@ -291,6 +371,10 @@
           <button type="button" class="exp-btn danger" data-proc="eliminar" title="Eliminar proceso">✕</button>
         </div>`;
 
+      row.querySelector('[data-proc="favorito"]').addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleFavorito(rec.id).catch((err) => { console.error(err); alert('No se pudo actualizar el favorito.'); });
+      });
       row.querySelector('[data-proc="abrir"]').addEventListener('click', () => abrir(rec.id));
       row.querySelector('[data-proc="renombrar"]').addEventListener('click', () => renombrar(rec.id));
       row.querySelector('[data-proc="eliminar"]').addEventListener('click', () => {
@@ -302,6 +386,26 @@
 
       list.appendChild(row);
     });
+  }
+
+  // ---------- filtros y buscador de "Mis procesos" ----------
+  function initFiltros() {
+    const search = document.getElementById('mp-search');
+    if (!search) return; // esta vista no incluye la barra de filtros
+    let t;
+    search.addEventListener('input', () => { clearTimeout(t); t = setTimeout(render, 200); });
+    ['mp-filtro-tipo', 'mp-filtro-grado', 'mp-filtro-trimestre'].forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener('change', render);
+    });
+    const favBtn = document.getElementById('mp-filtro-favoritos');
+    if (favBtn) {
+      favBtn.addEventListener('click', () => {
+        const activo = favBtn.classList.toggle('active');
+        favBtn.setAttribute('aria-pressed', String(activo));
+        render();
+      });
+    }
   }
 
   // ---------- auto-guardado ----------
@@ -331,8 +435,9 @@
     });
   });
 
-  window.Procesos = { sync, nuevo, abrir, eliminar, renombrar, listar: dbAll, exportAll: dbAll, importAll };
+  window.Procesos = { sync, nuevo, abrir, eliminar, renombrar, listar: dbAll, exportAll: dbAll, importAll, clearAll: dbClear, toggleFavorito };
   window.ProcesosUI = { render };
 
+  initFiltros();
   render();
 })();
