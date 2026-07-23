@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/styles.css?v=31">
+<link rel="stylesheet" href="css/styles.css?v=34">
 
 <script>
   tailwind.config = {
@@ -78,7 +78,7 @@
 <div class="min-h-screen flex flex-col">
 
   <!-- HEADER -->
-  <header class="border-b-2 border-navy bg-white">
+  <header class="border-b border-navy/10 bg-white">
     <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between gap-4">
       <div class="flex items-center gap-4 min-w-0">
         <button id="btn-drawer" type="button" class="drawer-btn" title="Menú de opciones" aria-label="Abrir menú de opciones">
@@ -141,34 +141,41 @@
   <main class="flex-1 max-w-5xl w-full mx-auto px-6 py-8">
 
     <!-- ==================== VISTA: INICIO ==================== -->
-    <div id="view-home" data-view class="space-y-8">
-      <div class="text-center pt-2 pb-1">
-        <h2 class="font-serif text-2xl font-semibold text-navy">¿Qué deseas hacer?</h2>
-        <p class="text-sm text-slate mt-1">Elige una opción para comenzar.</p>
-      </div>
+    <div id="view-home" data-view class="space-y-6">
+      <!-- ========== BANNER DE BIENVENIDA ========== -->
+      <section class="home-hero">
+        <div class="home-hero-text">
+          <p class="home-hero-greet">¡Hola, docente! <span class="home-hero-wave">👋</span></p>
+          <h2 class="home-hero-title">¿Qué deseas hacer hoy?</h2>
+          <p class="home-hero-sub">Elige una opción para comenzar a crear o gestionar tus procesos académicos.</p>
+        </div>
+        <img src="ornamentos.webp" alt="" class="home-hero-art" onerror="this.style.display='none'">
+      </section>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div data-nav="ordinaria" class="home-card" role="button" tabindex="0">
-          <img src="icon_ordinaria.webp" alt="" class="home-card-icon">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div data-nav="ordinaria" class="home-card home-card--ordinaria" role="button" tabindex="0">
+          <span class="home-card-icon-wrap"><img src="icon_ordinaria.webp" alt="" class="home-card-icon"></span>
           <span class="home-card-title">Generar Actividad Ordinaria</span>
           <span class="home-card-desc">Instructivo de actividad de evaluación: Integradora, Cotidiana o Prueba.</span>
           <button type="button" class="home-card-new" data-nuevo-proceso="ordinaria">＋ Iniciar nuevo proceso</button>
         </div>
-        <div data-nav="recuperacion" class="home-card" role="button" tabindex="0">
-          <img src="icon_recuperacion.webp" alt="" class="home-card-icon">
+        <div data-nav="recuperacion" class="home-card home-card--recuperacion" role="button" tabindex="0">
+          <span class="home-card-icon-wrap"><img src="icon_recuperacion.webp" alt="" class="home-card-icon"></span>
           <span class="home-card-title">Generar actividad de recuperación</span>
           <span class="home-card-desc">Acta de compromiso, instructivo e instrumento para estudiantes reprobados.</span>
           <button type="button" class="home-card-new" data-nuevo-proceso="recuperacion">＋ Iniciar nuevo proceso</button>
         </div>
-        <button type="button" data-nav="documentos" class="home-card home-card-simple">
-          <img src="icon_descargables.webp" alt="" class="home-card-icon">
+        <button type="button" data-nav="documentos" class="home-card home-card-simple home-card--documentos">
+          <span class="home-card-icon-wrap"><img src="icon_descargables.webp" alt="" class="home-card-icon"></span>
           <span class="home-card-title">Documentos descargables</span>
           <span class="home-card-desc">Programas de estudio y Manual de Evaluación.</span>
+          <span class="home-card-cta">Ver documentos</span>
         </button>
-        <button type="button" data-nav="expedientes" class="home-card home-card-simple">
-          <img src="icon_expedientes.webp" alt="" class="home-card-icon">
+        <button type="button" data-nav="expedientes" class="home-card home-card-simple home-card--expedientes">
+          <span class="home-card-icon-wrap"><img src="icon_expedientes.webp" alt="" class="home-card-icon"></span>
           <span class="home-card-title">Expedientes de estudiantes</span>
           <span class="home-card-desc">Historial de documentos generados, por estudiante, materia y período.</span>
+          <span class="home-card-cta">Acceder</span>
         </button>
       </div>
 
@@ -176,7 +183,7 @@
       <div id="mis-procesos" class="hidden space-y-3 pt-2">
         <div class="flex items-baseline justify-between">
           <h3 class="font-serif text-lg font-semibold text-navy">Mis procesos</h3>
-          <span id="mis-procesos-count" class="text-xs font-mono text-slate"></span>
+          <span id="mis-procesos-count" class="mp-count-pill text-xs font-mono text-slate"></span>
         </div>
         <p class="text-xs text-slate -mt-1">
           Cada proceso guarda automáticamente todo lo que ingresas (estudiantes, indicadores, actividades,
@@ -199,8 +206,10 @@
 
     <!-- ==================== VISTA: ACTIVIDAD ORDINARIA ==================== -->
     <div id="view-ordinaria" data-view hidden class="space-y-8">
-      <button type="button" data-nav="home" class="back-btn">← Inicio</button>
-      <h2 class="font-serif text-xl font-semibold text-navy">Generar actividad ordinaria</h2>
+      <div class="view-head">
+        <button type="button" data-nav="home" class="back-btn">← Inicio</button>
+        <h2 class="font-serif text-xl font-semibold text-navy">Generar actividad ordinaria</h2>
+      </div>
 
       <!-- El bloque de configuración general se monta aquí (o en recuperación) -->
       <div class="config-mount space-y-8">
@@ -367,8 +376,10 @@
 
     <!-- ==================== VISTA: RECUPERACIÓN ==================== -->
     <div id="view-recuperacion" data-view hidden class="space-y-8">
-      <button type="button" data-nav="home" class="back-btn">← Inicio</button>
-      <h2 class="font-serif text-xl font-semibold text-navy">Generar actividad de recuperación</h2>
+      <div class="view-head">
+        <button type="button" data-nav="home" class="back-btn">← Inicio</button>
+        <h2 class="font-serif text-xl font-semibold text-navy">Generar actividad de recuperación</h2>
+      </div>
 
       <div class="config-mount space-y-8"></div>
 
@@ -607,8 +618,10 @@
 
     <!-- ==================== VISTA: DOCUMENTOS ==================== -->
     <div id="view-documentos" data-view hidden class="space-y-8">
-      <button type="button" data-nav="home" class="back-btn">← Inicio</button>
-      <h2 class="font-serif text-xl font-semibold text-navy">Documentos descargables</h2>
+      <div class="view-head">
+        <button type="button" data-nav="home" class="back-btn">← Inicio</button>
+        <h2 class="font-serif text-xl font-semibold text-navy">Documentos descargables</h2>
+      </div>
       <p class="text-sm text-slate -mt-4">
         Programas de estudio oficiales del MINEDUCYT y Manual de Evaluación al Servicio del
         Aprendizaje y del Desarrollo. Toca la portada o «Abrir» para verlo, o «Descargar» para guardarlo.
@@ -618,8 +631,10 @@
 
     <!-- ==================== VISTA: EXPEDIENTES ==================== -->
     <div id="view-expedientes" data-view hidden class="space-y-8">
-      <button type="button" data-nav="home" class="back-btn">← Inicio</button>
-      <h2 class="font-serif text-xl font-semibold text-navy">Expedientes de estudiantes</h2>
+      <div class="view-head">
+        <button type="button" data-nav="home" class="back-btn">← Inicio</button>
+        <h2 class="font-serif text-xl font-semibold text-navy">Expedientes de estudiantes</h2>
+      </div>
       <p class="text-sm text-slate -mt-4">
         Cada documento que generas se archiva aquí automáticamente (en el navegador de esta computadora).
         Usa «Respaldo» en el menu para llevarte o compartir los expedientes con otro docente.
@@ -802,18 +817,18 @@
 <!-- docx: generación de Word (.docx) en el navegador -->
 <script src="https://cdn.jsdelivr.net/npm/docx@9.7.1/dist/index.iife.js"></script>
 
-<script src="js/students.js?v=31"></script>
-<script src="js/curriculo.js?v=31"></script>
-<script src="js/documentos.js?v=31"></script>
-<script src="js/pdfGenerator.js?v=31"></script>
-<script src="js/wordGenerator.js?v=31"></script>
-<script src="js/curriculo-ui.js?v=31"></script>
-<script src="js/instrumento-ui.js?v=31"></script>
-<script src="js/appscript-gen.js?v=31"></script>
-<script src="js/expediente.js?v=31"></script>
-<script src="js/procesos.js?v=31"></script>
-<script src="js/app.js?v=31"></script>
-<script src="js/ordinaria-ui.js?v=31"></script>
-<script src="js/documentos-ui.js?v=31"></script>
+<script src="js/students.js?v=34"></script>
+<script src="js/curriculo.js?v=34"></script>
+<script src="js/documentos.js?v=34"></script>
+<script src="js/pdfGenerator.js?v=34"></script>
+<script src="js/wordGenerator.js?v=34"></script>
+<script src="js/curriculo-ui.js?v=34"></script>
+<script src="js/instrumento-ui.js?v=34"></script>
+<script src="js/appscript-gen.js?v=34"></script>
+<script src="js/expediente.js?v=34"></script>
+<script src="js/procesos.js?v=34"></script>
+<script src="js/app.js?v=34"></script>
+<script src="js/ordinaria-ui.js?v=34"></script>
+<script src="js/documentos-ui.js?v=34"></script>
 </body>
 </html>
