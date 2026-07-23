@@ -749,7 +749,7 @@ body.dark .status-badge.pendiente { background: rgba(169, 180, 192, 0.18); color
    directamente al cuerpo, para que ambos se lean como una sola pieza. */
 .section-card {
   border: 1px solid var(--color-border);
-  border-radius: 4px;
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 1px 2px rgba(14, 31, 48, 0.08), 0 6px 16px rgba(14, 31, 48, 0.08);
   background: var(--color-surface);
@@ -825,46 +825,146 @@ html[data-initial-view="expedientes"]  #view-expedientes { display: block !impor
 .section-icon.ic-parametros   { -webkit-mask-image: url(../assets/f3_parametros.svg);         mask-image: url(../assets/f3_parametros.svg); }
 .section-icon.ic-generar      { -webkit-mask-image: url(../assets/generar.svg);               mask-image: url(../assets/generar.svg); }
 
+/* ---------------------------------------------------------
+   Inicio · banner de bienvenida (hero)
+--------------------------------------------------------- */
+.home-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.35rem 2rem;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(120deg, #E6EFFE 0%, #EEF1FF 48%, #F3EDFC 100%);
+  border: 1px solid var(--color-border-soft);
+}
+body.dark .home-hero {
+  background: linear-gradient(120deg, #16304C 0%, #1A2C48 52%, #251F44 100%);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+.home-hero-text { min-width: 0; position: relative; z-index: 1; }
+.home-hero-greet {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.15;
+}
+.home-hero-wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: hero-wave 2.6s ease-in-out infinite;
+}
+@keyframes hero-wave {
+  0%, 60%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+}
+@media (prefers-reduced-motion: reduce) { .home-hero-wave { animation: none; } }
+.home-hero-title {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.1;
+  margin-top: 0.1rem;
+}
+.home-hero-sub {
+  font-size: 0.9rem;
+  color: var(--color-slate);
+  margin-top: 0.5rem;
+  max-width: 27rem;
+  line-height: 1.45;
+}
+.home-hero-art {
+  width: 11rem;
+  max-width: 32%;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 12px 22px rgba(27, 58, 92, 0.18));
+}
+@media (max-width: 640px) {
+  .home-hero { flex-direction: column; text-align: center; align-items: center; padding: 1.4rem 1.5rem; }
+  .home-hero-art { width: 8rem; max-width: 55%; order: -1; }
+  .home-hero-sub { margin-left: auto; margin-right: auto; }
+  .home-hero-title { font-size: 1.5rem; }
+}
+
+/* ---------------------------------------------------------
+   Inicio · tarjetas de acción
+--------------------------------------------------------- */
 .home-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-  text-align: left;
-  padding: 1.5rem;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
+  align-items: center;
+  gap: 0.55rem;
+  text-align: center;
+  padding: 1.85rem 1.35rem;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 18px;
   background: var(--color-surface);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+  box-shadow: 0 1px 2px rgba(27, 58, 92, 0.04);
+  transition: border-color 0.15s ease, box-shadow 0.2s ease, transform 0.15s ease;
   cursor: pointer;
   height: 100%;
 }
 .home-card:hover {
-  border-color: var(--color-navy);
-  box-shadow: 0 4px 16px rgba(27, 58, 92, 0.1);
-  transform: translateY(-2px);
+  border-color: var(--color-border);
+  box-shadow: 0 14px 30px rgba(27, 58, 92, 0.13);
+  transform: translateY(-3px);
 }
-.home-card-icon { width: 3.75rem; height: 3.75rem; object-fit: contain; }
-.home-card-title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; color: var(--color-navy); font-size: 1.02rem; }
-.home-card-desc { font-size: 0.82rem; color: var(--color-slate); line-height: 1.35; }
+.home-card-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin-bottom: 0.35rem;
+  background: var(--home-accent, rgba(27, 58, 92, 0.08));
+  transition: transform 0.2s ease;
+}
+.home-card:hover .home-card-icon-wrap { transform: scale(1.06); }
+.home-card-icon { width: 2.9rem; height: 2.9rem; object-fit: contain; }
+.home-card-title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; color: var(--color-navy); font-size: 1.05rem; line-height: 1.25; }
+.home-card-desc { font-size: 0.82rem; color: var(--color-slate); line-height: 1.4; }
 
-/* Botón "Iniciar nuevo proceso" dentro de la tarjeta (la tarjeta continúa el
-   proceso en uso; este botón arranca uno limpio). */
-.home-card-new {
+/* Acento de color por tarjeta (círculo del icono y píldora de acción) */
+.home-card--ordinaria    { --home-accent: rgba(59, 130, 246, 0.12);  --home-ink: #2563EB; }
+.home-card--recuperacion { --home-accent: rgba(239, 111, 108, 0.14); --home-ink: #DC5A56; }
+.home-card--documentos   { --home-accent: rgba(34, 158, 118, 0.14);  --home-ink: #1F8F68; }
+.home-card--expedientes  { --home-accent: rgba(139, 92, 246, 0.14);  --home-ink: #7C4DDb; }
+body.dark .home-card--ordinaria    { --home-accent: rgba(96, 165, 250, 0.20);  --home-ink: #93C5FD; }
+body.dark .home-card--recuperacion { --home-accent: rgba(248, 130, 127, 0.22); --home-ink: #FCA5A3; }
+body.dark .home-card--documentos   { --home-accent: rgba(52, 211, 153, 0.20);  --home-ink: #6EE7B7; }
+body.dark .home-card--expedientes  { --home-accent: rgba(167, 139, 250, 0.22); --home-ink: #C4B5FD; }
+
+/* Píldora de acción compartida por ambas variantes de tarjeta.
+   .home-card-new es un botón real (inicia proceso limpio); .home-card-cta es
+   solo visual (la tarjeta completa es el botón de navegación). */
+.home-card-new,
+.home-card-cta {
   margin-top: auto;
   align-self: stretch;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  font-family: 'IBM Plex Mono', monospace;
-  color: var(--color-navy);
-  border: 1px dashed var(--color-border);
-  border-radius: 2px;
-  padding: 0.4rem 0.7rem;
-  background: transparent;
-  transition: background 0.15s ease, border-color 0.15s ease;
+  color: var(--home-ink, var(--color-navy));
+  border: none;
+  border-radius: 11px;
+  padding: 0.55rem 0.7rem;
+  background: var(--home-accent, var(--color-hover));
+  transition: filter 0.15s ease, transform 0.1s ease;
 }
-.home-card-new:hover { background: var(--color-hover); border-color: var(--color-navy); }
+.home-card-new:hover { filter: brightness(0.95); }
+.home-card-new:active { transform: translateY(1px); }
+.home-card:hover .home-card-cta { filter: brightness(0.96); }
 
 /* ---------------------------------------------------------
    Mis procesos (inicio)
@@ -874,13 +974,14 @@ html[data-initial-view="expedientes"]  #view-expedientes { display: block !impor
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.8rem 1.1rem;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 14px;
   background: var(--color-surface);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 1px 2px rgba(27, 58, 92, 0.04);
+  transition: border-color 0.15s ease, box-shadow 0.2s ease, transform 0.12s ease;
 }
-.proceso-row:hover { border-color: var(--color-navy); box-shadow: 0 2px 10px rgba(27, 58, 92, 0.08); }
+.proceso-row:hover { border-color: var(--color-border); box-shadow: 0 8px 20px rgba(27, 58, 92, 0.1); transform: translateY(-1px); }
 
 .proceso-main { min-width: 0; flex: 1; }
 
@@ -912,6 +1013,23 @@ body.dark .proceso-tipo.ordinaria { background: rgba(190, 227, 248, 0.15); color
   color: var(--color-navy);
   font-size: 0.95rem;
 }
+
+/* Badge de grado seleccionado — siempre visible en cada proceso */
+.proceso-grado {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  font-size: 0.62rem;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  background: rgba(139, 92, 246, 0.12);
+  color: #6D4AC7;
+}
+body.dark .proceso-grado { background: rgba(167, 139, 250, 0.2); color: #C4B5FD; }
 
 .proceso-activo-chip {
   font-size: 0.6rem;
@@ -963,7 +1081,32 @@ body.dark .proceso-activo-chip { background: rgba(110, 231, 183, 0.16); color: #
 body.dark .fase-seg--ok { background: rgba(110, 231, 183, 0.18); color: #6EE7B7; }
 body.dark .fase-seg--pendiente { background: rgba(251, 191, 36, 0.2); color: #FBBF24; }
 
-.proceso-actions { display: flex; gap: 0.4rem; flex-shrink: 0; }
+.proceso-actions { display: flex; align-items: center; gap: 0.4rem; flex-shrink: 0; }
+
+/* Botones de acción de cada proceso guardado */
+.proc-btn {
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  color: var(--color-navy);
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+.proc-btn--primary { padding: 0.45rem 1.05rem; }
+.proc-btn--primary:hover { background: var(--color-navy); color: #FFFFFF; border-color: var(--color-navy); }
+body.dark .proc-btn--primary:hover { color: #0E1B29; }
+.proc-btn--icon {
+  width: 2.15rem;
+  height: 2.15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--color-slate);
+}
+.proc-btn--icon:hover { background: var(--color-hover); border-color: var(--color-navy); color: var(--color-navy); }
+.proc-btn--danger:hover { background: rgba(181, 71, 8, 0.08); border-color: #B54708; color: #B54708; }
 
 .fav-star {
   font-size: 1.05rem;
@@ -986,8 +1129,15 @@ body.dark .fav-star.active { color: #FBBF24; }
   align-items: center;
   gap: 0.55rem;
 }
-.mp-filtros .field-input { width: auto; }
+.mp-filtros .field-input { width: auto; border-radius: 10px; }
 .mp-filtro-search { flex: 1 1 12rem; min-width: 9rem; }
+
+.mp-count-pill {
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: var(--color-hover);
+  color: var(--color-slate);
+}
 #mp-filtro-tipo, #mp-filtro-grado, #mp-filtro-trimestre { flex: 0 1 10rem; min-width: 8rem; }
 
 .mp-fav-toggle {
@@ -1009,20 +1159,30 @@ body.dark .fav-star.active { color: #FBBF24; }
 }
 body.dark .mp-fav-toggle.active { background: rgba(251, 191, 36, 0.18); border-color: #FBBF24; color: #FBBF24; }
 
+/* Encabezado de vista: botón "← Inicio" y título en la misma fila. */
+.view-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.view-head > h2 { margin: 0; }
+
 .back-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  flex-shrink: 0;
   font-size: 0.8rem;
   font-family: 'IBM Plex Mono', monospace;
   color: var(--color-slate);
   border: 1px solid var(--color-border);
-  border-radius: 2px;
+  border-radius: 10px;
   padding: 0.4rem 0.8rem;
   background: var(--color-surface);
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
-.back-btn:hover { background: var(--color-hover); color: var(--color-navy); }
+.back-btn:hover { background: var(--color-hover); color: var(--color-navy); border-color: var(--color-navy); }
 
 /* ---------------------------------------------------------
    Documentos descargables (tarjetas con miniatura)
@@ -1030,13 +1190,14 @@ body.dark .mp-fav-toggle.active { background: rgba(251, 191, 36, 0.18); border-c
 .doc-card {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 16px;
   overflow: hidden;
   background: var(--color-surface);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 1px 2px rgba(27, 58, 92, 0.04);
+  transition: border-color 0.15s ease, box-shadow 0.2s ease, transform 0.15s ease;
 }
-.doc-card:hover { border-color: var(--color-navy); box-shadow: 0 4px 16px rgba(27, 58, 92, 0.1); }
+.doc-card:hover { border-color: var(--color-border); box-shadow: 0 12px 28px rgba(27, 58, 92, 0.12); transform: translateY(-3px); }
 .doc-thumb {
   display: block;
   background: #EEF2F6;
@@ -1044,9 +1205,11 @@ body.dark .mp-fav-toggle.active { background: rgba(251, 191, 36, 0.18); border-c
   aspect-ratio: 11 / 8.5;   /* paisaje: los programas son horizontales (792x612) */
   overflow: hidden;
 }
-/* 'contain' para no recortar: los 15 programas (paisaje) llenan la caja y el
-   Manual (retrato) se muestra completo con márgenes laterales. */
+/* 'contain' para no recortar: los 15 programas (paisaje) llenan la caja. */
 .doc-thumb img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
+/* El Manual es retrato: 'cover' anclado arriba para que llene el cuadro
+   mostrando la parte superior de la portada (título) en vez de dejar bordes. */
+.doc-thumb--fill img { object-fit: cover; object-position: top center; }
 .doc-body { padding: 0.9rem 1rem 1rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
 .doc-cat {
   font-size: 0.62rem;
