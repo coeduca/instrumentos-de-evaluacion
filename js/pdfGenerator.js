@@ -18,8 +18,9 @@ function fmtFecha(isoDate) {
 function sanitizeFilename(str) {
   return (str || 'sin-dato')
     .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-zA-Z0-9]+/g, '_')
-    .replace(/^_+|_+$/g, '');
+    .replace(/[^a-zA-Z0-9 ]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+    .trim();
 }
 
 const MESES_ES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
@@ -527,7 +528,7 @@ function generarPdf(state, estudiantes, logoBase64, recup, opts) {
     },
   };
 
-  const filename = `Actas_${sanitizeFilename(state.configuracion.codigo)}_${sanitizeFilename(state.configuracion.trimestre)}_${sanitizeFilename(state.configuracion.anio)}.pdf`;
+  const filename = `Actas ${sanitizeFilename(state.configuracion.codigo)} - ${sanitizeFilename(state.configuracion.trimestre)} - ${sanitizeFilename(state.configuracion.anio)}.pdf`;
   outputPdf(docDefinition, filename, opts);
 }
 
@@ -637,7 +638,7 @@ function generarActaIncumplimientoPdf(state, students, logoBase64, opts) {
     styles: formalDocStyles(),
   };
 
-  const filename = `Actas_Incumplimiento_${sanitizeFilename(state.configuracion.codigo)}_${sanitizeFilename(state.configuracion.anio)}.pdf`;
+  const filename = `Actas de Incumplimiento ${sanitizeFilename(state.configuracion.codigo)} - ${sanitizeFilename(state.configuracion.anio)}.pdf`;
   outputPdf(docDefinition, filename, opts);
 }
 
@@ -827,7 +828,7 @@ function generarActaResultadoPdf(state, students, logoBase64, recup, opts) {
     styles: formalDocStyles(),
   };
 
-  const filename = `Actas_Resultado_${sanitizeFilename(state.configuracion.codigo)}_${sanitizeFilename(state.configuracion.anio)}.pdf`;
+  const filename = `Actas de Resultado ${sanitizeFilename(state.configuracion.codigo)} - ${sanitizeFilename(state.configuracion.anio)}.pdf`;
   outputPdf(docDefinition, filename, opts);
 }
 
@@ -860,7 +861,7 @@ function generarActasCierrePdf(state, students, logoBase64, recup, opts) {
     styles: formalDocStyles(),
   };
 
-  const filename = `Actas_Cierre_${sanitizeFilename(cfg.codigo)}_${sanitizeFilename(cfg.trimestre)}_${sanitizeFilename(cfg.anio)}.pdf`;
+  const filename = `Actas de Cierre ${sanitizeFilename(cfg.codigo)} - ${sanitizeFilename(cfg.trimestre)} - ${sanitizeFilename(cfg.anio)}.pdf`;
   outputPdf(docDefinition, filename, opts);
 }
 
@@ -949,7 +950,7 @@ function generarConstanciaRefuerzoPdf(state, students, logoBase64, recup, opts) 
     styles: formalDocStyles(),
   };
 
-  const filename = `Constancias_Refuerzo_${sanitizeFilename(state.configuracion.codigo)}_${sanitizeFilename(state.configuracion.anio)}.pdf`;
+  const filename = `Constancias de Refuerzo ${sanitizeFilename(state.configuracion.codigo)} - ${sanitizeFilename(state.configuracion.anio)}.pdf`;
   outputPdf(docDefinition, filename, opts);
 }
 
@@ -1037,7 +1038,7 @@ function generarActividadOrdinariaPdf(state, ordinaria, logoBase64, recup, opts)
     },
   };
 
-  const filename = `Actividad_${sanitizeFilename(ordinaria.tipoLabel)}_${sanitizeFilename(ordinaria.titulo)}.pdf`;
+  const filename = `${sanitizeFilename(ordinaria.tipoLabel)} - ${sanitizeFilename(ordinaria.titulo)} (${ordinaria.ponderacion}%).pdf`;
   outputPdf(docDefinition, filename, opts);
 }
 
