@@ -20,6 +20,12 @@ window.DOCUMENTOS = [
   "thumb": "Programas/thumbs/matematica-bach.png"
  },
  {
+  "titulo": "Ciencias de la Computación — Bachillerato",
+  "categoria": "Programa de estudio",
+  "archivo": "Programa de estudios de Ciencias de la Computación (1er Año).pdf",
+  "thumb": "Programas/thumbs/computacion.png"
+ },
+ {
   "titulo": "Ciencia y Tecnología — III Ciclo",
   "categoria": "Programa de estudio",
   "archivo": "Programas de estudio_Ciencia y Tecnología_III ciclo.pdf",
@@ -32,16 +38,10 @@ window.DOCUMENTOS = [
   "thumb": "Programas/thumbs/ciencia-bach.png"
  },
  {
-  "titulo": "Lengua y Literatura — III Ciclo",
+  "titulo": "Proyecto de Vida y Carrera — Bachillerato",
   "categoria": "Programa de estudio",
-  "archivo": "Programas de estudio_Lengua y Literatura_III ciclo.pdf",
-  "thumb": "Programas/thumbs/lengua-iii.png"
- },
- {
-  "titulo": "Lengua y Literatura — Bachillerato",
-  "categoria": "Programa de estudio",
-  "archivo": "Programas de estudio_Lengua y Literatura_Bachillerato.pdf",
-  "thumb": "Programas/thumbs/lengua-bach.png"
+  "archivo": "Programas_de_estudio_Proyecto_de_Vida_y_Carrera.pdf",
+  "thumb": "Programas/thumbs/proyecto-vida.png"
  },
  {
   "titulo": "Ciudadanía y Valores — III Ciclo",
@@ -54,30 +54,6 @@ window.DOCUMENTOS = [
   "categoria": "Programa de estudio",
   "archivo": "Programa de estudio Ciudadanía y Valores Educación Media.pdf",
   "thumb": "Programas/thumbs/ciudadania-media.png"
- },
- {
-  "titulo": "Educación Física — III Ciclo",
-  "categoria": "Programa de estudio",
-  "archivo": "Programa de estudio_Educación Física_III ciclo.pdf",
-  "thumb": "Programas/thumbs/edfisica-iii.png"
- },
- {
-  "titulo": "Educación Física — Bachillerato",
-  "categoria": "Programa de estudio",
-  "archivo": "Programas de estudio_Educación Física_Bachillerato.pdf",
-  "thumb": "Programas/thumbs/edfisica-bach.png"
- },
- {
-  "titulo": "Proyecto de Vida y Carrera — Bachillerato",
-  "categoria": "Programa de estudio",
-  "archivo": "Programas_de_estudio_Proyecto_de_Vida_y_Carrera.pdf",
-  "thumb": "Programas/thumbs/proyecto-vida.png"
- },
- {
-  "titulo": "Ciencias de la Computación — Bachillerato",
-  "categoria": "Programa de estudio",
-  "archivo": "Programa de estudios de Ciencias de la Computación (1er Año).pdf",
-  "thumb": "Programas/thumbs/computacion.png"
  },
  {
   "titulo": "Inglés (PreA1) — III Ciclo y Media",
@@ -96,5 +72,30 @@ window.DOCUMENTOS = [
   "categoria": "Programa de estudio",
   "archivo": "Programa de Ingles AI+_Web.pdf",
   "thumb": "Programas/thumbs/ingles-a1plus.png"
+ },
+ {
+  "titulo": "Lengua y Literatura — III Ciclo",
+  "categoria": "Programa de estudio",
+  "archivo": "Programas de estudio_Lengua y Literatura_III ciclo.pdf",
+  "thumb": "Programas/thumbs/lengua-iii.png"
+ },
+ {
+  "titulo": "Lengua y Literatura — Bachillerato",
+  "categoria": "Programa de estudio",
+  "archivo": "Programas de estudio_Lengua y Literatura_Bachillerato.pdf",
+  "thumb": "Programas/thumbs/lengua-bach.png"
+ },
+
+ {
+  "titulo": "Educación Física — III Ciclo",
+  "categoria": "Programa de estudio",
+  "archivo": "Programa de estudio_Educación Física_III ciclo.pdf",
+  "thumb": "Programas/thumbs/edfisica-iii.png"
+ },
+ {
+  "titulo": "Educación Física — Bachillerato",
+  "categoria": "Programa de estudio",
+  "archivo": "Programas de estudio_Educación Física_Bachillerato.pdf",
+  "thumb": "Programas/thumbs/edfisica-bach.png"
  }
 ];

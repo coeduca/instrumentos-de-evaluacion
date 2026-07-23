@@ -155,7 +155,8 @@
     if (rec.nombre) return rec.nombre;
     const r = rec.resumen || {};
     const periodo = [r.trimestre, r.anio].filter(Boolean).join(' ');
-    const partes = [r.grado, r.materia, periodo].filter(Boolean);
+    // El grado se muestra aparte, como badge propio, así que no se incluye aquí.
+    const partes = [r.materia, periodo].filter(Boolean);
     if (rec.tipo === 'ordinaria' && r.tituloOrdinaria) partes.push(`«${r.tituloOrdinaria}»`);
     return partes.length ? partes.join(' · ') : 'Proceso nuevo (sin datos aún)';
   }
@@ -356,6 +357,7 @@
             <button type="button" class="fav-star${esFav ? ' active' : ''}" data-proc="favorito"
               aria-pressed="${esFav ? 'true' : 'false'}" title="${esFav ? 'Quitar de favoritos' : 'Marcar como favorito'}">${esFav ? '★' : '☆'}</button>
             <span class="proceso-tipo ${rec.tipo}">${TIPO_LABEL[rec.tipo] || rec.tipo}</span>
+            ${r.grado ? `<span class="proceso-grado" title="Grado seleccionado">🎓 ${esc(r.grado)}</span>` : ''}
             <span class="proceso-nombre">${esc(labelDe(rec))}</span>
             ${esActivo ? '<span class="proceso-activo-chip">EN USO</span>' : ''}
           </div>
@@ -366,9 +368,9 @@
           </div>
         </div>
         <div class="proceso-actions">
-          <button type="button" class="exp-btn" data-proc="abrir">${esActivo ? 'Continuar' : 'Retomar'}</button>
-          <button type="button" class="exp-btn" data-proc="renombrar" title="Renombrar proceso">✎</button>
-          <button type="button" class="exp-btn danger" data-proc="eliminar" title="Eliminar proceso">✕</button>
+          <button type="button" class="proc-btn proc-btn--primary" data-proc="abrir">${esActivo ? 'Continuar' : 'Retomar'}</button>
+          <button type="button" class="proc-btn proc-btn--icon" data-proc="renombrar" title="Renombrar proceso">✎</button>
+          <button type="button" class="proc-btn proc-btn--icon proc-btn--danger" data-proc="eliminar" title="Eliminar proceso">✕</button>
         </div>`;
 
       row.querySelector('[data-proc="favorito"]').addEventListener('click', (e) => {

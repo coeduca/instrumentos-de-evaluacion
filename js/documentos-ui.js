@@ -18,8 +18,10 @@
       const href = 'Programas/' + encodeURIComponent(doc.archivo);
       const card = document.createElement('div');
       card.className = 'doc-card';
+      // El Manual (retrato) llena el cuadro con recorte; los programas (paisaje) no.
+      const thumbFill = doc.categoria === 'Manual' ? ' doc-thumb--fill' : '';
       card.innerHTML = `
-        <a class="doc-thumb" href="${href}" target="_blank" rel="noopener" title="Abrir ${esc(doc.titulo)}">
+        <a class="doc-thumb${thumbFill}" href="${href}" target="_blank" rel="noopener" title="Abrir ${esc(doc.titulo)}">
           <img src="${esc(doc.thumb)}" alt="Portada — ${esc(doc.titulo)}" loading="lazy">
         </a>
         <div class="doc-body">
