@@ -264,6 +264,9 @@ function buildInstrumentoContent(instrumento) {
   const th = (t) => ({ text: (t || '').toUpperCase(), style: 'instTh' });
   const cell = (t, style) => ({ text: t || '', style: style || 'instCell' });
 
+  // Función auxiliar para limpiar saltos de línea y espacios sobrantes
+  const cleanText = (t) => (t || '').replace(/\s+/g, ' ').trim();
+
   let table;
   if (instrumento.tipo === 'rubrica') {
     const escala = instrumento.escala && instrumento.escala.length
@@ -271,19 +274,26 @@ function buildInstrumentoContent(instrumento) {
       : [{ label: 'Excelente', puntos: 4 }, { label: 'Muy bueno', puntos: 3 }, { label: 'Bueno', puntos: 2 }, { label: 'Debe mejorar', puntos: 1 }];
     const header = [th('Criterio'), ...escala.map((n) => th(`${n.label} (${n.puntos})`))];
     const body = criterios.map((c) => [
-      cell(c.texto, 'instCriterio'),
-      ...escala.map((_, i) => cell((c.desc && c.desc[i]) || '', 'instCell')),
+      cell(cleanText(c.texto), 'instCriterio'),
+      ...escala.map((_, i) => cell(cleanText((c.desc && c.desc[i]) || ''), 'instCell')),
     ]);
     table = {
-      table: { widths: ['*', ...escala.map(() => '*')], headerRows: 1, body: [header, ...body] },
+      // 40% para el criterio, el resto (*) se divide equitativamente en la escala
+      table: { widths: ['40%', ...escala.map(() => '*')], headerRows: 1, body: [header, ...body] },
       layout: instTableLayout(),
       margin: [0, 6, 0, 0],
     };
   } else {
     const header = [th('Criterio'), th('Sí logra'), th('No logra'), th('Observaciones')];
-    const body = criterios.map((c) => [cell(c.texto, 'instCriterio'), cell('', 'instMark'), cell('', 'instMark'), cell('')]);
+    const body = criterios.map((c) => [
+      cell(cleanText(c.texto), 'instCriterio'), 
+      cell('', 'instMark'), 
+      cell('', 'instMark'), 
+      cell('')
+    ]);
     table = {
-      table: { widths: ['*', 'auto', 'auto', '*'], headerRows: 1, body: [header, ...body] },
+      // 45% para el criterio, 'auto' ajusta las casillas Sí/No al texto, y el resto para observaciones
+      table: { widths: ['45%', 'auto', 'auto', '*'], headerRows: 1, body: [header, ...body] },
       layout: instTableLayout(),
       margin: [0, 6, 0, 0],
     };
@@ -292,7 +302,7 @@ function buildInstrumentoContent(instrumento) {
   const titulo = instrumento.tipo === 'rubrica' ? 'INSTRUMENTO DE EVALUACIÓN · RÚBRICA' : 'INSTRUMENTO DE EVALUACIÓN · LISTA DE COTEJO';
   return [
     { text: titulo, style: 'instructivoTitle' },
-    { text: 'Instrumento con el que se valorará la actividad.', style: 'fieldValueMuted', margin: [0, 0, 0, 8] },
+    { text: 'Instrumento con el que se valorará la actividad de recuperación.', style: 'fieldValueMuted', margin: [0, 0, 0, 8] },
     table,
   ];
 }
