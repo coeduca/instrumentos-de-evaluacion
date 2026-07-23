@@ -292,7 +292,7 @@ function buildInstrumentoContent(instrumento) {
   const titulo = instrumento.tipo === 'rubrica' ? 'INSTRUMENTO DE EVALUACIÓN · RÚBRICA' : 'INSTRUMENTO DE EVALUACIÓN · LISTA DE COTEJO';
   return [
     { text: titulo, style: 'instructivoTitle' },
-    { text: 'Instrumento con el que se valorará la actividad de recuperación.', style: 'fieldValueMuted', margin: [0, 0, 0, 8] },
+    { text: 'Instrumento con el que se valorará la actividad.', style: 'fieldValueMuted', margin: [0, 0, 0, 8] },
     table,
   ];
 }
@@ -973,7 +973,11 @@ function buildActividadOrdinariaContent(config, ordinaria, recup) {
 
   if (ordinaria.fechaComunicacion) {
     content.push({
-      text: `Actividad dada a conocer a los estudiantes el ${fmtFecha(ordinaria.fechaComunicacion)}.`,
+      text: [
+        'Actividad dada a conocer a los estudiantes de ',
+        { text: (config.grado || '—').toLowerCase(), bold: true },
+        ` el ${fmtFecha(ordinaria.fechaComunicacion)}.`
+      ],
       style: 'fieldValueMuted', margin: [0, 0, 0, 10],
     });
   }
