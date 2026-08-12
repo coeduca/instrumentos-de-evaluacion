@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de Actas de Recuperación</title>
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+
+<!-- El tema guardado se aplica al <body> apenas se abre (script al inicio del
+     body), antes de pintar el contenido, para evitar el parpadeo (FOUC) al
+     recargar (p. ej. al iniciar un proceso). -->
+
+<!-- Antes de pintar: si se recarga directamente en una vista (p. ej. al continuar
+     un proceso, que hace location.reload() con #recuperacion/#ordinaria), se marca
+     la vista destino para que el CSS la muestre de una vez y no parpadee "Inicio". -->
+<script>
+  (function () {
+    try {
+      var v = (location.hash || '').replace(/^#/, '');
+      if (['ordinaria', 'recuperacion', 'documentos', 'expedientes'].indexOf(v) !== -1) {
+        document.documentElement.setAttribute('data-initial-view', v);
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<!-- Tailwind CSS vía CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Tipografías -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css?v=47">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: {
+            DEFAULT: '#1B3A5C',
+            50: '#EEF2F6',
+            700: '#16304C',
+            900: '#0E1F30',
+          },
+          slate: {
+            DEFAULT: '#5A5A5A',
+          },
+          paper: '#E7E3DA',
+          alert: '#B54708',
+          ok: '#2F6F5E',
+        },
+        fontFamily: {
+          serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+          mono: ['"IBM Plex Mono"', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+</head>
+<body class="bg-paper text-navy-900 font-sans antialiased">
+<script>
+  // Anti-parpadeo: aplica el tema antes de renderizar el contenido del body.
+  (function () {
+    try {
+      var savedTheme = localStorage.getItem('actas-recuperacion:theme');
+      var initialTheme = savedTheme === 'dark' || savedTheme === 'frutiger' || savedTheme === 'skeuo' || savedTheme === 'glass' || savedTheme === 'sketch'
+        ? savedTheme
+        : 'default';
+      document.body.dataset.theme = initialTheme;
+      document.body.classList.toggle('dark', initialTheme === 'dark');
+      document.body.classList.toggle('frutiger', initialTheme === 'frutiger');
+      document.body.classList.toggle('skeuo', initialTheme === 'skeuo');
+      document.body.classList.toggle('glass', initialTheme === 'glass');
+      document.body.classList.toggle('sketch', initialTheme === 'sketch');
+      document.documentElement.style.colorScheme = initialTheme === 'dark' ? 'dark' : 'light';
+    } catch (e) {}
+  })();
+</script>
+
+<div class="min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="border-b border-navy/10 bg-white">
+    <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-4 min-w-0">
+        <button id="btn-drawer" type="button" class="drawer-btn" title="Menú de opciones" aria-label="Abrir menú de opciones">
+          <span></span><span></span><span></span>
+        </button>
+        <img src="logo.png" alt="Logo institucional" class="h-11 w-11 object-contain shrink-0" onerror="this.style.display='none'">
+        <div class="min-w-0">
+          <div class="flex items-center gap-2.5 flex-wrap">
+            <h1 class="brand-title text-navy leading-tight">Generador de actas</h1>
+            <span id="header-section-tag" class="header-tag hidden"></span>
+          </div>
+          <p id="header-subtitle" class="text-sm text-slate mt-0.5">Actividades ordinarias, de recuperación e instructivos</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-1.5 shrink-0">
+        <button id="drive-sync-indicator" type="button" class="drive-sync-pill is-disconnected" title="Configurar sincronización con Google Drive" aria-label="Estado de Google Drive">
+          <img src="google-drive.webp" alt="" class="drive-sync-icon" aria-hidden="true">
+          <span class="drive-sync-dot" aria-hidden="true"></span>
+          <span id="drive-sync-indicator-text">Drive desconectado</span>
+        </button>
+        <button id="btn-clear-data" type="button" class="header-btn hidden" title="Borra toda la información ingresada">
+          Limpiar datos
+        </button>
+        <div id="save-indicator" class="text-xs text-slate/70 font-mono flex items-center gap-1.5 opacity-0 transition-opacity duration-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-ok"></span>
+          <span id="save-indicator-text">Guardado</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- DRAWER DE OPCIONES -->
+  <div id="drawer-overlay" class="drawer-overlay hidden"></div>
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <span class="font-serif font-semibold">Opciones</span>
+      <button id="drawer-close" type="button" class="modal-close" title="Cerrar">✕</button>
+    </div>
+    <nav class="drawer-items">
+      <section class="drive-drawer-panel" aria-labelledby="drive-panel-title">
+        <div class="drive-panel-heading">
+          <img src="google-drive.webp" alt="" class="drive-logo" aria-hidden="true">
+          <span>
+            <strong id="drive-panel-title">Google Drive</strong>
+            <small id="drive-account-label">Sin conectar</small>
+          </span>
+        </div>
+        <p id="drive-panel-message" class="drive-panel-message">Conecta tu cuenta para mantener un único respaldo actualizado en la nube.</p>
+        <div class="drive-panel-actions">
+          <button id="btn-drive-connect" type="button" class="btn-secondary drive-action-primary">Conectar cuenta</button>
+          <button id="btn-drive-sync-now" type="button" class="btn-secondary hidden">Sincronizar ahora</button>
+        </div>
+        <label class="drive-switch-row" for="drive-upload-documents">
+          <span>
+            <strong>Guardar documentos en Drive</strong>
+            <small>Al pulsar PDF o Word podrás elegir la carpeta de destino.</small>
+          </span>
+          <span class="drive-switch">
+            <input id="drive-upload-documents" type="checkbox">
+            <span class="drive-switch-track"><span></span></span>
+          </span>
+        </label>
+      </section>
+      <button id="btn-export-backup" type="button" class="drawer-item">
+        <img src="download-svgrepo-com.svg" alt="" class="drawer-icon">
+        <span class="drawer-item-text">
+          <span class="drawer-item-title">Respaldo</span>
+          <span class="drawer-item-desc">Descarga todos tus datos (procesos y expedientes) en un archivo</span>
+        </span>
+      </button>
+      <button id="btn-import-backup" type="button" class="drawer-item">
+        <img src="upload-svgrepo-com.svg" alt="" class="drawer-icon">
+        <span class="drawer-item-text">
+          <span class="drawer-item-title">Restaurar</span>
+          <span class="drawer-item-desc">Recupera un respaldo descargado previamente</span>
+        </span>
+      </button>
+      <input type="file" id="import-backup-input" accept=".coeduca,.json,.gz,application/gzip,application/json" class="hidden">
+      <button id="btn-theme" type="button" class="drawer-item" aria-haspopup="dialog" aria-controls="theme-modal">
+        <span class="theme-drawer-icon" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <span class="drawer-item-text">
+          <span class="drawer-item-title">Temas</span>
+          <span class="drawer-item-desc">Elige entre Default, Dark, Frutiger, Skeuo, Glass y Sketch</span>
+        </span>
+      </button>
+    </nav>
+  </aside>
+
+  <main class="flex-1 max-w-5xl w-full mx-auto px-6 py-8">
+
+    <!-- ==================== VISTA: INICIO ==================== -->
+    <div id="view-home" data-view class="space-y-6">
+      <!-- ========== BANNER DE BIENVENIDA ========== -->
+      <section class="home-hero">
+        <div class="home-hero-text">
+          <p class="home-hero-greet">¡Hola, docente! <span class="home-hero-wave">👋</span></p>
+          <h2 class="home-hero-title">¿Qué deseas hacer hoy?</h2>
+          <p class="home-hero-sub">Elige una opción para comenzar a crear o gestionar tus procesos académicos.</p>
+        </div>
+        <img src="ornamentos.webp" alt="" class="home-hero-art" onerror="this.style.display='none'">
+      </section>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div data-nav="ordinaria" class="home-card home-card--ordinaria" role="button" tabindex="0">
+          <span class="home-card-icon-wrap"><img src="icon_ordinaria.webp" alt="" class="home-card-icon"></span>
+          <span class="home-card-title">Generar Actividad Ordinaria</span>
+          <span class="home-card-desc">Actividad, indicadores, criterios e instrumento: Integradora, Cotidiana o Prueba.</span>
+          <button type="button" class="home-card-new" data-nuevo-proceso="ordinaria">＋ Iniciar nuevo proceso</button>
+        </div>
+        <div data-nav="recuperacion" class="home-card home-card--recuperacion" role="button" tabindex="0">
+          <span class="home-card-icon-wrap"><img src="icon_recuperacion.webp" alt="" class="home-card-icon"></span>
+          <span class="home-card-title">Generar actividad de recuperación</span>
+          <span class="home-card-desc">3 pasos claros: refuerzo y notificación, recuperación y registro de la nota. Solo lo necesario.</span>
+          <button type="button" class="home-card-new" data-nuevo-proceso="recuperacion">＋ Iniciar nuevo proceso</button>
+        </div>
+        <button type="button" data-nav="documentos" class="home-card home-card-simple home-card--documentos">
+          <span class="home-card-icon-wrap"><img src="icon_descargables.webp" alt="" class="home-card-icon"></span>
+          <span class="home-card-title">Documentos descargables</span>
+          <span class="home-card-desc">Programas de estudio y Manual de Evaluación.</span>
+          <span class="home-card-cta">Ver documentos</span>
+        </button>
+        <button type="button" data-nav="expedientes" class="home-card home-card-simple home-card--expedientes">
+          <span class="home-card-icon-wrap"><img src="icon_expedientes.webp" alt="" class="home-card-icon"></span>
+          <span class="home-card-title">Expedientes de estudiantes</span>
+          <span class="home-card-desc">Historial de documentos generados, por estudiante, materia y período.</span>
+          <span class="home-card-cta">Acceder</span>
+        </button>
+      </div>
+
+      <!-- ========== MIS PROCESOS (guardados automáticamente) ========== -->
+      <div id="mis-procesos" class="hidden space-y-3 pt-2">
+        <div class="flex items-baseline justify-between">
+          <h3 class="font-serif text-lg font-semibold text-navy">Mis procesos</h3>
+          <span id="mis-procesos-count" class="mp-count-pill text-xs font-mono text-slate"></span>
+        </div>
+        <p class="text-xs text-slate -mt-1">
+          Cada proceso guarda automáticamente todo lo que ingresas (estudiantes, indicadores, actividades,
+          instrumento, fase...). Retómalo cuando toque la siguiente fase, aunque pasen días.
+        </p>
+        <div id="mis-procesos-filtros" class="mp-filtros">
+          <input id="mp-search" type="text" autocomplete="off" class="field-input mp-filtro-search" placeholder="Buscar proceso...">
+          <select id="mp-filtro-tipo" class="field-input">
+            <option value="">Todos los tipos</option>
+            <option value="ordinaria">Ordinaria</option>
+            <option value="recuperacion">Recuperación</option>
+          </select>
+          <select id="mp-filtro-grado" class="field-input"><option value="">Todos los grados</option></select>
+          <select id="mp-filtro-trimestre" class="field-input"><option value="">Todos los períodos</option></select>
+          <button type="button" id="mp-filtro-favoritos" class="mp-fav-toggle" aria-pressed="false">☆ Favoritos</button>
+        </div>
+        <div id="mis-procesos-list" class="space-y-2.5"></div>
+      </div>
+    </div>
+
+    <!-- ==================== VISTA: ACTIVIDAD ORDINARIA ==================== -->
+    <div id="view-ordinaria" data-view hidden class="space-y-8">
+      <div class="view-head">
+        <button type="button" data-nav="home" class="back-btn">← Inicio</button>
+        <h2 class="font-serif text-xl font-semibold text-navy">Generar actividad ordinaria</h2>
+      </div>
+
+      <!-- El bloque de configuración general se monta aquí (o en recuperación) -->
+      <div class="config-mount space-y-8">
+      <div id="config-block" class="space-y-8">
+      <div class="section-card">
+      <div class="section-card-header"><span class="section-card-badge">◆</span><span class="section-icon ic-settings"></span><span>Configuración general</span></div>
+      <section class="section-card-body">
+        <div class="p-6 space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label for="cfg-institucion" class="field-label">Institución</label>
+              <input id="cfg-institucion" type="text" class="field-input" placeholder="Centro Escolar...">
+            </div>
+            <div>
+              <label for="cfg-ubicacion" class="field-label">Ubicación</label>
+              <input id="cfg-ubicacion" type="text" class="field-input" placeholder="Municipio, Departamento">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <div>
+              <label for="cfg-codigo" class="field-label">Código</label>
+              <input id="cfg-codigo" type="text" class="field-input font-mono" placeholder="00000">
+            </div>
+            <div>
+              <label for="cfg-docente" class="field-label">Docente</label>
+              <select id="cfg-docente" class="field-input">
+                <option value="">Seleccionar</option>
+              </select>
+            </div>
+            <div>
+              <label for="cfg-materia" class="field-label">Materia</label>
+              <select id="cfg-materia" class="field-input">
+                <option value="">Seleccionar</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div>
+              <label for="cfg-grado" class="field-label">Grado</label>
+              <select id="cfg-grado" class="field-input">
+                <option value="">Seleccionar</option>
+              </select>
+            </div>
+            <div>
+              <label for="cfg-trimestre" class="field-label">Periodo</label>
+              <select id="cfg-trimestre" class="field-input">
+                <option value="">Seleccionar</option>
+                <option value="Primer Trimestre">Primer Trimestre</option>
+                <option value="Segundo Trimestre">Segundo Trimestre</option>
+                <option value="Tercer Trimestre">Tercer Trimestre</option>
+                <option value="Primer Periodo">Primer Periodo</option>
+                <option value="Segundo Periodo">Segundo Periodo</option>
+                <option value="Tercer Periodo">Tercer Periodo</option>
+                <option value="Cuarto Periodo">Cuarto Periodo</option>
+              </select>
+            </div>
+            <div>
+              <label for="cfg-anio" class="field-label">Año</label>
+              <input id="cfg-anio" type="number" min="2024" step="1" class="field-input" placeholder="2026">
+            </div>
+            <div>
+              <label for="cfg-fecha-limite" class="field-label">Fecha límite</label>
+              <input id="cfg-fecha-limite" type="date" class="field-input">
+            </div>
+          </div>
+
+        </div>
+      </section>
+      </div><!-- .section-card -->
+      </div><!-- #config-block -->
+      </div><!-- .config-mount -->
+
+      <div class="section-card">
+      <div class="section-card-header"><span class="section-card-badge">01</span><span class="section-icon ic-curriculum"></span><span>Currículo · indicadores de logro</span></div>
+      <section id="ord-curriculo" class="section-card-body"></section>
+      </div>
+
+      <div class="section-card">
+      <div class="section-card-header"><span class="section-card-badge">02</span><span class="section-icon ic-instrumento"></span><span>Instrumento y criterios de evaluación <span class="required-chip">Obligatorio</span></span></div>
+      <section id="ord-instrumento" class="section-card-body"></section>
+      </div>
+
+      <div class="section-card">
+      <div class="section-card-header"><span class="section-card-badge">03</span><span class="section-icon ic-ordinaria"></span><span>Datos de la actividad</span></div>
+      <section class="section-card-body">
+        <div class="p-6 space-y-5">
+          <div>
+            <span class="field-label">Tipo de actividad de evaluación</span>
+            <div class="flex flex-wrap gap-2">
+              <label class="inst-radio"><input type="radio" name="ord-tipo" value="integradora" class="sr-only"> <span>Actividad Integradora</span></label>
+              <label class="inst-radio"><input type="radio" name="ord-tipo" value="cotidiana" class="sr-only"> <span>Actividad Cotidiana</span></label>
+              <label class="inst-radio"><input type="radio" name="ord-tipo" value="prueba" class="sr-only"> <span>Prueba</span></label>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <div>
+              <label for="ord-titulo" class="field-label">Título de la actividad</label>
+              <input id="ord-titulo" type="text" class="field-input" placeholder="ej. Resolución de problemas con enteros">
+            </div>
+            <div>
+              <label for="ord-ponderacion" class="field-label">
+                Porcentaje asignado a esta actividad (%)
+                <button type="button" class="info-btn" data-info-target="ord-ponderacion-info"
+                        aria-label="Más información sobre la ponderación" aria-expanded="false">i</button>
+              </label>
+              <input id="ord-ponderacion" type="number" min="1" max="35" step="1" class="field-input">
+              <p id="ord-ponderacion-info" class="info-msg hidden">
+                El Manual fija 35% para integradoras, 35% para cotidianas y 30% para pruebas como categorías del período. Este campo solo distribuye ese porcentaje entre actividades de la misma categoría y nunca permite superar el total oficial.
+              </p>
+            </div>
+            <div>
+              <label for="ord-fecha-com" class="field-label">Fecha en que se dio a conocer <span class="optional-inline">Opcional</span></label>
+              <input id="ord-fecha-com" type="date" class="field-input">
+            </div>
+          </div>
+
+          <div>
+            <span class="field-label">Indicaciones para el estudiante</span>
+            <div class="flex items-center gap-1 mb-1.5">
+              <button type="button" data-ord-cmd="bold" class="format-btn" title="Negrita"><b>N</b></button>
+              <button type="button" data-ord-cmd="italic" class="format-btn" title="Cursiva"><i>K</i></button>
+              <button type="button" data-ord-cmd="underline" class="format-btn" title="Subrayado"><u>S</u></button>
+            </div>
+            <div id="ord-instrucciones" contenteditable="true" class="field-input rich-editor"
+                 data-placeholder="Describe qué debe hacer el estudiante, condiciones y entrega..."></div>
+          </div>
+        </div>
+      </section>
+      </div><!-- .section-card -->
+
+      <div class="section-card">
+      <div class="section-card-header is-cta"><span class="section-card-badge">04</span><span class="section-icon ic-generar"></span><span>Generar · constancia e instructivo de la actividad</span></div>
+      <section class="bg-navy p-6 space-y-5">
+        <label class="switch-row">
+          <span class="switch"><input type="checkbox" class="cfg-firmar-documentos"><span class="switch-track"><span class="switch-thumb"></span></span></span>
+          <span class="switch-text"><span class="switch-title">Firmar documentos</span><span class="switch-desc">Agrega automáticamente la firma de José Eliseo cuando aparezca como firmante.</span></span>
+        </label>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <p class="text-white font-serif text-base font-medium">Constancia e instructivo de la actividad ordinaria</p>
+            <p id="ord-hint" class="text-white/70 text-sm mt-0.5">Escribe un título para habilitar la descarga.</p>
+          </div>
+          <div class="flex gap-3 shrink-0">
+            <button id="btn-ordinaria-preview" type="button" class="btn-generate" disabled>Vista previa</button>
+            <button id="btn-ordinaria-pdf" type="button" class="btn-generate" disabled>Descargar PDF</button>
+            <button id="btn-ordinaria-word" type="button" class="btn-generate" disabled>Descargar Word</button>
+          </div>
+        </div>
+      </section>
+      </div><!-- .section-card -->
+    </div>
+
+    <!-- ==================== VISTA: RECUPERACIÓN ==================== -->
+    <div id="view-recuperacion" data-view hidden class="space-y-8">
+      <div class="view-head">
+        <button type="button" data-nav="home" class="back-btn">← Inicio</button>
+        <h2 class="font-serif text-xl font-semibold text-navy">Generar actividad de recuperación</h2>
+      </div>
+
+      <div class="config-mount space-y-8"></div>
+
+      <!-- La card de Estudiantes vive aquí en las fases 1-2 y se mueve al
+           inicio de la fase 3 (cierre), donde se marcan entregas y notas. -->
+      <div id="estudiantes-slot-main" class="space-y-8">
+      <div id="estudiantes-card" class="section-card">
+      <div class="section-card-header"><span class="section-card-badge">01</span><span class="section-icon ic-students"></span><span>Estudiantes</span></div>
+      <section class="section-card-body">
+        <div class="p-6">
+          <label for="student-search" class="field-label">Buscar estudiante por nombre</label>
+          <div class="relative">
+            <input id="student-search" type="text" autocomplete="off" class="field-input" placeholder="Escribe un nombre... ej. Diego, Barrera, Rivas">
+            <div id="autocomplete-list" class="autocomplete-list hidden"></div>
+          </div>
+          <p id="manual-add-hint" class="text-xs text-slate mt-2 hidden">
+            No se encontró ningún estudiante con ese nombre.
+            <button id="btn-add-manual" type="button" class="text-navy underline underline-offset-2 hover:text-navy-700">Agregarlo manualmente</button>
+          </p>
+
+          <div class="mt-3">
+            <button id="btn-toggle-manual" type="button" class="text-xs text-navy underline underline-offset-2 hover:text-navy-700">
+              + Agregar estudiante manualmente
+            </button>
+            <div id="manual-form" class="hidden grid grid-cols-1 sm:grid-cols-4 gap-2 mt-3">
+              <input id="manual-name" type="text" class="field-input" placeholder="Nombre completo">
+              <input id="manual-nie" type="text" class="field-input" placeholder="NIE (opcional)">
+              <input id="manual-grade" type="text" class="field-input" placeholder="Grado (opcional; usa el general si falta)">
+              <button id="btn-manual-save" type="button" class="btn-secondary">Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-navy/10 overflow-x-auto">
+          <table class="w-full text-sm students-table">
+            <thead>
+              <tr class="text-left text-xs font-mono uppercase tracking-wide text-navy bg-navy-50 border-b border-navy/10">
+                <th class="px-6 py-3 font-medium">Estudiante</th>
+                <th class="px-4 py-3 font-medium">NIE</th>
+                <th class="px-4 py-3 font-medium">Grado</th>
+                <th id="nota-base-label" class="px-4 py-3 font-medium w-24 col-cierre">Nota original</th>
+                <th class="px-4 py-3 font-medium w-24 col-cierre">¿Entregó?</th>
+                <th class="px-4 py-3 font-medium w-24 col-cierre">Nota recup.</th>
+                <th class="px-4 py-3 font-medium w-28 text-center col-cierre">Estado</th>
+                <th class="px-4 py-3 font-medium w-10"></th>
+              </tr>
+            </thead>
+            <tbody id="students-tbody"></tbody>
+          </table>
+          <p id="students-empty" class="px-6 py-8 text-sm text-slate text-center">
+            Aún no has agregado estudiantes. Búscalos arriba por nombre.
+          </p>
+        </div>
+
+        <div class="border-t border-navy/10 px-6 py-3 flex items-center text-xs font-mono text-slate">
+          <span id="students-count">0 estudiantes agregados</span>
+        </div>
+      </section>
+      </div><!-- #estudiantes-card -->
+      </div><!-- #estudiantes-slot-main -->
+
+      <div class="section-card">
+      <div class="section-card-header"><span class="section-card-badge">02</span><span class="section-icon ic-curriculum"></span><span>Currículo · indicadores no alcanzados</span></div>
+      <section id="rec-curriculo" class="section-card-body"></section>
+      </div>
+
+      <div class="norm-route" role="note" aria-label="Ruta mínima obligatoria">
+        <div class="norm-route-head">Ruta mínima obligatoria</div>
+        <div class="norm-route-grid">
+          <div><strong>1. Refuerza y notifica</strong><span>Documenta el refuerzo y la notificación con las tres firmas del num. 15.d.</span></div>
+          <div><strong>2. Recupera</strong><span>Evalúa solo lo no alcanzado y conserva el comprobante de la actividad.</span></div>
+          <div><strong>3. Registra</strong><span>Aplica la regla de la nota y registra el resultado en el mecanismo oficial.</span></div>
+        </div>
+        <p>Todo lo demás que aparezca como <b>Opcional</b> es apoyo administrativo del centro, no un requisito adicional del Manual.</p>
+      </div>
+
+      <!-- ========== FASES DEL PROCESO (cada una en su momento) ========== -->
+      <div class="fase-flow">
+        <div class="fase-nav-sticky">
+        <div class="fase-tabs" role="tablist">
+          <button type="button" class="fase-tab" data-fase="1">
+            <span class="fase-tab-num">1</span><span>Refuerzo y notificación</span><span class="fase-check" data-fase-check="refuerzo"></span>
+          </button>
+          <button type="button" class="fase-tab" data-fase="2">
+            <span class="fase-tab-num">2</span><span>Recuperación</span><span class="fase-check" data-fase-check="paquete"></span>
+          </button>
+          <button type="button" class="fase-tab" data-fase="3">
+            <span class="fase-tab-num">3</span><span>Registro final</span><span class="fase-check" data-fase-check="cierre"></span>
+          </button>
+        </div>
+        </div><!-- /.fase-nav-sticky -->
+        <p class="text-xs text-slate mt-2 fase-nav-help">
+          La ✓ marca los pasos esenciales ya cumplidos. En la fase 3 no necesitas generar otra acta: se completa cuando confirmas que la nota quedó registrada oficialmente.
+        </p>
+
+      <!-- ========== FASE 1 · REFUERZO ========== -->
+      <div data-fase-panel="1" hidden class="space-y-8">
+      <div class="section-card">
+      <div class="section-card-header"><span class="section-card-badge">F1</span><span class="section-icon ic-refuerzo"></span><span>Refuerzo educativo y notificación <span class="required-chip">Obligatorio</span></span></div>
+      <section class="section-card-body">
+        <div class="p-6 space-y-5">
+          <p class="text-sm text-slate">
+            El Manual exige documentar el <strong class="text-navy">refuerzo educativo</strong> (nums. 12 y 15.a) y conservar una
+            <strong class="text-navy">constancia de notificación</strong> firmada por director/a, docente responsable y un representante del Equipo de Evaluación (num. 15.d).
+            Este único documento cubre ambos respaldos para evitar duplicar trámites.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <div>
+              <label for="rec-ref-inicio" class="field-label">Inicio del refuerzo</label>
+              <input id="rec-ref-inicio" type="date" class="field-input">
+            </div>
+            <div>
+              <label for="rec-ref-fin" class="field-label">Fin del refuerzo</label>
+              <input id="rec-ref-fin" type="date" class="field-input">
+            </div>
+            <div>
+              <label for="rec-ref-fecha-emision" class="field-label">Fecha de emisión de constancia</label>
+              <input id="rec-ref-fecha-emision" type="date" class="field-input" required>
+            </div>
+          </div>
+          <div>
+            <label for="rec-ref-desc" class="field-label">Estrategias y actividades de refuerzo realizadas</label>
+            <textarea id="rec-ref-desc" rows="3" class="field-input" placeholder="ej. Retroalimentación individual, guías de ejercicios adicionales, tutoría entre pares, repaso dirigido..."></textarea>
+          </div>
+          <div class="border-t border-navy/10 pt-5">
+            <p class="field-label mb-3">Firmas requeridas para la constancia de notificación</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div><label for="cfg-director" class="field-label">Director/a</label><input id="cfg-director" type="text" class="field-input" placeholder="Nombre del director/a"></div>
+              <div><label for="cfg-evaluador" class="field-label">Representante del Equipo de Evaluación</label><input id="cfg-evaluador" type="text" class="field-input" placeholder="Nombre del representante"></div>
+            </div>
+            <p class="text-xs text-slate mt-2">La tercera firma es la del docente responsable, tomada automáticamente del campo «Docente» de la configuración general.</p>
+          </div>
+        </div>
+      </section>
+      </div>
+
+      <div class="section-card">
+      <div class="section-card-header is-cta"><span class="section-card-badge">F1</span><span class="section-icon ic-generar"></span><span>Generar · constancia de refuerzo y notificación</span></div>
+      <section class="bg-navy p-6 space-y-5">
+        <label class="switch-row">
+          <span class="switch"><input type="checkbox" class="cfg-firmar-documentos"><span class="switch-track"><span class="switch-thumb"></span></span></span>
+          <span class="switch-text"><span class="switch-title">Firmar documentos</span><span class="switch-desc">Agrega automáticamente la firma de José Eliseo cuando aparezca como firmante.</span></span>
+        </label>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <p class="text-white font-serif text-base font-medium">Constancia de refuerzo educativo y notificación</p>
+            <p id="refuerzo-hint" class="text-white/70 text-sm mt-0.5">Agrega estudiantes y describe el refuerzo para habilitar la constancia.</p>
+          </div>
+          <div class="flex gap-3 shrink-0">
+            <button id="btn-refuerzo-preview" type="button" class="btn-generate" disabled>Vista previa</button>
+            <button id="btn-refuerzo-pdf" type="button" class="btn-generate" disabled>PDF</button>
+            <button id="btn-refuerzo-word" type="button" class="btn-generate" disabled>Word</button>
+          </div>
+        </div>
+      </section>
+      </div><!-- .section-card -->
+      <div class="fase-next-row"><span>Cuando el refuerzo ya fue realizado y la familia fue notificada, continúa con la actividad de recuperación.</span><button type="button" class="btn-secondary" data-go-fase="2">Siguiente: Recuperación →</button></div>
+      </div><!-- /fase 1 -->
+
+      <!-- ========== FASE 2 · RECUPERACIÓN ========== -->
+      <div data-fase-panel="2" hidden class="space-y-8">
+      <div class="section-card">
+      <div class="section-card-header"><span class="section-card-badge">F2</span><span class="section-icon ic-recuperacion"></span><span>Actividades de recuperación <span class="required-chip">Obligatorio</span></span></div>
+      <section class="section-card-body">
+        <div id="activities-list" class="divide-y divide-navy/10"></div>
+        <div class="p-6 pt-5">
+          <button id="btn-add-activity" type="button" class="btn-secondary">+ Agregar actividad</button>
+        </div>
+      </section>
+      </div>
+
+      <div class="section-card">
+      <div class="section-card-header"><span class="section-card-badge">F2</span><span class="section-icon ic-instrumento"></span><span>Instrumento de evaluación</span></div>
+      <section id="rec-instrumento" class="section-card-body"></section>
+      </div>
+
+      <div class="section-card">
+      <div class="section-card-header is-cta"><span class="section-card-badge">F2</span><span class="section-icon ic-generar"></span><span>Generar · paquete de recuperación</span></div>
+      <section class="bg-navy p-6 space-y-5">
+        <label class="switch-row">
+          <span class="switch"><input type="checkbox" class="cfg-firmar-documentos"><span class="switch-track"><span class="switch-thumb"></span></span></span>
+          <span class="switch-text"><span class="switch-title">Firmar documentos</span><span class="switch-desc">Agrega automáticamente la firma de José Eliseo cuando aparezca como firmante.</span></span>
+        </label>
+        <details class="optional-details">
+          <summary>Documento adicional <span class="optional-chip">Opcional</span></summary>
+          <label for="cfg-incluir-acta-compromiso" class="switch-row mt-3">
+            <span class="switch"><input type="checkbox" id="cfg-incluir-acta-compromiso"><span class="switch-track"><span class="switch-thumb"></span></span></span>
+            <span class="switch-text"><span class="switch-title">Incluir acta de compromiso</span><span class="switch-desc">Desactivada por defecto. El Manual no la exige; actívala únicamente si tu centro educativo la solicita como acuerdo interno.</span></span>
+          </label>
+        </details>
+        <label for="cfg-instrumento-misma-pagina" class="switch-row">
+          <span class="switch">
+            <input type="checkbox" id="cfg-instrumento-misma-pagina">
+            <span class="switch-track"><span class="switch-thumb"></span></span>
+          </span>
+          <span class="switch-text">
+            <span class="switch-title">Instructivo e Instrumento de evaluación en la misma página</span>
+            <span class="switch-desc">Útil cuando ambos son cortos: se imprimen juntos en vez de en hojas separadas.</span>
+          </span>
+        </label>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-white/15 pt-5">
+          <div>
+            <p id="generate-package-title" class="text-white font-serif text-base font-medium">Actividad e instrumento de recuperación</p>
+            <p id="generate-hint" class="text-white/70 text-sm mt-0.5">Agrega al menos un estudiante para continuar.</p>
+          </div>
+          <div class="flex gap-3 shrink-0">
+            <button id="btn-generate-preview" type="button" class="btn-generate" disabled>Vista previa</button>
+            <button id="btn-generate-pdf" type="button" class="btn-generate" disabled>PDF</button>
+            <button id="btn-generate-word" type="button" class="btn-generate" disabled>Word</button>
+          </div>
+        </div>
+      </section>
+      </div><!-- .section-card -->
+      <div class="fase-next-row"><span>Después de aplicar y calificar la recuperación, registra el resultado. No hace falta crear otra acta.</span><button type="button" class="btn-secondary" data-go-fase="3">Siguiente: Registrar resultado →</button></div>
+      </div><!-- /fase 2 -->
+
+      <!-- ========== FASE 3 · CIERRE ========== -->
+      <div data-fase-panel="3" hidden class="space-y-8">
+      <div class="section-card">
+      <div class="section-card-header"><span class="section-card-badge">F3</span><span class="section-icon ic-parametros"></span><span>Registro del resultado <span class="required-chip">Obligatorio</span></span></div>
+      <section class="section-card-body">
+        <div class="p-6 space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label for="rec-tipo-recup" class="field-label">Tipo de recuperación</label>
+              <select id="rec-tipo-recup" class="field-input">
+                <option value="ordinaria">Ordinaria — durante el trimestre/período (num. 13.1)</option>
+                <option value="extraordinaria">Extraordinaria — al finalizar el año (num. 13.2)</option>
+              </select>
+            </div>
+            <div>
+              <label for="rec-nivel" class="field-label">Nivel educativo · nota mínima</label>
+              <select id="rec-nivel" class="field-input">
+                <option value="">Seleccionar</option>
+                <option value="basica">Educación Básica (7.º–9.º) · nota mínima 5.0</option>
+                <option value="media">Educación Media (bachillerato) · nota mínima 6.0</option>
+              </select>
+            </div>
+          </div>
+          <p class="text-xs text-slate">
+            En la <strong>ordinaria</strong>, la nota de recuperación sustituye a la actividad original únicamente si es mayor y luego se recalcula el promedio (num. 13.1.c).
+            En la <strong>extraordinaria</strong>, se promedia la recuperación con el promedio final reprobado; si alcanza el mínimo, se registra exactamente 5.0 en Básica o 6.0 en Media (num. 13.2.c).
+          </p>
+          <div id="extra-requisitos" class="hidden norm-note">
+            <strong>Antes de aplicar una extraordinaria:</strong> verifica al menos 85% de asistencia, salvo fuerza mayor justificada; un período mínimo de una semana antes de finalizar el año; gratuidad; y que el estudiante haya reprobado como máximo 3 asignaturas. Este framework se limita a 7.º–9.º y 1.º–2.º Bachillerato, que son los grados atendidos por el centro.
+          </div>
+        </div>
+      </section>
+      </div>
+
+      <!-- La tabla se muestra después de definir el tipo de recuperación para que sus campos tengan sentido -->
+      <div id="estudiantes-slot-cierre" class="space-y-8"></div>
+
+      <!-- Ruta posterior a una recuperación extraordinaria no aprobada.
+           Solo aparece cuando realmente corresponde según grado y resultado. -->
+      <div id="post-extra-panel" class="hidden space-y-8">
+        <div id="ultimo-recurso-card" class="section-card hidden">
+          <div class="section-card-header"><span class="section-card-badge">F4</span><span class="section-icon ic-recuperacion"></span><span>Actividad como último recurso <span class="conditional-chip">Condicional</span></span></div>
+          <section class="section-card-body">
+            <div class="p-6 space-y-5">
+              <div id="ultimo-recurso-norma" class="norm-note"></div>
+              <div>
+                <p class="field-label mb-2">Estudiantes que no alcanzaron la nota mínima</p>
+                <div id="ultimo-recurso-estudiantes" class="ultimo-recurso-list"></div>
+                <p class="text-xs text-slate mt-2">El framework no puede saber cuántas asignaturas le quedan pendientes al estudiante. Confirma individualmente quién cumple la condición antes de incluirlo.</p>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="ur-titulo" class="field-label">Título de la actividad</label>
+                  <input id="ur-titulo" type="text" class="field-input" placeholder="ej. Actividad final de aplicación de aprendizajes">
+                </div>
+                <div>
+                  <label for="ur-fecha" class="field-label">Fecha de aplicación <span class="optional-inline">Opcional</span></label>
+                  <input id="ur-fecha" type="date" class="field-input">
+                </div>
+              </div>
+              <div>
+                <label for="ur-instrucciones" class="field-label">Indicaciones de la actividad</label>
+                <textarea id="ur-instrucciones" rows="4" class="field-input" placeholder="Describe la actividad que permitirá verificar si el estudiante alcanza la nota mínima..."></textarea>
+              </div>
+              <p class="text-xs text-slate">Para evitar duplicar trabajo, el documento reutiliza los <strong>indicadores no alcanzados</strong> y el <strong>instrumento de evaluación</strong> ya definidos en la fase 2. El Manual no establece una nueva fórmula de promedio para este último recurso.</p>
+            </div>
+          </section>
+          <section class="bg-navy p-6 space-y-5">
+            <label class="switch-row">
+              <span class="switch"><input type="checkbox" class="cfg-firmar-documentos"><span class="switch-track"><span class="switch-thumb"></span></span></span>
+              <span class="switch-text"><span class="switch-title">Firmar documentos</span><span class="switch-desc">Agrega automáticamente la firma de José Eliseo cuando aparezca como firmante.</span></span>
+            </label>
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <p class="text-white font-serif text-base font-medium">Actividad e instrumento de último recurso</p>
+                <p id="ur-hint" class="text-white/70 text-sm mt-0.5">Selecciona al menos un estudiante que cumpla la condición normativa.</p>
+              </div>
+              <div class="flex gap-3 shrink-0">
+                <button id="btn-ur-preview" type="button" class="btn-generate" disabled>Vista previa</button>
+                <button id="btn-ur-pdf" type="button" class="btn-generate" disabled>PDF</button>
+                <button id="btn-ur-word" type="button" class="btn-generate" disabled>Word</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div id="suficiencia-card" class="section-card hidden">
+          <div class="section-card-header"><span class="section-card-badge">→</span><span class="section-icon ic-parametros"></span><span>Vía posterior en 2.º Bachillerato <span class="conditional-chip">Condicional</span></span></div>
+          <section class="section-card-body"><div class="p-6">
+            <div class="norm-note">
+              <strong>No corresponde una “actividad de último recurso” en 2.º Bachillerato.</strong> El num. 40.2.d del Manual establece que, si después de la recuperación extraordinaria de promedios institucionales el estudiante no aprueba <strong>una asignatura del área básica</strong>, podrá solicitar un <strong>examen de suficiencia</strong> conforme a los procedimientos del Ministerio, durante los tres primeros meses del año siguiente. La nota obtenida sustituye la institucional y no puede ser mayor que la nota mínima de aprobación.
+            </div>
+          </div></section>
+        </div>
+      </div>
+
+      <div class="section-card">
+      <div class="section-card-header"><span class="section-card-badge">F3</span><span class="section-icon ic-generar"></span><span>Verificación normativa</span></div>
+      <section class="section-card-body"><div class="p-6 space-y-4">
+        <p class="text-sm text-slate">Marca los pasos cuando estén cumplidos. <strong class="text-navy">No necesitas generar un acta de cierre</strong> para completar la recuperación.</p>
+        <div id="expediente-checklist" class="checklist-panel checklist-panel-light"></div>
+      </div></section>
+      </div><!-- .section-card -->
+
+      <details class="section-card optional-section">
+        <summary class="section-card-header"><span class="section-card-badge">＋</span><span class="section-icon ic-generar"></span><span>Actas de resultado o incumplimiento <span class="optional-chip">Opcional</span></span></summary>
+        <section class="bg-navy p-6 space-y-5">
+          <label class="switch-row">
+            <span class="switch"><input type="checkbox" class="cfg-firmar-documentos"><span class="switch-track"><span class="switch-thumb"></span></span></span>
+            <span class="switch-text"><span class="switch-title">Firmar documentos</span><span class="switch-desc">Agrega automáticamente la firma de José Eliseo cuando aparezca como firmante.</span></span>
+          </label>
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div><p class="text-white font-serif text-base font-medium">Respaldo administrativo adicional</p><p id="cierre-hint" class="text-white/70 text-sm mt-0.5">Estas actas no son exigidas por el Manual. Úsalas solo si tu centro necesita una constancia adicional.</p></div>
+          <div class="flex gap-3 shrink-0"><button id="btn-cierre-preview" type="button" class="btn-generate" disabled>Vista previa</button><button id="btn-cierre-pdf" type="button" class="btn-generate" disabled>PDF</button><button id="btn-cierre-word" type="button" class="btn-generate" disabled>Word</button></div>
+          </div>
+        </section>
+      </details>
+      </div><!-- /fase 3 -->
+      </div><!-- /.fase-flow -->
+    </div>
+
+    <!-- ==================== VISTA: DOCUMENTOS ==================== -->
+    <div id="view-documentos" data-view hidden class="space-y-8">
+      <div class="view-head">
+        <button type="button" data-nav="home" class="back-btn">← Inicio</button>
+        <h2 class="font-serif text-xl font-semibold text-navy">Documentos descargables</h2>
+      </div>
+      <p class="text-sm text-slate -mt-4">
+        Programas de estudio oficiales del MINEDUCYT y Manual de Evaluación al Servicio del
+        Aprendizaje y del Desarrollo. Toca la portada o «Abrir» para verlo, o «Descargar» para guardarlo.
+      </p>
+      <div id="documentos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </div>
+
+    <!-- ==================== VISTA: EXPEDIENTES ==================== -->
+    <div id="view-expedientes" data-view hidden class="space-y-8">
+      <div class="view-head">
+        <button type="button" data-nav="home" class="back-btn">← Inicio</button>
+        <h2 class="font-serif text-xl font-semibold text-navy">Expedientes de estudiantes</h2>
+      </div>
+      <p class="text-sm text-slate -mt-4">
+        Cada documento que generas se archiva aquí automáticamente (en el navegador de esta computadora).
+        Usa «Respaldo» en el menu para llevarte o compartir los expedientes con otro docente.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div>
+          <label class="field-label" for="exp-search">Buscar estudiante</label>
+          <input id="exp-search" type="text" autocomplete="off" class="field-input" placeholder="Nombre o NIE...">
+        </div>
+        <div>
+          <label class="field-label" for="exp-filter-materia">Materia</label>
+          <select id="exp-filter-materia" class="field-input"><option value="">Todas</option></select>
+        </div>
+        <div>
+          <label class="field-label" for="exp-filter-periodo">Período</label>
+          <select id="exp-filter-periodo" class="field-input"><option value="">Todos</option></select>
+        </div>
+      </div>
+      <div id="exp-list" class="space-y-4"></div>
+      <p id="exp-empty" class="text-sm text-slate text-center py-10 hidden">
+        Aún no hay documentos archivados. Genera un acta, instructivo o constancia y aparecerá aquí.
+      </p>
+    </div>
+
+  </main>
+
+  <footer class="border-t border-navy/10 py-6">
+    <p class="text-center text-xs text-slate">
+      Tus datos permanecen en el navegador. Solo se envían a tu Google Drive cuando conectas la sincronización.
+    </p>
+  </footer>
+
+</div>
+
+<!-- plantilla oculta de fila de estudiante (usada por JS) -->
+<template id="student-row-template">
+  <tr class="border-b border-navy/5 last:border-0">
+    <td class="px-6 py-3 font-medium" data-field="name"></td>
+    <td class="px-4 py-3 font-mono text-slate" data-field="nie"></td>
+    <td class="px-4 py-3 text-slate" data-field="grade"></td>
+    <td class="px-4 py-3 col-cierre">
+      <input type="number" min="0" max="10" step="0.1" data-field="calificacion" class="field-input-sm" placeholder="—/10">
+    </td>
+    <td class="px-4 py-3 col-cierre">
+      <select data-field="entrego" class="field-input-sm" title="¿Entregó la actividad de recuperación?">
+        <option value="">—</option>
+        <option value="si">Sí</option>
+        <option value="no">No</option>
+      </select>
+    </td>
+    <td class="px-4 py-3 col-cierre">
+      <input type="number" min="0" max="10" step="0.1" data-field="nota-recup" class="field-input-sm" placeholder="—/10" title="Nota obtenida en la actividad de recuperación">
+    </td>
+    <td class="px-4 py-3 text-center col-cierre">
+      <span data-field="status" class="status-badge"></span>
+      <span data-field="result-detail" class="result-detail"></span>
+    </td>
+    <td class="px-4 py-3 text-right">
+      <button type="button" data-action="delete" class="text-slate hover:text-alert transition-colors" title="Eliminar">✕</button>
+    </td>
+  </tr>
+</template>
+
+<!-- plantilla oculta de bloque de actividad -->
+<template id="activity-block-template">
+  <div class="p-6 space-y-3" data-activity-block>
+    <div class="flex items-center justify-between">
+      <span class="field-label mb-0" data-field="label"></span>
+      <button type="button" data-action="delete-activity" class="text-slate hover:text-alert text-sm transition-colors">Eliminar</button>
+    </div>
+    <input type="text" data-field="titulo" class="field-input" placeholder="Título de la actividad">
+
+    <div>
+      <div class="flex items-center gap-1 mb-1.5">
+        <button type="button" data-cmd="bold" class="format-btn" title="Negrita"><b>N</b></button>
+        <button type="button" data-cmd="italic" class="format-btn" title="Cursiva"><i>K</i></button>
+        <button type="button" data-cmd="underline" class="format-btn" title="Subrayado"><u>S</u></button>
+        <span class="w-px h-4 bg-navy/15 mx-1.5"></span>
+        <button type="button" data-action="toggle-table" class="format-btn">+ Tabla</button>
+        <button type="button" data-action="add-image" class="format-btn">+ Imagen</button>
+      </div>
+      <div
+        data-field="instrucciones"
+        contenteditable="true"
+        class="field-input rich-editor"
+        data-placeholder="Instrucciones para el estudiante..."
+      ></div>
+    </div>
+
+    <div data-field="table-controls" class="hidden items-end gap-2 pt-1 flex">
+      <div>
+        <label class="field-label">Filas</label>
+        <input type="number" min="1" max="20" value="3" data-field="table-rows" class="field-input-sm">
+      </div>
+      <div>
+        <label class="field-label">Columnas</label>
+        <input type="number" min="1" max="10" value="3" data-field="table-cols" class="field-input-sm">
+      </div>
+      <button type="button" data-action="create-table" class="btn-secondary">Crear tabla</button>
+    </div>
+
+    <div data-field="table-wrapper" class="hidden">
+      <div class="flex items-center justify-between mb-1.5">
+        <span class="field-label mb-0">Tabla de la actividad</span>
+        <button type="button" data-action="remove-table" class="text-xs text-slate hover:text-alert underline underline-offset-2">Quitar tabla</button>
+      </div>
+      <div data-field="table-container" class="overflow-x-auto border border-navy/10 rounded-sm"></div>
+    </div>
+
+    <div data-field="image-wrapper" class="hidden">
+      <div class="flex items-center justify-between mb-1.5">
+        <span class="field-label mb-0">Imagen de la actividad</span>
+        <button type="button" data-action="remove-image" class="text-xs text-slate hover:text-alert underline underline-offset-2">Quitar imagen</button>
+      </div>
+      <div class="flex flex-col sm:flex-row items-start gap-4">
+        <img data-field="image-preview" class="activity-image-preview" alt="Vista previa de la imagen">
+        <div class="flex-1 space-y-2.5 w-full">
+          <div class="image-document-options">
+            <div>
+              <span class="field-label">Tamaño en el documento</span>
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <button type="button" data-size="xsmall" class="size-btn">Muy pequeño</button>
+                <button type="button" data-size="small" class="size-btn">Pequeño</button>
+                <button type="button" data-size="medium" class="size-btn">Mediano</button>
+                <button type="button" data-size="large" class="size-btn">Grande</button>
+              </div>
+            </div>
+            <div>
+              <span class="field-label">Posición</span>
+              <div class="flex items-center gap-1.5">
+                <button type="button" data-image-position="default" class="size-btn image-position-btn" title="Debajo del texto" aria-label="Imagen debajo del texto">
+                  <img src="assets/format_default.svg" alt="">
+                </button>
+                <button type="button" data-image-position="left" class="size-btn image-position-btn" title="Imagen a la izquierda" aria-label="Imagen a la izquierda del texto">
+                  <img src="assets/format_image_left.svg" alt="">
+                </button>
+                <button type="button" data-image-position="right" class="size-btn image-position-btn" title="Imagen a la derecha" aria-label="Imagen a la derecha del texto">
+                  <img src="assets/format_image_right.svg" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label class="field-label">Descripción (pie de imagen)</label>
+            <input type="text" data-field="image-caption" class="field-input" placeholder="Aparecerá en cursiva pequeña bajo la imagen (opcional)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<!-- Modal para elegir el tema visual -->
+<div id="theme-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="theme-modal-title" aria-describedby="theme-modal-description">
+  <div class="modal-box theme-modal-box">
+    <div class="modal-header">
+      <span id="theme-modal-title">Temas</span>
+      <button type="button" id="theme-modal-close" class="modal-close" title="Cerrar" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="theme-modal-content">
+      <p id="theme-modal-description" class="theme-modal-description">Selecciona la apariencia de la plataforma. El cambio se aplica y se guarda al instante.</p>
+      <fieldset class="theme-fieldset">
+        <legend class="sr-only">Temas disponibles</legend>
+        <div class="theme-options">
+          <label class="theme-option">
+            <input class="theme-radio" type="radio" name="app-theme" value="default">
+            <span class="theme-preview theme-preview--default" aria-hidden="true">
+              <span class="theme-preview-toolbar"></span>
+              <span class="theme-preview-sidebar"></span>
+              <span class="theme-preview-page"><i></i><i></i><i></i></span>
+            </span>
+            <span class="theme-option-copy">
+              <span class="theme-option-name">Default</span>
+              <span class="theme-option-description">Claro, sobrio y enfocado en el contenido.</span>
+            </span>
+            <span class="theme-option-check" aria-hidden="true">✓</span>
+          </label>
+
+          <label class="theme-option">
+            <input class="theme-radio" type="radio" name="app-theme" value="dark">
+            <span class="theme-preview theme-preview--dark" aria-hidden="true">
+              <span class="theme-preview-toolbar"></span>
+              <span class="theme-preview-sidebar"></span>
+              <span class="theme-preview-page"><i></i><i></i><i></i></span>
+            </span>
+            <span class="theme-option-copy">
+              <span class="theme-option-name">Dark</span>
+              <span class="theme-option-description">Oscuro, cómodo y de alto contraste.</span>
+            </span>
+            <span class="theme-option-check" aria-hidden="true">✓</span>
+          </label>
+
+          <label class="theme-option">
+            <input class="theme-radio" type="radio" name="app-theme" value="frutiger">
+            <span class="theme-preview theme-preview--frutiger" aria-hidden="true">
+              <span class="theme-preview-toolbar"></span>
+              <span class="theme-preview-sidebar"></span>
+              <span class="theme-preview-page"><i></i><i></i><i></i></span>
+            </span>
+            <span class="theme-option-copy">
+              <span class="theme-option-name">Frutiger</span>
+              <span class="theme-option-description">Cristal Aero, cielo brillante y naturaleza.</span>
+            </span>
+            <span class="theme-option-check" aria-hidden="true">✓</span>
+          </label>
+
+          <label class="theme-option">
+            <input class="theme-radio" type="radio" name="app-theme" value="skeuo">
+            <span class="theme-preview theme-preview--skeuo" aria-hidden="true">
+              <span class="theme-preview-toolbar"></span>
+              <span class="theme-preview-sidebar"></span>
+              <span class="theme-preview-page"><i></i><i></i><i></i></span>
+            </span>
+            <span class="theme-option-copy">
+              <span class="theme-option-name">Skeuo</span>
+              <span class="theme-option-description">Cuero, lino y controles inspirados en los primeros iPhone.</span>
+            </span>
+            <span class="theme-option-check" aria-hidden="true">✓</span>
+          </label>
+
+          <label class="theme-option">
+            <input class="theme-radio" type="radio" name="app-theme" value="glass">
+            <span class="theme-preview theme-preview--glass" aria-hidden="true">
+              <span class="theme-preview-toolbar"></span>
+              <span class="theme-preview-sidebar"></span>
+              <span class="theme-preview-page"><i></i><i></i><i></i></span>
+            </span>
+            <span class="theme-option-copy">
+              <span class="theme-option-name">Glass</span>
+              <span class="theme-option-description">Transparencias, desenfoque y capas de luz.</span>
+            </span>
+            <span class="theme-option-check" aria-hidden="true">✓</span>
+          </label>
+
+          <label class="theme-option">
+            <input class="theme-radio" type="radio" name="app-theme" value="sketch">
+            <span class="theme-preview theme-preview--sketch" aria-hidden="true">
+              <span class="theme-preview-toolbar"></span>
+              <span class="theme-preview-sidebar"></span>
+              <span class="theme-preview-page"><i></i><i></i><i></i></span>
+            </span>
+            <span class="theme-option-copy">
+              <span class="theme-option-name">Sketch</span>
+              <span class="theme-option-description">Papel real, trazos a mano y tinta de cuaderno.</span>
+            </span>
+            <span class="theme-option-check" aria-hidden="true">✓</span>
+          </label>
+        </div>
+      </fieldset>
+      <div class="theme-modal-footer">
+        <p id="theme-selection-status" class="theme-selection-status" aria-live="polite"></p>
+        <button type="button" id="theme-modal-done" class="btn-accent">Listo</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para seleccionar / arrastrar imagen -->
+<div id="image-modal" class="modal-overlay hidden">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span>Agregar imagen a la actividad</span>
+      <button type="button" id="image-modal-close" class="modal-close" title="Cerrar">✕</button>
+    </div>
+    <div id="image-dropzone" class="dropzone">
+      <p class="text-sm">Arrastra una imagen aquí</p>
+      <p class="dz-or">— o —</p>
+      <button type="button" id="image-pick-btn" class="btn-secondary">Seleccionar archivo</button>
+      <input type="file" id="image-file-input" accept="image/*" class="hidden">
+      <p class="dz-hint">PNG, JPG, GIF o WEBP · se ajusta automáticamente al tamaño de página</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para restaurar un respaldo: unir o reemplazar -->
+<div id="restore-modal" class="modal-overlay hidden">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span>Restaurar respaldo</span>
+      <button type="button" id="restore-modal-close" class="modal-close" title="Cerrar">✕</button>
+    </div>
+    <div class="p-5 space-y-3">
+      <p id="restore-modal-summary" class="text-sm text-slate"></p>
+      <div class="space-y-2.5">
+        <button type="button" id="restore-modal-unir" class="restore-option">
+          <span class="restore-option-title">⤵ Unir con mis datos actuales</span>
+          <span class="restore-option-desc">Los procesos y expedientes del archivo se agregan a los que ya tienes. Si algún proceso o documento coincide, se actualiza con la versión del respaldo.</span>
+        </button>
+        <button type="button" id="restore-modal-reemplazar" class="restore-option danger">
+          <span class="restore-option-title">⚠ Reemplazar todo</span>
+          <span class="restore-option-desc">Borra TODOS tus procesos y expedientes actuales y los sustituye por los del archivo. No se puede deshacer.</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de confirmación para descargar documentos con datos pendientes -->
+<div id="missing-data-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="missing-data-title">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span id="missing-data-title">Datos pendientes</span>
+      <button type="button" id="missing-data-close" class="modal-close" title="Cerrar" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="p-5 space-y-4">
+      <p class="text-sm text-navy-900">Faltan los siguientes datos:</p>
+      <ul id="missing-data-list" class="list-disc pl-5 space-y-1.5 text-sm text-slate"></ul>
+      <div class="flex flex-col-reverse sm:flex-row sm:justify-end gap-3 pt-2">
+        <button type="button" id="missing-data-cancel" class="btn-secondary">Cancelar</button>
+        <button type="button" id="missing-data-download" class="btn-accent">Descargar de todos modos</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Conflicto de sincronización con Google Drive -->
+<div id="drive-conflict-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="drive-conflict-title">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span id="drive-conflict-title">Cambios en dos computadoras</span>
+      <button type="button" id="drive-conflict-close" class="modal-close" title="Cerrar" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="p-5 space-y-4">
+      <p id="drive-conflict-message" class="text-sm text-slate">Hay cambios sin sincronizar en esta computadora y también existe una versión diferente en Drive. Elige cuál conservar.</p>
+      <div class="space-y-2.5">
+        <button type="button" id="drive-conflict-use-cloud" class="restore-option">
+          <span class="restore-option-title">Usar la versión de Google Drive</span>
+          <span class="restore-option-desc">Reemplaza los datos de esta computadora por el respaldo que está en la nube.</span>
+        </button>
+        <button type="button" id="drive-conflict-use-local" class="restore-option">
+          <span class="restore-option-title">Conservar esta computadora</span>
+          <span class="restore-option-desc">Actualiza el respaldo de Drive con los datos que estás viendo ahora.</span>
+        </button>
+      </div>
+      <p class="drive-conflict-hint">Si no estás seguro, cierra esta ventana: no se sobrescribirá nada.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Selector de carpeta para documentos generados en Google Drive -->
+<div id="drive-save-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="drive-save-title">
+  <div class="modal-box drive-save-modal-box">
+    <div class="modal-header">
+      <span id="drive-save-title">Guardar documento en…</span>
+      <button type="button" id="drive-save-close" class="modal-close" title="Cerrar" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="drive-save-content">
+      <p class="drive-save-intro">El documento se descargará normalmente y también se guardará en esta ubicación de tu Drive.</p>
+      <div class="drive-save-grid">
+        <label>
+          <span>Año</span>
+          <input id="drive-folder-year" type="number" min="2000" max="2100" class="field-input">
+        </label>
+        <label>
+          <span>Grado</span>
+          <input id="drive-folder-grade" type="text" class="field-input" placeholder="Ej. Séptimo">
+        </label>
+        <label>
+          <span>Trimestre o periodo</span>
+          <select id="drive-folder-period" class="field-input">
+            <option value="">Sin periodo</option>
+            <option>Primer Trimestre</option>
+            <option>Segundo Trimestre</option>
+            <option>Tercer Trimestre</option>
+            <option>Primer Periodo</option>
+            <option>Segundo Periodo</option>
+            <option>Tercer Periodo</option>
+            <option>Cuarto Periodo</option>
+          </select>
+        </label>
+        <label>
+          <span>Materia</span>
+          <input id="drive-folder-subject" type="text" class="field-input" placeholder="Ej. Matemática y Datos">
+        </label>
+      </div>
+      <div class="drive-path-preview">
+        <span>Ubicación</span>
+        <strong id="drive-folder-preview">COEDUCA/2026/Evaluaciones/Sin grado/Sin periodo - Sin materia</strong>
+      </div>
+      <div class="drive-save-actions">
+        <button type="button" id="drive-save-local-only" class="btn-secondary">Solo descargar</button>
+        <button type="button" id="drive-save-confirm" class="btn-accent">Descargar y guardar en Drive</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- pdfmake: generación de PDF en el navegador -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+
+<!-- docx: generación de Word (.docx) en el navegador -->
+<script src="https://cdn.jsdelivr.net/npm/docx@9.7.1/dist/index.iife.js"></script>
+
+<script src="js/students.js?v=34"></script>
+<script src="js/curriculo.js?v=35"></script>
+<script src="js/documentos.js?v=34"></script>
+<script src="js/firmas.js?v=1"></script>
+<script src="js/pdfGenerator.js?v=45"></script>
+<script src="js/wordGenerator.js?v=45"></script>
+<script src="js/curriculo-ui.js?v=36"></script>
+<script src="js/instrumento-ui.js?v=36"></script>
+<script src="js/appscript-gen.js?v=35"></script>
+<script src="js/expediente.js?v=37"></script>
+<script src="js/procesos.js?v=35"></script>
+<script src="js/app.js?v=45"></script>
+<script src="js/ordinaria-ui.js?v=35"></script>
+<script src="js/documentos-ui.js?v=34"></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="js/drive-sync.js?v=4"></script>
+</body>
+</html>

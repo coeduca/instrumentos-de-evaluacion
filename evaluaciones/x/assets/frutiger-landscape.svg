@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="farRidge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8dc8b2" stop-opacity=".78"/>
+      <stop offset="1" stop-color="#4a9d72" stop-opacity=".88"/>
+    </linearGradient>
+    <linearGradient id="midRidge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9fda76"/>
+      <stop offset=".48" stop-color="#64b954"/>
+      <stop offset="1" stop-color="#31873f"/>
+    </linearGradient>
+    <linearGradient id="nearHill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fd35e"/>
+      <stop offset=".5" stop-color="#54ac43"/>
+      <stop offset="1" stop-color="#277d36"/>
+    </linearGradient>
+    <linearGradient id="meadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#70bf4c"/>
+      <stop offset="1" stop-color="#247436"/>
+    </linearGradient>
+    <linearGradient id="river" x1="0" y1="0" x2=".75" y2="1">
+      <stop offset="0" stop-color="#c8f6ff" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#48b5df" stop-opacity=".88"/>
+    </linearGradient>
+    <radialGradient id="sunGlow">
+      <stop offset="0" stop-color="#fffde2" stop-opacity=".98"/>
+      <stop offset=".28" stop-color="#fffbd0" stop-opacity=".82"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softCloud" x="-30%" y="-40%" width="160%" height="180%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#17667b" flood-opacity=".18"/>
+    </filter>
+    <pattern id="grassTexture" width="46" height="34" patternUnits="userSpaceOnUse">
+      <path d="M7 31l3-12m0 12l7-9M31 34l2-10m0 10l6-7" stroke="#d0ed83" stroke-opacity=".19" stroke-width="2" stroke-linecap="round"/>
+    </pattern>
+  </defs>
+
+  <!-- Luz y nubes suaves sobre el cielo CSS que queda visible detrás. -->
+  <circle cx="1575" cy="180" r="170" fill="url(#sunGlow)"/>
+  <circle cx="1575" cy="180" r="48" fill="#fffde5" fill-opacity=".86"/>
+  <g fill="#fff" fill-opacity=".68" filter="url(#softCloud)">
+    <ellipse cx="300" cy="235" rx="116" ry="27"/>
+    <ellipse cx="235" cy="225" rx="55" ry="35"/>
+    <ellipse cx="352" cy="218" rx="72" ry="42"/>
+    <ellipse cx="1085" cy="300" rx="102" ry="23"/>
+    <ellipse cx="1038" cy="287" rx="48" ry="31"/>
+    <ellipse cx="1130" cy="283" rx="61" ry="34"/>
+  </g>
+
+  <!-- Cordillera lejana: perfil irregular y desaturado por la atmósfera. -->
+  <path d="M0 695L0 610c78-26 132-74 207-68 67 5 102 54 157 43 69-14 105-111 184-118 75-7 123 74 188 67 66-7 92-87 161-98 83-13 139 89 215 74 64-13 89-82 157-91 75-10 121 75 187 70 70-5 101-99 179-110 84-12 125 92 195 88 63-3 100-70 170-77v305H0z" fill="url(#farRidge)"/>
+  <path d="M0 613c80-24 132-70 207-65 67 5 103 52 157 41 70-14 107-108 184-115 74-7 123 72 188 65 65-7 93-83 161-94 83-13 140 86 215 72 65-12 90-79 157-88 75-10 121 72 187 67 71-5 102-95 179-106 84-12 126 88 195 84 64-3 100-66 170-73" fill="none" stroke="#d9f3dc" stroke-opacity=".42" stroke-width="8"/>
+
+  <!-- Lomas intermedias con valles y luces naturales. -->
+  <path d="M0 815V706c116-75 214-93 320-53 86 32 132 29 211-18 109-65 218-80 329-23 96 49 166 50 254 4 128-68 230-65 345 1 88 51 161 53 247 3 82-48 143-58 214-42v237H0z" fill="url(#midRidge)" filter="url(#softShadow)"/>
+  <path d="M0 761c143-89 252-93 370-34 71 36 138 30 216-18 108-67 204-65 309-7 95 52 178 47 269-10 111-70 215-72 329-4 95 57 181 48 267-8 66-43 112-54 160-46v181H0z" fill="#87cd5b" fill-opacity=".45"/>
+
+  <!-- Primer plano: pradera continua, sin el aspecto de círculos gigantes. -->
+  <path d="M0 1080V842c131-47 251-52 367-16 123 39 213 30 326-26 139-69 271-72 407-12 115 50 218 52 334 12 169-58 328-47 486 36v244H0z" fill="url(#nearHill)"/>
+  <path d="M0 1080V935c160-60 318-66 475-25 145 37 271 30 407-24 159-63 306-61 454-4 111 43 220 48 326 17 89-26 174-28 258-4v185H0z" fill="url(#meadow)"/>
+
+  <!-- Un cauce luminoso aporta profundidad al valle. -->
+  <path d="M1055 752c36 37 30 78 3 118-29 43-66 72-42 116 20 36 82 61 132 94h256c-101-46-185-77-218-119-38-49 32-88 48-134 12-34-20-61-61-91z" fill="url(#river)" fill-opacity=".72"/>
+  <path d="M1080 766c17 28 3 56-18 85" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Vegetación pequeña para dar escala al paisaje. -->
+  <g fill="#246f35" fill-opacity=".82">
+    <path d="M190 806l13-45 13 45zm31 1l9-32 10 32zm1188-33l15-51 16 51zm38 3l11-39 12 39zm258-61l13-44 14 44z"/>
+    <path d="M623 795l11-38 12 38zm-26 5l8-29 9 29zm934 18l10-34 11 34z"/>
+  </g>
+  <g fill="#e7f3a0" fill-opacity=".32">
+    <ellipse cx="248" cy="913" rx="3" ry="3"/><ellipse cx="427" cy="876" rx="3" ry="3"/>
+    <ellipse cx="705" cy="930" rx="4" ry="4"/><ellipse cx="912" cy="888" rx="3" ry="3"/>
+    <ellipse cx="1488" cy="920" rx="4" ry="4"/><ellipse cx="1740" cy="869" rx="3" ry="3"/>
+  </g>
+  <path d="M0 842c131-47 251-52 367-16 123 39 213 30 326-26 139-69 271-72 407-12 115 50 218 52 334 12 169-58 328-47 486 36" fill="none" stroke="#d7ef8d" stroke-opacity=".35" stroke-width="8"/>
+  <rect y="830" width="1920" height="250" fill="url(#grassTexture)"/>
+</svg>

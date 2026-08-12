@@ -1,0 +1,12289 @@
+// Base de datos del curriculo nacional (MINED/MINEDUCYT, El Salvador)
+// Generado automaticamente desde los programas de estudio oficiales.
+// Estructura: CURRICULO[asignatura][grado] = [ {unidad, nombre, objetivos:[str], indicadores:[{codigo,texto}]} ]
+window.CURRICULO = {
+ "Matemática": {
+  "Séptimo": [
+   {
+    "unidad": 1,
+    "nombre": "Números positivos, negativos y el cero",
+    "objetivos": [
+     "Conocer el significado de los números positivos, negativos y el cero representando una Competencia ubicación respecto a un punto de referencia o una diferencia respecto a una cantidad de de unidad referencia, y reconocer la utilidad de los números negativos, para representar situaciones del entorno."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Asigna un valor positivo o negativo a distintas temperaturas."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Asigna un valor positivo o negativo a la ubicación de un objeto respecto a un punto de referencia."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Asigna un valor positivo o negativo a la diferencia de una cantidad respecto a otra cantidad de referencia."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Representa números positivos y negativos en la recta numérica."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Determina y compara números positivos, negativos o cero para establecer una relación de orden entre ellos."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Encuentra el valor absoluto de un número dado."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Identifica una relación de orden entre un grupo de números negativos, utilizando como criterio el valor absoluto de los números."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Determina un número mayor o menor que otro a partir de los desplazamientos a la izquierda o a la derecha en la recta numérica. Cantidad de referencia"
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Suma y resta de números positivos, negativos y el cero",
+    "objetivos": [
+     "Utilizar las operaciones de suma y resta de números positivos, negativos y el cero e identificar situaciones del entorno en las que se pueden aplicar."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Realiza una suma de dos números no decimales ni fraccionarios con igual signo."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Efectúa una suma de dos números no decimales ni fraccionarios con diferente signo."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Realiza una suma que tiene como sumandos al cero y a otro número no decimal ni fraccionario."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Efectúa una suma de números decimales o fraccionarios que son positivos o negativos."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Aplica la propiedad conmutativa y asociativa para realizar el cálculo de una suma."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Realiza una resta de dos números que tiene igual o diferente signo."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Efectúa una resta que tiene al cero como minuendo o sustraendo."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Expresa sumas y restas combinadas de números positivos o negativos, como suma de números positivos o negativos y viceversa."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Realiza sumas y restas combinadas de números positivos y negativos."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Realiza sumas y restas combinadas de números positivos y negativos suprimiendo paréntesis. Operaciones combinadas"
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Multiplicación y división de números positivos, negativos y el cero",
+    "objetivos": [
+     "Efectuar las operaciones de multiplicación y división de números positivos, negativos y el cero, e identificar situaciones del entorno en las que se puedan aplicar.",
+     "Conocer los números primos y aplicarlos en el cálculo del máximo común divisor y el mínimo común múltiplo."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Multiplica dos números con distinto signo."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Multiplica dos números con igual signo."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Multiplica dos números donde un factor es –1, 0 o 1."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Aplica la propiedad conmutativa y asociativa para facilitar el cálculo de una multiplicación."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Determina el signo del producto de una multiplicación, según el número de factores negativos."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Calcula la potencia 2 o 3 de un número a través de la multiplicación."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Efectúa multiplicaciones que incluyen potencias 2 o 3."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Realiza la división de dos números positivos, negativos y cero."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Expresa las fracciones con un número negativo en el numerador o denominaa dor en la forma . b"
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Determina el recíproco de un número dado."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Realiza una división de un número por otro, efectuando la multiplicación del dividendo por el recíproco del divisor."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Efectúa operaciones que combinan multiplicación y división."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Realiza operaciones que combinan suma, resta, multiplicación y división."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Efectúa operaciones que combinan suma, resta, multiplicación o división e incluyen potencias."
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Aplica la propiedad distributiva de la multiplicación."
+     },
+     {
+      "codigo": "3.16",
+      "texto": "Determina las operaciones que siempre se pueden realizar según el conjunto numérico dado."
+     },
+     {
+      "codigo": "3.17",
+      "texto": "Calcula el mínimo común múltiplo y máximo común divisor de 2 o 3 números listando múltiplos y divisores de los números."
+     },
+     {
+      "codigo": "3.18",
+      "texto": "Determina si un número es múltiplo de otro dado que el segundo es divisor del primero y viceversa."
+     },
+     {
+      "codigo": "3.19",
+      "texto": "Determina si un número es primo o compuesto, dependiendo del número de divisores."
+     },
+     {
+      "codigo": "3.20",
+      "texto": "Descompone un número en sus factores primos, utilizando la división sucesiva."
+     },
+     {
+      "codigo": "3.21",
+      "texto": "Calcula el máximo común divisor por descomposición en factores primos."
+     },
+     {
+      "codigo": "3.22",
+      "texto": "Calcula el mínimo común múltiplo por descomposición en factores primos."
+     },
+     {
+      "codigo": "3.23",
+      "texto": "Aplica el mínimo común múltiplo y máximo común divisor para resolver problemas del entorno. y el cero."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Comunicación con símbolos",
+    "objetivos": [
+     "Modelar situaciones del entorno a través de la utilización de expresiones algebraicas para resolver problemas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Determina el valor de una cantidad desconocida a través de un patrón numérico."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Generaliza el patrón numérico de una cantidad desconocida."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Determina expresiones algebraicas con una variable a partir de una situación dada."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Determina expresiones algebraicas con más de una variable a partir de una situación dada."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Representa sin el signo “×” las expresiones algebraicas con multiplicación y viceversa."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Representa sin el signo “×” las expresiones algebraicas con multiplicación por 1 y –1 y viceversa."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Representa la multiplicación reiterada de una variable como una potencia de la variable."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Representa sin el signo “÷” las expresiones algebraicas con división y viceversa."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Representa expresiones algebraicas con multiplicación y división sin los signos “×” y “÷”, respectivamente."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Traduce expresiones del lenguaje coloquial a expresiones algebraicas."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Traduce expresiones sobre distancia, velocidad y tiempo en lenguaje coloquial a expresiones algebraicas."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Traduce expresiones sobre porcentaje del lenguaje coloquial a expresiones algebraicas."
+     },
+     {
+      "codigo": "4.13",
+      "texto": "Traduce expresiones algebraicas a expresiones del lenguaje coloquial."
+     },
+     {
+      "codigo": "4.14",
+      "texto": "Calcula el valor numérico de una expresión algebraica con una variable sustituyendo valores enteros positivos."
+     },
+     {
+      "codigo": "4.15",
+      "texto": "Encuentra el valor numérico de expresiones algebraicas con una variable sustituyendo valores negativos o fracciones."
+     },
+     {
+      "codigo": "4.16",
+      "texto": "Calcula el valor numérico de una expresión algebraica con una variable y donde la expresión es racional o cuadrática."
+     },
+     {
+      "codigo": "4.17",
+      "texto": "Calcula el valor numérico de una expresión algebraica con más de una variable."
+     },
+     {
+      "codigo": "4.18",
+      "texto": "Identifica términos y coeficientes de una expresión algebraica."
+     },
+     {
+      "codigo": "4.19",
+      "texto": "Multiplica una expresión algebraica con un término por un número."
+     },
+     {
+      "codigo": "4.20",
+      "texto": "Divide una expresión algebraica con un término por un número."
+     },
+     {
+      "codigo": "4.21",
+      "texto": "Multiplica una expresión algebraica con dos términos por un número."
+     },
+     {
+      "codigo": "4.22",
+      "texto": "Divide una expresión algebraica con dos términos por un número."
+     },
+     {
+      "codigo": "4.23",
+      "texto": "Multiplica una expresión algebraica de dos términos en el numerador de una fracción por un número entero."
+     },
+     {
+      "codigo": "4.24",
+      "texto": "Reduce una expresión algebraica aplicando el recíproco de la propiedad distributiva."
+     },
+     {
+      "codigo": "4.25",
+      "texto": "Reduce una expresión algebraica identificando términos semejantes."
+     },
+     {
+      "codigo": "4.26",
+      "texto": "Suma dos expresiones algebraicas."
+     },
+     {
+      "codigo": "4.27",
+      "texto": "Resta dos expresiones algebraicas."
+     },
+     {
+      "codigo": "4.28",
+      "texto": "Realiza operaciones combinadas de suma, resta y multiplicación por un número de expresiones algebraicas."
+     },
+     {
+      "codigo": "4.29",
+      "texto": "Representa la relación de igualdad de dos expresiones matemáticas."
+     },
+     {
+      "codigo": "4.30",
+      "texto": "Representa la relación de desigualdad de dos expresiones matemáticas. Lenguaje algebraico"
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Ecuaciones de primer grado",
+    "objetivos": [
+     "Conocer las propiedades de una igualdad matemática y utilizarlas para la resolución de una ecuación de primer grado.",
+     "Identificar por iniciativa propia, situaciones del entorno, en las que a través del planteamiento y solución de una ecuación de primer grado pueda dar respuesta a una interrogante que se presente."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Expresa igualdades de dos expresiones numéricas."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Expresa igualdades de dos expresiones algebraicas."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Identifica si un valor es solución de una ecuación."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Identifica las propiedades de una igualdad matemática."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Resuelve una ecuación de primer grado sumando la misma cantidad en ambos miembros."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Resuelve una ecuación de primer grado restando la misma cantidad en ambos miembros."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Resuelve una ecuación de primer grado realizando la transposición de términos."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Resuelve una ecuación de primer grado multiplicando la misma cantidad en ambos miembros."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Resuelve una ecuación de primer grado dividiendo por la misma cantidad en ambos miembros."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Resuelve una ecuación de primer grado aplicando más de una propiedad de una igualdad."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Resuelve una ecuación de primer grado con incógnitas en ambos miembros."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Resuelve una ecuación de primer grado que incluye signos de agrupación."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Resuelve una ecuación de primer grado que tiene soluciones fraccionarias y decimales."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Resuelve una ecuación de primer grado con coeficientes y términos decimales."
+     },
+     {
+      "codigo": "5.15",
+      "texto": "Resuelve una ecuación con términos y coeficientes fraccionarios."
+     },
+     {
+      "codigo": "5.16",
+      "texto": "Resuelve una situación del entorno, aplicando una ecuación de primer grado que se resuelve utilizando una propiedad de una igualdad."
+     },
+     {
+      "codigo": "5.17",
+      "texto": "Resuelve una situación del entorno, aplicando una ecuación de primer grado que se resuelve utilizando más de una propiedad de una igualdad."
+     },
+     {
+      "codigo": "5.18",
+      "texto": "Aplica una ecuación de primer grado con una incógnita en términos de otra a una situación del entorno."
+     },
+     {
+      "codigo": "5.19",
+      "texto": "Resuelve una situación del entorno aplicando una ecuación de primer grado con la incógnita en ambos miembros."
+     },
+     {
+      "codigo": "5.20",
+      "texto": "Aplica a una situación de distancia, velocidad y tiempo una ecuación de primer grado."
+     },
+     {
+      "codigo": "5.21",
+      "texto": "Resuelve una situación de proporcionalidad directa con una ecuación de primer grado."
+     },
+     {
+      "codigo": "5.22",
+      "texto": "Aplica a una situación de proporcionalidad directa una ecuación de primer grado con signos de agrupación. situación específica. Miembro derecho"
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Proporcionalidad directa e inversa",
+    "objetivos": [
+     "Aplicar los conceptos de proporcionalidad directa e inversa, para modelar situaciones del entorno."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Identifica si una cantidad es función de otra."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Identifica si la relación de dos cantidades es de proporcionalidad directa expresándola en la forma y = ax e indicando la constante."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Representa los valores que toman las variables que están en una relación de proporcionalidad directa a través de desigualdades."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Representa en la forma y = ax, dos variables que toman valores negativos y que están en una relación de proporcionalidad directa con constante positiva, a partir de una tabla."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Representa en la forma y = ax, dos variables que están en una relación de proporcionalidad directa con constante negativa, a partir de una tabla."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Representa en la forma y = ax dos variables que están en una relación de proporcionalidad directa, a partir de un par de valores de y y x."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Lee y ubica un par ordenado en el plano cartesiano."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Grafica una relación de proporcionalidad directa a partir de tablas."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Grafica una relación de proporcionalidad directa a partir de dos pares ordenados."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Representa una relación de proporcionalidad directa en la forma de y = ax, a partir de la gráfica."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Grafica la relación de proporcionalidad directa entre dos variables cuando los valores que toman son limitados."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Identifica si la relación de dos cantidades es de proporcionalidad inversa a expresándola en la forma y = e inx dicando la constante."
+     },
+     {
+      "codigo": "6.13",
+      "texto": "Representa en la forma y = a/x, dos variables que están en una relación de proporcionalidad inversa, a partir de una tabla."
+     },
+     {
+      "codigo": "6.14",
+      "texto": "Representa en la forma y = a/x, dos variables que están en una relación de proporcionalidad inversa, a partir de un par de valores de y y x."
+     },
+     {
+      "codigo": "6.15",
+      "texto": "Grafica una relación de proporcionalidad inversa cuando su constante es positiva."
+     },
+     {
+      "codigo": "6.16",
+      "texto": "Grafica una relación de proporcionalidad inversa cuando su constante es negativa."
+     },
+     {
+      "codigo": "6.17",
+      "texto": "Aplica regla de tres simple directa para encontrar un dato desconocido, utilizando dos cantidades directamente proporcionales."
+     },
+     {
+      "codigo": "6.18",
+      "texto": "Aplica regla de tres simple directa para encontrar un dato desconocido en una situación de porcentaje."
+     },
+     {
+      "codigo": "6.19",
+      "texto": "Aplica regla de tres simple directa para realizar la conversión entre unidades de medida."
+     },
+     {
+      "codigo": "6.20",
+      "texto": "Utiliza regla de tres simple inversa para determinar un dato desconocido, utilizando dos cantidades inversamente proporcionales."
+     }
+    ]
+   },
+   {
+    "unidad": 7,
+    "nombre": "Gráfica de faja y circular",
+    "objetivos": [
+     "Analizar e interpretar la información presentada en gráficas de faja y circulares, a fin de utilizarla en la toma de decisiones personales y sociales, valorando críticamente las opiniones de los demás."
+    ],
+    "indicadores": [
+     {
+      "codigo": "7.1",
+      "texto": "Lee la información presentada en una gráfica de faja."
+     },
+     {
+      "codigo": "7.2",
+      "texto": "Construye una gráfica de faja para representar la información de una tabla."
+     },
+     {
+      "codigo": "7.3",
+      "texto": "Lee la información de una gráfica circular."
+     },
+     {
+      "codigo": "7.4",
+      "texto": "Construye una gráfica circular a partir de una tabla. Porcentaje"
+     }
+    ]
+   },
+   {
+    "unidad": 8,
+    "nombre": "Figuras planas y construcción de cuerpos geométricos",
+    "objetivos": [
+     "Utilizar los instrumentos de geometría para hacer traslación, reflexión y rotación de figuras planas.",
+     "Aplicar las características de los círculos que se intersectan para determinar la mediatriz de un segmento y la bisectriz de un ángulo.",
+     "Aplicar la regla de tres simple directa para calcular la longitud de arco y el área de un segmento circular.",
+     "Desarrollar el plano de un prisma, pirámide y cilindro para calcular su área total."
+    ],
+    "indicadores": [
+     {
+      "codigo": "8.1",
+      "texto": "Representa con lenguaje matemático la relación entre segmentos o rectas."
+     },
+     {
+      "codigo": "8.2",
+      "texto": "Identifica diferentes tipos de movimientos de figuras geométricas."
+     },
+     {
+      "codigo": "8.3",
+      "texto": "Traslada figuras mediante una dirección y un sentido de paralelismo."
+     },
+     {
+      "codigo": "8.4",
+      "texto": "Refleja figuras respecto a una recta que es el eje de simetría."
+     },
+     {
+      "codigo": "8.5",
+      "texto": "Rota figuras respecto a un punto, utilizando un ángulo determinado."
+     },
+     {
+      "codigo": "8.6",
+      "texto": "Utiliza los movimientos de una figura para sobreponerla en otra y determinar si son congruentes."
+     },
+     {
+      "codigo": "8.7",
+      "texto": "Identifica los elementos de un círculo."
+     },
+     {
+      "codigo": "8.8",
+      "texto": "Identifica las característica de dos círculos que se intersectan."
+     },
+     {
+      "codigo": "8.9",
+      "texto": "Dibuja figuras geométricas utilizando regla y compás."
+     },
+     {
+      "codigo": "8.10",
+      "texto": "Aplica características de dos círculos que se intersectan para trazar rectas perpendiculares."
+     },
+     {
+      "codigo": "8.11",
+      "texto": "Determina la distancia entre un punto y una recta y la distancia entre rectas paralelas."
+     },
+     {
+      "codigo": "8.12",
+      "texto": "Dibuja la mediatriz de un segmento aplicando las características de dos círculos que se intersectan."
+     },
+     {
+      "codigo": "8.13",
+      "texto": "Dibuja la bisectriz de un ángulo aplicando las características de dos círculos que se intersectan."
+     },
+     {
+      "codigo": "8.14",
+      "texto": "Dibuja una recta tangente a una circunferencia utilizando características de dos círculos que se intersectan."
+     },
+     {
+      "codigo": "8.15",
+      "texto": "Calcula la longitud del arco de un sector circular."
+     },
+     {
+      "codigo": "8.16",
+      "texto": "Calcula el área de un sector circular."
+     },
+     {
+      "codigo": "8.17",
+      "texto": "Determina el incentro de un triángulo."
+     },
+     {
+      "codigo": "8.18",
+      "texto": "Clasifica cuerpos geométricos, según sus características."
+     },
+     {
+      "codigo": "8.19",
+      "texto": "Clasifica poliedros regulares por el número y la forma de las caras."
+     },
+     {
+      "codigo": "8.20",
+      "texto": "Identifica la relación de posición entre rectas y planos."
+     },
+     {
+      "codigo": "8.21",
+      "texto": "Determina la distancia entre un punto y un plano."
+     },
+     {
+      "codigo": "8.22",
+      "texto": "Determina cuerpos geométricos formados por el movimiento de figuras planas."
+     },
+     {
+      "codigo": "8.23",
+      "texto": "Identifica el cuerpo geométrico observando la figura proyectada ortogonalmente."
+     },
+     {
+      "codigo": "8.24",
+      "texto": "Calcula el área total de un prisma a partir de su plano desarrollado."
+     },
+     {
+      "codigo": "8.25",
+      "texto": "Calcula el área total de una pirámide a partir de su plano desarrollado."
+     },
+     {
+      "codigo": "8.26",
+      "texto": "Calcula el área total de un cilindro a partir de su plano desarrollado. y la bisectriz de un ángulo. Rectas paralelas Eje de simetría Sector circular recta Bisectriz Área de un sector circular Pirámides Rectas paralelas Área lateral cuerpo Paralelismo: ǁ Ángulo ABC: ABC ∢"
+     }
+    ]
+   }
+  ],
+  "Octavo": [
+   {
+    "unidad": 1,
+    "nombre": "Operaciones algebraicas",
+    "objetivos": [
+     "Realizar operaciones de polinomios, utilizando las diferentes operaciones de números y las propiedades de potencia, para modelar situaciones en las cuales se use el lenguaje algebraico de los polinomios."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Identifica los elementos y características de los polinomios, aplicando la definición."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Reduce términos semejantes de polinomios."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Efectúa sumas y restas de polinomios."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Realiza multiplicaciones de polinomios por un número."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Realiza divisiones de polinomios por un número."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Efectúa operaciones combinadas de polinomios que incluyen división por un número."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Realiza multiplicaciones de monomios con monomios."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Efectúa divisiones de monomios con monomios."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Realiza operaciones combinadas de polinomios que incluyen división por un número o por un monomio."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Utiliza la sustitución de variables para determinar el valor numérico de un polinomio."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Utiliza polinomios para obtener propiedades de números u operaciones."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Aplica polinomios para resolver problemas en los que se tenga que reconocer patrones."
+     },
+     {
+      "codigo": "1.13",
+      "texto": "Utiliza polinomios para resolver situaciones cotidianas. Grado de un polinomio Valor numérico"
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Sistemas de ecuaciones de primer grado con dos incógnitas",
+    "objetivos": [
+     "Utilizar los sistemas de ecuaciones de primer grado con dos incógnitas, para resolver situaciones del entorno, aplicando el método de solución que considere más adecuado."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Resuelve una situación mediante una ecuación o un sistema de ecuaciones de primer grado con dos incógnitas."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Determina el valor de las incógnitas que cumplen un sistema de ecuaciones de la forma ax + by + c = 0."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Resuelve un sistema de ecuaciones con dos incógnitas en las que una de las incógnitas tiene coeficientes de igual signo e igual valor absoluto, mediante el método de reducción por sustracción."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Aplica el método de reducción por adición para resolver sistemas de ecuaciones con dos incógnitas, en las que el valor absoluto de los coeficientes de una de las incógnitas es igual, pero con distinto signo."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Utiliza el método de reducción por adición o sustracción para resolver sistemas de ecuaciones con dos incógnitas, donde en una de las incógnitas los coeficientes, uno es múltiplo del otro."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Resuelve un sistema de ecuaciones con dos incógnitas, en las que el valor absoluto de los coeficientes es diferente, mediante el método de reducción."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Conoce el método de sustitución para resolver sistemas de ecuaciones con dos incógnitas."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Resuelve un sistema de ecuaciones con dos incógnitas mediante el método de sustitución."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Resuelve un sistema de ecuaciones con dos incógnitas, aplicando el método más adecuado."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Determina la solución de un sistema de ecuaciones con dos incógnitas cuyos coeficientes son decimales, utilizando el método más adecuado."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Utiliza el método más adecuado para resolver un sistema de ecuaciones con dos incógnitas, cuyos coeficientes son fraccionarios."
+     },
+     {
+      "codigo": "2.12",
+      "texto": "Determina la solución de un sistema de ecuaciones con dos incógnitas que comprende operaciones indicadas con signos de agrupación."
+     },
+     {
+      "codigo": "2.13",
+      "texto": "Resuelve un sistema de ecuaciones con dos incógnitas cuya forma es ax + by + c = 0."
+     },
+     {
+      "codigo": "2.14",
+      "texto": "Resuelve un sistema de ecuaciones aplicando el método más adecuado considerando las características de sus coeficientes."
+     },
+     {
+      "codigo": "2.15",
+      "texto": "Utiliza los sistemas de ecuaciones para resolver problemas sobre geometría."
+     },
+     {
+      "codigo": "2.16",
+      "texto": "Utiliza los sistemas de ecuaciones para resolver problemas de las ciencias naturales."
+     },
+     {
+      "codigo": "2.17",
+      "texto": "Resuelve situaciones sobre porcentaje mediante el uso de sistemas de ecuaciones de primer grado con dos incógnitas."
+     },
+     {
+      "codigo": "2.18",
+      "texto": "Utiliza los sistemas de ecuaciones de primer grado con dos incógnitas para resolver problemas que incluyen razones y proporciones. dos incógnitas. resolverlas y aportar al desarrollo de la grado con dos incógnitas. de reducción Método de sustitución"
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Función lineal",
+    "objetivos": [
+     "Resolver situaciones del entorno mediante el uso de la función lineal, identificando, modelando, interpretando y graficando correctamente las relaciones entre las variables."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Representa dos variables en una tabla y escribe la expresión y = ax + b."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Identifica la función lineal dada su ecuación."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Resuelve situaciones mediante el análisis de la razón de cambio haciendo uso de tablas."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Resuelve situaciones mediante el análisis de la razón y comparación con la ecuación de la función."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Utiliza la gráfica de la función y = ax + b para describir sus características."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Identifica la relación entre las gráficas de las funciones y = ax y y = ax + b."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Analiza el significado de la razón de cambio haciendo uso de la gráfica con pendiente positiva."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Resuelve situaciones mediante el análisis de la razón de cambio haciendo usos de gráficas con pendiente negativa."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Identifica la relación entre la razón de cambio y la pendiente en la función lineal."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Identifica la pendiente y el intercepto de una función y = ax + b."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Identifica la relación entre los elementos de la tabla, la ecuación y la gráfica de la función lineal."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Traza el gráfico de la función y = ax + b, dado el valor de a y b."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Relaciona la ecuación de la función con la gráfica de la función y = ax + b."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Determina los valores de y, cuando se delimitan los valores de x."
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Escribe la función de la forma y = ax + b, a partir del gráfico, identificando la pendiente y el intercepto."
+     },
+     {
+      "codigo": "3.16",
+      "texto": "Escribe la función de la forma y = ax + b, conociendo las coordenadas de un punto de la gráfica y el valor de a."
+     },
+     {
+      "codigo": "3.17",
+      "texto": "Escribe la función de la forma y = ax + b, identificando dos puntos de la gráfica."
+     },
+     {
+      "codigo": "3.18",
+      "texto": "Escribe la función de la forma y = ax + b, a partir de las coordenadas de dos puntos de la forma (x, 0) (0, y)."
+     },
+     {
+      "codigo": "3.19",
+      "texto": "Comprueba que la gráfica de una ecuación de primer grado con dos incógnitas tiene la misma forma de la función lineal."
+     },
+     {
+      "codigo": "3.20",
+      "texto": "Transforma las ecuaciones de primer grado con dos incógnitas a la forma y = ax + b, de la función lineal."
+     },
+     {
+      "codigo": "3.21",
+      "texto": "Grafica la ecuación de la forma ax + by + c = 0, identificando los interceptos con los ejes x y y."
+     },
+     {
+      "codigo": "3.22",
+      "texto": "Representa gráficamente la ecuación de la forma by = c."
+     },
+     {
+      "codigo": "3.23",
+      "texto": "Representa gráficamente la ecuación de la forma ax = c."
+     },
+     {
+      "codigo": "3.24",
+      "texto": "Determina el intercepto de la gráfica de dos ecuaciones de la forma ax + by + c = 0."
+     },
+     {
+      "codigo": "3.25",
+      "texto": "Determina la solución de un sistema de dos ecuaciones de primer grado con dos incógnitas de forma gráfica."
+     },
+     {
+      "codigo": "3.26",
+      "texto": "Resuelve problemas mediante el uso de la función lineal."
+     },
+     {
+      "codigo": "3.27",
+      "texto": "Extrae información de un gráfico para resolver problemas."
+     },
+     {
+      "codigo": "3.28",
+      "texto": "Determina el área de una figura plana mediante el uso de la función lineal. científicos. Variación Recta horizontal: by + c = 0 grado Recta vertical: ax + c = 0 cuando grado cuando"
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Paralelismo y ángulos de un polígono",
+    "objetivos": [
+     "Utilizar la relación entre ángulos internos y externos de los polígonos, así como de los ángulos entre paralelas para caracterizar figuras y resolver situaciones del entorno."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Determina la suma de los ángulos internos de un polígono por triangulación."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Utiliza diferentes estrategias para determinar la suma de los ángulos internos de un polígono por triangulación."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Determina la suma de los ángulos externos de un polígono."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Determina la medida de ángulos internos y externos de un polígono regular."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Relaciona los ángulos opuestos por el vértice."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Identifica ángulos correspondientes y los alternos externos e internos."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Identifica la relación entre ángulos correspondientes."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Identifica la relación entre ángulos internos, externos, alternos internos y alternos externos, entre dos rectas paralelas."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Utiliza la relación de los ángulos entre paralelas, para demostrar el teorema de los ángulos internos de un triángulo."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Identifica los elementos de una demostración matemática."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Resuelve desafíos o situaciones problemáticas en distintos contextos, mediante la aplicación de las relaciones que caracterizan a los ángulos entre paralelas. o para demostrar propiedades matemáticas. Proposición Igualdad en medidas de segmentos: AB = DE"
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Criterios de congruencia de triángulos",
+    "objetivos": [
+     "Utilizar los criterios para determinar la congruencia entre triángulos, caracterizar algunas figuras planas y resolver situaciones matemáticas de la vida cotidiana."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Determina cuando dos figuras son congruentes."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Identifica cuando dos triángulos son congruentes."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Determina el mínimo de elementos necesarios que deben ser iguales para que dos triángulos sean congruentes."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Identifica los diferentes casos que se tienen para determinar si dos triángulos son congruentes."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Aplica criterios de congruencia para demostrar relaciones entre triángulos formados a partir de polígonos."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Aplica criterios de congruencia para resolver situaciones del entorno."
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Características de los triángulos y cuadriláteros",
+    "objetivos": [
+     "Identificar figuras planas utilizando criterios de congruencias para obtener características de triángulos y cuadriláteros."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Caracteriza los triángulos isósceles."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Demuestra el teorema del triángulo isósceles: “A lados iguales corresponden ángulos iguales”, utilizando la congruencia de triángulos."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Deduce y utiliza la característica que posee la bisectriz de un triángulo isósceles."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Demuestra el teorema “Un triángulo equilátero es equiángulo”."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Demuestra teoremas que relacionan los lados y ángulos iguales de triángulos isósceles o equiláteros, con los respectivos lados opuestos."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Identifica el recíproco o contraejemplo de un teorema."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Identifica la relación que debe existir entre los lados y ángulos de dos triángulos rectángulos para que sean congruentes."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Identifica la relación que debe existir entre los lados de dos triángulos rectángulos para que sean congruentes."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Conoce el sentido de una condición necesaria y suficiente."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Determina en enunciados si una condición es necesaria y suficiente."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Demuestra que la distancia del incentro a cualquiera de los lados de un triángulo son congruentes."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Identifica las condiciones para que un cuadrilátero sea paralelogramo."
+     },
+     {
+      "codigo": "6.13",
+      "texto": "Caracteriza los paralelogramos estableciendo la relación entre sus lados y ángulos."
+     },
+     {
+      "codigo": "6.14",
+      "texto": "Caracteriza las diagonales de un paralelogramo."
+     },
+     {
+      "codigo": "6.15",
+      "texto": "Demuestra la relación que debe existir entre los lados de un cuadrilátero para que sea paralelogramo."
+     },
+     {
+      "codigo": "6.16",
+      "texto": "Demuestra que para que un cuadrilátero sea paralelogramo sus ángulos opuestos deben ser iguales."
+     },
+     {
+      "codigo": "6.17",
+      "texto": "Enlista las condiciones suficientes para que un cuadrilátero sea paralelogramo."
+     },
+     {
+      "codigo": "6.18",
+      "texto": "Caracteriza un rectángulo y un rombo."
+     },
+     {
+      "codigo": "6.19",
+      "texto": "Utiliza las características de las diagonales de un rectángulo para demostrar relaciones con elementos de un triángulo rectángulo."
+     },
+     {
+      "codigo": "6.20",
+      "texto": "Analiza la veracidad del recíproco de las características de los rectángulos."
+     },
+     {
+      "codigo": "6.21",
+      "texto": "Determina la relación entre los segmentos perpendiculares trazados entre rectas paralelas."
+     },
+     {
+      "codigo": "6.22",
+      "texto": "Resuelve problemas de triángulos y paralelogramos aplicando la relación entre rectas paralelas y áreas. Contraejemplo Paralelogramo Hipotenusa Perpendicular a: 5555 Oc⊥tavo grado"
+     }
+    ]
+   },
+   {
+    "unidad": 7,
+    "nombre": "Área y volumen de sólidos geométricos",
+    "objetivos": [
+     "Utilizar el área y el volumen de cuerpos geométricos para proponer soluciones a situaciones del entorno."
+    ],
+    "indicadores": [
+     {
+      "codigo": "7.1",
+      "texto": "Identifica el sólido que se genera al girar una figura plana alrededor de un eje."
+     },
+     {
+      "codigo": "7.2",
+      "texto": "Identifica características y elementos del cono y la esfera."
+     },
+     {
+      "codigo": "7.3",
+      "texto": "Deduce la fórmula para el cálculo del volumen del cilindro de manera análoga al cálculo del volumen del prisma."
+     },
+     {
+      "codigo": "7.4",
+      "texto": "Determina la relación entre el volumen de un prisma y el de una pirámide, cuyas bases son congruentes y se utilizan para resolver problemas."
+     },
+     {
+      "codigo": "7.5",
+      "texto": "Calcula el volumen de una pirámide de base triangular utilizando la fórmula."
+     },
+     {
+      "codigo": "7.6",
+      "texto": "Determina la relación entre el volumen del cono y el cilindro de igual radio y altura."
+     },
+     {
+      "codigo": "7.7",
+      "texto": "Determina la relación entre el volumen de la esfera y el cilindro con igual radio e igual altura."
+     },
+     {
+      "codigo": "7.8",
+      "texto": "Utiliza las fórmulas de volúmenes de sólidos geométricos, para determinar el volumen de sólidos compuestos."
+     },
+     {
+      "codigo": "7.9",
+      "texto": "Identifica los elementos del patrón del cono."
+     },
+     {
+      "codigo": "7.10",
+      "texto": "Determina la relación entre los elementos del patrón del cono."
+     },
+     {
+      "codigo": "7.11",
+      "texto": "Determina el área total del cono a partir del patrón."
+     },
+     {
+      "codigo": "7.12",
+      "texto": "Determina la relación entre el área superficial de una esfera y el área del círculo de igual radio."
+     },
+     {
+      "codigo": "7.13",
+      "texto": "Utiliza las fórmulas deducidas sobre áreas superficiales de sólidos, para determinar el área superficial de sólidos compuestos."
+     }
+    ]
+   },
+   {
+    "unidad": 8,
+    "nombre": "Organización y análisis de datos estadísticos",
+    "objetivos": [
+     "Organizar, graficar e interpretar la información del entorno, a fin de utilizarla en la toma de decisiones personales y/o sociales, valorando con criticidad la opinión de los demás.",
+     "Resolver problemas aplicando las medidas de tendencia central a datos estadísticos para analizar, opinar y obtener conclusiones de manera crítica."
+    ],
+    "indicadores": [
+     {
+      "codigo": "8.1",
+      "texto": "Clasifica los datos en grupos."
+     },
+     {
+      "codigo": "8.2",
+      "texto": "Organiza datos en tablas de distribución de frecuencias."
+     },
+     {
+      "codigo": "8.3",
+      "texto": "Calcula el punto medio de una serie de datos organizados en una tabla e interpreta los resultados."
+     },
+     {
+      "codigo": "8.4",
+      "texto": "Representa gráficamente información estadística."
+     },
+     {
+      "codigo": "8.5",
+      "texto": "Compara información estadística mediante la frecuencia relativa porcentual."
+     },
+     {
+      "codigo": "8.6",
+      "texto": "Interpreta datos estadísticos organizados en tablas de frecuencias."
+     },
+     {
+      "codigo": "8.7",
+      "texto": "Identifica el uso de valores representativos para la solución de situaciones cotidianas."
+     },
+     {
+      "codigo": "8.8",
+      "texto": "Calcula la media aritmética de una serie de datos agrupados."
+     },
+     {
+      "codigo": "8.9",
+      "texto": "Compara y analiza información mediante el uso de propiedades de la media aritmética."
+     },
+     {
+      "codigo": "8.10",
+      "texto": "Determina de manera aproximada la mediana y la moda de una serie de datos."
+     },
+     {
+      "codigo": "8.11",
+      "texto": "Interpreta situaciones a partir de las propiedades de las medidas de tendencia central."
+     },
+     {
+      "codigo": "8.12",
+      "texto": "Analiza la relación entre las medidas de tendencia central a partir de una gráfica."
+     },
+     {
+      "codigo": "8.13",
+      "texto": "Determina el valor aproximado de una cantidad."
+     },
+     {
+      "codigo": "8.14",
+      "texto": "Analiza las reglas para determinar los dígitos significativos de una cantidad."
+     },
+     {
+      "codigo": "8.15",
+      "texto": "Expresa cantidades en notación científica."
+     }
+    ]
+   }
+  ],
+  "Noveno": [
+   {
+    "unidad": 1,
+    "nombre": "Multiplicación de polinomios",
+    "objetivos": [
+     "Adquirir habilidades del dominio del álgebra elemental, a través de los procesos de multiplicación y factorización de polinomios, apoyándose en justificaciones geométricas que faciliten su visualización; para resolver problemas de matemática y de su entorno."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Desarrolla el producto de un monomio por binomio."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Determina el desarrollo del producto de un binomio por un binomio que involucre el signo positivo."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Desarrolla el producto de un binomio por un binomio que involucre el signo positivo y negativo."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Determina el desarrollo del producto de un binomio por trinomio."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Desarrolla el producto de un trinomio por un trinomio."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Desarrolla el producto de un polinomio utilizando lo visto en clases anteriores."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Determina productos de la forma (x + a)(x + b)."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Justifica geométricamente el desarrollo del cuadrado de la suma."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Determina el desarrollo del cuadrado de la resta."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Desarrolla la suma por la diferencia de binomios."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Multiplica polinomios utilizando sustitución de variables."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Multiplica polinomios utilizando combinación de productos notables."
+     },
+     {
+      "codigo": "1.13",
+      "texto": "Desarrolla el cuadrado de un trinomio."
+     },
+     {
+      "codigo": "1.14",
+      "texto": "Calcula el valor numérico de expresiones algebraicas y de operaciones aritméticas utilizando productos notables."
+     },
+     {
+      "codigo": "1.15",
+      "texto": "Realiza operaciones utilizando productos notables."
+     },
+     {
+      "codigo": "1.16",
+      "texto": "Relaciona la factorización como proceso inverso de la multiplicación de polinomios."
+     },
+     {
+      "codigo": "1.17",
+      "texto": "Factoriza polinomios cuyo factor común es un monomio."
+     },
+     {
+      "codigo": "1.18",
+      "texto": "Factoriza polinomios de la forma x2 + (a + b)x + ab en el producto notable (x + a)(x + b)."
+     },
+     {
+      "codigo": "1.19",
+      "texto": "Factoriza trinomios cuadrados perfectos a)2 a)2. en el producto notable (x + o (x −"
+     },
+     {
+      "codigo": "1.20",
+      "texto": "Factoriza la diferencia de cuadrados como el producto notable (x + a)(x − a)."
+     },
+     {
+      "codigo": "1.21",
+      "texto": "Utiliza el cambio de variable por un monomio para factorizar polinomios."
+     },
+     {
+      "codigo": "1.22",
+      "texto": "Utiliza el cambio de variable por un binomio para factorizar polinomios."
+     },
+     {
+      "codigo": "1.23",
+      "texto": "Factoriza polinomios extrayendo factor común y utilizando productos notables."
+     },
+     {
+      "codigo": "1.24",
+      "texto": "Factoriza polinomios que impliquen combinaciones de los métodos vistos en clases anteriores."
+     },
+     {
+      "codigo": "1.25",
+      "texto": "Calcula operaciones aritméticas y áreas de regiones utilizando factorización."
+     },
+     {
+      "codigo": "1.26",
+      "texto": "Utiliza factorización para resolver problemas. una solución. binomio Factorización Diferencia de cuadrados: − x2 a2"
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Raíz cuadrada",
+    "objetivos": [
+     "Conocer el sentido, representación y definición de raíces cuadradas, realizando operaciones algorítmicas y de simplificación para poder enfrentarse a futuros problemas matemáticos y del entorno."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Utiliza el símbolo de radical para representar un número."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Determina números que son raíces exactas."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Determina las raíces cuadradas de un número."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Utiliza el orden de las raíces cuadradas para comparar números."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Clasifica números como racionales o irracionales."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Convierte números decimales periódicos a fracción."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Identifica números reales y justifica su pertenencia a este conjunto."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Opera multiplicaciones con raíces cuadradas."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Opera divisiones con raíces cuadradas."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Utiliza la descomposición prima para representar un número sin el símbolo radical."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Expresa la multiplicación de un número racional con una raíz cuadrada, representando la operación con un solo radicando."
+     },
+     {
+      "codigo": "2.12",
+      "texto": "Simplifica raíces cuadradas inexactas."
+     },
+     {
+      "codigo": "2.13",
+      "texto": "Determina el producto de raíces cuadradas utilizando simplificación."
+     },
+     {
+      "codigo": "2.14",
+      "texto": "Racionaliza el denominador de una fracción."
+     },
+     {
+      "codigo": "2.15",
+      "texto": "Suma y resta raíces cuadradas semejantes."
+     },
+     {
+      "codigo": "2.16",
+      "texto": "Suma y resta de raíces cuadradas, utilizando simplificación y racionalización."
+     },
+     {
+      "codigo": "2.17",
+      "texto": "Opera raíces cuadradas utilizando la propiedad distributiva de la multiplicación sobre la suma."
+     },
+     {
+      "codigo": "2.18",
+      "texto": "Opera raíces cuadradas utilizando la propiedad distributiva de la multiplicación sobre la suma."
+     },
+     {
+      "codigo": "2.19",
+      "texto": "Resuelve problemas de aplicación utilizando conceptos sobre raíces cuadradas. Raíces cuadradas raíces Racionalización Números irracionales: ' ℚ ℚ"
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Ecuación cuadrática",
+    "objetivos": [
+     "Resolver ecuaciones cuadráticas, utilizando diferentes métodos de resolución, para modelar y solucionar problemáticas de la vida cotidiana."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Plantea ecuaciones cuadráticas e identifica la necesidad de resolverlas."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Determina la cantidad de soluciones que tiene una ecuación cuadrática."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Resuelve ecuaciones de la forma x2 = c."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Resuelve ecuaciones de la forma = c."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Resuelve ecuaciones de la forma (x + m)2 = n."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Resuelve ecuaciones de la forma x2 + bx = 0."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Determina ecuaciones cuadráticas de la forma x2 + 2ax + a2, utilizando el trinomio cuadrado perfecto."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Resuelve ecuaciones cuadráticas de la forma (x + a)(x + b) = 0."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Utiliza argumentos geométricos para encontrar la solución positiva de x2 ecuaciones del tipo + bx + c = 0."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Utiliza el procedimiento de complementación de cuadrados, para resolver ecuaciones cuadráticas."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Resuelve una ecuación cuadrática usando una secuencia de pasos, como una estrategia previa para deducir la fórmula general de la ecuación cuadrática."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Utiliza completación de cuadrados para determinar la fórmula general de la ecuación cuadrática."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Utiliza la fórmula general de la ecuación cuadrática identificando los valores de la ecuación general."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Compara los métodos de solución desarrollados para resolver ecuaciones cuadráticas."
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Determina e interpreta la cantidad de soluciones que tiene una ecuación cuadrática."
+     },
+     {
+      "codigo": "3.16",
+      "texto": "Utiliza el discriminante para determinar si una ecuación cuadrática tiene una solución, dos o ninguna."
+     },
+     {
+      "codigo": "3.17",
+      "texto": "Plantea ecuaciones cuadráticas que resuelven situaciones problemáticas. Discriminante Discriminante de una ecuación cuadrática: b2 – 4ac"
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Función cuadrática de la forma y = ax2 + c",
+    "objetivos": [
+     "Determinar las características de la función y = ax2+c, trazando con precisión la gráfica y resolviendo problemas sobre la variación de la función."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Plantea una ecuación de la forma y = ax2 a partir del uso de tablas y encontrando la proporcionalidad directa con el cuadrado de la ecuación."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Utiliza la proporcionalidad directa para encontrar la constante de proporcionalidad dada la variable independiente y dependiente."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Describe las características de la función y = x2 a partir de los puntos ubicados en el plano cartesiano."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Elabora la gráfica y = ax2 con a > 1 o 0 < a < 1, a partir de la gráfica y = x2."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Elabora la gráfica y = −ax2 con a > 0, a partir de la gráfica y = x2."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Identifica las características de las funciones y = ax2 y y = −ax2 a partir de los valores de a."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Describe el cambio en los valores de la función y = ax2."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Encuentra el máximo y el mínimo de la función y = ax2, describiendo el cambio en los valores que toma la función."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Encuentra el rango de la función y = ax2 dado su dominio."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Grafica la función y = ax2 + c, con c > 0, realizando desplazamientos verticales en c unidades, a partir de la gráfica de y = ax2."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Grafica la función y = ax2 + c, con c < 0, realizando desplazamientos verticales en c unidades, a partir de la gráfica de y = ax2."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Calcula los valores de a y c en y = ax2+c, dadas las condiciones iniciales de la gráfica de la función."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Figuras semejantes",
+    "objetivos": [
+     "Identificar y construir figuras semejantes a partir de las características de sus lados y sus ángulos.",
+     "Utilizar semejanza de triángulos, para deducir y aplicar propiedades de figuras y sólidos semejantes en la resolución de situaciones problemáticas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Encuentra la longitud de segmentos, dada una razón."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Utiliza la razón entre segmentos para determinar si dos segmentos son proporcionales a otros dos."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Reduce y amplía cuadriláteros para dibujar figuras semejantes utilizando cuadrícula."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Identifica ángulos correspondientes entre polígonos y, con base a ello, determina polígonos semejantes."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Identifica los lados correspondientes de figuras y calcula la razón de semejanza."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Construye figuras semejantes, mediante la homotecia, con razón positiva."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Identifica triángulos semejantes a partir del criterio “lados correspondientes proporcionales”."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Identifica triángulos semejantes a partir del criterio ‟Dos ángulos correspondientes congruentes”."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Identifica triángulos semejantes a partir del criterio ‟Un ángulo correspondiente congruente y lados adyacentes proporcionales”."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Aplica el teorema de la base media para calcular longitudes de segmentos."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Aplica una variante del teorema de la base media para encontrar la longitud de segmentos."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Demuestra que los puntos medios de un cuadrilátero cóncavo forman un paralelogramo."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Calcula longitudes de segmentos usando el teorema sobre segmentos paralelos en un triángulo."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Calcula la medida de ángulos identificando segmentos paralelos a los lados de un triángulo."
+     },
+     {
+      "codigo": "5.15",
+      "texto": "Determina segmentos paralelos en un triángulo, dada su proporcionalidad de segmentos."
+     },
+     {
+      "codigo": "5.16",
+      "texto": "Demuestra el teorema sobre proporcionalidad y paralelismo."
+     },
+     {
+      "codigo": "5.17",
+      "texto": "Encuentra la distancia entre dos puntos sobre un mapa, utilizando la proporcionalidad entre segmentos, para conocer la escala real."
+     },
+     {
+      "codigo": "5.18",
+      "texto": "Utiliza la razón entre dos triángulos semejantes para encontrar la razón entre sus áreas."
+     },
+     {
+      "codigo": "5.19",
+      "texto": "Utiliza la semejanza de sólidos para encontrar la razón de semejanza entre sus volúmenes."
+     },
+     {
+      "codigo": "5.20",
+      "texto": "Aplica la semejanza y triángulos semejantes para resolver problemas de la vida cotidiana. Lados correspondientes"
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Teorema de Pitágoras",
+    "objetivos": [
+     "Utilizar el teorema de Pitágoras para calcular longitudes desconocidas en figuras y cuerpos geométricos y aplicarlo en la resolución de problemas del entorno."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Encuentra la hipotenusa de un triángulo rectángulo en particular, utilizando áreas."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Encuentra la hipotenusa de un triángulo rectángulo cuyos vértices son puntos del plano cartesiano."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Demuestra el teorema de Pitágoras, utilizando áreas de triángulos y cuadrados."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Demuestra el teorema de Pitágoras, utilizando semejanza de triángulos."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Encuentra la longitud de un cateto desconocido, utilizando el teorema de Pitágoras en un triángulo rectángulo."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Calcula la longitud del lado de un triángulo utilizando el teorema de Pitágoras dos veces."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Calcula la medida de los lados de los triángulos notables, utilizando el teorema de Pitágoras."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Utiliza el recíproco del teorema de Pitágoras para verificar si un triángulo es rectángulo."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Calcula la altura y el volumen de un cono, utilizando el teorema de Pitágoras."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Calcula la altura y el volumen de una pirámide, utilizando el teorema de Pitágoras."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Calcula la medida de una de las diagonales de un ortoedro, utilizando el teorema de Pitágoras dos veces."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Calcula el área de un hexágono, conociendo la longitud de la altura del triángulo equilátero contenido en el hexágono."
+     },
+     {
+      "codigo": "6.13",
+      "texto": "Resuelve problemas sobre figuras y cuerpos geométricos donde se aplique el teorema de Pitágoras."
+     },
+     {
+      "codigo": "6.14",
+      "texto": "Aplica el teorema de Pitágoras a situaciones reales para calcular una distancia desconocida, realizando cálculos hasta un decimal."
+     },
+     {
+      "codigo": "6.15",
+      "texto": "Utiliza el teorema de Pitágoras para calcular longitudes y medidas de objetos en problemas contextualizados. de Pitágoras. Triángulos notables Cálculo del cateto b: = c2 – a2 b"
+     }
+    ]
+   },
+   {
+    "unidad": 7,
+    "nombre": "Ángulo inscrito y central",
+    "objetivos": [
+     "Determinar la medida de los ángulos inscritos y semiinscritos en una circunferencia, utilizando los teoremas y relaciones sobre cuerdas y arcos en una circunferencia, para estudiar las características y propiedades de figuras planas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "7.1",
+      "texto": "Identifica los elementos de una circunferencia."
+     },
+     {
+      "codigo": "7.2",
+      "texto": "Distingue los tipos de ángulos inscritos en la circunferencia y su relación intuitiva con el ángulo central."
+     },
+     {
+      "codigo": "7.3",
+      "texto": "Determina las medidas de ángulos inscritos cuyo lado coincide con un diámetro de la circunferencia."
+     },
+     {
+      "codigo": "7.4",
+      "texto": "Determina las medidas de ángulos inscritos cuyo ángulo central está al interior del ángulo inscrito."
+     },
+     {
+      "codigo": "7.5",
+      "texto": "Utiliza el teorema del ángulo inscrito para determinar la medida de ángulos en la circunferencia."
+     },
+     {
+      "codigo": "7.6",
+      "texto": "Determina la medida de ángulos inscritos que subtienden arcos de igual medida."
+     },
+     {
+      "codigo": "7.7",
+      "texto": "Construye las tangentes a una circunferencia desde un punto fuera de dicha circunferencia."
+     },
+     {
+      "codigo": "7.8",
+      "texto": "Utiliza las cuerdas y los arcos congruentes para clasificar figuras con lados iguales."
+     },
+     {
+      "codigo": "7.9",
+      "texto": "Resuelve problemas con triángulos semejantes utilizando el teorema del ángulo inscrito."
+     },
+     {
+      "codigo": "7.10",
+      "texto": "Utiliza arcos congruentes para determinar paralelismo entre cuerdas."
+     },
+     {
+      "codigo": "7.11",
+      "texto": "Determina las condiciones para que cuatro puntos estén sobre una circunferencia."
+     },
+     {
+      "codigo": "7.12",
+      "texto": "Determina las medidas de ángulos semiinscritos utilizando la medida del ángulo central. Ángulo semiinscrito AC = AD"
+     }
+    ]
+   },
+   {
+    "unidad": 8,
+    "nombre": "Medidas de dispersión",
+    "objetivos": [
+     "Calcula e interpreta las medidas de dispersión para analizar críticamente situaciones de su contexto que requieran del análisis de datos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "8.1",
+      "texto": "Identifica la dispersión de distribuciones de datos, utilizando el rango para datos no agrupados."
+     },
+     {
+      "codigo": "8.2",
+      "texto": "Identifica distribuciones de datos que se encuentran más dispersas respecto a la media."
+     },
+     {
+      "codigo": "8.3",
+      "texto": "Utiliza la varianza para datos no agrupados para justificar la dispersión de los datos de la serie."
+     },
+     {
+      "codigo": "8.4",
+      "texto": "Justifica la dispersión de una serie utilizando la desviación típica."
+     },
+     {
+      "codigo": "8.5",
+      "texto": "Organiza datos en una tabla de distribución de frecuencias."
+     },
+     {
+      "codigo": "8.6",
+      "texto": "Calcula la media aritmética e identifica la dispersión de distribuciones de datos, utilizando el rango para datos agrupados."
+     },
+     {
+      "codigo": "8.7",
+      "texto": "Calcula la varianza para datos agrupados."
+     },
+     {
+      "codigo": "8.8",
+      "texto": "Calcula la desviación típica para datos agrupados."
+     },
+     {
+      "codigo": "8.9",
+      "texto": "Utiliza las medidas de dispersión para resolver problemas e identifica distribuciones de datos que se encuentran más dispersos."
+     },
+     {
+      "codigo": "8.10",
+      "texto": "Calcula la desviación típica de distribuciones cuyos datos son la suma de una constante y una variable."
+     },
+     {
+      "codigo": "8.11",
+      "texto": "Calcula la desviación típica de distribuciones cuyos datos son el producto de una constante por una variable. un problema. Desviación típica 2 Desviación típica: σ σ"
+     }
+    ]
+   }
+  ],
+  "Primer año": [
+   {
+    "unidad": 1,
+    "nombre": "Números reales",
+    "objetivos": [
+     "Utilizar las propiedades de orden, escritura y operaciones de los números reales para resolver problemas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Efectúa operaciones elementales con raíces cuadradas."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Efectúa operaciones combinadas con raíces cuadradas."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Racionaliza fracciones con denominador a."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Racionaliza fracciones con denominador ± o a ± b. a b"
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Realiza cálculos de los números neperiano y áureo."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Ubica los números reales en la recta numérica."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Clasifica los números decimales en racionales e irraciones. Contenidos procedimentales"
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Calcula el valor absoluto de números reales."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Representa intervalos en la recta numérica o en la notación de conjunto. Función valor absoluto Intervalos"
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Operaciones con polinomios y números complejos",
+    "objetivos": [
+     "Adquirir habilidades en la factorización y división de polinomios, identificando las condiciones necesarias para la aplicación de los mismos y utilizarlos en la verificación de teoremas en álgebra y la resolución de problemas de matemática."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Identifica las variables y coeficientes de un polinomio, y calcula el grado con respecto a una variable o a sus términos."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Realiza productos notables que son de la forma (x + a)(x + b), (a ± b)2 y (a + b) (a – b)."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Realiza productos notables que son de by)2 la forma (mx + a)(mx + b), (ax ± y (ax + by)(ax – by)."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Desarrolla el producto notable de la forma (ax + b)(cx + d)."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Realiza el producto notable de la forma by)3. (ax +"
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Realiza el producto notable de la forma (ax – by)3."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Desarrolla operaciones con polinomios utilizando los productos notables."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Factoriza polinomios cuyo factor común es un monomio o un polinomio, utilizando las propiedades asociativa y distributiva."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Factoriza trinomios de la forma x2 + (a + b)x + ab en el producto notable (x + a)(x + b)."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Factoriza polinomios que son trinomios cuadrados perfectos o diferencia de cuadrados en los productos notaa)2 bles (x ± y (x + a)(x – a)."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Factoriza polinomios que son trinomios cuadrados perfectos o diferencia de cuadrados en los productos notables (ax ± by)2 y (ax + by)(ax – by)."
+     },
+     {
+      "codigo": "2.12",
+      "texto": "Utiliza el método de la tijera para factorizar trinomios en el producto (ax + b)(cx + d) donde a, b, c y d son enteros positivos."
+     },
+     {
+      "codigo": "2.13",
+      "texto": "Utiliza el método de la tijera para factorizar trinomios en el producto (ax + b)(cx + d) donde a, b, c y d son enteros cualesquiera. 17 Primer año de bachillerato"
+     },
+     {
+      "codigo": "2.14",
+      "texto": "Factoriza polinomios extrayendo el factor común monomio de sus términos."
+     },
+     {
+      "codigo": "2.15",
+      "texto": "Factoriza polinomios asociando términos que tienen factor común monomio."
+     },
+     {
+      "codigo": "2.16",
+      "texto": "Realiza la división de un polinomio por un monomio multiplicando por el recíproco del divisor."
+     },
+     {
+      "codigo": "2.17",
+      "texto": "Realiza la división de un polinomio por un polinomio utilizando el algoritmo de la división."
+     },
+     {
+      "codigo": "2.18",
+      "texto": "Efectúa la división de un polinomio por un binomio de la forma x – a utilizando la división sintética."
+     },
+     {
+      "codigo": "2.19",
+      "texto": "Utiliza la división sintética cuando el dividendo no posee todas las potencias de la variable."
+     },
+     {
+      "codigo": "2.20",
+      "texto": "Calcula el residuo de la división de un polinomio por un binomio de la forma x – a utilizando el teorema del residuo."
+     },
+     {
+      "codigo": "2.21",
+      "texto": "Utiliza el teorema del factor para factorizar polinomios de la forma x3 + mx2 + nx + k cuando se conoce uno de sus factores lineales."
+     },
+     {
+      "codigo": "2.22",
+      "texto": "Factoriza polinomios de la forma x3 mx2 + + nx + k encontrando los divisores del término independiente y aplicando el teorema del factor."
+     },
+     {
+      "codigo": "2.23",
+      "texto": "Factoriza polinomios aplicando los métodos de factorización y división de polinomios."
+     },
+     {
+      "codigo": "2.24",
+      "texto": "Resuelve ecuaciones cuadráticas utilizando factorización en la forma (x + a)(x + b) o el método de la tijera."
+     },
+     {
+      "codigo": "2.25",
+      "texto": "Resuelve ecuaciones cuadráticas utilizando la fórmula general."
+     },
+     {
+      "codigo": "2.26",
+      "texto": "Identifica la parte real y la parte imaginaria de un número complejo."
+     },
+     {
+      "codigo": "2.27",
+      "texto": "Efectúa la suma, resta y multiplicación de números complejos, y determina el conjugado y el módulo de un número complejo. 19 Primer año de bachillerato"
+     },
+     {
+      "codigo": "2.28",
+      "texto": "Efectúa el cociente de dos números complejos multiplicando por el conjugado del divisor."
+     },
+     {
+      "codigo": "2.29",
+      "texto": "Encuentra las raíces cuadradas de números reales negativos y los escribe en la forma a + bi."
+     },
+     {
+      "codigo": "2.30",
+      "texto": "Determina el tipo de soluciones (reales o complejas) de una ecuación cuadrática utilizando su discriminante."
+     },
+     {
+      "codigo": "2.31",
+      "texto": "Factoriza polinomios de grado dos o tres utilizando números complejos."
+     },
+     {
+      "codigo": "2.32",
+      "texto": "Calcula las raíces de un polinomio de a lo sumo grado tres, usando números complejos."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Desigualdades",
+    "objetivos": [
+     "Resolver desigualdades lineales y no lineales con una variable haciendo uso de las propiedades de desigualdad para la demostración o comprobación de teoremas matemáticos, así como la interpretación y resolución de situaciones del entorno que impliquen el uso de las mismas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Determina el símbolo de relación que hace verdadera una desigualdad cuando se suma el mismo número real a ambos miembros."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Determina el símbolo de relación que hace verdadera una desigualdad cuando se multiplica el mismo número real a ambos miembros."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Expresa situaciones de la vida cotidiana utilizando desigualdades lineales de una variable."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Resuelve desigualdades lineales de la forma x + b c o x + b c. ≥ ≤"
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Resuelve desigualdades lineales de la forma ax c o ax c. ≥ ≤"
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Resuelve desigualdades lineales de la forma ax + b 0 o ax + b 0. ≥ ≤"
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Resuelve desigualdades lineales utilizando la gráfica de la función y = ax + b."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Utiliza desigualdades lineales para interpretar matemáticamente y resolver situaciones de la vida cotidiana."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Verifica si es posible trazar triángulos usando regla y compás dadas las longitudes de sus lados."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Identifica los posibles valores para la longitud del lado de un triángulo dadas las longitudes de los otros dos."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Verifica la desigualdad triangular |a + b| |a| + |b| para números reales a y b. ≤"
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Verifica la desigualdad de las medias aritmética y geométrica para números reales no negativos."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Resuelve desigualdades de la forma 1 1 0 o 0. ax + b ax + b > < 23 Primer año de bachillerato"
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Funciones reales",
+    "objetivos": [
+     "Identificar los elementos y características de las funciones cuadráticas, cúbicas de la forma f(x) = ax3, racionales e irracionales, haciendo uso de tablas de valores y de sus gráficas para resolver problemas sobre monotonía y situaciones de la vida cotidiana, e interpretar gráficamente la solución de una desigualdad cuadrática."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Calcula el valor de f(x) usando la ecuación de la función y el valor de x."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Utiliza la prueba de la recta vertical para identificar gráficas de funciones."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Encuentra el dominio y rango de funax2 ciones lineales y de la forma f(x) = utilizando la ecuación de la función."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Elabora la gráfica y encuentra el dominio y el rango de las funciones ax2 g(x) = ax + b o f(x) = + c, usando desplazamientos verticales."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Grafica y encuentra el dominio y rango de la función g(x) = a(x – h)2 para h 0 usando desplazamientos horiax2. zontales de f(x) = > 2255 Primer año de bachillerato"
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Grafica y encuentra el dominio y el rango de la función g(x) = a(x – h)2, para h < 0, usando desplazamientos horizontales de f(x) = ax2."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Grafica y encuentra el dominio y el h)2 k rango de la función g(x) = a(x – + usando desplazamientos verticales de f(x) = a(x – h)2."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Grafica y encuentra el dominio y el rango de la función g(x) = a(x – h)2 + k, usando desplazamientos horizontales y verticales de f(x) = ax2."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Completa cuadrados en la ecuación de la función f(x) = ax2 + bx para trazar su gráfica y encontrar su dominio y rango."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Completa cuadrados en la ecuación de la función f(x) = x2 + bx + c para trazar su gráfica y encontrar su dominio y rango."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Completa cuadrados en la ecuación ax2 de la función f(x) = + bx + c para trazar su gráfica y encontrar su dominio y rango."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Encuentra la ecuación de una función cuadrática que satisface determinadas condiciones."
+     },
+     {
+      "codigo": "4.13",
+      "texto": "Determina la monotonía de una función cuadrática en un intervalo dado y encuentra el rango de valores para f(x)."
+     },
+     {
+      "codigo": "4.14",
+      "texto": "Determina los valores que toma f(x) a partir de los valores de x, siendo f una función cuadrática."
+     },
+     {
+      "codigo": "4.15",
+      "texto": "Utiliza el valor máximo de una función cuadrática para resolver problemas de la vida cotidiana."
+     },
+     {
+      "codigo": "4.16",
+      "texto": "Utiliza el valor mínimo de una función cuadrática para resolver problemas de la vida cotidiana."
+     },
+     {
+      "codigo": "4.17",
+      "texto": "Encuentra las coordenadas del punto de intersección de la gráfica de una función cuadrática con el eje y usando la ecuación de la función."
+     },
+     {
+      "codigo": "4.18",
+      "texto": "Encuentra las coordenadas de los puntos de intersección de la gráfica de una función cuadrática con el eje x a partir de la ecuación de la función."
+     },
+     {
+      "codigo": "4.19",
+      "texto": "Resuelve desigualdades de la forma f(x) 0, donde f es una función cuadrática cuya parábola es abierta hacia arrib≥a y corta al eje x en dos puntos. 27 Primer año de bachillerato"
+     },
+     {
+      "codigo": "4.20",
+      "texto": "Resuelve desigualdades de la forma f(x) 0, donde f es una función cuadrática cuya parábola es abierta hacia arrib≥a y corta al eje x en uno o ningún punto."
+     },
+     {
+      "codigo": "4.21",
+      "texto": "Resuelve desigualdades de la forma f(x) 0, donde f es una función cuadrática cuya parábola es abierta hacia arrib≤a."
+     },
+     {
+      "codigo": "4.22",
+      "texto": "Aplica propiedades de desigualdad para resolver desigualdades cuadráticas cuyo coeficiente de x2 es negativo."
+     },
+     {
+      "codigo": "4.23",
+      "texto": "Utiliza el cuadro de variación para resolver desigualdades cuadráticas."
+     },
+     {
+      "codigo": "4.24",
+      "texto": "Aplica propiedades de desigualdades y utiliza el cuadro de variación para resolver desigualdades cuadráticas."
+     },
+     {
+      "codigo": "4.25",
+      "texto": "Elabora la gráfica de la función de la x3 forma f(x) = ubicando puntos en el plano cartesiano que satisfacen la ecuación de la función."
+     },
+     {
+      "codigo": "4.26",
+      "texto": "Grafica funciones de la forma ax3 g(x) = para a 0 usando la gráfica x3. de f(x) = >"
+     },
+     {
+      "codigo": "4.27",
+      "texto": "Grafica funciones de la forma g(x) = – ax3 para a 0 usando la gráfica de f(x) = x3. >"
+     },
+     {
+      "codigo": "4.28",
+      "texto": "Encuentra las ecuaciones de las funciones que resultan de desplazar horizontal y verticalmente la gráfica de la k función f(x) = . x"
+     },
+     {
+      "codigo": "4.29",
+      "texto": "Encuentra las ecuaciones y grafica las k asíntotas de la función f(x) = + q x – p para trazar la gráfica de f. ax + b"
+     },
+     {
+      "codigo": "4.30",
+      "texto": "Escribe la función f(x) = en la cx + d k forma f(x) = + q para encontrar x – p sus asíntotas y trazar su gráfica."
+     },
+     {
+      "codigo": "4.31",
+      "texto": "Grafica y encuentra el dominio y el rango de funciones irracionales de la forma f(x) = a x."
+     },
+     {
+      "codigo": "4.32",
+      "texto": "Grafica y encuentra el dominio y el rango de funciones irracionales de la forma f(x) = ax."
+     },
+     {
+      "codigo": "4.33",
+      "texto": "Explora las herramientas de un software matemático para ubicar puntos en el plano cartesiano y trazar las gráficas de funciones lineales y cuadráticas. 29 Primer año de bachillerato"
+     },
+     {
+      "codigo": "4.34",
+      "texto": "Utiliza las herramientas de un software para visualizar los desplazamientos verticales de funciones cuadráticas y la elaboración de la parábola de x2 f(x) = a partir de puntos."
+     },
+     {
+      "codigo": "4.35",
+      "texto": "Utiliza las herramientas de un software para visualizar los desplazamientos horizontales de funciones cuadráticas y la elaboración de otras funciones a partir de puntos. Función de proporcionalidad inversa Función racional Asíntota Función irracional k de proporcionalidad inversa: f(x) = x irracionales: f(x) = a x; f(x) = ax"
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Resolución de triángulos oblicuángulos",
+    "objetivos": [
+     "Resolver triángulos utilizando las herramientas de la trigonometría y aplicarlo a diferentes situaciones del entorno."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Establece las razones trigonométricas de un ángulo agudo de un triángulo rectángulo en términos de la hipotenusa, el lado opuesto y adyacente a dicho ángulo."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Calcula las razones trigonométricas seno, coseno y tangente de un ángulo agudo."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Utiliza los triángulos notables y semejanza para encontrar las medidas de los lados de un triángulo rectángulo."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Determina las razones trigonométricas de los ángulos de 30°, 45° y 60°."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Encuentra la medida de los lados de un triángulo rectángulo conocidas la medida de un lado y un ángulo agudo utilizando razones trigonométricas. 3311 Primer año de bachillerato"
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Encuentra la medida de los ángulos agudos de un triángulo rectángulo conocidas las medidas de dos lados, utilizando las razones trigonométricas seno, coseno y tangente."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Utiliza triángulos rectángulos y razones trigonométricas para resolver problemas del entorno."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Utiliza las razones trigonométricas para calcular ángulos de depresión en problemas del entorno."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Utiliza las razones trigonométricas para calcular ángulos de elevación en problemas del entorno."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Construye un clinómetro casero para hacer mediciones de ángulos de elevación."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Calcula la distancia entre dos puntos del plano cartesiano."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Determina las coordenadas del punto simétrico de un punto del plano cartesiano respecto al eje x, al eje y, al origen y a la recta identidad."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Determina el signo y el cuadrante al que pertenece un ángulo en el plano cartesiano."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Grafica en el plano cartesiano ángulos mayores a 360° y menores a –360°."
+     },
+     {
+      "codigo": "5.15",
+      "texto": "Determina las razones trigonométricas de un ángulo definido por la parte positiva del eje x y OP, donde P es un punto del plano cartesiano."
+     },
+     {
+      "codigo": "5.16",
+      "texto": "Calcula las razones trigonométricas de ángulos en el plano cartesiano, utilizando los ángulos de triángulos notables."
+     },
+     {
+      "codigo": "5.17",
+      "texto": "Representa las razones trigonométricas de ángulos no agudos en términos de ángulos que estén entre 0° y 90°."
+     },
+     {
+      "codigo": "5.18",
+      "texto": "Calcula el ángulo si se conoce una de sus razones trigonométricas."
+     },
+     {
+      "codigo": "5.19",
+      "texto": "Calcula las razones trigonométricas de cualquier ángulo utilizando la identidad pitagórica si se conocen algunos datos de este. 33 Primer año de bachillerato"
+     },
+     {
+      "codigo": "5.20",
+      "texto": "Calcula el área de un triángulo oblicuángulo utilizando trigonometría."
+     },
+     {
+      "codigo": "5.21",
+      "texto": "Calcula la medida de un lado de un triángulo conocidas las medidas de dos ángulos y un lado opuesto a uno de estos ángulos, aplicando la ley de los senos."
+     },
+     {
+      "codigo": "5.22",
+      "texto": "Calcula la medida de un ángulo de un triángulo conocidos dos lados y un ángulo opuesto a uno de estos lados, aplicando la ley de los senos."
+     },
+     {
+      "codigo": "5.23",
+      "texto": "Determina el número de triángulos que pueden construirse cuando se conocen las medidas de dos lados y un ángulo opuesto a uno de estos."
+     },
+     {
+      "codigo": "5.24",
+      "texto": "Encuentra la medida de un lado de un triángulo si se conocen las medidas de dos lados y el ángulo comprendido entre ellos, aplicando la ley del coseno."
+     },
+     {
+      "codigo": "5.25",
+      "texto": "Calcula la medida de los ángulos de un triángulo si se conocen las medidas de sus tres lados."
+     },
+     {
+      "codigo": "5.26",
+      "texto": "Utiliza la ley de los senos y la ley del coseno para resolver problemas que involucren triángulos oblicuángulos. Ángulo de referencia Área de un triángulo Ley de los senos Ley del coseno op tangente:tan θ = ady 3355 Primer año de bachillerato"
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Identidades y ecuaciones trigonométricas",
+    "objetivos": [
+     "Deducir identidades trigonométricas básicas mediante propiedades de simetría en el plano, para el cálculo de valores trigonométricos exactos y la resolución de ecuaciones trigonométricas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Representa razones trigonométricas en términos de ángulos agudos utilizando las identidades trigonométricas de ángulos opuestos, complementarios y suplementarios."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Representa razones trigonométricas en términos de ángulos agudos utilizando las identidades trigonométricas de los ángulos θ + 180°, θ – 180° y 90° + θ."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Demuestra las identidades trigonométricas del ángulo adición."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Calcula valores exactos de razones trigonométricas utilizando ángulos especiales y las identidades del ángulo adición."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Deduce y aplica las identidades trigonométricas del ángulo doble."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Deduce y aplica las identidades trigonométricas del ángulo medio."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Calcula valores exactos de razones trigonométricas utilizando las identidades del ángulo doble y del ángulo medio."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Resuelve ecuaciones trigonométricas utilizando razones trigonométricas conocidas."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Resuelve ecuaciones trigonométricas utilizando la identidad pitagórica para transformarlas en ecuaciones cuadráticas donde intervenga una sola razón trigonométrica."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Resuelve ecuaciones trigonométricas aplicando la identidad del ángulo doble del coseno para transformarlas en ecuaciones donde aparezcan razones con ángulo θ."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Resuelve ecuaciones trigonométricas aplicando la identidad del ángulo doble del seno para transformarla en una donde aparezcan razones con ángulo θ."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Resuelve razones trigonométricas aplicando la relación entre las razones trigonométricas secante, cosecante y cotangente con las razones coseno, seno y tangente. 37 Primer año de bachillerato"
+     }
+    ]
+   },
+   {
+    "unidad": 7,
+    "nombre": "Vectores y números complejos",
+    "objetivos": [
+     "Conocer los conceptos básicos sobre vectores, sus operaciones y relacionarlos con la representación geométrica de los números complejos, comparando la representación y las operaciones de vectores en el plano cartesiano con los números complejos en el plano complejo, para fundamentar los resultados más importantes sobre vectores y aplicarlos en otras áreas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "7.1",
+      "texto": "Identifica la norma de un vector, vectores iguales, unitarios y ortogonales interpretando la definición."
+     },
+     {
+      "codigo": "7.2",
+      "texto": "Dibuja el vector resultante de suma o resta de vectores."
+     },
+     {
+      "codigo": "7.3",
+      "texto": "Dibuja el vector resultante de multiplicar un vector por un número escalar."
+     },
+     {
+      "codigo": "7.4",
+      "texto": "Determina las coordenadas de un vector utilizando una base vectorial."
+     },
+     {
+      "codigo": "7.5",
+      "texto": "Determina las coordenadas del vector resultante de un producto por escalar, una suma o una resta de vectores."
+     },
+     {
+      "codigo": "7.6",
+      "texto": "Expresa las coordenadas de un vector cualquiera en el plano cartesiano como coordenadas de un punto. 3399 Primer año de bachillerato"
+     },
+     {
+      "codigo": "7.7",
+      "texto": "Utiliza la definición de paralelismo entre vectores para resolver problemas con vectores expresados en coordenadas."
+     },
+     {
+      "codigo": "7.8",
+      "texto": "Dibuja la proyección ortogonal de un vector sobre otro en diferentes casos."
+     },
+     {
+      "codigo": "7.9",
+      "texto": "Calcula el producto escalar de vectores paralelos."
+     },
+     {
+      "codigo": "7.10",
+      "texto": "Efectúa el producto escalar de vectores no paralelos utilizando proyección ortogonal."
+     },
+     {
+      "codigo": "7.11",
+      "texto": "Realiza el producto escalar de vectores utilizando la forma trigonométrica del producto escalar."
+     },
+     {
+      "codigo": "7.12",
+      "texto": "Determina el producto escalar de vectores en coordenadas de una base ortonormal."
+     },
+     {
+      "codigo": "7.13",
+      "texto": "Representa un número complejo en el plano complejo."
+     },
+     {
+      "codigo": "7.14",
+      "texto": "Representa las operaciones básicas con números complejos en el plano complejo."
+     },
+     {
+      "codigo": "7.15",
+      "texto": "Expresa un número complejo en su forma trigonométrica utilizando su módulo y su argumento."
+     },
+     {
+      "codigo": "7.16",
+      "texto": "Determina el producto de dos números complejos utilizando su forma trigonométrica."
+     },
+     {
+      "codigo": "7.17",
+      "texto": "Determina el cociente de dos números complejos utilizando su forma trigonométrica."
+     },
+     {
+      "codigo": "7.18",
+      "texto": "Calcula el resultado de elevar un número complejo a una potencia utilizando la fórmula de Moivre."
+     },
+     {
+      "codigo": "7.19",
+      "texto": "Utiliza un software matemático para representar y efectuar operaciones con vectores."
+     },
+     {
+      "codigo": "7.20",
+      "texto": "Utiliza un software matemático para resolver problemas con vectores. 41 Primer año de bachillerato"
+     }
+    ]
+   },
+   {
+    "unidad": 8,
+    "nombre": "Estadística descriptiva",
+    "objetivos": [
+     "Analizar series de datos de fenómenos de la realidad, aplicando conceptos y definiciones sobre estadística descriptiva, para tomar decisiones adecuadas en los momentos oportunos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "8.1",
+      "texto": "Aplica las definiciones de población, muestra y variable, y clasifica las variables entre cualitativas nominales y ordinales o cuantitativas discretas y continuas."
+     },
+     {
+      "codigo": "8.2",
+      "texto": "Planifica y aplica técnicas de muestreo aleatorio simple y sistemático."
+     },
+     {
+      "codigo": "8.3",
+      "texto": "Aplica el muestreo probabilístico a situaciones de la vida cotidiana."
+     },
+     {
+      "codigo": "8.4",
+      "texto": "Identifica la técnica de muestreo no probabilístico más adecuada para situaciones específicas."
+     },
+     {
+      "codigo": "8.5",
+      "texto": "Elabora tablas de frecuencia y calcula las medidas de tendencia central y de dispersión para datos agrupados. 4433 Primer año de bachillerato"
+     },
+     {
+      "codigo": "8.6",
+      "texto": "Calcula las medidas de tendencia central para una muestra y una población en datos agrupados."
+     },
+     {
+      "codigo": "8.7",
+      "texto": "Calcula las medidas de dispersión para una muestra y una población en datos agrupados."
+     },
+     {
+      "codigo": "8.8",
+      "texto": "Utiliza el coeficiente de variación para analizar la representatividad de la media aritmética en series de datos diferentes."
+     },
+     {
+      "codigo": "8.9",
+      "texto": "Determina y analiza los cuartiles de una serie de datos simple."
+     },
+     {
+      "codigo": "8.10",
+      "texto": "Elabora y analiza el diagrama de caja y bigotes de una serie de datos simple."
+     },
+     {
+      "codigo": "8.11",
+      "texto": "Compara los diagramas de caja y bigotes de series de datos en una misma escala."
+     },
+     {
+      "codigo": "8.12",
+      "texto": "Determina y analiza los deciles y percentiles de una serie de datos simple."
+     },
+     {
+      "codigo": "8.13",
+      "texto": "Utiliza un software matemático para realizar el análisis estadístico descriptivo de una serie de datos."
+     }
+    ]
+   }
+  ],
+  "Segundo año": [
+   {
+    "unidad": 1,
+    "nombre": "Ecuaciones",
+    "objetivos": [
+     "Resolver ecuaciones bicuadráticas, radicales, racionales y sistemas de ecuaciones lineales y cuadráticas, utilizando herramientas de resolución de ecuaciones lineales y cuadráticas para aplicarlo en problemas algebraicos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Resuelve ecuaciones bicuadráticas de la forma x4 + Bx2 + C = 0."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Resuelve ecuaciones bicuadráticas de la forma Ax4 + Bx2 + C = 0."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Calcula soluciones de ecuaciones radicales que pueden reducirse a ecuaciones lineales."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Resuelve ecuaciones radicales que pueden reducirse a ecuaciones lineales o cuadráticas."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Resuelve ecuaciones radicales reducibles a ecuaciones cuadráticas."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Determina el mínimo común múltiplo de dos o más polinomios."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Resuelve ecuaciones racionales, con polinomios de grado uno y dos."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Resuelve sistemas de ecuaciones donde una es lineal y la otra es de grado dos en una de las incógnitas. Mínimo común múltiplo de polinomios 49 Segundo año de bachillerato"
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Línea recta",
+    "objetivos": [
+     "Deducir los conceptos sobre pendiente y ecuación de una línea recta a partir de sus características en el plano cartesiano para utilizarlo en la determinación de las posiciones relativas entre rectas y aplicarlo en la resolución de problemas y teoremas sobre geometría."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Calcula la distancia entre dos puntos ubicados sobre la recta numérica o en el plano cartesiano."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Encuentra el valor del punto que divide un segmento sobre la recta numérica en una razón dada."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Encuentra las coordenadas del punto que divide un segmento en el plano cartesiano en una razón dada."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Determina el valor o las coordenadas del punto medio de un segmento."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Resuelve problemas utilizando la distancia entre dos puntos y división de un segmento en una razón dada."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Identifica puntos sobre la misma línea recta utilizando el valor de su pendiente."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Determina la ecuación y grafica una recta utilizando el valor de su pendiente y las coordenadas del punto sobre ella."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Determina la ecuación y grafica la recta que pasa por dos puntos conocidos."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Encuentra la ecuación y grafica la recta paralela a uno de los ejes de coordenadas que pasa por un punto dado."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Grafica líneas rectas cuya ecuación es de la forma ax + by + c = 0."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Encuentra las coordenadas del punto de intersección de una línea recta con el eje x."
+     },
+     {
+      "codigo": "2.12",
+      "texto": "Encuentra las coordenadas del punto de intersección de una línea recta con el eje y."
+     },
+     {
+      "codigo": "2.13",
+      "texto": "Determina las coordenadas del punto de intersección entre dos rectas. 51 Segundo año de bachillerato"
+     },
+     {
+      "codigo": "2.14",
+      "texto": "Verifica el paralelismo entre rectas a partir del valor de sus pendientes."
+     },
+     {
+      "codigo": "2.15",
+      "texto": "Verifica perpendicularidad entre rectas utilizando sus pendientes."
+     },
+     {
+      "codigo": "2.16",
+      "texto": "Calcula la distancia de un punto a una recta."
+     },
+     {
+      "codigo": "2.17",
+      "texto": "Calcula el ángulo de inclinación de una recta usando el valor de su pendiente."
+     },
+     {
+      "codigo": "2.18",
+      "texto": "Calcula el ángulo formado entre dos rectas no paralelas usando los valores de sus pendientes."
+     },
+     {
+      "codigo": "2.19",
+      "texto": "Resuelve problemas de geometría utilizando las relaciones de paralelismo y perpendicularidad entre rectas, y distancia entre dos puntos."
+     },
+     {
+      "codigo": "2.20",
+      "texto": "Utiliza un software matemático para elaborar segmentos y líneas rectas dados dos puntos o su ecuación, y para calcular coordenadas del punto medio y valor de la pendiente."
+     },
+     {
+      "codigo": "2.21",
+      "texto": "Utiliza un software matemático para encontrar las coordenadas del punto de intersección entre dos rectas, calcular el ángulo de inclinación y el ángulo entre rectas, y elaborar rectas paralelas o perpendiculares. un segmento. de un punto a una recta de inclinación de una recta entre rectas 5533 Segundo año de bachillerato"
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Secciones cónicas",
+    "objetivos": [
+     "Determinar la estructura, elementos y propiedades de las cuatro secciones cónicas, deduciendo y analizando las ecuaciones de cada una de ellas, para utilizarlo en la resolución de problemas de aplicación en diferentes áreas científicas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Grafica el lugar geométrico determinado por una ecuación."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Deduce la ecuación que determina un lugar geométrico con condiciones dadas."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Identifica el lugar geométrico de una parábola."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Deduce y grafica la ecuación de una parábola con vértice en el origen dados el foco y la directriz."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Encuentra y grafica la ecuación de una parábola desplazada paralelamente respecto a los ejes de coordenadas."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Completa cuadrados perfectos en una expresión algebraica."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Determina las coordenadas del vértice y traza la gráfica de una parábola a partir de su ecuación general."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Encuentra las coordenadas de los puntos de intersección entre la ecuación de una línea recta y una parábola utilizando sus ecuaciones."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Determina el valor de un parámetro para que una línea recta sea tangente a una parábola."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Utiliza la propiedad reflectora del foco para resolver problemas de aplicación sobre objetos parabólicos."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Deduce y grafica la ecuación de una circunferencia con centro en el origen y radio dado."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Encuentra y grafica la ecuación de una circunferencia cuyo centro es un punto diferente del origen."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Determina el centro y el radio de una circunferencia a partir de su ecuación general y traza su gráfica en el plano cartesiano."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Deduce la ecuación de la línea recta tangente a una circunferencia en un punto dado. 55 Segundo año de bachillerato"
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Encuentra las coordenadas de los puntos de intersección de una recta y una circunferencia."
+     },
+     {
+      "codigo": "3.16",
+      "texto": "Utiliza las propiedades y la ecuación de la circunferencia para resolver problemas del entorno."
+     },
+     {
+      "codigo": "3.17",
+      "texto": "Identifica el lugar geométrico de una elipse."
+     },
+     {
+      "codigo": "3.18",
+      "texto": "Deduce la ecuación de una elipse con centro en el origen a partir de los focos y el valor del semieje mayor."
+     },
+     {
+      "codigo": "3.19",
+      "texto": "Identifica los elementos de una elipse dada su ecuación para graficarla en el plano cartesiano."
+     },
+     {
+      "codigo": "3.20",
+      "texto": "Encuentra la ecuación de una elipse desplazada paralelamente respecto a los ejes de coordenadas y traza su gráfica."
+     },
+     {
+      "codigo": "3.21",
+      "texto": "Determina los elementos de una elipse a partir de su ecuación general y traza su gráfica en el plano cartesiano."
+     },
+     {
+      "codigo": "3.22",
+      "texto": "Utiliza las propiedades de los focos y la ecuación de la elipse para resolver problemas sobre objetos elípticos."
+     },
+     {
+      "codigo": "3.23",
+      "texto": "Identifica el lugar geométrico de una hipérbola."
+     },
+     {
+      "codigo": "3.24",
+      "texto": "Deduce la ecuación de una hipérbola centrada en el origen dado los focos y el valor de a."
+     },
+     {
+      "codigo": "3.25",
+      "texto": "Identifica los elementos de una hipérbola dada su ecuación para graficarla en el plano cartesiano."
+     },
+     {
+      "codigo": "3.26",
+      "texto": "Encuentra y grafica la ecuación de una hipérbola desplazada paralelamente respecto a los ejes de coordenadas."
+     },
+     {
+      "codigo": "3.27",
+      "texto": "Determina los elementos de una hipérbola a partir de su ecuación general y traza su gráfica en el plano cartesiano."
+     },
+     {
+      "codigo": "3.28",
+      "texto": "Utiliza las propiedades de los focos y la ecuación de la hipérbola para resolver problemas sobre objetos hiperbólicos."
+     },
+     {
+      "codigo": "3.29",
+      "texto": "Utiliza un software matemático para graficar y localizar los elementos de las cónicas a partir de su forma canónica. 57 Segundo año de bachillerato"
+     },
+     {
+      "codigo": "3.30",
+      "texto": "Grafica la cónica determinada por una ecuación general utilizando un software matemático adecuado."
+     },
+     {
+      "codigo": "3.31",
+      "texto": "Comprueba las propiedades de los focos de las diferentes cónicas realizando construcciones en un software matemático adecuado."
+     },
+     {
+      "codigo": "3.32",
+      "texto": "Utiliza un software matemático para resolver problemas sobre secciones cónicas. Vértices Rectas tangentes y secantes"
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Funciones trascendentales I",
+    "objetivos": [
+     "Realizar operaciones con potencias de números reales, utilizando las propiedades que facilitan su desarrollo, para resolver ecuaciones y describir las características de las funciones exponenciales."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Expresa como potencia, productos y cocientes con igual base y exponente positivo."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Expresa como potencia productos y cocientes con igual exponente positivo."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Expresa potencias con exponentes negativos como fracciones con exponente positivo y viceversa."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Escribe potencias de números como raíces n-ésimas."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Calcula raíces n-ésimas descomponiendo el radicando en factores primos."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Determina el producto, cociente y raíz de raíces simplificando los resultados a su mínima expresión. 59 Segundo año de bachillerato"
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Suma y resta raíces semejantes y simplifica la potencia de una raíz escribiendo los resultados en su mínima expresión."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Utiliza exponentes racionales para representar raíces n-ésimas de un número y viceversa."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Aplica las propiedades de los exponentes, combinando exponentes racionales y enteros."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Aplica las propiedades de los exponentes racionales para realizar operaciones de raíces con distinto índice."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Grafica funciones exponenciales utilizando tablas y localizando puntos en el plano cartesiano."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Grafica funciones exponenciales utilizando simetrías respecto de los ejes de coordenadas y el origen."
+     },
+     {
+      "codigo": "4.13",
+      "texto": "Determina las características de una función exponencial dada (dominio, rango, monotonía y asíntotas)."
+     },
+     {
+      "codigo": "4.14",
+      "texto": "Grafica funciones exponenciales utilizando desplazamientos horizontales y verticales."
+     },
+     {
+      "codigo": "4.15",
+      "texto": "Elabora la gráfica de funciones exponenciales utilizando simetría y desplazamientos."
+     },
+     {
+      "codigo": "4.16",
+      "texto": "Resuelve ecuaciones exponenciales utilizando igualdad de potencias con la misma base."
+     },
+     {
+      "codigo": "4.17",
+      "texto": "Resuelve ecuaciones exponenciales que se reducen a ecuaciones cuadráticas por medio de un cambio de variable. Simetría Asíntota Ecuación exponencial 6611 Segundo año de bachillerato"
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Funciones trascendentales II",
+    "objetivos": [
+     "Describir los elementos y características de la función logaritmo y de las funciones trigonométricas seno, coseno y tangente por medio de su definición o gráfica para interpretar situaciones modeladas por funciones."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Identifica funciones inyectivas de manera gráfica y algebraica."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Identifica funciones sobreyectivas de manera gráfica y algebraica."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Identifica si una función es biyectiva o restringe su dominio o rango para que lo sea."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Determina la ecuación de la composición de dos funciones."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Determina el dominio de la composición de funciones utilizando la definición."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Determina la ecuación de la función inversa de una función dada."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Determina la función inversa de una función analizando dominio y rango."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Expresa igualdades de potencias como igualdades de logaritmos y viceversa."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Calcula el logaritmo de un número expresándolo como potencia."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Efectúa operaciones de logaritmos utilizando sus propiedades."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Utiliza la propiedad del cambio de base de un logaritmo para calcular el logaritmo de un número."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Grafica funciones logarítmicas utilizando tabla de valores y colocando puntos en el plano cartesiano."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Determina la función inversa de una función logarítmica o exponencial."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Resuelve ecuaciones logarítmicas, aplicando propiedades de potencias."
+     },
+     {
+      "codigo": "5.15",
+      "texto": "Resuelve ecuaciones logarítmicas utilizando propiedades de logaritmos y potencias."
+     },
+     {
+      "codigo": "5.16",
+      "texto": "Determina la cantidad de dígitos de un entero positivo utilizando logaritmo base 10 y calcula logaritmo natural de un número usando calculadora. 63 Segundo año de bachillerato"
+     },
+     {
+      "codigo": "5.17",
+      "texto": "Calcula las razones trigonométricas de un ángulo determinado por un punto P en el plano cartesiano."
+     },
+     {
+      "codigo": "5.18",
+      "texto": "Grafica en el círculo trigonométrico el punto P(cos θ, sen θ) para un ángulo θ dado."
+     },
+     {
+      "codigo": "5.19",
+      "texto": "Utiliza la periodicidad para evaluar las funciones seno y coseno en ángulos mayores a 360° y menores a 0°."
+     },
+     {
+      "codigo": "5.20",
+      "texto": "Utiliza la periodicidad para calcular la tangente de ángulos mayores a 180° y menores a 0°."
+     },
+     {
+      "codigo": "5.21",
+      "texto": "Grafica la función seno utilizando la periodicidad."
+     },
+     {
+      "codigo": "5.22",
+      "texto": "Grafica la función coseno utilizando la periodicidad."
+     },
+     {
+      "codigo": "5.23",
+      "texto": "Representa el valor de la tangente de un ángulo utilizando el círculo trigonométrico."
+     },
+     {
+      "codigo": "5.24",
+      "texto": "Grafica la función tangente utilizando la periodicidad."
+     },
+     {
+      "codigo": "5.25",
+      "texto": "Grafica funciones trigonométricas del tipo y = Asen θ y y = sen Bθ."
+     },
+     {
+      "codigo": "5.26",
+      "texto": "Grafica funciones trigonométricas del tipo y = sen θ + k."
+     },
+     {
+      "codigo": "5.27",
+      "texto": "Grafica funciones trigonométricas del tipo y = sen(θ– ). α"
+     },
+     {
+      "codigo": "5.28",
+      "texto": "Grafica las funciones trigonométricas del tipo y = Asen B(θ– ). α"
+     },
+     {
+      "codigo": "5.29",
+      "texto": "Convierte ángulos del sistema sexagesimal al sistema circular y viceversa."
+     },
+     {
+      "codigo": "5.30",
+      "texto": "Identifica la variación de las funciones trigonométricas al cambiar su periodo, amplitud y al realizar desplazamientos."
+     },
+     {
+      "codigo": "5.31",
+      "texto": "Utiliza las herramientas del software para construir las funciones seno y coseno a partir del círculo trigonométrico."
+     },
+     {
+      "codigo": "5.32",
+      "texto": "Utiliza las herramientas del software para construir la función tangente a partir del círculo trigonométrico."
+     },
+     {
+      "codigo": "5.33",
+      "texto": "Explica el método de exhaución en el círculo trigonométrico por medio de un software para aproximar el valor de π. 65 Segundo año de bachillerato"
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Sucesiones aritméticas y geométricas",
+    "objetivos": [
+     "Establecer el término general de una sucesión aritmética y geométrica para calcular términos o sumas parciales, utilizando las propiedades de estas sucesiones."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Identifica patrones numéricos o de figuras y establece la regla que los genera."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Determina el término general de una sucesión."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Determina si una sucesión es aritmética utilizando su definición."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Establece el término general de una sucesión aritmética y lo utiliza para calcular algunos términos de esta."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Calcula la suma parcial de una sucesión aritmética. 6677 Segundo año de bachillerato"
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Calcula el número de términos que deben sumarse de una sucesión aritmética si se conoce la suma parcial."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Resuelve problemas sobre sucesiones aritméticas si se conocen algunos datos de estas."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Determina si una sucesión es geométrica utilizando su definición."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Encuentra el término general de una sucesión geométrica."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Calcula la suma parcial de una sucesión geométrica."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Determina el número de términos que deben sumarse de una sucesión geométrica para obtener una suma específica."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Resuelve problemas sobre sucesiones geométricas si se conocen algunos datos de estas."
+     }
+    ]
+   },
+   {
+    "unidad": 7,
+    "nombre": "Métodos de conteo",
+    "objetivos": [
+     "Plantear estrategias para realizar conteos sobre diferentes situaciones del entorno, utilizando los principios básicos de conteo, las permutaciones y combinaciones."
+    ],
+    "indicadores": [
+     {
+      "codigo": "7.1",
+      "texto": "Define los conceptos sobre teoría de conjuntos y diagramas de Venn."
+     },
+     {
+      "codigo": "7.2",
+      "texto": "Determina la unión, intersección, diferencia y complemento de conjuntos."
+     },
+     {
+      "codigo": "7.3",
+      "texto": "Calcula la cardinalidad de conjuntos y de sus operaciones."
+     },
+     {
+      "codigo": "7.4",
+      "texto": "Resuelve problemas aplicando las propiedades de la cardinalidad de las operaciones con conjuntos."
+     },
+     {
+      "codigo": "7.5",
+      "texto": "Utiliza el diagrama de árbol para resolver situaciones sobre conteo."
+     },
+     {
+      "codigo": "7.6",
+      "texto": "Aplica el principio de la suma para resolver problemas sobre conteo."
+     },
+     {
+      "codigo": "7.7",
+      "texto": "Aplica el principio de la multiplicación para resolver problemas sobre conteo."
+     },
+     {
+      "codigo": "7.8",
+      "texto": "Calcula el resultado de expresiones con factoriales."
+     },
+     {
+      "codigo": "7.9",
+      "texto": "Utiliza las permutaciones para resolver problemas sobre conteo."
+     },
+     {
+      "codigo": "7.10",
+      "texto": "Integra las permutaciones con los principios de la suma y la multiplicación para resolver problemas sobre conteo."
+     },
+     {
+      "codigo": "7.11",
+      "texto": "Resuelve problemas sobre conteo aplicando permutaciones con repetición."
+     },
+     {
+      "codigo": "7.12",
+      "texto": "Usa las permutaciones circulares para resolver problemas sobre conteo."
+     },
+     {
+      "codigo": "7.13",
+      "texto": "Establece una estrategia para resolver problemas sobre configuraciones circulares."
+     },
+     {
+      "codigo": "7.14",
+      "texto": "Determina la solución de problemas sobre conteo donde se involucren objetos repetidos. 71 Segundo año de bachillerato"
+     },
+     {
+      "codigo": "7.15",
+      "texto": "Aplica el conteo por el complemento para resolver problemas sobre conteo."
+     },
+     {
+      "codigo": "7.16",
+      "texto": "Utiliza las combinaciones para resolver problemas sobre conteo."
+     },
+     {
+      "codigo": "7.17",
+      "texto": "Integra las combinaciones con los principios de la suma y la multiplicación para resolver problemas sobre conteo."
+     },
+     {
+      "codigo": "7.18",
+      "texto": "Determina la cantidad de caminos de longitud mínima para ir de un punto A a un punto B dentro de una cuadrícula."
+     },
+     {
+      "codigo": "7.19",
+      "texto": "Demuestra identidades combinatorias utilizando conteo de caminos."
+     },
+     {
+      "codigo": "7.20",
+      "texto": "Realiza demostraciones sobre identidades combinatorias planteando dos formas de contar una situación específica."
+     },
+     {
+      "codigo": "7.21",
+      "texto": "Establece la relación que existe entre los combinatorios en el triángulo de Pascal."
+     },
+     {
+      "codigo": "7.22",
+      "texto": "Aplica el binomio de Newton para determinar el coeficiente de un término en el desarrollo de un binomio."
+     },
+     {
+      "codigo": "7.23",
+      "texto": "Utiliza separadores para resolver problemas de conteo que requieran escoger grupos de objetos idénticos."
+     }
+    ]
+   },
+   {
+    "unidad": 8,
+    "nombre": "Probabilidad",
+    "objetivos": [
+     "Aplicar los conceptos básicos sobre probabilidad, resolviendo problemas del entorno y calculando probabilidades para tomar decisiones acertadas y oportunas en situaciones específicas de la vida cotidiana."
+    ],
+    "indicadores": [
+     {
+      "codigo": "8.1",
+      "texto": "Define y aplica los conceptos de probabilidad, experimento aleatorio, espacio muestral, evento, probabilidad experimental y evento simple."
+     },
+     {
+      "codigo": "8.2",
+      "texto": "Calcula la probabilidad teórica para situaciones específicas."
+     },
+     {
+      "codigo": "8.3",
+      "texto": "Resuelve problemas de probabilidad aplicando la regla de adición para la unión de dos eventos excluyentes o no excluyentes."
+     },
+     {
+      "codigo": "8.4",
+      "texto": "Encuentra la probabilidad de un evento que puede particionarse."
+     },
+     {
+      "codigo": "8.5",
+      "texto": "Comprueba y aplica los axiomas de Kolmogórov."
+     },
+     {
+      "codigo": "8.6",
+      "texto": "Determina la probabilidad de un evento calculando la probabilidad del evento complementario."
+     },
+     {
+      "codigo": "8.7",
+      "texto": "Aplica la probabilidad condicional para resolver situaciones específicas."
+     },
+     {
+      "codigo": "8.8",
+      "texto": "Determina la probabilidad de la intersección de dos eventos aplicando el teorema del producto para la probabilidad."
+     },
+     {
+      "codigo": "8.9",
+      "texto": "Combina los principios básicos de conteo con los conceptos de probabilidad condicional para resolver problemas."
+     },
+     {
+      "codigo": "8.10",
+      "texto": "Resuelve problemas de aplicación del teorema de probabilidad total y teorema de Bayes."
+     },
+     {
+      "codigo": "8.11",
+      "texto": "Calcula la probabilidad de que ocurran al menos dos experimentos independientes."
+     },
+     {
+      "codigo": "8.12",
+      "texto": "Encuentra probabilidades para valores específicos de la distribución binomial o multinomial, utilizando los conceptos de independencia de experimentos y combinaciones."
+     },
+     {
+      "codigo": "8.13",
+      "texto": "Aplica los conceptos de experimentos independientes y combinaciones en la resolución de problemas sobre el cálculo de probabilidades para valores específicos de la distribución binomial negativa. 75 Segundo año de bachillerato"
+     }
+    ]
+   }
+  ]
+ },
+ "Ciencia y Tecnología": {
+  "Séptimo": [
+   {
+    "unidad": 1,
+    "nombre": "Compuestos inorgánicos",
+    "objetivos": [
+     "Emplear nomenclatura química y métodos de balanceo, para representar ecuaciones de reacción de síntesis de compuestos inorgánicos de uso cotidiano."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Identifica a los óxidos en fenómenos o aplicaciones cotidianas."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Formula y balancea ecuaciones de reacción química para la obtención de óxidos."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Aplica diferentes nomenclaturas para denominar óxidos."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Identifica hidruros, hidrácidos y sales binarias en productos de uso cotidiano."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Formula y balancea ecuaciones de reacción química para la obtención de hidruros, hidrácidos y sales binarias."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Aplica diferentes nomenclaturas químicas para denominar hidruros, hidrácidos y sales binarias."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Identifica hidróxidos y oxácidos en productos de uso cotidiano."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Formula y balancea ecuaciones de reacción química para la obtención de hidróxidos y oxácidos."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Aplica diferentes nomenclaturas químicas para denominar hidróxidos y oxácidos."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Identifica las oxisales en aplicaciones cotidianas."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Formula y balancea ecuaciones de reacción química para la obtención de oxisales."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Aplica diferentes nomenclaturas químicas para denominar oxisales. productivas de los compuestos inorgánicos. existen técnicas para su síntesis e identificaa partir de la función química que presentan. y representación de compuestos inorInternacional de Química Pura y Aplica-"
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Genética y evolución",
+    "objetivos": [
+     "Explicar las características e interacciones fundamentales del material genético a nivel de individuos y poblaciones, a partir de resultados experimentales y del análisis de situaciones cotidianas desde la perspectiva de la genética clásica y la biología evolutiva."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Reconoce las funciones del material genético."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Experimenta con técnicas básicas de extracción y tinción de ácidos nucleicos."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Explica con sus palabras el funcionamiento de técnicas básicas para la extracción y tinción de ácidos nucleicos."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Identifica sucesos cotidianos que involucran la replicación del ADN."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Representa el proceso de replicación de ADN utilizando manipulativos."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Diseña un recurso explicativo acerca del proceso de replicación del ADN."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Explica el concepto de alelo empleando fenómenos cotidianos."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Reconoce la ocurrencia de polimorfismos a partir de casos."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Ejemplifica enfermedades humanas causadas por alelos defectuosos."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Reconoce la relación cromosoma-alelo a partir de casos concretos."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Resuelve cruces hipotéticos empleado las leyes de Mendel."
+     },
+     {
+      "codigo": "2.12",
+      "texto": "Ejemplifica enfermedades humanas causadas por mutaciones cromosómicas."
+     },
+     {
+      "codigo": "2.13",
+      "texto": "Reconoce la heterogeneidad de una población a través de sus frecuencias genotípicas."
+     },
+     {
+      "codigo": "2.14",
+      "texto": "Identifica las fuerzas que incrementan y disminuyen la variabilidad genética."
+     },
+     {
+      "codigo": "2.15",
+      "texto": "Describe un proceso de resistencia bacteriana ante un antibiótico."
+     },
+     {
+      "codigo": "2.16",
+      "texto": "Representa la acción de las fuerzas evolutivas que actúan sobre una población."
+     },
+     {
+      "codigo": "2.17",
+      "texto": "Diseña un procedimiento para el hipotético mejoramiento genético de un organismo."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Biodiversidad",
+    "objetivos": [
+     "Emplear nomenclatura biológica y técnicas de agrupamiento de biodiversidad para describir y representar grupos de organismos de ocurrencia local."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Explica el concepto y los niveles de la biodiversidad."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Reconoce organismos de la localidad y sus usos."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Desarrolla un ejercicio de cuantificación de la biodiversidad de especies presentes en su comunidad."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Clasifica grupos de seres vivos empleando un sistema de clasificación."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Plantea criterios de agrupamientos de seres vivos."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Identifica sistemas de clasificación artificial para el agrupamiento de especies."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Reconoce la composición y usos de los nombres científicos."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Identifica criterios taxonómicos empleados en las claves dicotómicas."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Utiliza plataformas de biodiversidad para obtener información taxonómica o ecológica."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Explica el concepto de cladística en relación con los agrupamientos."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Identifica grupos a partir de cladogramas."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Describe los principales grupos taxonómicos del sistema de los tres dominios. de organismos de su interés.. acuerdo con diferentes criterios. criterios. el sistema de tres dominios de Woese et al. aquellos con rango de especie, se esal español se escribe en minúsculas. se emplearán las siguientes reglamensus siglas en inglés).5 inglés).6 y plantas (ICBN, por sus siglas en por sus siglas en inglés).7 se escribirán entrecomillados y en minús-"
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Ecología",
+    "objetivos": [
+     "Exponer argumentos propios acerca del funcionamiento y la importancia de los ecosistemas, a partir de la observación experimental del entorno y de la investigación documental."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Identifica tipos de interacciones ecológicas que ocurren en su entorno."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Describe con lenguaje científico interacciones ecológicas comunes en su entorno."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Explica con sus palabras los conceptos de especie y población."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Describe la estructura y dinámica elemental de una población utilizando datos experimentales."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Identifica las características y componentes básicos de las comunidades biológicas."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Aplica técnicas básicas de muestreo de comunidades biológicas."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Compara abundancia y riqueza de especies entre comunidades biológicas."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Reconoce la estructura general y las funciones principales de los ecosistemas."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Identifica contribuciones de la naturaleza a la gente (NCP) con incidencia en su comunidad."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Relaciona los conceptos de perturbación y sucesión ecológica."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Identifica variables utilizadas como criterios para clasificar biomas."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Ejemplifica aplicaciones de las unidades biogeográficas. cotidianas. que habilitan o restringen el desarrollo de biológica utilizando medidas de tendencia de las contribuciones de la naturaleza a reglas de escritura, incluyendo el manejo de de acuerdo con el Reglamento Técnico Saldecimal. Los números con muchas cifras se No se emplearán comas. por los símbolos °C, sin punto y sin espacio sí debe mediar un espacio: 1 °C. el sistema de zonas de vida de Holdridge la clasificación climática de Köppen-Geiger"
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Recurso hídrico",
+    "objetivos": [
+     "Interpretar información acerca de la dinámica hídrica global y local, a partir de la medición directa de parámetros hídricos y meteorológicos, y la exploración de la distribución hídrica nacional."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Identifica las etapas y características generales del ciclo hidrológico natural y con intervención antrópica."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Representa una cuenca hidrográfica reflejando sus componentes principales."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Calcula el caudal y el volumen de cuerpos de aguas superficiales."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Describe la fluctuación estacional de un cuerpo de agua local a partir de datos."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Reconoce variaciones en la infiltración y distribución vertical del agua en los suelos."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Identifica los tipos de acuíferos representados en modelos o esquemas."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Identifica en un mapa las regiones hidrogeológicas del país y la de su comunidad."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Identifica parámetros biológicos de calidad del agua."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Determina valores de algunos parámetros fisicoquímicos de calidad de agua."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Reconoce los usos potenciales del agua de acuerdo con su índice de calidad (ICA)."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Identifica las propiedades físicas de las capas atmosféricas."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Reconoce los principales parámetros que inciden en la calidad del aire."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Explica la clasificación de la calidad del aire según el Índice Centroamericano de Calidad del Aire (ICCA)."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Utiliza una aplicación para la consulta y registro de parámetros meteorológicos."
+     },
+     {
+      "codigo": "5.15",
+      "texto": "Registra apropiadamente los valores de un parámetro meteorológico medido con un dispositivo de construcción propia."
+     },
+     {
+      "codigo": "5.16",
+      "texto": "Describe el comportamiento de un parámetro meteorológico a partir de un gráfico."
+     },
+     {
+      "codigo": "5.17",
+      "texto": "Explica con sus palabras las causas y características generales de los ciclones tropicales."
+     },
+     {
+      "codigo": "5.18",
+      "texto": "Describe los parámetros meteorológicos empleados en la clasificación de los ciclones tropicales."
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Ambiente y energía",
+    "objetivos": [
+     "Proponer adecuaciones a dispositivos de experimentación o a prácticas cotidianas para aumentar su productividad o eficiencia y reducir así los impactos ambientales inherentes al aprovechamiento de los recursos energéticos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Explica con sus palabras el concepto y las características fundamentales de los recursos naturales."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Compara las características de eficiencia y suministro entre distintos recursos energéticos de uso cotidiano."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Ejemplifica los recursos energéticos más utilizados en su comunidad."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Reconoce los combustibles como denominador común en el aprovechamiento de las energías no renovables."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Elabora un dispositivo de combustión para el aprovechamiento de energías no renovables."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Esquematiza el proceso general de transformación de combustibles en energía eléctrica."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Reconoce la diversidad de procesos que pueden utilizarse para generar energías renovables."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Construye un dispositivo para el aprovechamiento de energías renovables."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Compara los procesos de obtención y aprovechamiento de las energías renovables y no renovables."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Lista posibles perturbaciones ecosistémicas derivadas de la explotación energética."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Explica con sus palabras cuáles son las principales actividades humanas que impactan los ecosistemas naturales de El Salvador."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Desarrolla un ejercicio hipotético de estimación de impactos ambientales."
+     },
+     {
+      "codigo": "6.13",
+      "texto": "Representa los fenómenos de efecto invernadero y lluvia ácida."
+     },
+     {
+      "codigo": "6.14",
+      "texto": "Ejemplifica acciones cotidianas que impulsan el cambio climático antropogénico."
+     },
+     {
+      "codigo": "6.15",
+      "texto": "Explica los principales efectos adversos del cambio climático antropogénico."
+     },
+     {
+      "codigo": "6.16",
+      "texto": "Compara el uso actual y el potencial de los suelos para producción alimentaria en El Salvador."
+     },
+     {
+      "codigo": "6.17",
+      "texto": "Compara el rendimiento calórico de los cultivos alimenticios contra el consumo medio de estos en su comunidad."
+     },
+     {
+      "codigo": "6.18",
+      "texto": "Esquematiza la cadena de suministro y almacenamiento de tres alimentos básicos de su comunidad."
+     },
+     {
+      "codigo": "6.19",
+      "texto": "Explica con sus palabras el concepto de sostenibilidad."
+     },
+     {
+      "codigo": "6.20",
+      "texto": "Identifica prácticas comunes que promueven la sostenibilidad ambiental."
+     }
+    ]
+   }
+  ],
+  "Octavo": [
+   {
+    "unidad": 1,
+    "nombre": "Mecánica",
+    "objetivos": [
+     "Emplear diagramas de cuerpo libre, tabulación y gráfica de datos, para explicar las relaciones entre las cantidades físicas involucradas en los movimientos unidimensional, bidimensional y de rotación."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Calibra un instrumento de medición de construcción propia."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Diferencia entre técnica directa e indirecta durante la medición de una magnitud física."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Interpreta la pendiente, el área bajo la curva y el comportamiento de la proporcionalidad directa e indirecta en distintos gráficos."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Mide directamente las componentes de un vector a lo largo de un par de ejes perpendiculares."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Suma y resta dos vectores por el método de las componentes rectangulares."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Aplica la técnica de diagrama de cuerpo libre sobre un objeto de análisis."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Resuelve problemas empleando las leyes del movimiento de Newton."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Resuelve problemas acerca del movimiento rectilíneo empleando interpretación de gráficas."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Resuelve problemas acerca del movimiento parabólico empleando interpretación de gráficas."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Reconoce la relación entre el torque resultante y el equilibrio rotacional."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Calcula magnitudes del movimiento circular uniforme a partir de resultados experimentales."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Explica qué es un cambio del momento lineal de un objeto en términos de fuerza y tiempo."
+     },
+     {
+      "codigo": "1.13",
+      "texto": "Explica con sus palabras el cambio del momento lineal de objetos a partir del impulso."
+     },
+     {
+      "codigo": "1.14",
+      "texto": "Efectúa cálculos de conservación del momento lineal de dos objetos."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Energía",
+    "objetivos": [
+     "Emplear estrategias de medición directa, interpretación y cálculo de variables que intervienen en el movimiento, para analizar y resolver problemas que involucren energía potencial, energía cinética traslacional y rotacional, y sus transformaciones."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Ejemplifica el concepto de trabajo utilizando máquinas simples."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Resuelve problemas empleando el teorema del trabajo y la energía cinética."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Interpreta los signos matemáticos del trabajo a partir de experimentos."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Ejemplifica el concepto de trabajo de rotación con situaciones cotidianas."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Explica los momentos de inercia de objetos a partir del movimiento rotacional."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Diferencia las energías cinética y potencial de la energía total de objetos que se trasladan y rotan."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Explica la ley de conservación de la energía mecánica a partir de un experimento."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Interpreta gráficas de energía cinética y potencial obtenidas a partir de un experimento."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Ejemplifica el concepto de potencia mecánica."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Calcula la potencia mecánica de máquinas para la obtención del momento lineal."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Resuelve problemas relacionados con la potencia mecánica."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Ondas mecánicas",
+    "objetivos": [
+     "Formular conclusiones propias acerca del funcionamiento de sistemas mecánicos ondulatorios en diferentes medios, a partir del montaje de dispositivos y la medición de variables obtenidas por experimentación."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Reconoce las fuerzas que realizan trabajo sobre un péndulo simple."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Identifica la transformación de la energía del péndulo simple, a partir de un experimento."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Explica las características de las gráficas de energía del oscilador armónico simple."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Mide el período y la amplitud de oscilación de un péndulo simple."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Calcula una altura empleando el período de oscilación de un péndulo simple."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Diseña un experimento para la determinación de una altura empleando un péndulo simple."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Identifica el tipo de onda a partir del movimiento de la fuente de vibración de cuerdas.."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Identifica las magnitudes y las condiciones que varían la frecuencia o el tono del sonido producido en cuerdas."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Resuelve problemas teóricos a partir de las gráficas de desplazamiento contra posición, y de densidad contra posición de una onda transversal."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Identifica el tipo de onda a partir del movimiento de la fuente de vibración en columnas de aire."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Identifica las magnitudes y las condiciones que varían la frecuencia o el tono del sonido producido en tubos de aire."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Resuelve problemas teóricos a partir de las gráficas desplazamiento contra posición, y densidad contra posición de una onda longitudinal."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Estequiometría y dispersiones",
+    "objetivos": [
+     "Aplicar principios de estequiometría y propiedades de las soluciones para determinar cantidades de sustancias y preparar soluciones de uso común en el hogar o la industria."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Identifica las unidades físicas de concentración en sustancias de uso cotidiano."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Calcula cantidades de soluto o concentración de soluciones empleando las unidades físicas de concentración."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Reconoce las aplicaciones cotidianas, industriales y ambientales de las unidades físicas de concentración."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Reconoce el significado del número de Avogadro."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Calcula la cantidad de partículas y moles de una sustancia empleando el número de Avogadro."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Emplea las masas atómicas relativas para calcular la masa molar."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Ejecuta cálculos estequiométricos para determinar cantidades de sustancia en gramos"
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Interpreta resultados de cálculos estequiométricos."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Identifica las unidades químicas de concentración en sustancias de uso cotidiano."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Ejecuta cálculos de concentración, gramos y moles de soluto empleando unidades químicas de concentración."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Reconoce las aplicaciones industriales de las unidades químicas de concentración."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Identifica dispersiones químicas en sustancias de uso cotidiano."
+     },
+     {
+      "codigo": "4.13",
+      "texto": "Clasifica las dispersiones químicas de acuerdo con sus propiedades."
+     },
+     {
+      "codigo": "4.14",
+      "texto": "Ejemplifica los diferentes tipos de dispersiones químicas y sus aplicaciones."
+     },
+     {
+      "codigo": "4.15",
+      "texto": "Clasifica las soluciones químicas con base en la cantidad de soluto."
+     },
+     {
+      "codigo": "4.16",
+      "texto": "Identifica los factores que afectan la solubilidad."
+     },
+     {
+      "codigo": "4.17",
+      "texto": "Explica el comportamiento de las partículas según los factores que afectan la solubilidad."
+     },
+     {
+      "codigo": "4.18",
+      "texto": "Identifica las propiedades coligativas."
+     },
+     {
+      "codigo": "4.19",
+      "texto": "Efectúa un experimento para evidenciar las propiedades coligativas."
+     },
+     {
+      "codigo": "4.20",
+      "texto": "Describe las aplicaciones industriales de las propiedades coligativas. aplicaciones de las dispersiones. la vida cotidiana, que pueden caracterizarse de se aplica la estequiometría. y partes por trillón en medición de concentraserán las estandarizadas por el SI,8 de de las dispersiones podrá expresarse de"
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Minerales",
+    "objetivos": [
+     "Formular conclusiones propias acerca de la estructura y las propiedades de los minerales, y de su distribución en El Salvador, a partir de la experimentación y el cotejo de información documental."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Ejemplifica objetos comunes elaborados a partir de minerales."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Caracteriza a los minerales con base en sus propiedades físicas."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Reconoce combinaciones de elementos químicos que comúnmente conforman los minerales."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Explica el proceso de formación de cristales."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Determina el hábito cristalino de un mineral preparado experimentalmente."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Reconoce las estructuras cristalinas de los minerales."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Reconoce los minerales presentes según el tipo de roca."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Ubica los yacimientos minerales en El Salvador"
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Argumenta el balance de los impactos de la minería. materiales con diversas aplicaciones hiso mezclas, pero que tienen una composición cristalinos que se emplean como materias para la denominación de minerales; no obspara la denominación y representación la IUPAC.1,2,3"
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Anatomía y fisiología vegetal",
+    "objetivos": [
+     "Aplicar procedimientos de observación sistemática y experimentación con organismos vegetales, para evidenciar la estructura y el funcionamiento de los sistemas biológicos presentes en las plantas vasculares."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Identifica propiedades físicas o químicas de los principales tejidos vegetales."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Reconoce tejidos vegetales a partir de muestras, micrografías o esquemas."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Compara adaptaciones estructurales de las células vegetales dentro de los tejidos."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Plantea una forma empírica de evidenciar la conducción y el almacenamiento de sustancias en las plantas."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Ejemplifica estructuras vegetales para la conducción y el almacenamiento de sustancias."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Elabora un catálogo histológico vegetal a partir de muestras, micrografías o esquemas."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Ejemplifica variables que inciden en la germinación y el crecimiento de plantas."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Identifica las características y ubicación de las regiones meristemáticas."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Plantea un experimento para explorar variables que inciden en la maduración de un fruto."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Reconoce las funciones fisiológicas de las hojas."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Efectúa un experimento para evidenciar los procesos de transpiración y fotosíntesis en plantas."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Explica con lenguaje científico las principales funciones fisiológicas de las hojas. y los órganos de las plantas. interactúan de manera organizada y realizan vegetal. fotosintéticos. en el desarrollo de las plantas. el SI,8 de acuerdo con el RTS 01.02.01:18 o su elementos y compuestos deberán ser comse empleará el Código Internacional siglas en inglés).6 No se recomienda el uso de pertinentes, deberán seguirse los artículos pero los nombres propios con inicial"
+     }
+    ]
+   },
+   {
+    "unidad": 7,
+    "nombre": "Anatomía y fisiología animal",
+    "objetivos": [
+     "Obtener información propia acerca de la estructura y el funcionamiento de tejidos, órganos y sistemas de órganos de los animales vertebrados, a partir de la observación directa de muestras y la elaboración de modelos anatómicos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "7.1",
+      "texto": "Identifica las principales características estructurales y funcionales de los tejidos animales fundamentales."
+     },
+     {
+      "codigo": "7.2",
+      "texto": "Elabora un modelo o esquema de los tejidos animales fundamentales."
+     },
+     {
+      "codigo": "7.3",
+      "texto": "Explica con lenguaje científico las características y funciones de los tejidos animales fundamentales."
+     },
+     {
+      "codigo": "7.4",
+      "texto": "Identifica las estructuras principales del sistema musculoesquelético."
+     },
+     {
+      "codigo": "7.5",
+      "texto": "Explica el mecanismo general y las funciones de la contracción muscular."
+     },
+     {
+      "codigo": "7.6",
+      "texto": "Elabora un modelo funcional del sistema musculoesquelético."
+     },
+     {
+      "codigo": "7.7",
+      "texto": "Explica con sus palabras cómo se relaciona el intercambio de gases y la circulación."
+     },
+     {
+      "codigo": "7.8",
+      "texto": "Reconoce las principales características y funciones de las estructuras respiratorias y circulatorias en vertebrados."
+     },
+     {
+      "codigo": "7.9",
+      "texto": "Elabora un modelo de una estructura respiratoria."
+     },
+     {
+      "codigo": "7.10",
+      "texto": "Identifica las principales características estructurales de los sistemas digestivos."
+     },
+     {
+      "codigo": "7.11",
+      "texto": "Efectúa un experimento para simular los procesos químicos o mecánicos que intervienen en la digestión."
+     },
+     {
+      "codigo": "7.12",
+      "texto": "Compara los procesos de ingestión y digestión en vertebrados."
+     },
+     {
+      "codigo": "7.13",
+      "texto": "Ejemplifica los procesos generales que realizan los sistemas excretores."
+     },
+     {
+      "codigo": "7.14",
+      "texto": "Explica las funciones principales de los riñones."
+     },
+     {
+      "codigo": "7.15",
+      "texto": "Identifica diferentes mecanismos de excreción en animales."
+     }
+    ]
+   }
+  ],
+  "Noveno": [
+   {
+    "unidad": 1,
+    "nombre": "Mecánica de fluidos",
+    "objetivos": [
+     "Aplicar análisis gráficos de magnitudes físicas relacionadas con la mecánica de fluidos para efectuar cálculos de variables y explicar resultados experimentales."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Determina las propiedades de un fluido para calcular el empuje."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Calcula el peso aparente de un objeto sumergido en un líquido a partir del empuje."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Presenta resultados experimentales considerando el error de la medida."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Comprueba experimentalmente el principio de Pascal a partir de datos de variación de presión en una prensa hidráulica."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Explica el efecto del principio de multiplicación de fuerzas a partir de las áreas de los pistones de la prensa hidráulica"
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Resuelve problemas empleando las leyes de la hidrostática."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Reconoce la relación inversa entre presión y rapidez en un fluido ideal a partir de casos concretos."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Comprueba experimentalmente el teorema de Torricelli a partir del caudal de salida de un líquido en un recipiente."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Calcula la rapidez de salida de un líquido por el orificio de un recipiente a partir del teorema de Torricelli."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Mide las magnitudes físicas requeridas para calcular la viscosidad de un fluido."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Compara resultados experimentales y teóricos a partir de la ley de Stokes."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Resuelve problemas teóricos sobre hidrodinámica."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Calor y temperatura",
+    "objetivos": [
+     "Formular conclusiones propias acerca de los procesos termodinámicos y la eficiencia de máquinas térmicas, a partir de la experimentación y la resolución de problemas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Distingue cambios de fase en sustancias puras a partir de un experimento."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Interpreta el gráfico de temperatura versus tiempo de una sustancia para el análisis del calor específico."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Calcula el calor latente y el calor específico a partir de un gráfico de calentamiento."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Efectúa experimentos sobre procesos termodinámicos en un gas ideal."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Resuelve problemas a partir de gráficas de procesos termodinámicos."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Explica con sus palabras el concepto de equilibrio térmico."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Elabora un dispositivo transformador del calor en trabajo mecánico."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Resuelve problemas empleando la primera ley de la termodinámica."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Explica un proceso irreversible de extracción de calor por medio de trabajo mecánico."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Resuelve problemas acerca de la máxima eficiencia posible en una reversión parcial con máquinas térmicas. datos obtenidos de procesos termodinámicos. impliquen cálculos de termodinámica. las variables macroscópicas experimenta un termodinámica; estos procesos a vapor. de escritura y el manejo de cifras a emactualización.9 01.02.01:18 o su decimal. Los números con muchas cifras se No se emplearán comas. interés en la unidad: J. kelvin, J/(Kg·K)."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Equilibrio químico",
+    "objetivos": [
+     "Aplicar principios de equilibrio químico para predecir la dirección de una reacción y explicar la importancia del equilibrio ácido base en procesos habituales."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Define con sus palabras el concepto de equilibrio químico."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Identifica los factores que afecta la velocidad de reacción."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Identifica el tipo de equilibrio químico y la expresión de la constante de equilibrio en una reacción."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Identifica los fatores que afectan el equilibrio químico."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Predice el sentido del desplazamiento de la reacción aplicando el principio de Le Châtelier."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Representa la constante de equilibrio a partir de ecuaciones de reacción química."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Determina la constante de equilibrio químico de una reacción."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Distingue por sus características entre sustancias ácidas y básicas."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Identifica ácidos y bases según las teorías de Arrhenius, Bronsted-Lowry y Lewis."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Extrae un indicador natural para la identificación cualitativa de ácidos y bases."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Calcula el valor del pH de una solución."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Clasificación de soluciones en neutras, ácidas y básicas."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Reconoce ácidos y bases fuertes y débiles de acuerdo con su disociación en agua."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Expresa las constantes de ionización para ácidos y bases."
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Explica la función de las soluciones buffer."
+     },
+     {
+      "codigo": "3.16",
+      "texto": "Comprueba el efecto amortiguador de pH de las soluciones buffer."
+     },
+     {
+      "codigo": "3.17",
+      "texto": "Ejemplifica aplicaciones y ocurrencia natural de las soluciones buffer."
+     },
+     {
+      "codigo": "3.18",
+      "texto": "Aplica el principio de Le Châtelier en el equilibrio ácido base."
+     },
+     {
+      "codigo": "3.19",
+      "texto": "Detecta el punto de equivalencia a partir de un experimento de titulación ácido-base."
+     },
+     {
+      "codigo": "3.20",
+      "texto": "Ejemplifica medidas para el manejo y tratamiento de ácidos y bases. productos se gastan a la misma velocidad que elementos y compuestos deberán ser comPura y Aplicada (IUPAC, por sus siglas decimal. Los números con muchas cifras se No se emplearán comas. interés en la unidad:"
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Oceanografía",
+    "objetivos": [
+     "Formular conclusiones propias acerca de las características y la dinámica del océano como un sistema global, a partir de la experimentación, el uso de simuladores y el cotejo de información relacionada con el ambiente marino."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Explica la importancia de los mares y los océanos para la sociedad y la naturaleza."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Ejemplifica las características y las propiedades físicas y químicas de los océanos."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Representa la zonificación general del ambiente marino."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Reconoce los efectos del viento y del calor sobre una masa de agua."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Explica la influencia de la energía solar y del viento en las corrientes oceánicas."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Identifica las magnitudes físicas que influyen en las corrientes oceánicas profundas."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Representa la configuración actual de las corrientes oceánicas superficiales."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Define con sus palabras el fenómeno de oleaje."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Describe los procesos asociados a la generación y la propagación de olas."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Explica el fenómeno de las mareas en el planeta Tierra."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Explica el fenómeno de sedimentación marina."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Reconoce los procesos que intervienen en la dinámica costera."
+     },
+     {
+      "codigo": "4.13",
+      "texto": "Describe ejemplos de ecosistemas marino costeros presentes en El Salvador."
+     },
+     {
+      "codigo": "4.14",
+      "texto": "Reconoce las variables que influyen en la estratificación vertical del ambiente marino."
+     },
+     {
+      "codigo": "4.15",
+      "texto": "Describe la estructura y la dinámica general de un ecosistema marino presente en El Salvador."
+     },
+     {
+      "codigo": "4.16",
+      "texto": "Argumenta cuáles son las principales causas de la problemática ambiental oceánica."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Geología de El Salvador",
+    "objetivos": [
+     "Aplicar técnicas de registro, representación y síntesis de información, para explicar las estructuras y procesos geológicos que ocurren en El Salvador, sus potencialidades y riesgos asociados."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Reconoce cómo se clasifican las rocas."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Reconoce la distribución de los tipos de roca que existen en El Salvador."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Explica los principales rasgos geomorfológicos del país."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Identifica las diferentes estructuras volcánicas a partir de casos específicos de El Salvador."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Explica las causas del fenómeno volcánico en El Salvador."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Reconoce la escala del fenómeno volcánico en el sistema solar."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Explica la actividad volcánica salvadoreña a partir del historial eruptivo y los volcanes activos."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Identifica los principales parámetros de un sismo a partir del historial sísmico de El Salvador."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Describe el comportamiento de las ondas sísmicas a partir de un simulador o experimento."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Identifica zonas con potencial de ocurrencia de sismos en El Salvador."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Reconoce los sistemas de alerta temprana ante fenómenos geológicos en El Salvador. que suceden en El Salvador. parte de la dinámica general del planeta Tiesu funcionamiento es indispensable para de escritura y el manejo de cifras a em01.02.01:18 o su actualización.9 decimal. Los números con muchas cifras se No se emplearán comas. de Explosividad Volcánica (IEV) (Newhall y 8. Modificada (MM), que toma valores en núen números enteros positivos entre 0 y c.) y antes de la era común (a. e. c.), siendo del calendario gregoriano. cuándo ocurrió un evento que ha sido datado al año 1950."
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Electricidad",
+    "objetivos": [
+     "Construir circuitos eléctricos funcionales que incorporen componentes electrónicos, a partir de la aplicación de fundamentos de electricidad, el ensamblaje de prototipos y el uso de software."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Identifica la carga eléctrica de los cuerpos a partir de un experimento."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Efectúa un experimento para evidenciar las características del campo y la fuerza eléctrica."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Calcula la fuerza eléctrica considerando cargas puntuales en una dimensión."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Distingue algunos componentes electrónicos presentes en una placa madre."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Construye un circuito eléctrico funcional que incluya diversos componentes electrónicos."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Explica el funcionamiento de algunos componentes electrónicos."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Esquematiza la configuración eléctrica del hogar, incluyendo los dispositivos de la red eléctrica."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Relaciona las especificaciones de un electrodoméstico con su funcionamiento."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Explica la utilidad de un rectificador de onda en los dispositivos eléctricos."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Identifica las características generales de los circuitos integrados."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Construye un circuito eléctrico utilizando como componente principal un circuito integrado."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Utiliza premisas y preguntas condicionales para elaborar una tabla de verdad."
+     },
+     {
+      "codigo": "6.13",
+      "texto": "Construye circuitos utilizando compuertas lógicas."
+     },
+     {
+      "codigo": "6.14",
+      "texto": "Utiliza funciones lógicas para programar condicionales en hojas de cálculo."
+     }
+    ]
+   },
+   {
+    "unidad": 7,
+    "nombre": "Magnetismo aplicado",
+    "objetivos": [
+     "Formular conclusiones propias acerca del funcionamiento de tecnologías basadas en el magnetismo a partir del cotejo de información documental, el análisis de situaciones cotidianas y la construcción de dispositivos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "7.1",
+      "texto": "Reconoce las aplicaciones del campo magnético en fenómenos terrestres."
+     },
+     {
+      "codigo": "7.2",
+      "texto": "Reconoce las aplicaciones del campo magnético en la exploración espacial."
+     },
+     {
+      "codigo": "7.3",
+      "texto": "Indaga aplicaciones magnéticas a partir del diagnóstico y los tratamientos médicos."
+     },
+     {
+      "codigo": "7.4",
+      "texto": "Explica los fenómenos magnéticos involucrados entre el equipo de uso médico y el cuerpo humano."
+     },
+     {
+      "codigo": "7.5",
+      "texto": "Construye un motor de corriente directa."
+     },
+     {
+      "codigo": "7.6",
+      "texto": "Explica el funcionamiento del motor de corriente eléctrica a partir de campos magnéticos."
+     },
+     {
+      "codigo": "7.7",
+      "texto": "Compara las tecnologías del motor eléctrico y el motor de combustión interna."
+     }
+    ]
+   }
+  ],
+  "Primer año": [
+   {
+    "unidad": 1,
+    "nombre": "Electroquímica",
+    "objetivos": [
+     "Contrastar observaciones experimentales de procesos redox con los valores de potencial estándar de reducción, para deducir la espontaneidad de una reacción y las aplicaciones de la electroquímica junto a sus consideraciones ambientales."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Reconoce que las ecuaciones de oxidación-reducción se deben balancear en masa y carga."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Identifica cuándo aplicar el método del ion-electrón para balancear ecuaciones de oxidación-reducción."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Aplica el método del ion-electrón para balancear ecuaciones químicas."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Compara la conductividad eléctrica de electrolitos a diferentes concentraciones."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Construye una celda galvánica con implementos cotidianos."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Evalúa una secuencia de instrucciones para la construcción de una celda electroquímica."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Construye una celda electrolítica para la descomposición del agua."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Deduce si una reacción de oxidación-reducción es espontánea con base en el potencial de celda."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Ejemplifica aplicaciones de la electroquímica y sus impactos. de dispositivos que involucren celdas electroentre la energía química y la elécy permite el desarrollo de tecnologías que de Nernst. de procesos biológicos. las reglas de escritura, así como el manejo de (SI),1 de acuerdo con el Reglamento los valores numéricos se empleará el punto repartirán en grupos de tres cifras separadas interés en la unidad: en volts, V."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Electromagnetismo",
+    "objetivos": [
+     "Proponer adecuaciones al diseño, materiales o proceso de construcción de un dispositivo de comunicación inalámbrica, para mejorar su alcance o desempeño según su propósito de uso."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Explica el fenómeno de la inducción de voltaje."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Reconoce a partir de un experimento los principios físicos descritos por las ecuaciones de Maxwell."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Calcula magnitudes físicas en dispositivos electromagnéticos."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Ejemplifica los tipos de ondas que se encuentran en el espectro electromagnético."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Describe las propiedades de las ondas electromagnéticas a partir de un experimento."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Resuelve problemas teóricos a partir de las gráficas de los campos eléctrico y magnético de una onda electromagnética."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Explica el funcionamiento básico de diferentes tecnologías de comunicación inalámbrica."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Construye un sistema de radiotelecomunicación funcional."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Explica los principales hitos en el desarrollo de las tecnologías de radiocomunicación. inalámbricas de radiofrecuencia, como inalámbrica. hasta la actualidad funcionan mediante gráficas de señales moduladas y demoduladas. reglas de escritura y el manejo de cifras a em01.02.01:18 o su actualización.2 decimal. Los números con muchas cifras se No se emplearán comas. interés en la unidad: T. A/m. y el flujo de la corriente eléctrica con-"
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Óptica",
+    "objetivos": [
+     "Contrastar sus resultados de la experimentación con fenómenos de la luz con los principios de óptica física y geométrica, para generalizar el comportamiento dual de la luz y sus aplicaciones."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Describe la propagación ondulatoria de la luz."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Explica los fenómenos de interferencia, difracción y polarización de la luz."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Discute las aplicaciones tecnológicas de la interferencia, difracción y polarización."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Identifica los fenómenos de dispersión y descomposición de la luz en situaciones cotidianas."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Explica los fenómenos de dispersión y descomposición de la luz."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Describe las aplicaciones tecnológicas de la dispersión y descomposición de la luz."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Reconoce la predictibilidad de la trayectoria de la luz al incidir en un objeto."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Mide directamente los ángulos de incidencia, refracción y reflexión."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Resuelve problemas que involucran reflexión, refracción y reflexión interna total."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Reconoce las propiedades de las imágenes."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Determina la posición y el tamaño de una imagen formada por refracción y reflexión."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Describe aplicaciones tecnológicas de las propiedades de las imágenes. profesional de diferentes dispositivos ópticos. electromagnéticas y como partículas llamadas asociados al comportamiento ondulatorio, corpuscular. del comportamiento de la luz en reglas de escritura y el manejo de cifras a em01.02.01:18 o su actualización.2 decimal. Los números con muchas cifras se No se emplearán comas. interés en la unidad: sobre segundo, m/s."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Introducción a la química orgánica",
+    "objetivos": [
+     "Representa apropiadamente los orbitales del carbono y las estructuras que puede conformar, para explicar las funciones químicas, propiedades y aplicaciones de los hidrocarburos alifáticos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Ejemplifica sustancias de uso común que contienen compuestos orgánicos."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Describe orbitales híbridos empleando modelos tridimensionales."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Reconoce al carbono como elemento principal en la estructura de los compuestos orgánicos."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Reconoce la función alcano en sustancias de uso común."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Identifica las propiedades físicas y químicas de los alcanos."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Emplea nomenclatura IUPAC para nombrar alcanos."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Reconoce la función alqueno como materia prima en la industria química."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Identifica las propiedades físicas y químicas de los alquenos."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Emplea nomenclatura IUPAC para nombrar alquenos."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Reconoce la función alquino."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Identifica las propiedades físicas y químicas de los alquinos."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Emplea nomenclatura IUPAC para nombrar alquinos. los compuestos orgánicos para la producción principalmente por hidrógeno y carbono, cuya que poseen. escritura y representación de compuestos orgáUnión Internacional de Química Pura y Aplicada o familia de las sustancias, de acuerdo con y las reglas de escritura, así como el manejo de con el RTS 01.02.01:18 o su actualización.2 decimal. Los números con muchas cifras se No se emplearán comas."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Compuestos orgánicos",
+    "objetivos": [
+     "Aplica la nomenclatura IUPAC para la denominación de compuestos orgánicos y técnicas de laboratorio, para identificar las propiedades físicas y químicas de las funciones orgánicas y sus aplicaciones."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Reconoce la función hidrocarburos aromáticos."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Identifica las propiedades físicas y químicas de los hidrocarburos aromáticos."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Emplea nomenclatura IUPAC para nombrar hidrocarburos aromáticos."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Reconoce las funciones alcohol, fenol y éter."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Identifica las propiedades físicas y químicas de los alcoholes, fenoles y éteres."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Emplea nomenclatura IUPAC para nombrar alcoholes, fenoles y éteres."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Reconoce las funciones aldehído, cetona, ácido carboxílico y derivados de ácido carboxílico."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Identifica las propiedades físicas y químicas de aldehídos, cetonas, ácidos carboxílicos y sus derivados."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Emplea nomenclatura IUPAC para nombrar aldehídos, cetonas, ácidos carboxílicos y sus derivados."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Reconoce las funciones tioles, tioéteres, aminas, haluros de alquilo y arilo."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Identifica las propiedades físicas y químicas de tioles, tioéteres, aminas, haluros de alquilo y arilo."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Emplea nomenclatura IUPAC para nombrar tioles, tioéteres, aminas, haluros de alquilo y arilo."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Describe la quiralidad del átomo de carbono."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Construye modelos de isómeros constitucionales y estereoisómeros. de distintas familias de compuestos ororgánicos de uso cotidiano con su nade acuerdo con su función química. naturales, empleando un método de extracy representación de compuestos orgáLas unidades de medida, su definición, de cifras a emplear, son las estandarizadas decimal. Los números con muchas cifras se No se emplearán comas."
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Biomoléculas",
+    "objetivos": [
+     "Desarrollar estrategias experimentales o proyectos colaborativos para identificar, extraer o demostrar las propiedades de un grupo de biomoléculas, o representar su estructura y funciones metabólicas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Identifica la función carbohidrato y sus estructuras."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Reconoce las clasificaciones y propiedades de los carbohidratos."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Explica la importancia de los polisacáridos y su metabolismo."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Reconoce la función lípidos y su clasificación general."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Realiza una extracción de lípidos."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Describe el proceso general del metabolismo de los lípidos."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Reconoce la estructura general de los aminoácidos."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Desarrolla un proceso de extracción de proteínas."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Clasifica a las proteínas empleando diferentes criterios."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Identifica las funciones de los nucleótidos libres."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Elabora modelos tridimensionales de las estructuras químicas de los ácidos nucleicos. correcto desarrollo y funcionamiento de los contenidas en productos alimenticios, seres vivos. Sus propiedades físicas y químien el organismo. con su diversidad estructural y funcional. enfermedades priónicas en humanos. escritura y representación de compuestos orIUPAC.3, 5 Para representar abreviadamente la una o tres letras, prefiriéndose la notación de representar la identidad de un nucleótido romanos que se basa en la inicial mayúscula donde: A = Adenina, C = Citocina, G = Guaemplear las notaciones para aminoáci-"
+     }
+    ]
+   },
+   {
+    "unidad": 7,
+    "nombre": "Biología celular",
+    "objetivos": [
+     "Compara sus observaciones e interpretaciones de un experimento o simulación con los fundamentos de biología celular, bioenergética y metabolismo, para generalizar la naturaleza del flujo de energía e información molecular en los seres vivos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "7.1",
+      "texto": "Ejemplifica el uso de energía en los seres vivos a partir de fenómenos cotidianos."
+     },
+     {
+      "codigo": "7.2",
+      "texto": "Explica los conceptos de entropía y organización en los seres vivos."
+     },
+     {
+      "codigo": "7.3",
+      "texto": "Reconoce el código genético y la nomenclatura de aminoácidos como formas de representar información molecular."
+     },
+     {
+      "codigo": "7.4",
+      "texto": "Explica el concepto de energía biológicamente útil."
+     },
+     {
+      "codigo": "7.5",
+      "texto": "Reconoce los tipos de energía biológicamente útil."
+     },
+     {
+      "codigo": "7.6",
+      "texto": "Ejemplifica procesos celulares que emplean energía biológicamente útil."
+     },
+     {
+      "codigo": "7.7",
+      "texto": "Argumenta la presencia de enzimas en los seres vivos."
+     },
+     {
+      "codigo": "7.8",
+      "texto": "Interpreta los resultados de un experimento demostrativo de la actividad enzimática."
+     },
+     {
+      "codigo": "7.9",
+      "texto": "Obtiene información de enzimas a partir del uso de bases de datos."
+     },
+     {
+      "codigo": "7.10",
+      "texto": "Ejemplifica los procesos oxidativos que suceden en la respiración celular."
+     },
+     {
+      "codigo": "7.11",
+      "texto": "Efectúa un experimento para comprobar la ocurrencia de la respiración celular aerobia o de la fermentación."
+     },
+     {
+      "codigo": "7.12",
+      "texto": "Explica el funcionamiento general de una cadena de transporte de electrones."
+     },
+     {
+      "codigo": "7.13",
+      "texto": "Interpreta los resultados de un experimento demostrativo de la actividad fotosintética."
+     },
+     {
+      "codigo": "7.14",
+      "texto": "Efectúa un experimento de extracción y separación de pigmentos fotosintéticos."
+     },
+     {
+      "codigo": "7.15",
+      "texto": "Explica los procesos de fotofosforilación de la fotosíntesis. de las células. mantener su integridad y funciones vitales gestionar su información. para explicar el funcionamiento normal de"
+     }
+    ]
+   },
+   {
+    "unidad": 8,
+    "nombre": "Anatomía y fisiología humana",
+    "objetivos": [
+     "Aplicar técnicas de registro, representación y síntesis de información con lenguaje científico, para comunicar sus hallazgos y conclusiones acerca de la anatomía, funcionamiento y medidas de autocuido de los sistemas nervioso, endocrino e inmunitario."
+    ],
+    "indicadores": [
+     {
+      "codigo": "8.1",
+      "texto": "Ejemplifica los tipos de reflejos y las funciones corporales controladas por el sistema nervioso somático y autónomo."
+     },
+     {
+      "codigo": "8.2",
+      "texto": "Construye un modelo de neurona o neuroglia ajustado a su anatomía celular y funciones principales."
+     },
+     {
+      "codigo": "8.3",
+      "texto": "Explica la anatomía general y las principales funciones corporales reguladas por el sistema nervioso central y el sistema nervioso periférico."
+     },
+     {
+      "codigo": "8.4",
+      "texto": "Explica el papel de los órganos receptores para percibir el entorno."
+     },
+     {
+      "codigo": "8.5",
+      "texto": "Sintetiza el proceso general de recepción de estímulos a través de distintos órganos receptores."
+     },
+     {
+      "codigo": "8.6",
+      "texto": "Representa un proceso fisiológico en el que participan las neuronas sensoriales o motoras."
+     },
+     {
+      "codigo": "8.7",
+      "texto": "Explica la importancia de las hormonas y el concepto de órgano diana."
+     },
+     {
+      "codigo": "8.8",
+      "texto": "Ejemplifica las principales respuestas endocrinas y las glándulas involucradas."
+     },
+     {
+      "codigo": "8.9",
+      "texto": "Reconoce respuestas a corto y largo plazo de las glándulas endocrinas ante estímulos del entorno."
+     },
+     {
+      "codigo": "8.10",
+      "texto": "Explica brevemente los componentes y líneas de defensa del sistema inmunitario en relación con la respuesta innata y adaptativa."
+     },
+     {
+      "codigo": "8.11",
+      "texto": "Describe los impactos del estrés y del sueño en las respuestas inmunitarias."
+     },
+     {
+      "codigo": "8.12",
+      "texto": "Ejemplifica enfermedades que afectan el sistema inmunitario y sus consecuencias. a mantener el funcionamiento óptimo de que afecta el sistema inmunológico. con el entorno gracias a la actividad coordialteración en ellos tiene un efecto directo de responder a estímulos o amenazas. con la percepción del tiempo y los ritmos cirdel sistema endocrino. el SI,1 de acuerdo con el Reglamento Técnico numéricos se empleará el punto como sepagrupos de tres cifras separadas por un espacio. nomenclatura, escritura y representación IUPAC.3, 4, 5 con las disposiciones de la"
+     }
+    ]
+   }
+  ],
+  "Segundo año": [
+   {
+    "unidad": 1,
+    "nombre": "Ciencias del espacio",
+    "objetivos": [
+     "Contrastar razonamientos y conclusiones propias con los principios y teorías de la astronomía, para generalizar el comportamiento de sistemas conformados por objetos astronómicos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Explica el razonamiento que llevó al planteamiento de los sistemas geocéntrico y heliocéntrico."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Identifica los parámetros orbitales de los sistemas planetarios descritos por las leyes de Kepler."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Calcula la masa de la Tierra a partir de la ley de la gravitación universal de Newton."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Relaciona la temperatura de un objeto astronómico con el tipo de radiación que emite."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Reconoce las ventajas y desventajas en el uso de telescopios de refracción y reflexión."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Ejemplifica tipos de detectores de imágenes empleados en los observatorios astronómicos terrestres y espaciales."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Explica un método empleado para detectar o caracterizar un exoplaneta."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Ejemplifica las propiedades deducibles de los exoplanetas."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Argumenta cuáles son las condiciones que permiten el desarrollo de la vida en un planeta. de la astronomía y la astrobiología. concernientes a la exploración espacial. conformados por objetos astronómicos. A la radioastronomía, en conjunto con un rápido detallado. Actualmente, incluso es posible reglas de escritura, así como el manejo de ci- (SI),1 de acuerdo con el Reglamento Técnico decimal. Los números con muchas cifras se se emplearán comas. medida reconocidas por la Unión Astronómica aproximadamente a la distancia media la luz en un año terrestre. de estrellas y otros objetos astronómicos ma-"
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Introducción a la física moderna",
+    "objetivos": [
+     "Aplicar técnicas de representación y síntesis de información, con nomenclatura y lenguaje científico, para analizar o comunicar los conceptos fundamentales y las aplicaciones cotidianas de la física moderna."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Identifica las métricas del espacio relativista y no relativista, y sus invarianzas."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Interpreta los marcos de referencia inerciales para eventos simultáneos."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Calcula la longitud de objetos que se mueven a una rapidez cercana a la de la luz."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Reconoce los tipos de radiación ionizante y sus principales efectos en las células."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Diferencia la radiación de partículas de la radiación electromagnética por sus interacciones con la materia."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Ejemplifica aplicaciones médicas de la radiación ionizante según su tipo."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Reconoce las características fundamentales de las reacciones de fisión y fusión nuclear."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Representa el proceso general de transformación de un combustible nuclear en energía eléctrica."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Ejemplifica aplicaciones tecnológicas nucleares no eléctricas. en condiciones extremas como velocidad tipos y niveles de radiación. desarrollados a principios del siglo Si bien estos buscaban explicar fenómenos tienen aplicaciones directas en la vida cotidiamasiva, el conocimiento sobre radiación relativistas son fundamentales para el funde las aplicaciones de la física moderna. reglas de escritura, así como el manejo de cifras RTS 01.02.01:18 o su actualización.2 decimal. Los números con muchas cifras se se emplearán comas. en la unidad:"
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Bases genéticas de la evolución",
+    "objetivos": [
+     "Manipular herramientas de búsqueda, representación y simulación virtual de procesos genéticos o celulares como medios para explicar el funcionamiento general de los mecanismos evolutivos clásicos o de edición y transferencia genética horizontal."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Reconoce las discrepancias en cuanto al tamaño del genoma y la ploidía entre especies."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Reconoce las propiedades fisicoquímicas del material genético y la organización cromosómica del ADN."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Obtiene secuencias genéticas cortas empleando bases de datos biológicas."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Explica las fases del ciclo celular y sus puntos de control."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Describe los principales procesos de la división mitótica."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Describe los principales procesos de la división meiótica."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Ejemplifica procesos que involucran el control de la expresión génica."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Representa los procesos de transcripción y traducción."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Explica los procesos de transcripción y traducción utilizando la terminología científica."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Reconoce el proceso de recombinación genética como un mecanismo evolutivo."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Explica el papel de las mutaciones en la adaptabilidad y el incremento de la diversidad genética."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Ejemplifica cómo los mecanismos de selección natural, artificial y sexual actúan restringiendo la variabilidad genética."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Identifica mecanismos de transducción y transfección celular."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Explica en qué consisten los procesos de transferencia genética horizontal (TGH)."
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Representa un mecanismo de transgénesis o de edición genética. y mecanismos evolutivos. tales como selección artificial, hibridadirigir el comportamiento de las células. son susceptibles de alterar el material de los individuos como en la composición"
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Análisis de biodiversidad",
+    "objetivos": [
+     "Aplica técnicas estadísticas de registro, representación y síntesis de datos de biodiversidad para inferir o analizar relaciones entre organismos o comunidades biológicas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Identifica las proporciones genotípicas y fenotípicas a partir de cruces genéticos."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Calcula las frecuencias genotípicas y alélicas para una población."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Resuelve problemas que involucran la determinación de frecuencias genotípicas y alélicas."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Relaciona las características de los seres vivos con las evidencias que apuntan a su origen común."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Define los conceptos de especie, subespecie, variedad y cepa."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Identifica las formas naturales de especiación a partir de casos."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Define los conceptos de riqueza y abundancia de especies."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Estima la similitud y distancia entre comunidades biológicas."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Explica la importancia de la biodiversidad funcional."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Ejemplifica los usos o aplicaciones de los índices de biodiversidad."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Construye un dendrograma a partir un algoritmo específico."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Reconoce grupos de organismos a partir de dendrogramas. todos sus niveles y atributos. datos sobre genética poblacional y biodivery de las regiones; sin embargo, es posible permite su conservación y aprovechamiento para determinar identidad genética se empleará la notación estándar de caractela base nitrogenada contenida en el nucleóy U = Uracilo (ribonucleótido).7 Los alelos de la característica que codifican. Para pares mientras que una minúscula al recesivo. Para numéricos; por ejemplo, para tres verde cruces genéticos, los símbolos al padre y a la madre de una generación. en la unidad:"
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Biotecnología microbiana",
+    "objetivos": [
+     "Contrastar sus propias observaciones y resultados de la experimentación con microorganismos con principios de la microbiología, genética y bioquímica; para generalizar las aplicaciones y métodos de producción empleados en la biotecnología microbiana."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Ejemplifica procesos y productos comerciales desarrollados con aplicación de biotecnología microbiana."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Distingue las características de los microorganismos de interés industrial y de aquellos con importancia médica."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Explica la importancia de las aplicaciones de las técnicas de tinción de microorganismos."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Reconoce las condiciones generales de crecimiento y los medios de cultivo apropiados para un grupo de microorganismos."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Explica el proceso general para establecer un cultivo bacteriano en un medio sólido."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Estima la cantidad de colonias de un cultivo microbiano en un medio sólido utilizando un método de recuento sencillo."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Identifica aplicaciones del metabolismo bacteriano en la agricultura y la alimentación."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Obtiene un bioproducto o producto alimenticio empleando una tecnología basada en la fermentación."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Explica un mecanismo de fermentación y sus aplicaciones."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Reconoce las vacunas y las pruebas de detección clínica como tecnologías médicas para la prevención y diagnóstico de enfermedades de origen microbiano."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Explica el rol de probióticos, prebióticos, antibióticos o antimicóticos en la prevención y tratamiento de enfermedades."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Representa uno de los mecanismos de acción general de los antibióticos o de los antimicóticos. muestras biológicas y alimentos. al consumo irresponsable de suplementos y utilizar microorganismos para desarrollar proprincipales se encuentran en la industria productos cotidianos se obtienen gracias genético de microorganismos de uso inobtención de un producto comercial a partir"
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Biotecnología vegetal y agroindustria",
+    "objetivos": [
+     "Emplear sus propias adecuaciones tecnológicas o estrategias de experimentación vegetal para evidenciar procesos fisiológicos de las plantas, o implementar técnicas agrícolas modernas para el establecimiento y mejora de cultivos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Ejemplifica aplicaciones de la biotecnología vegetal."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Identifica tejidos y células vegetales aplicando técnicas de tinción."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Representa las características de la célula vegetal."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Reconoce la importancia de la reproducción sexual y asexual de las plantas para la producción agrícola."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Explica un procedimiento técnico de propagación vegetativa."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Compara el mejoramiento genético vegetal tradicional con el contemporáneo."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Resume el proceso de nutrición de las plantas incluyendo el papel de los fertilizantes en este."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Explica un procedimiento técnico para establecer cultivos vegetales en un sustrato distinto al suelo."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Describe los efectos de los cambios del pH del suelo en la nutrición mineral de las plantas."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Relaciona el concepto de hormona vegetal con el desarrollo de las plantas."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Ejemplifica efectos de las hormonas vegetales o fitorreguladores en el desarrollo de las plantas o sus estructuras."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Explica los efectos del fotoperíodo en las plantas."
+     },
+     {
+      "codigo": "6.13",
+      "texto": "Generaliza las condiciones a tener en cuenta para iniciar un cultivo in vitro de plantas."
+     },
+     {
+      "codigo": "6.14",
+      "texto": "Explica un método simple para establecer un cultivo in vitro de plantas."
+     },
+     {
+      "codigo": "6.15",
+      "texto": "Caracteriza un método de regeneración in vitro de plantas."
+     },
+     {
+      "codigo": "6.16",
+      "texto": "Reconoce la importancia de la conservación del germoplasma."
+     },
+     {
+      "codigo": "6.17",
+      "texto": "Explica las condiciones a tener en cuenta para el almacenamiento adecuado de semillas."
+     },
+     {
+      "codigo": "6.18",
+      "texto": "Clasifica agroquímicos para el control de plagas por su uso y etiquetado de seguridad."
+     }
+    ]
+   },
+   {
+    "unidad": 7,
+    "nombre": "Ciencia de materiales",
+    "objetivos": [
+     "Contrastar sus propias observaciones y resultados experimentales con principios físicos y químicos empleados en la ciencia de materiales, para generalizar la estructura, propiedades y aplicaciones principales de los metales, cerámicos y polímeros sintéticos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "7.1",
+      "texto": "Identifica propiedades de los principales metales y aleaciones utilizadas en la industria electrónica."
+     },
+     {
+      "codigo": "7.2",
+      "texto": "Relaciona la estructura de metales y cerámicas con sus propiedades y aplicaciones."
+     },
+     {
+      "codigo": "7.3",
+      "texto": "Ejemplifica aplicaciones tecnológicas y médicas de los metales y las cerámicas."
+     },
+     {
+      "codigo": "7.4",
+      "texto": "Reconoce distintos tipos de polímeros sintéticos de uso común."
+     },
+     {
+      "codigo": "7.5",
+      "texto": "Generaliza los mecanismos básicos de polimerización y los tipos de polímeros resultantes."
+     },
+     {
+      "codigo": "7.6",
+      "texto": "Describe la estructura, clasificación y formas de reciclaje de los materiales compuestos."
+     },
+     {
+      "codigo": "7.7",
+      "texto": "Relaciona las propiedades de los metales, las cerámicas y los polímeros con sus principales usos."
+     },
+     {
+      "codigo": "7.8",
+      "texto": "Explica el concepto de nanomaterial en función del tamaño de su partícula o estructura."
+     },
+     {
+      "codigo": "7.9",
+      "texto": "Ejemplifica las principales aplicaciones de los nanomateriales. de residuos sólidos. y dispositivos de uso cotidiano. les confiere propiedades distintivas, lo que final. los metales. de escritura, así como el manejo de cifras 01.02.01:18 o su actualización.2 decimal. Los números con muchas cifras se se emplearán comas."
+     }
+    ]
+   },
+   {
+    "unidad": 8,
+    "nombre": "Ecología y ambiente",
+    "objetivos": [
+     "Aplicar técnicas de registro, representación y síntesis de información cuantitativa sobre biodiversidad y ecosistemas para analizar problemáticas ambientales y defender propuestas o posturas para reducir sus impactos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "8.1",
+      "texto": "Define los conceptos de productividad y DBO en comunidades biológicas."
+     },
+     {
+      "codigo": "8.2",
+      "texto": "Reconoce procesos biológicos que forman parte de los ciclos biogeoquímicos."
+     },
+     {
+      "codigo": "8.3",
+      "texto": "Explica el desarrollo de un ciclo biogeoquímico."
+     },
+     {
+      "codigo": "8.4",
+      "texto": "Identifica causas y consecuencias de la deforestación, la contaminación o la extracción de fauna o flora silvestre en El Salvador."
+     },
+     {
+      "codigo": "8.5",
+      "texto": "Explica los impactos potenciales de un cambio en el uso de suelo y los factores que llevan a su degradación."
+     },
+     {
+      "codigo": "8.6",
+      "texto": "Argumenta cómo la planificación y la gestión territorial pueden ayudar a combatir la problemática ambiental."
+     },
+     {
+      "codigo": "8.7",
+      "texto": "Reconoce la sobreexplotación de recursos y la generación de residuos de distintos tipos como problemáticas con repercusión mundial."
+     },
+     {
+      "codigo": "8.8",
+      "texto": "Explica las principales causas y consecuencias del cambio climático antropogénico."
+     },
+     {
+      "codigo": "8.9",
+      "texto": "Explica las causas y los impactos globales de la pérdida de biodiversidad."
+     },
+     {
+      "codigo": "8.10",
+      "texto": "Identifica los mecanismos de restauración de ecosistemas."
+     },
+     {
+      "codigo": "8.11",
+      "texto": "Explica un método o técnica para el monitoreo de biodiversidad."
+     },
+     {
+      "codigo": "8.12",
+      "texto": "Reconoce estrategias de restauración de ecosistemas. encaminados a reducir su huella ecoglobales y de las acciones que pueden por la sobreexplotación de recursos naconsecuencias adversas observables a nivel territorial y la restauración de ecosistesostenible. de escritura, así como el manejo de cifras 01.02.01:18 o su actualización.2 En los valonúmeros con muchas cifras se repartirán en comas. podrán utilizarse: ha (10 000 m2)."
+     }
+    ]
+   }
+  ]
+ },
+ "Lengua y Literatura": {
+  "Séptimo": [
+   {
+    "unidad": 1,
+    "nombre": "El cuento maravilloso",
+    "objetivos": [
+     "Participar en diferentes situaciones comunicativas, identificando los elementos del proceso de comunicación, con la finalidad de interactuar de manera respetuosa y adecuada al contexto.",
+     "Leer y comprender distintos tipos de párrafos, reconociendo sus elementos y características, y analizando su contenido, a fin de fortalecer la comprensión lectora de textos literarios y no literarios.",
+     "Escribir cuentos maravillosos siguiendo los pasos del proceso de escritura, y entender la construcción de palabras a partir de unidades mínimas de significación y del énfasis de la sílaba tónica, con el propósito de consolidar las habilidades de expresión."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Reconoce los elementos que intervienen en la comunicación literaria, a partir de la lectura de textos."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Explica la estructura y los elementos de los textos narrativos que lee."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Reconoce y comenta las características de cuentos maravillosos que lee."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Clasifica a los personajes humanos y no humanos de cuentos maravillosos a partir de sus características."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Reconoce el efecto estético que producen el símil, el epíteto y la personificación, en textos que lee o escribe."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Analiza cuentos maravillosos, tomando en cuenta sus características y contenido."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Analiza párrafos descriptivos, argumentativos y narrativos, a partir de las ideas principales y secundarias que presentan."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Reconoce y utiliza sinónimos y antónimos en textos literarios y no literarios que lee y escribe."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Escribe un cuento maravilloso atendiendo a sus elementos y características."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Identifica y utiliza las unidades mínimas de significación que conforman las palabras."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Clasifica las palabras en simples, compuestas, derivadas y parasintéticas, a partir de su estructura."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Reconoce la sílaba tónica y átona en palabras que lee o escucha."
+     },
+     {
+      "codigo": "1.13",
+      "texto": "Reconoce semejanzas, diferencias y contextos de la conversación formal y no formal, a partir de sus características."
+     },
+     {
+      "codigo": "1.14",
+      "texto": "Participa en conversaciones formales y no formales, atendiendo a sus características y contextos. comunicativos."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "El mundo de la novela",
+    "objetivos": [
+     "Participar en actividades de comunicación oral, tomando en cuenta los rasgos o características de cada una, con el propósito de interactuar con respeto al escuchar las opiniones de los demás.",
+     "Interpretar novelas fantásticas y comentarios críticos a partir de sus características, estructura y contenido, y establecer las diferencias y semejanzas entre el cuento y la novela, a fin de fortalecer la comprensión lectora y el disfrute de textos literarios y no literarios.",
+     "Escribir textos, aplicando las reglas sobre el acento ortográfico y diacrítico, con la finalidad de consolidar las habilidades de expresión escrita y compresión de textos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Reconoce y comenta las características y obras de la novela fantástica, a partir de la lectura de este tipo de texto."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Clasifica los personajes en principales y secundarios, según su rol en textos literarios que lee."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Identifica y utiliza las diferentes modalidades oracionales, según la actitud del hablante."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Establece diferencias entre el cuento y la novela, por medio de las características de estos textos narrativos."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Reconoce el efecto estético de la sinécdoque en textos que lee y escribe."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Analiza el contenido de novelas fantásticas que lee."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Identifica los elementos y características de un comentario crítico, a partir de la lectura de este tipo de texto."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Analiza comentarios críticos que lee."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Reconoce y utiliza nombres o sustantivos teniendo en cuenta la concordancia entre el género y número en textos que lee y escribe."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Participa en discusiones grupales sobre temas de interés respetando las normas de interacción."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Redacta un comentario crítico atendiendo a su estructura y características, siguiendo los pasos del proceso de escritura."
+     },
+     {
+      "codigo": "2.12",
+      "texto": "Reconoce y aplica las reglas sobre el acento ortográfico y la tilde diacrítica, al revisar, corregir o producir textos. de comunicación oral."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Conozcamos el teatro",
+    "objetivos": [
+     "Participar en diálogos sobre temas de interés colectivo, atendiendo a su contexto e intención comunicativa, a fin de fortalecer sus habilidades de expresión y comprensión oral, mediante la interacción con otros.",
+     "Comprender textos dramáticos y textos no literarios, a partir de su estructura, elementos y características, analizando su contenido e intención comunicativa, con el propósito de consolidar la comprensión de textos.",
+     "Elaborar resúmenes aplicando las reglas del uso de la tilde y la recurrencia léxica y la sustitución como mecanismos de cohesión de ideas, con la finalidad de fortalecer las habilidades de expresión escrita."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Reconoce las características y la estructura externa de textos dramáticos al leer e interpretar obras de este género literario."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Competencias transversales de la asignatura Hablar, escuchar, leer y escribir son habilidades que reciben diferentes nombres: destrezas, capacidades comunicativas o macrohabilidades (Cassany, Luna, & Sanz, 2007). En este programa se ha definido el uso de macrohabilidades comunicativas como competencias transversales y se expresan de esta manera: expresión oral, expresión escrita, comprensión lectora y comprensión oral (habilidades que los usuarios de la lengua deben dominar a fin de comunicarse con eficacia en cualquier situación). A continuación, se define cada una de estas: ▪ Comprensión oral. Es la capacidad de utilizar todo tipo de recursos para comprender información oral presentada con distintos propósitos y en diferentes situaciones comunicativas. ▪ Expresión oral. Se enmarca en situaciones comunicativas, en las cuales el estudiantado expresa de forma oral sus deseos, intereses, experiencias e ideas, entre otros, con un propósito determinado. ▪ Comprensión lectora. Implica la comprensión y la construcción del sentido de textos escritos. En este proceso, el lector se enfrenta a una situación comunicativa en la que pone en juego sus conocimientos y estrategias cognitivas y metacognitivas, pues su interlocutor no puede ser interrogado de manera directa, sino a través de pistas y convenciones que estructuran los diferentes tipos de texto. ▪ Expresión escrita. Permite establecer comunicación por medio de la escritura. Al igual que las otras competencias, implica adecuarse al contexto comunicativo y al lector (destinatario). Escribir no solo requiere el conocimiento del código (sistema de escritura), sino también el uso de estrategias, téc-"
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Participa en diálogos, atendiendo a sus características y contextos."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Analiza la forma y el contenido de textos dramáticos que lee."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Reconoce el efecto estético que producen la exclamación y la interrogación, en textos que lee o escribe."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Reconoce y aplica las reglas ortográficas de la tilde en palabras agudas, graves, esdrújulas y sobresdrújulas, en textos que lee, corrige o escribe."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Reconoce ideas principales en textos que lee mediante la aplicación de técnicas de selección de información."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Reconoce la función de resúmenes que lee."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Reconoce la persona, el número, el tiempo y el modo de los verbos, en textos que lee o escucha."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Corrige textos propios o ajenos, a partir del uso correcto de los verbos, según la intención comunicativa."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Elabora un resumen, atendiendo a sus características y elementos, siguiendo los pasos del proceso de escritura."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Reconoce y aplica mecanismos de cohesión textual en textos que lee, escribe o corrige."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "La poesía",
+    "objetivos": [
+     "Conocer las características del lenguaje, lengua y habla, a fin de comprender la diferencia entre la facultad innata del ser humano, el idioma que se adquiere y cómo este se concreta para que haya comunicación entre las personas.",
+     "Analizar textos poéticos teniendo en cuenta sus características y contenido y reconocer el efecto estético de figuras literarias, con el propósito de fortalecer las habilidades de comprensión lectora.",
+     "Leer y redactar textos periodísticos, utilizando criterios para la selección de información y conectores discursivos, aplicando las reglas del uso de la tilde en palabras simples y compuestas, a fin de consolidar el desarrollo del pensamiento crítico y fortalecer las habilidades comunicativas relacionadas con la escritura de textos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Distingue y explica las diferencias entre lenguaje, lengua y habla."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Reconoce y explica las características y estructura de textos poéticos que lee o escucha."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Reconoce y utiliza adjetivos en textos literarios o no literarios que lee o escribe."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Reconoce el efecto estético que produce la metonimia, en textos que lee o escribe."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Analiza la estructura y contenido de textos poéticos que lee."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Aplica la norma ortográfica del uso de la tilde en palabras simples y compuestas, en textos que revisa, corrige o produce."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Analiza el contenido de las noticias que lee o escucha, teniendo en cuenta sus elementos y características."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Reconoce la técnica de la pirámide invertida en noticias que lee o escucha."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Aplica criterios para el uso de información pertinente que encuentra en la web, al redactar diversos textos."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Redacta una noticia atendiendo a su estructura y características, a partir de la realidad inmediata y siguiendo los pasos del proceso de escritura."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Establece la relación semántica del texto a partir de los conectores discursivos temporales o de coexistencia, al leer, corregir o redactar textos. diferentes situaciones comunicativas. de textos poéticos."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "El cuento de terror",
+    "objetivos": [
+     "Comprender cuentos de terror y crónicas, teniendo en cuenta sus características, elementos y contenido, con el fin de fortalecer las habilidades de comprensión lectora.",
+     "Escribir y corregir textos propios o ajenos, aplicando las normas del uso de mayúsculas y utilizando mecanismos de cohesión de ideas, con el propósito de consolidar las habilidades de expresión escrita."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Reconoce y comenta las características de los cuentos de terror que lee."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Identifica los tipos de narrador, a partir de su intervención en la historia, en cuentos que lee o escucha."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Identifica y describe las clases de ambiente en los cuentos de terror que lee."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Analiza cuentos de terror que lee, tomando en cuenta sus características, elementos y contenido."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Corrige textos escritos aplicando las normas del uso de mayúsculas."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Escribe un cuento de terror, siguiendo los pasos del proceso de escritura."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Clasifica y utiliza pronombres en textos que lee o escribe."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Corrige textos propios o ajenos, a partir del uso de pronombres."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Reconoce las características, elementos y tipos de crónicas que lee."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Analiza crónicas que lee, a partir de sus características, elementos y contenido."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Establece la relación semántica del texto a partir de los conectores discursivos de orden, al leer, co rregir o redactar textos."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Diseña cadenas de secuencias para organizar información de textos que lee."
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "El mundo de la ciencia ficción",
+    "objetivos": [
+     "Participar en situaciones comunicativas orales y escritas, utilizando conectores discursivos, adverbios o locuciones adverbiales al expresar ideas, con el propósito de consolidar las habilidades de expresión en diversos contextos.",
+     "Comprender novelas e historietas de ciencia ficción y artículos de opinión, reconociendo sus elementos, características y estructura, y analizando su contenido, con el fin de fortalecer las habilidades de comprensión lectora.",
+     "Elaborar historietas de ciencia ficción con secuencias narrativas completas, atendiendo a sus características, elementos y estructura, y aplicando las normas ortográficas del uso de b y v, mediante los pasos del proceso de escritura."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Participa en situaciones comunicativas orales o escritas atendiendo a sus características, contextos e intención comunicativa."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Reconoce y explica las dimensiones temporal y espacial de las novelas que lee."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Reconoce y explica las características de las novelas de ciencia ficción que lee."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Analiza novelas de ciencia ficción a partir de sus características y contenido."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Reconoce el efecto estético que produce la topografía, etopeya y onomatopeya en textos que lee o escribe."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Clasifica y utiliza adverbios y locuciones adverbiales mediante la lectura o redacción de textos."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Analiza historietas de ciencia ficción, a partir de sus elementos, estructura y contenido."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Crea una historieta de ciencia ficción, siguiendo los pasos del proceso de escritura."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Aplica las normas del uso de b y v, al revisar, corregir o redactar textos."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Analiza y evalúa la forma y contenido de los artículos de opinión, mediante la lectura de este tipo de texto periodístico."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Establece la relación semántica del texto a partir de los conectores discursivos de adición, al leer, corregir o redactar textos. y escritas."
+     }
+    ]
+   },
+   {
+    "unidad": 7,
+    "nombre": "Información en movimiento",
+    "objetivos": [
+     "Participar en conversaciones orales y virtuales, reconociendo la diferencia entre los actos locutivo, ilocutivo y perlocutivo, utilizando emoticonos y emojis para complementar o sustituir el mensaje escrito en las redes sociales, con el fin de consolidar la competencia comunicativa en diversos contextos.",
+     "Analizar textos dramáticos a partir de sus elementos primarios y secundarios y de su estructura interna, con el propósito de desarrollar el pensamiento crítico mediante el fortalecimiento de las habilidades de comprensión.",
+     "Leer y producir textos propagandísticos atendiendo a sus elementos y función, y utilizando determinantes, preposiciones y conjunciones en la redacción de ideas, con la finalidad de fortalecer la competencia de expresión escrita."
+    ],
+    "indicadores": [
+     {
+      "codigo": "7.1",
+      "texto": "Distingue el texto primario y el secundario al leer textos dramáticos."
+     },
+     {
+      "codigo": "7.2",
+      "texto": "Identifica y explica la estructura interna de textos dramáticos que observa o lee."
+     },
+     {
+      "codigo": "7.3",
+      "texto": "Clasifica los actos de habla a partir de la lectura o escucha de textos."
+     },
+     {
+      "codigo": "7.4",
+      "texto": "Analiza textos dramáticos a partir de su estructura y contenido."
+     },
+     {
+      "codigo": "7.5",
+      "texto": "Reconoce el efecto estético del hipérbaton, la ironía, el sarcasmo y la perífrasis, en textos que lee y escribe."
+     },
+     {
+      "codigo": "7.6",
+      "texto": "Analiza textos propagandísticos en formato de afiche o rótulo atendiendo a su estructura, características y contenido."
+     },
+     {
+      "codigo": "7.7",
+      "texto": "Elabora un afiche, atendiendo a sus características, elementos y función."
+     },
+     {
+      "codigo": "7.8",
+      "texto": "Utiliza determinantes, preposiciones y conjunciones, al redactar y corregir textos."
+     },
+     {
+      "codigo": "7.9",
+      "texto": "Explica la función de los emoticonos y emojis en la comunicación por redes sociales."
+     },
+     {
+      "codigo": "7.10",
+      "texto": "Reconoce y explica la relación entre los signos y la realidad, identificando indicios, íconos y símbolos en diferentes contextos de comunicación. escritas. sociales."
+     }
+    ]
+   },
+   {
+    "unidad": 8,
+    "nombre": "A la luz de las palabras",
+    "objetivos": [
+     "Participar en mesas redondas, utilizando conectores discursivos para expresar las ideas de manera coherente, con la finalidad de consolidar las habilidades de expresión y comprensión oral.",
+     "Analizar textos poéticos, reconociendo sus elementos, características y estructura, y evaluar su contenido teniendo en cuenta el tema que plantean, con el fin de fortalecer las habilidades de comprensión lectora.",
+     "Analizar y redactar textos argumentativos, atendiendo a sus elementos e intención comunicativa, y utilizando signos de puntuación y conectores discursivos, con el propósito de reforzar las habilidades de expresión escrita."
+    ],
+    "indicadores": [
+     {
+      "codigo": "8.1",
+      "texto": "Reconoce y explica los elementos de la comunicación poética, a partir de textos que lee."
+     },
+     {
+      "codigo": "8.2",
+      "texto": "Reconoce el efecto estético que producen la anáfora, la similicadencia y la aliteración, en textos que lee o escribe."
+     },
+     {
+      "codigo": "8.3",
+      "texto": "Analiza y evalúa el contenido de textos poéticos que lee."
+     },
+     {
+      "codigo": "8.4",
+      "texto": "Participa en mesas redondas expresando su punto de vista sobre temas de interés colectivo."
+     },
+     {
+      "codigo": "8.5",
+      "texto": "Analiza y evalúa textos argumentativos, a partir de sus elementos y contenido."
+     },
+     {
+      "codigo": "8.6",
+      "texto": "Establece la relación semántica del texto a partir de los conectores discursivos de cambio de perspectiva, al leer, corregir o redactar textos."
+     },
+     {
+      "codigo": "8.7",
+      "texto": "Concluye el tema de textos que lee, a partir del reconocimiento de las ideas principales o subtemas."
+     },
+     {
+      "codigo": "8.8",
+      "texto": "Redacta textos argumentativos, atendiendo a sus elementos e intención comunicativa."
+     },
+     {
+      "codigo": "8.9",
+      "texto": "Reconoce la función de los signos de puntuación en textos que lee."
+     },
+     {
+      "codigo": "8.10",
+      "texto": "Aplica la norma ortográfica de los signos de puntuación al revisar, corregir o redactar textos."
+     },
+     {
+      "codigo": "8.11",
+      "texto": "Analiza morfológicamente oraciones simples de un párrafo o texto que lee."
+     }
+    ]
+   }
+  ],
+  "Octavo": [
+   {
+    "unidad": 1,
+    "nombre": "Entre el mito y la leyenda",
+    "objetivos": [
+     "Participar en situaciones comunicativas, reflexionando sobre su rol como sujeto comunicador, haciendo uso efectivo del lenguaje verbal y no verbal, con el fin de transmitir ideas eficientemente.",
+     "Leer y analizar mitos y leyendas, identificando sus diferencias, similitudes y características, a través de narraciones representativas de la cultura universal, con la finalidad conocer y comprender la influencia de estas narraciones en la identidad cultural.",
+     "Analizar y escribir textos informativos como el boletín, poniendo en práctica sus conocimientos sobre la elipsis, organizando la información y aplicando mecanismos de cohesión textual, con el propósito de consolidar sus habilidades comunicativas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Reconoce y explica la definición, origen y características del mito y la leyenda, al leer textos pertenecientes a diferentes culturas."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Establece las diferencias entre el mito y la leyenda, a partir de las características de estos subgéneros narrativos."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Reconoce el efecto estético que produce el símbolo, en textos que lee o escribe."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Analiza mitos y leyendas mediante la lectura de textos de la cultura universal."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Identifica los elementos de la comunicación pragmática en diversas situaciones comunicativas, tanto orales como escritas."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Evalúa su rol como sujeto comunicador a partir del uso efectivo del lenguaje, de acuerdo con el contexto de las situaciones comunicativas en las que participa."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Analiza la forma y contenido de boletines que lee."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Analiza gramaticalmente oraciones simples identificando el sujeto y predicado en textos que lee o escribe."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Investiga información en Internet, estableciendo criterios para determinar la veracidad de la información encontrada y la confiabilidad de las fuentes."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Clasifica las fuentes de información de la web en confiables y no confiables a partir de una serie de criterios."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Redacta un boletín atendiendo a sus elementos, características y temáticas."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Aplica mecanismos de cohesión textual como la elipsis verbal para evitar la repetición de palabras, en textos que revisa, corrige o produce. del lenguaje verbal y no verbal. y su influencia en la identidad adecuado, y a la búsqueda de fuentes"
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "El poema",
+    "objetivos": [
+     "Participar en situaciones comunicativas orales y escritas, identificando la intención comunicativa de los hablantes, a fin de fortalecer las habilidades de comunicación oral.",
+     "Leer y comprender textos poéticos, identificando sus elementos fónicos, así como las formas de la métrica clásica y versificación, e interpretando el efecto estético de las figuras literarias en muestras de autores representativos de la poesía del Romanticismo, a fin de desarrollar habilidades de comprensión lectora.",
+     "Analizar y escribir textos periodísticos como la columna de opinión, poniendo en práctica sus conocimientos sobre el uso de palabras con h inicial o intercalada, organizando la información y aplicando mecanismos de cohesión textual, con el propósito de consolidar sus habilidades comunicativas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Identifica la métrica clásica, licencias poéticas, tipo de verso y estrofas, al leer textos poéticos."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Identifica los elementos fónicos del verso en muestras poéticas que lee."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Clasifica los versos de muestras poéticas que lee, en versos de arte mayor o menor, según la cantidad de sílabas métricas."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Analiza textos poéticos reconociendo sus características estructurales y de contenido, mediante la lectura de muestras representativas de escritores nacionales e internacionales."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Reconoce el efecto estético que producen la metáfora, la reduplicación, la similicadencia y la complexión"
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Infiere la intención comunicativa de situaciones comunicativas orales y escritas, tomando en cuenta el contexto y el propósito de los hablantes."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Analiza y evalúa textos periodísticos mediante la lectura de columnas de opinión."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Establece la relación semántica del texto a partir de los conectores discursivos de explicación, al leer, corregir o redactar textos."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Analiza gramaticalmente oraciones simples reconociendo el sintagma nominal, su estructura y núcleo, en textos que lee o escribe."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Redacta una columna de opinión atendiendo a sus elementos, características, y temáticas."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Aplica la norma ortográfica en pah labras con inicial o intercalada, en textos que revisa, corrige o produce."
+     },
+     {
+      "codigo": "2.12",
+      "texto": "Participa en foros sobre temas específicos respetando las normas implícitas de este tipo de comunicación oral. oral. y valoraciones."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "La novela histórica",
+    "objetivos": [
+     "Participar en situaciones comunicativas identificando las funciones del lenguaje utilizadas, según la intencionalidad de los hablantes, con la finalidad de fortalecer las habilidades de comunicación oral.",
+     "Analizar textos novelísticos identificando sus elementos, características y tipos de personajes, mediante la lectura de novelas históricas, valorando oralmente y por escrito los recursos expresivos y las situaciones comunicativas, y construyendo el significado y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de textos.",
+     "Analizar y producir reportajes periodísticos, poniendo en práctica sus conocimientos sobre la tilde en palabras compuestas, organizando la información y aplicando mecanismos de coherencia pragmática, con el propósito de consolidar sus habilidades comunicativas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Reconoce y explica las características, autores y obras de la novela histórica."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Clasifica los personajes en protagonistas o antagonistas, según su rol en la historia, al leer textos literarios."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Reconoce y utiliza en diferentes actos comunicativos, las funciones del lenguaje que se adapten al propósito de los hablantes."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Analiza novelas históricas mediante la lectura de muestras representativas."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Reconoce el efecto estético que produce la digresión y sinatroísmo en textos que lee o escribe."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Identifica los elementos, características y temáticas del reportaje periodístico."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Analiza y evalúa el contenido de reportajes, a través de la lectura de este tipo de texto periodístico."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Redacta criterios para seleccionar fuentes de información confiables a partir del desarrollo de investigaciones."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Selecciona y utiliza fuentes de información confiables al desarrollar investigaciones."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Analiza líneas de tiempo identificando su estructura e interpretando su contenido a partir de la representación cronológica de datos."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Diseña líneas de tiempo a partir de la lectura de textos para presentar información de forma cronológica."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Analiza gramaticalmente oraciones simples identificando el sintagma verbal en textos que lee o escribe."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Redacta un reportaje periodístico atendiendo a sus elementos, características y temáticas."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Aplica las normas de acentuación ortográfica en palabras compuestas, al revisar, corregir o producir textos. del lenguaje que se adapten a la confiables, para elaborar reportajes"
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "El texto dramático",
+    "objetivos": [
+     "Participar en situaciones comunicativas al escribir textos o desarrollar prácticas discursivas del lenguaje, con la finalidad de fortalecer las habilidades de comunicación oral.",
+     "Analizar obras representativas del teatro europeo, valorando oralmente y por escrito los recursos expresivos y las situaciones comunicativas, y construyendo el significado y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de textos.",
+     "Producir textos dramáticos con intención literaria, poniendo en práctica sus conocimientos sobre el uso del paréntesis y la raya, organizando la información y aplicando mecanismos de cohesión textual, con el propósito de consolidar sus habilidades comunicativas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Analiza textos dramáticos identificando las situaciones comunicativas del texto dramático al leer muestras de este género literario."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Analiza gramaticalmente oraciones simples identificando el sintagma adjetivo en textos que lee o es cribe."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Analiza textos dramáticos mediante la lectura de muestras representativas del teatro universal."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Reconoce el efecto estético que produce la perífrasis y litote, en textos que lee o escribe."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Aplica correctamente las normas del uso del paréntesis y la raya, al producir o corregir textos."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Redacta un texto dramático tomando en cuenta los elementos, características y las diferentes situaciones comunicativas de este género literario."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Participa en juegos de roles al caracterizar e interpretar personajes literarios o de su entorno cotidiano."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Evalúa el impacto lingüístico que genera el uso de las redes sociales en las comunidades de hablantes diferenciando el dialecto, la jerga y el argot en situaciones de comunicación."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Analiza comentarios críticos evaluando su contenido e infiriendo la visión del autor al leer este tipo de texto."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Produce comentarios críticos sobre temáticas relevantes a partir de la investigación o la lectura."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Establece la relación semántica del texto a partir de los conectores discursivos de causa, al leer, corregir o redactar textos. comunicación oral. mensajes escritos e interactuar en"
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "La novela gótica",
+    "objetivos": [
+     "Participar en disertaciones orales, haciendo uso efectivo del lenguaje verbal y no verbal, con el fin de exponer de manera congruente su perspectiva sobre un tema de interés y fortalecer sus habilidades de comunicación oral.",
+     "Leer y analizar novelas góticas, identificando sus características, elementos, autores y obras, valorando oralmente y por escrito los recursos expresivos y las situaciones comunicativas, y construyendo, el significado y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar competentemente toda clase de textos.",
+     "Analizar y producir textos argumentativos escritos u orales, atendiendo a las normas ortográficas y de redacción, comprendiendo el contenido y función de estos textos, con el propósito de desarrollar la capacidad de argumentación a través de diversos medios y contextos comunicativos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Reconoce y explica las características, autores y obras de la novela gótica."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Analiza oraciones simples identificando el sintagma adverbial en textos que lee o escribe."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Analiza novelas góticas mediante la lectura de muestras representativas de autores internacionales."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Reconoce el efecto estético que produce la figura literaria dubitación en textos que lee o escribe."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Analiza y evalúa el contenido de textos argumentativos reconociendo los argumentos de autoridad, probabilidad o analogía, mediante la lectura de este tipo de texto."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Establece la relación semántica del texto a partir de los conectores discursivos de conclusión, al leer, corregir o redactar textos."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Identifica y utiliza los diferentes tipos de citas textuales al producir textos de una investigación, para evitar el plagio y sus consecuencias, y dar validez a lo planteado."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Redacta un texto argumentativo atendiendo a sus características y utilizando argumentos de autoridad, probabilidad o analogía."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Aplica correctamente las normas j g, ortográficas del uso de la y al revisar, corregir o redactar textos."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Participa en disertaciones orales al exponer de manera congruente una perspectiva sobre un tema de interés para los receptores. sus características y contextos ideas y opiniones. y aplicar las normas ortográficas y"
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "La poesía",
+    "objetivos": [
+     "Participar en exposiciones orales, practicando la escucha activa y haciendo uso efectivo del lenguaje verbal y no verbal, con el propósito de transmitir eficientemente sus ideas y fortalecer sus habilidades de comunicación oral.",
+     "Analizar textos poéticos, identificando la métrica clásica, las licencias poéticas, el tipo de verso y las estrofas, así como el efecto estético causado por las figuras literarias, y construyendo, el significado y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de textos.",
+     "Analizar y producir textos expositivos, poniendo en práctica sus conocimientos sobre la norma gramatical, organizando la información y aplicando mecanismos de cohesión textual, con el propósito de consolidar sus habilidades comunicativas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Identifica las formas de la métrica clásica, como el soneto, redondilla, décima o romance, en muestras poéticas que lee."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Analiza gramaticalmente oraciones simples identificando el sintagma preposicional en textos que lee o produce."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Analiza textos poéticos mediante la lectura de muestras representativas del Romanticismo."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Reconoce el efecto estético que produce el retruécano, alegoría, antítesis, y sinestesia en textos que lee o escribe."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Analiza textos expositivos, identificando sus características y estructura, mediante la lectura de textos de diferentes temáticas actuales."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Establece la relación semántica del texto a partir de los conectores discursivos de introducción, al revisar, corregir o redactar textos."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Analiza mapas conceptuales identificando información principal mediante la estructura de este organizador gráfico."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Diseña mapas conceptuales para presentar la información de textos, utilizando herramientas digitales."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Aplica correctamente las normas c, s, z, ortográficas del uso de la cc sc, y al leer, corregir o redactar textos."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Redacta un texto expositivo de temáticas actuales, ateniendo a su estructura y características."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Participa en exposiciones orales sobre temas actuales, respetando las normas de interacción de este tipo de comunicación oral. actuales. lectora. gramatical."
+     }
+    ]
+   },
+   {
+    "unidad": 7,
+    "nombre": "La novela realista",
+    "objetivos": [
+     "Participar en simposios sobre temas de interés, con el fin de comunicar eficientemente sus ideas y fortalecer sus habilidades de comunicación oral.",
+     "Analizar y producir textos novelísticos del realismo, atendiendo a sus elementos, características, tipos de personajes y recursos estilísticos, con el propósito de fortalecer sus habilidades de comprensión lectora.",
+     "Analizar textos argumentativos, tomando en cuenta sus características y estructura, con el fin de consolidar las habilidades comunicativas mediante argumentos que sustenten los temas en discusión, mostrando criticidad en la información."
+    ],
+    "indicadores": [
+     {
+      "codigo": "7.1",
+      "texto": "Reconoce y explica las características de la novela realista mediante la lectura de autores nacionales e internacionales."
+     },
+     {
+      "codigo": "7.2",
+      "texto": "Evalúa la influencia del contexto en la producción de novelas realistas."
+     },
+     {
+      "codigo": "7.3",
+      "texto": "Clasifica los personajes en planos y redondos, según su caracterización en la historia, al leer textos literarios."
+     },
+     {
+      "codigo": "7.4",
+      "texto": "Reconoce el efecto estético que producen la prosopografía y pleonasmo, en textos que lee o escribe."
+     },
+     {
+      "codigo": "7.5",
+      "texto": "Analiza oraciones simples identificando el tipo de sujeto y predicado, al leer o producir textos."
+     },
+     {
+      "codigo": "7.6",
+      "texto": "Analiza novelas realistas identificando la influencia del contexto mediante la lectura de muestras representativas nacionales e internacionales."
+     },
+     {
+      "codigo": "7.7",
+      "texto": "Identifica y explica los rasgos lingüísticos de las variaciones de la lengua en una determinada comunidad de hablantes, al leer o participar en situaciones comunicativas."
+     },
+     {
+      "codigo": "7.8",
+      "texto": "Aplica las normas de uso de de, adónde, dónde adonde, y al revisar, escribir o corregir textos."
+     },
+     {
+      "codigo": "7.9",
+      "texto": "Analiza mapas de ideas relacionando y contrastando la información presentada a partir de la estructura de este tipo de texto discontinuo."
+     },
+     {
+      "codigo": "7.10",
+      "texto": "Crea mapas de ideas para presentar información de forma organizada utilizando herramientas digitales."
+     },
+     {
+      "codigo": "7.11",
+      "texto": "Redacta un capítulo de novela realista, tomando en cuenta sus elementos, características y temáticas, siguiendo un plan de redacción."
+     },
+     {
+      "codigo": "7.12",
+      "texto": "Analiza textos argumentativos atendiendo a sus características e identificando argumentos de causa, deductivos o inductivos, al leer textos persuasivos."
+     },
+     {
+      "codigo": "7.13",
+      "texto": "Redacta argumentos de causa, morales, deductivos o inductivos al expresar su opinión en diferentes temáticas."
+     },
+     {
+      "codigo": "7.14",
+      "texto": "Establece la relación semántica del texto a partir de los conectores discursivos de contraposición al revisar, corregir o redactar textos."
+     },
+     {
+      "codigo": "7.15",
+      "texto": "Utiliza referencias bibliográficas al redactar textos para garantizar la rigurosidad de la información. cotidiano. para crear sus propios textos. de argumentos."
+     }
+    ]
+   },
+   {
+    "unidad": 8,
+    "nombre": "La poesía lírica",
+    "objetivos": [
+     "Participar en declamaciones y situaciones donde utilice la comunicación oral, practicando la escucha activa y haciendo uso efectivo del lenguaje verbal y no verbal, con el fin de transmitir eficientemente sus sentimientos y fortalecer sus habilidades de comunicación oral.",
+     "Analizar poesía lírica identificando sus características, temáticas, estructura y formas, interpretando muestras de autores representativos y el efecto estético de las figuras literarias, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Producir textos poéticos con intención literaria, atendiendo a su estructura, características y recursos retóricos, organizando la información y aplicando mecanismos de cohesión textual, con el propósito de consolidar sus habilidades comunicativas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "8.1",
+      "texto": "Reconoce y explica las características, estructura y temáticas de las principales manifestaciones de poesía lírica al leer este tipo de texto poético."
+     },
+     {
+      "codigo": "8.2",
+      "texto": "Análiza sintagmáticamente oraciones simples para determinar la estructura gramatical de párrafos o textos."
+     },
+     {
+      "codigo": "8.3",
+      "texto": "Analiza textos poéticos mediante la lectura de autores representativos de la poesía lírica."
+     },
+     {
+      "codigo": "8.4",
+      "texto": "Reconoce el efecto estético que producen la anadiplosis, epanadiplosis, zeugma, antítesis y jitanjáfora, en textos que lee o escribe."
+     },
+     {
+      "codigo": "8.5",
+      "texto": "Participa en declamaciones de poesía coral, a través de la interpretación de composiciones poéticas."
+     },
+     {
+      "codigo": "8.6",
+      "texto": "Redacta textos poéticos con intención literaria, atendiendo a su estructura, características y recursos retóricos."
+     },
+     {
+      "codigo": "8.7",
+      "texto": "Aplica las máximas conversacionales al participar en situaciones comunicativas de la oralidad y la escritura."
+     },
+     {
+      "codigo": "8.8",
+      "texto": "Evalúa el uso de las máximas conversacionales en situaciones comunicativas orales y escritas."
+     },
+     {
+      "codigo": "8.9",
+      "texto": "Analiza descripciones literarias y no literarias estableciendo las diferencias en el estilo descriptivo al leer este tipo de texto."
+     },
+     {
+      "codigo": "8.10",
+      "texto": "Establece la relación semántica del texto a partir de los conectores discursivos de semejanza al leer, corregir o redactar textos."
+     },
+     {
+      "codigo": "8.11",
+      "texto": "Aplica correctamente las normas ll y, ortográficas de las letras u al revisar, producir o corregir textos. del uso del lenguaje verbal y no textos. literarias en textos que lee."
+     }
+    ]
+   }
+  ],
+  "Noveno": [
+   {
+    "unidad": 1,
+    "nombre": "El cuento policial",
+    "objetivos": [
+     "Leer y analizar textos narrativos del género policíaco, interpretando sus características, estilo, contenido y tipos de personajes, con la finalidad de consolidar hábitos lectores y el disfrute de la lectura de cuentos policiales.",
+     "Escribir textos de interacción social aplicando sus conocimientos sobre las redes sociales, el correo electrónico y el uso del lenguaje icónico-verbal, tomando en cuenta la corrección ortográfica, la coherencia y la cohesión textual y aplicando los criterios de rigor para la selección y organización de la información, a fin de consolidar las habilidades para comprender la intención comunicativa de los textos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Identifica y explica las características del cuento policial, atendiendo a la estructura narrativa."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Clasifica y explica los diferentes tipos de personajes, según sus características en las categorías de tipo, estereotipo y arquetipo."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Analiza cuentos policiales a partir de la identificación de sus características, la función de los personajes, los estilos narrativos y los elementos formales y de contenido."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Analiza sintácticamente oraciones simples identificando el sujeto y sus complementos en textos que lee o produce."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Analiza la estructura, la información y los recursos iconográficos y visuales de infografías para comprender su propósito comunicativo."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Aplica la norma ortográfica de los signos interrogación y exclamación al revisar, corregir o redactar textos."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Diseña infografías de forma efectiva, atendiendo a las características fundamentales de este tipo de texto."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Analiza y redacta correos electrónicos tomando en consideración la estructura y la intención comunicativa."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Analiza los mensajes en las redes sociales y los fenómenos lingüísticos de sustitución, adición y supresión de grafías valorando su uso según el contexto comunicativo."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Identifica y aplica las diferentes reglas de coherencia en los textos que lee o escribe."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "El teatro griego",
+    "objetivos": [
+     "Analizar textos dramáticos, sus características y los elementos representativos de la tragedia griega, a partir de la interpretación de situaciones comunicativas y la valoración del uso de figuras retóricas, con el propósito de desarrollar la comprensión de textos literarios y de recursos estéticos para enriquecer la expresión oral y escrita.",
+     "Distinguir las características, los elementos y el propósito de los textos publicitarios, interpretando su cont enido, tomando consciencia de las normas ortográficas, de redacción y de comunicación, a fin de fortalec er la comprensión de textos del entorno en situaciones comunicativas reales."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Explica el origen del teatro griego como producto de la tradición oral y los mitos religiosos de la época."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Reconoce las características y elementos de la tragedia griega en las muestras que lee."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Analiza textos dramáticos basándose en las características, el contenido y los elementos de la tragedia griega."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Analiza sintácticamente oraciones simples identificando el complemento directo en textos que lee o produce."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Reconoce el efecto estético de la hipérbole, el eufemismo, la exclamación, el símil y la metonimia en los textos que lee o escribe."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Analiza y evalúa el contenido de textos publicitarios en diversos medios de comunicación, basándose en la intención comunicativa y las estrategias discursivas que utilizan."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Aplica adecuadamente el uso de tilde en diptongos, triptongos e hiatos en textos que lee o escribe."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Aplica la elipsis como herramienta de cohesión en textos al revisar, corregir o producir escritos."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Crea un texto publicitario propio, atendiendo a las características, los elementos y la intención comunicativa de este tipo de textos."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Analiza la estructura y la intención comunicativa de cartas de solicitud de becas, identificando su estructura y características a partir de la lectura de este tipo de textos."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Redacta una carta para solicitud de beca siguiendo un modelo."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "La novela policial",
+    "objetivos": [
+     "Participar en situaciones comunicativas, adecuando su expresión y el registro al contexto (formal o informal) y negociando el significado de los discursos orales, con el propósito de consolidar sus habilidades de comunicación, con seguridad y respeto hacia las opiniones de los demás.",
+     "Comprender textos narrativos del género policial, diferenciando la novela policial a partir de su definición, características y contexto e interpretando fragmentos, con la finalidad de lograr el disfrute de los textos literarios y el hábito de la lectura.",
+     "Escribir textos ensayísticos en los que utilice los conectores discursivos de opinión, con el propósito de consolidar habilidades comunicativas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Reconoce las características y los elementos de la novela policial."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Caracteriza los tipos de personajes, su papel en la acción narrativa y la influencia del ambiente en la situación conflictiva policial."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Reconoce y explica las técnicas narrativas empleadas en las novelas que lee."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Reconoce el efecto estético que produce la exclamación en textos que lee o escribe."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Analiza oraciones simples identificando el complemento indirecto en textos que lee o produce."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Analiza novelas policíacas identificando las características de este subgénero narrativo mediante la lectura de textos."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Analiza ensayos académicos en los que toma en consideración la estructura y las características de estos."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Establece la relación semántica del texto a partir de los conectores discursivos de opinión, al leer, corregir o redactar textos."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Redacta ensayos académicos breves aplicando su estructura y sus características."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Define y redacta objetivos generales y específicos a partir de temas de investigación delimitados previamente."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Organiza y participa en debates respetando los principios básicos entre las personas deliberantes."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "El teatro romántico",
+    "objetivos": [
+     "Comprender y analizar textos dramáticos del Romanticismo, identificando el contexto, las características, los representantes y sus obras, distinguiendo el efecto estético causado por las figuras literarias, a fin de expresar sus sentimientos y emociones, teniendo en cuenta la intención comunicativa de los textos.",
+     "Analizar y producir artículos científicos, tomando en cuenta su estructura textual y características, a fin de consolidar las habilidades comunicativas mediante argumentos que sustenten los temas en discusión, mostrando criticidad en la información.",
+     "Participar en conferencias o discursos orales mediante conferencias o paneles, tomando en cuenta las características de esta modalidad, con la finalidad de interpretar eficientemente el contenido y la forma del discurso."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Identifica y explica las características de los textos dramáticos del Romanticismo, sus principales autores y obras."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Reconoce el efecto estético del asíndeton y del polisíndeton en textos que lee o escribe."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Analiza textos dramáticos del Romanticismo atendiendo a las características y particularidades de estos."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Analiza sintácticamente oraciones simples identificando el complemento circunstancial y su clasificación en textos que lee o produce."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Analiza el contenido de textos de divulgación científica que lee."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Elabora cuadros comparativos para contrastar la información sobre temas específicos."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Aplica mecanismos de coherencia textual, como la coherencia lógica, la unidad y la progresión temática, en textos que revisa, corrige o produce."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Produce artículos de divulgación científica tomando en cuenta sus características y su estructura."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Aplica la norma ortográfica del punto (.), la coma (,), punto y coma (;) y dos puntos (:) al revisar, corregir o producir textos."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Organiza y participa en conferencias o paneles, atendiendo a las características y a la intención comunicativa. al contexto y sus características, en cuenta la estructura y su de diversos temas de interés, con el en la producción de su discurso."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "La novela negra",
+    "objetivos": [
+     "Analizar e interpretar obras narrativas a partir de la estructura, el contenido y las situaciones comunicativas que las integran, con énfasis en la novela negra, sus características y demás elementos representativos que la diferencian de otros textos narrativos.",
+     "Interactuar en discursos orales negociando el significado y comprendiendo el uso de textos no literarios: la entrevista y la carta de solicitud de empleo, como herramientas para la comunicación humana y aplicando adecuadamente las normas ortográficas, gramaticales y de redacción."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Identifica y explica la estructura, las características y los personajes de la novela negra."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Analiza obras literarias correspondientes a la novela negra, tomando en cuenta las características y el contenido de este subgénero narrativo."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Redacta un capítulo de novela negra, recreando una situación comunicativa, aplicando las características de este tipo de texto."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Analiza la entrevista periodística a partir de su estructura, características, contenido y propósito."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Redacta y utiliza una entrevista periodística como herramienta de recolección de información en situaciones reales de comunicación."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Aplica adecuadamente la tilde diacrítica al redactar o corregirtextos."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Analiza sintácticamente oraciones simples en las que identifica el complemento de régimen en los textos que lee o p roduce."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Analiza una carta de solicitud de empleo reconociendo su estructura y la función que desempeña como herramienta de inserción laboral."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Aplica mecanismos de cohesión como la anáfora y la catáfora, reconociendo su función de elementos sustitutivos al revisar, corregir o producir textos. y opiniones sobre lo leído. la comunicación humana."
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "El teatro existencialista",
+    "objetivos": [
+     "Leer y comprender obras dramáticas del existencialismo, identificando sus características y los principales autores y sus obras, a fin de conocer el efecto estético causado por la expresión de sentimientos y emociones en la intención comunicativa de estos textos.",
+     "Analizar morfosintácticamente oraciones simples en textos literarios o no literarios, identificado sus categorías y funciones, a fin de conocer distintas formas de enunciación según la intención comunicativa para expresar ideas de forma oral y escrita adecuadamente.",
+     "Elaborar textos de investigación, formulando argumentaciones de acuerdo con los temas propuestos y autocorrigiéndose con responsabilidad, con el propósito de desarrollar y consolidar sus habilidades para la comunicación."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Reconoce y explica las características y temáticas de obras existencialistas en muestras que lee."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Planifica y participa en la representación teatral de una obra dramática, tomando en cuenta sus elementos."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Aplica la norma ortográfica para la mayúscula en nombres propios de textos que revisa, corrige o produce."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Analiza textos existencialistas atendiendo a su contenido y características."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Analiza la información que brindan los cuadros sinópticos basándose en la función y estructura de este tipo de textos discontinuos."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Crea cuadros sinópticos para sistematizar información basándose en la función y estructura de este tipo de textos discontinuos."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Analiza críticamente artículos de revista, considerando las temáticas y la estructura."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Analiza morfosintácticamente oraciones simples, identificando sus categorías y funciones en textos literarios y no literarios."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Utiliza los signos no verbales o paralingüísiticos de participar en situaciones comunicativas."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Análisis de currículum vitae tomando en consideración la estructura y la función de este tipo de textos."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Redacta un curriculum vitae considerando la estructura textual y la función de este."
+     }
+    ]
+   },
+   {
+    "unidad": 7,
+    "nombre": "La poesía contemporánea",
+    "objetivos": [
+     "Interpretar obras poéticas de la época contemporánea, identificando sus características, elementos, autores y obras, a fin de escribir un texto poético en el que se utilicen diversos recursos literarios.",
+     "Organizar y participar en declamaciones de poemas, respetando los principios y las normas implícitas del lenguaje verbal y no verbal, con el fin de mejorar la expresión oral.",
+     "Analizar el contenido y la función de los editoriales, considerando su estructura, características y contenidos, a fin de desarrollar el pensamiento crítico."
+    ],
+    "indicadores": [
+     {
+      "codigo": "7.1",
+      "texto": "Reconoce y explica las características de la poesía contemporánea a partir de sus principales autores."
+     },
+     {
+      "codigo": "7.2",
+      "texto": "Analiza textos literarios y no literarios considerando el sentido literal y el sentido figurado en textos que lee o escribe."
+     },
+     {
+      "codigo": "7.3",
+      "texto": "Reconoce el efecto estético que producen la metáfora y la dubitación en los textos que lee y escribe."
+     },
+     {
+      "codigo": "7.4",
+      "texto": "Analiza la poesía contemporánea basándose en sus características, estructura y contexto."
+     },
+     {
+      "codigo": "7.5",
+      "texto": "Aplica la coherencia textual de manera global y local en textos que revisa, corrige o escribe."
+     },
+     {
+      "codigo": "7.6",
+      "texto": "Declama poemas cuidando el tono de voz, el volumen y la expresividad gestual como medios para comunicar ideas, sentimientos y valoraciones."
+     },
+     {
+      "codigo": "7.7",
+      "texto": "Escribe un poema en verso libre tomando en consideración las características y elementos del texto poético, así como los recursos estéticos."
+     },
+     {
+      "codigo": "7.8",
+      "texto": "Evalúa el contenido de un poema a partir de su estructura, características y contenido."
+     },
+     {
+      "codigo": "7.9",
+      "texto": "Aplica el uso de comillas de manera oportuna en textos que escribe o corrige."
+     },
+     {
+      "codigo": "7.10",
+      "texto": "Analiza y evalúa editoriales a partir de sus elementos y de los temas que desarrollan."
+     },
+     {
+      "codigo": "7.11",
+      "texto": "Analiza oraciones simples con predicado nominal u oraciones copulativas identificando el atributo a partir de la estructura de la oración en textos que lee o escribe."
+     }
+    ]
+   },
+   {
+    "unidad": 8,
+    "nombre": "El teatro realista",
+    "objetivos": [
+     "Participar en técnicas de actuación, como el sociodrama, identificando y clasificando las variables que afectan la puesta en escena con el fin de lograr una representación clara y efectiva, mostrando seguridad en sí mismo y respeto hacia las participaciones de otros.",
+     "Leer textos dramáticos del movimiento realista atendiendo a sus características, estilo, contenido y tipos de personajes, con la finalidad de consolidar hábitos lectores y fomentar la valoración y el disfrute de la lectura del teatro realista.",
+     "Escribir textos jurídicos aplicando conocimientos de su estructura, características y función, así como de elementos cohesivos, a fin de consolidar habilidades para expresar ideas de forma clara y concisa y comprender su intención comunicativa."
+    ],
+    "indicadores": [
+     {
+      "codigo": "8.1",
+      "texto": "Organiza y participa en representaciones teatrales reconociendo la función del director de teatro para la puesta en escena, así como los elementos que componen el espacio escénico."
+     },
+     {
+      "codigo": "8.2",
+      "texto": "Identifica las características y los representantes del teatro realista en las muestras literarias que lee."
+     },
+     {
+      "codigo": "8.3",
+      "texto": "Analiza y evalúa el contenido de los memes que lee o crea a partir de las temáticas que abordan."
+     },
+     {
+      "codigo": "8.4",
+      "texto": "Analiza obras dramáticas del realismo, atendiendo a la temática y a los elementos que la conforman."
+     },
+     {
+      "codigo": "8.5",
+      "texto": "Aplica mecanismos de cohesión textual como la deixis personal, temporal, espacial y social al revisar, corregir o producir textos."
+     },
+     {
+      "codigo": "8.6",
+      "texto": "Analiza críticas culturales a partir de su estructura y características."
+     },
+     {
+      "codigo": "8.7",
+      "texto": "Escribe una crítica cultural sobre textos del teatro realista con argumentos propios de este tipo de texto."
+     },
+     {
+      "codigo": "8.8",
+      "texto": "Analiza oraciones en voz pasiva identificando los sintagmas que funcionan como complemento agente en textos que lee o escribe."
+     },
+     {
+      "codigo": "8.9",
+      "texto": "Aplica la norma de uso para ay, hay , ahí y ha en textos que revisa, corrige o produce."
+     },
+     {
+      "codigo": "8.10",
+      "texto": "Simula una situación comunicativa en la que formula un contrato, atendiendo a su estructura, función y propósito discursivo."
+     },
+     {
+      "codigo": "8.11",
+      "texto": "Redacta una escena de teatro realista en la que considera las características y la estructura textual de este tipo de texto."
+     }
+    ]
+   }
+  ],
+  "Primer año": [
+   {
+    "unidad": 1,
+    "nombre": "Literatura griega",
+    "objetivos": [
+     "Participar en interacciones orales, aplicando estrategias de comprensión y negociación del significado, con el fin de fortalecer sus habilidades de comunicación.",
+     "Interpretar epopeyas y comedias representativas de la literatura del clasicismo grecolatino, identificando los valores épicos implícitos, mediante el reconocimiento de las características y los valores épicos presentes en las muestras, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Analizar y escribir diferentes textos de comunicación masiva o de interacción social, identificando sus características, finalidad y estructura, sistematizando la información en fichas de resumen y haciendo uso correcto de las palabras homónimas, homófonas y parónimas, las abreviaturas, las siglas y los acrónimos, a fin de desarrollar habilidades para analizar críticamente y producir textos de diversa clase.",
+     "Producir textos de comunicación masiva o interacción social, utilizando frases, líneas, texturas, colores, formas y tamaños para elaborar imágenes que transmitan mensajes específicos, a fin de comprender que la expresión artística se relaciona con la vida social de un país y desarrollar un juicio crítico para valorar las producciones artísticas propias y ajenas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Identifica el contexto de comunicación (formal o informal) y adecúa su expresión a este, para lograr la negociación del significado entre oyente y hablante."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Reconoce las características, autores y obras de la comedia grecolatina."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Identifica las características de la composición y los valores épicos implícitos en las epopeyas griegas."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Explica el contenido de obras épicas representativas de la literatura de la época clásica."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Interpreta obras literarias de la época clásica, mediante la identificación de las características y de los valores épicos presentes en las muestras que lee."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Interpreta textos con imágenes a partir del uso de los colores, líneas, imágenes y frases."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Elabora textos en los que usa imágenes como elementos para la comunicación masiva de mensajes."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Revisa y corrige ortográficamente textos propios o ajenos, respetando las convenciones que rigen la escritura."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Lee y analiza textos de comunicación masiva y de interacción social."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Usa adecuadamente las abreviaturas y siglas cuando produce y corrige textos de comunicación masiva y de interacción social."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Escribe fichas resumen de información consultada en la creación de textos, respetando su estructura. de aula. la literatura del clasicismo grecolatino. social o de comunicación masiva."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Literatura medieval",
+    "objetivos": [
+     "Escuchar textos orales mediante la práctica de una serie de estrategias y tomar apuntes del discurso con el fin de desarrollar habilidades relacionadas con la construcción de significados en la comunicación oral.",
+     "Interpretar obras de la literatura universal de la época medieval, valorándolas oralmente y por escrito, según criterios de literariedad y de comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos y producir escritos de cualquier tipo, respetando las propiedades de coherencia, cohesión, adecuación y corrección.",
+     "Escribir y corregir textos literarios y no literarios atendiendo las reglas de uso de la sílaba tónica y átona: diptongos, triptongos e hiatos, a fin de alcanzar la corrección en la producción textual.",
+     "Elaborar informes académicos basados en un plan de investigación y organizando la información con el apoyo de cuadros sinópticos y de red, a fin de alcanzar el dominio de la producción de este tipo de textos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Interpreta el mensaje o idea de un texto oral a partir de la aplicación de estrategias de compresión."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Identifica y explica las características de las principales expresiones literarias de la España medieval y las relaciona con el entorno social."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Caracteriza y compara la poesía renacentista y mística, con sus principales exponentes."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Explica el origen de la novela picaresca, en el contexto social y político de Europa, especialmente de España."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Interpreta obras literarias de la Edad Media, valorando las características y el contenido de este tipo de textos."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Redacta un comentario de texto siguiendo un modelo preestablecido."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Corrige y adecua los textos producidos en clase, según los usos del paréntesis, llaves y comillas."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Usa el cuadro sinóptico y de red en la organización de información recolectada a través de investigaciones que planifica y realiza, para la elaboración de informes académicos."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Planea la producción de un informe académico, teniendo en cuenta la estructura, el formato y la organización de las ideas."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Revisa y corrige ortográficamente textos propios o ajenos, respetando las convenciones que rigen la escritura sobre los diptongos, triptongos e hiatos."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Literatura barroca",
+    "objetivos": [
+     "Hablar en conferencias y exposiciones practicando el Decálogo del hablante perfecto, con el fin de desarrollar habilidades relacionadas con la construcción de significados explícitos e implícitos en la comunicación del hablante.",
+     "Interpretar obras literarias del barroco español, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Reconocer el blog, Twitter, Facebook, YouTube y el chat, analizando sus características, finalidad, y las formas de interacción de los usuarios en cada red social a fin de mejorar la participación en estos medios.",
+     "Corregir el uso de los signos de puntuación y aplicar las normas de coherencia en la creación de textos, a fin de producir escritos de cualquier tipo, respetando las propiedades de la escritura.",
+     "Elaborar e interpretar organizadores gráficos de la información, partiendo de textos informativos y datos recolectados, para desarrollar habilidades de análisis crítico de la información y el uso de textos discontinuos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Reconoce la audiencia a la que se dirige y respeta al otro como interlocutor válido, aplicando el Decálogo del hablante perfecto."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Competencias transversales de la asignatura Hablar, escuchar, leer y escribir son habilidades que reciben diferentes nombres: destrezas, capacidades comunicativas o macrohabilidades (Cassany, Luna, & Sanz, 2007). En este programa se ha definido el uso de macrohabilidades comunicativas como competencias transversales y se expresan de esta manera: expresión oral, expresión escrita, comprensión lectora y comprensión oral (habilidades que los usuarios de la lengua deben dominar a fin de comunicarse con eficacia en cualquier situación). A continuación, se define cada una de estas: ▪ Comprensión oral: Es la capacidad de utilizar todo tipo de recursos para comprender información oral presentada con distintos propósitos y en diferentes situaciones comunicativas, mostrando habilidades de comprensión y características de un buen oyente. ▪ Expresión oral: Se enmarca en situaciones comunicativas, en las cuales el estudiantado expresa de forma oral sus deseos, intereses, experiencias e ideas, entre otros, con un propósito determinado, atendiendo a criterios de cortesía al interactuar con otros en situaciones formales o informales de la comunicación. ▪ Comprensión lectora: Implica la comprensión y la construcción del significado y del sentido de textos escritos. En este proceso, el lector se enfrenta a una situación comunicativa en la que"
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Incorpora en la comprensión de los textos que lee, el conocimiento de elementos del contexto histórico y sociocultural de producción del barroco español."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Interpreta el contenido de textos literarios del siglo XVI que lee, y relaciona las situaciones comunicativas ficcionales con hechos históricos y del presente."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Comprueba la validez de fuentes e información en Twitter, Facebook y YouTube, mediante la aplicación de criterios de calidad de la información."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Practica normas de participación en Twitter, Facebook y YouTube, como espacios de comunicación personal."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Reconoce las características y funciones del chat como medio de comunicación inmediata."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Elabora comparaciones de las ventajas y desventajas del chat como medio de comunicación."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Revisa y corrige la puntuación en textos propios o ajenos, respetando las convenciones que rigen la escritura."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Elabora un mapa conceptual, a partir de textos informativos estudiados en clase."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Reconoce las estrategias para la creación de un blog digital."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Simula la elaboración de un blog digital, en las que aplica criterios de planificación, redacción y uso de recursos audiovisuales para fortalecer la intención comunicativa."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Aplica las diferentes reglas de coherencia global y local, cuando sistematiza y sintetiza información. del hablante perfecto. medios de comunicación. las normas de coherencia. la información."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Literatura del manierismo",
+    "objetivos": [
+     "Elaborar diferentes textos orales y escritos relacionados con la oratoria, para acomodarlos a una situación de comunicación definida con anterioridad, cuidando las estructuras de cada uno, su registro particular, los elementos de cohesión necesarios, el desarrollo coherente de las ideas y la corrección gramatical.",
+     "Interpretar obras de la literatura universal propias del Manierismo, valorándolas oralmente y por escrito, según criterios de literariedad y de comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos y producir escritos de cualquier tipo, respetando las propiedades de coherencia, cohesión, adecuación y corrección.",
+     "Investigar diferentes temas aplicando criterios de selección de fuentes y las normas para referenciarlas, apoyándose en el diario de campo y la bitácora como herramientas para sistematizar la información, a fin de fortalecer las habilidades para el uso de la lengua escrita en este tipo de textos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Realiza ejercicios de oratoria reconociendo su estructura y adecuando el discurso al público."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Analiza el contexto, las características y los personajes de las novelas de caballería."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Relaciona el contexto sociocultural con el contenido de la producción literaria de obras representativas de William Shakespeare."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Interpreta obras literarias del manierismo, aplicando las características y relacionando el contenido con el contexto de producción."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Utiliza adecuadamente la repetición o recurrencia léxica, como mecanismos de cohesión textual cuando escribe diferentes tipos de textos."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Comenta textos dramáticos que lee, aplicando diferentes estrategias: interpretación del texto, valoraciones personales fundamentadas y conclusiones."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Aplica las normas APA para referenciar fuentes de temas literarios y no literarios."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Reconoce el diario de campo y la bitácora como instrumentos para recopilar información en una investigación."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Investiga sobre temas literarios y no literarios, aplicando criterios de selección de la información contenida en fuentes bibliográficas y digitales."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Verifica y corrige el uso de las conjunciones coordinantes cuando redacta textos."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Sintetiza información de investigación de campo, a través de una bitácora para registrar las acciones de búsqueda de información sobre un tema específico."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Literatura del Romanticismo",
+    "objetivos": [
+     "Planificar exposiciones orales sobre temas investigados previamente, con el fin de desarrollar habilidades relacionadas con la construcción de significados explícitos e implícitos en la comunicación del hablante e interpretar adecuadamente este tipo de discursos.",
+     "Interpretar obras de la literatura universal propias del Romanticismo, valorándolas oralmente y por escrito, según criterios de literariedad y de comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos y producir escritos de cualquier tipo, respetando las propiedades de coherencia, cohesión, adecuación y corrección.",
+     "Elaborar y analizar textos argumentativos en los que se utilizan argumentos de autoridad, tesis y contraargumentos, con el fin de fundamentar eficientemente los mensajes en cualquier situación de comunicación."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "La evaluación auténtica Este tipo de evaluación otorga relevancia a las tareas o actividades basadas en el «saber hacer» (proceso) en situaciones reales de comunicación y de interacción con textos literarios y no literarios que ocurren en el aula de clases para construir significado. Por ejemplo, escribir un ensayo, leer a los compañeros, comentar sobre el contenido, dramatizar el texto o elaborar organizadores gráficos, entre otras actividades. La evaluación auténtica se centra en un estudiante real, considera sus diferencias, lo ubica en su propio contexto y lo enfrenta a situaciones significativas y complejas de aprendizajes, tanto a nivel individual como grupal. (Condemarín & Medina, 2000). Principios de la evaluación auténtica: a. Es una instancia destinada a mejorar la calidad de los aprendizajes. b. Constituye parte integral de la enseñanza. c. Evalúa competencias dentro de contextos significativos. d. Se realiza a partir de situaciones problemáticas. e. Se centra en las fortalezas del estudiantado. f. Constituye un proceso colaborativo. g. Diferencia evaluación de calificación. h. Constituye un proceso multidimensional. i. Utiliza el error como ocasión de aprendizaje. Una de las críticas en el sistema educativo tradicional es que la evaluación que se realiza no es congruente con lo que se enseña. A partir de esto y de una idea del constructivismo, la cual plantea"
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Analiza la literatura romántica, en la obra de autores europeos."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Infiere la intencionalidad comunicativa de los recursos expresivos como pleonasmo, epíteto, gradación, alegoría e hipérbaton en textos literarios que analiza."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Interpreta obras literarias del Romanticismo, a través de la aplicación de procedimientos de comprensión lectora."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Identifica los procesos de supresión y asimilación desde el punto de vista fonético, en el uso del idioma en mensajes de redes sociales y los corrige en la escritura convencional."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Establece relaciones entre la norma lingüística y ortográfica de la lengua española, utilizándolas en expresiones orales o escritas."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Emite juicios sobre el contenido de un texto, utilizando argumentos de autoridad, según su finalidad, características y clases."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Revisa y corrige textos argumentativos producidos en clase, respetando las normas que rigen la escritura, uso de los conectores de causa."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Redacta un texto en el que plantea una tesis, argumentos de autoridad y contraargumentos."
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Literatura del realismo",
+    "objetivos": [
+     "Participar en situaciones comunicativas orales identificando la intención comunicativa de los hablantes mediante la interpretación de los actos del habla, a fin de fortalecer las habilidades de comunicación oral.",
+     "Interpretar obras de la literatura universal propias del realismo, valorándolas oralmente y por escrito, según criterios de literariedad y de comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Producir instrumentos de recolección de información reconociendo sus partes y elementos, atendiendo al uso de sino, si no; porque, porqué, por qué, por que como recursos de cohesión para fortalecer las habilidades en el uso de la lengua escrita en este tipo de textos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Interpreta la intención comunicativa de actos del habla en que participa, según el contexto de las situaciones de interacción humana, tomando en cuenta los componentes pragmáticos."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Identifica las principales características del realismo y sus principales corrientes, manifestaciones, representantes y obras."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Explica y describe la función sociológica de la novela realista."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Interpreta obras literarias del realismo, atendiendo aspectos de forma y de contenido."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Compara las teorías del teatro identificando sus características y particularidades."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Formula comentarios sobre obras dramáticas norteamericanas y europeas."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Identifica las características del teatro norteamericano y europeo en las obras que lee."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Identifica con acierto las diferentes categorías morfológicas en la estructura de textos literarios y no literarios utilizando técnicas de análisis gramatical."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Escribe comentarios de textos dramáticos del teatro del absurdo a partir de las lecturas que realiza, en los que demuestra el dominio del código y la adecuación textual."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Reconoce las técnicas y la estructura de los instrumentos para la recolección de información: encuesta, cuestionario y herramientas digitales."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Elabora instrumentos para la recolección de datos, aplicando el proceso de escritura para la redacción de preguntas e indicaciones."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Revisa y corrige ortográficamente textos propios o ajenos, respetando las convenciones que rigen la escritura."
+     }
+    ]
+   },
+   {
+    "unidad": 7,
+    "nombre": "Literatura del siglo XX",
+    "objetivos": [
+     "Participar en tertulias literarias atendiendo la estructura y estilo del discurso, a fin de fortalecer las habilidades de comunicación oral.",
+     "Interpretar obras de la literatura universal pertenecientes al siglo XX, valorándolas oralmente y por escrito, según criterios de literariedad y comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Elaborar artículos de divulgación científica, resultado de rigurosos procesos de investigación, atendiendo a su estructura y divulgándolos con el apoyo de diapositivas, con el fin de fundamentar eficientemente los mensajes en cualquier situación de comunicación y atendiendo a las normas de escritura de las palabras haciendo uso correcto de a, ha, a ver y haber."
+    ],
+    "indicadores": [
+     {
+      "codigo": "7.1",
+      "texto": "Participa en tertulias literarias, atendiendo a la estructura, estilo y adecuación del discurso."
+     },
+     {
+      "codigo": "7.2",
+      "texto": "Formula preguntas que permiten aclarar el contenido del discurso que escucha en tertulias literarias."
+     },
+     {
+      "codigo": "7.3",
+      "texto": "Diferencia la producción literaria de los principales autores de la narrativa surgidos en el siglo XX."
+     },
+     {
+      "codigo": "7.4",
+      "texto": "Interpreta obras literarias del siglo XX, valorando el contenido con el contexto de lectura."
+     },
+     {
+      "codigo": "7.5",
+      "texto": "Identifica diferentes tipos de sintagmas en oraciones y textos."
+     },
+     {
+      "codigo": "7.6",
+      "texto": "Reconoce los elementos y características del artículo de divulgación científica."
+     },
+     {
+      "codigo": "7.7",
+      "texto": "Diseña presentaciones con diapositivas para exposiciones orales, tomando en cuenta el propósito, audiencia, mensaje y tipo de lenguaje; y adecuando a la situación comunicativa su estructura, diseño y contenido."
+     },
+     {
+      "codigo": "7.8",
+      "texto": "Diseña un proceso de investigación científica a partir de la aplicación y ejecución de una serie de pasos."
+     },
+     {
+      "codigo": "7.9",
+      "texto": "Define el marco conceptual en un proyecto de investigación científica, aplicando conocimientos adquiridos en clases."
+     },
+     {
+      "codigo": "7.10",
+      "texto": "Revisa y corrige textos argumentativos producidos en clase, respetando las normas que rigen la escritura de a, ha, a ver y haber."
+     },
+     {
+      "codigo": "7.11",
+      "texto": "Redacta un artículo de divulgación científica, respetando su estructura y finalidad, a partir de los resultados de una investigación."
+     }
+    ]
+   },
+   {
+    "unidad": 8,
+    "nombre": "Literatura latinoamericana",
+    "objetivos": [
+     "Participar en mesas redondas atendiendo a la estructura y estilo del discurso, y apoyando sus comentarios en fichas previamente elaboradas, a fin de fortalecer las habilidades de comunicación oral.",
+     "Interpretar obras de la literatura latinoamericana pertenecientes al siglo XX, valorándolas oralmente y por escrito, según criterios de literariedad y comunicación; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos y producir escritos de cualquier tipo.",
+     "Elaborar materiales para exposición, atendiendo a la estructura y características particulares de cada uno, con el fin de fundamentar eficientemente los mensajes en cualquier situación de comunicación."
+    ],
+    "indicadores": [
+     {
+      "codigo": "8.1",
+      "texto": "Participa en una mesa redonda para exponer de forma oral sus ideas y planteamientos sobre temas de interés."
+     },
+     {
+      "codigo": "8.2",
+      "texto": "Elabora fichas en las que organiza los comentarios que hará en una mesa redonda u otro discurso oral."
+     },
+     {
+      "codigo": "8.3",
+      "texto": "Caracteriza de forma comparativa la poesía y narrativa contemporánea latinoamericana, con sus principales exponentes."
+     },
+     {
+      "codigo": "8.4",
+      "texto": "Analiza muestras poéticas y narrativas contemporáneas de Latinoamérica."
+     },
+     {
+      "codigo": "8.5",
+      "texto": "Interpreta obras literarias contemporáneas de Latinoamérica atendiendo al lenguaje figurado y los recursos expresivos o de estilo."
+     },
+     {
+      "codigo": "8.6",
+      "texto": "Produce fichas, infografías o presentaciones con diapositivas para exponer textos literarios representativos del siglo XX."
+     },
+     {
+      "codigo": "8.7",
+      "texto": "Analiza la morfosintaxis, las propiedades y la estructura de discursos literarios."
+     },
+     {
+      "codigo": "8.8",
+      "texto": "Valora críticamente el discurso de textos publicitarios y su influencia en las prácticas sociales del lenguaje."
+     },
+     {
+      "codigo": "8.9",
+      "texto": "Revisa y corrige ortográficamente textos propios o ajenos, respetando las convenciones que rigen la acentuación de palabras compuestas y extranjerismos."
+     },
+     {
+      "codigo": "8.10",
+      "texto": "Explica las características, la estructura, la función y el lenguaje que utiliza la crónica negra."
+     },
+     {
+      "codigo": "8.11",
+      "texto": "Interpreta crónicas negras, analizando su estructura, contenido y características periodísticas y literarias. al siglo XX. académicos."
+     }
+    ]
+   }
+  ],
+  "Segundo año": [
+   {
+    "unidad": 1,
+    "nombre": "Literatura precolombina",
+    "objetivos": [
+     "Participar en situaciones comunicativas orales, organizando el discurso y gestionando el tiempo en sus participaciones, con el fin de fortalecer sus habilidades de comunicación.",
+     "Interpretar obras literarias del período precolombino, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios, como los reportes administrativos, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección a fin de fortalecer su dominio de la lengua escrita."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Organiza adecuadamente sus participaciones orales siguiendo una serie de pasos y gestionando el tiempo."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Explica las características generales de la literatura precolombina con ejemplos de la visión cosmogónica de estas culturas."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Identifica e interpreta las figuras literarias presentes en los textos que lee y analiza."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Analiza las obras literarias del período precolombino atendiendo a las características estudiadas en clase."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Interpreta las obras literarias del período precolombino mediante la aplicación de una guía de análisis."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Aplica una serie de pasos al seleccionar un tema, las fuentes y la metodología en una investigación."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Identifica y clasifica las diferentes herramientas de búsqueda de información atendiendo a la eficacia y calidad."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Identifica correctamente la estructura y características de los tipos de reportes que lee."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Utiliza conectores de consecuencia al producir y corregir textos informativos."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Redacta un reporte atendiendo al tipo, la estructura, las características, el estilo del lenguaje y utilizando los conectores estudiados en clase para cohesionar el texto. organización del discurso y la gestión"
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Literatura colonial",
+    "objetivos": [
+     "Participar en situaciones comunicativas orales, desarrollando mecanismos de adecuación del ritmo del discurso y la prosodia, con el fin de fortalecer sus habilidades de comunicación frente al público.",
+     "Interpretar obras literarias representativas del Barroco en América, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios como los comentarios de texto, publicidad radiofónica y textos explicativos, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección a fin de fortalecer su dominio de la lengua escrita."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Aplica adecuadamente los rasgos prosódicos y la modulación de la velocidad del discurso en situaciones comunicativas en las que participa."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Analiza y comenta textos a partir de los aspectos más relevantes del contexto sociocultural y político del periodo colonial."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Define y comenta las características de la literatura barroca en América."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Interpreta textos poéticos del Barroco americano a partir de las características presentes en los textos que lee."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Identifica e interpreta las figuras literarias presentes en los textos que lee y analiza."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Analiza párrafos de acuerdo a la organización textual y al uso de marcadores discursivos."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Produce comentarios de texto aplicando un plan de redacción."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Identifica y analiza los elementos y características de la publicidad radiofónica y de redes sociales."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Identifica y corrige las expresiones que se escriben juntas o separadas atendiendo a las normas de escritura."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Formula un proyecto de investigación atendiendo a una serie de criterios."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Reformula textos utilizando la paráfrasis mecánica o constructiva. publicidad radiofónica y textos"
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Literatura salvadoreña I",
+    "objetivos": [
+     "Participar en interacciones orales atendiendo a la planificación, los aspectos no verbales, la conducción del discurso, la producción y negociación del significado, con el fin de fortalecer sus habilidades de comunicación.",
+     "Interpretar obras literarias salvadoreñas, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios en diferentes formatos, como diagramas de Venn, encuestas y formularios, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección, a fin de fortalecer su dominio de la lengua escrita en papel y en soportes tecnológicos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Escucha y comprende las participaciones orales producidas por sus interlocutores a partir de las estrategias estudiadas en clase."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Explica adecuadamente las características de la literatura salvadoreña fundacional."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Comenta las características de la literatura de la generación del 44 considerando el contexto de producción."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Analiza e interpreta las obras de escritores salvadoreños destacando las características de este tipo de textos."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Identifica y describe con ejemplos las características de la producción literaria de la generación del 44."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Corrige los textos propios o ajenos producidos en clase, aplicando las reglas de escritura."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Elabora instrumentos de recolección de información aplicando las características de este tipo de textos."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Justifica la pertinencia de una investigación sobre un tema específico a partir de criterios."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Utiliza los diagramas de Venn como recurso para organizar y presentar la información. y formularios."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Literatura salvadoreña II",
+    "objetivos": [
+     "Participar en representaciones de entrevistas laborales atendiendo a la planificación, los aspectos no verbales, la conducción del discurso, la producción y negociación del significado, con el fin de fortalecer sus habilidades de comunicación.",
+     "Interpretar obras literarias salvadoreñas propias de la época de la posguerra hasta la actualidad, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios, como guiones de entrevista o correspondencia electrónica en diferentes formatos, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección, a fin de fortalecer su dominio de la lengua escrita en papel y en soportes tecnológicos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Aplica un manejo adecuado de la voz y de la actitud personal al simular entrevistas de trabajo."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Identifica y comenta las características sociales e históricas en que surge los textos literarios salvadoreños que lee."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Analiza e interpreta obras literarias salvadoreñas a partir de sus características particulares."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Identifica y explica las figuras literarias contenidas en los textos que lee."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Lee y comenta textos ensayísticos, destacando sus características."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Reconoce y analiza oraciones coordinadas y subordinadas sustantivas a partir de su estructura y sus características."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Redacta textos ensayísticos atendiendo a su estructura y siguiendo un plan de redacción."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Reconoce el estilo y las características de los textos electrónicos que lee y comenta."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Redacta correos electrónicos aplicando fórmulas de tratamiento y siguiendo la estructura de este tipo de textos. la época de la posguerra hasta la en papel y en soportes tecnológicos."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Romanticismo y modernismo en América",
+    "objetivos": [
+     "Participar en ponencias orales, apoyándose en un borrador previamente elaborado, atendiendo a sus características y finalidad, para fortalecer sus habilidades de comunicación frente al público.",
+     "Interpretar obras literarias representativas del Romanticismo y el modernismo en América, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios, como ensayos académicos y textos argumentativos, publicitarios y propagandísticos, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección, a fin de fortalecer su dominio de la lengua escrita."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Analiza las características y la organización de discursos orales al practicar y escuchar conferencias y ponencias."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Caracteriza el Romanticismo americano a partir de sus tendencias y del contexto sociohistórico."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Explica las características y tendencias del Romanticismo americano, a partir del uso de organizadores de la información."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Analiza obras del Romanticismo americano aplicando las características de esta literatura."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Identifica y describe los tipos de personajes presentes en los textos que lee."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Caracteriza el modernismo como movimiento literario a partir del estudio del contexto sociohistórico."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Analiza críticamente las características particulares del modernismo literario."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Interpreta obras literarias del modernismo, mediante la aplicación de una guía de análisis."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Redacta con coherencia y claridad textos publicitarios y propagandísticos atendiendo a sus características, intencionalidad, audiencia y formatos de difusión."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Revisa y corrige textos propios o ajenos aplicando las convenciones ortográficas sobre el uso de extranjerismos y determinantes."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Utiliza marcadores de ordenación, adversativos y consecutivos, en textos argumentativos o de ensayos académicos que escribe o corrige."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Redacta textos argumentativos usando todo tipos de argumentos."
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "El realismo en América",
+    "objetivos": [
+     "Participar en debates sobre temas de interés, atendiendo a su estructura, elementos e intención comunicativa, para fortalecer sus habilidades de comunicación frente al público.",
+     "Interpretar obras literarias representativas del realismo regionalista, crítico y social en América, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios como reseñas críticas, reportajes periodísticos y ensayos académicos, atendiendo a sus características, respetando las propiedades de coherencia, cohesión, adecuación y corrección, a fin de fortalecer su dominio de la lengua escrita."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Participa en un debate en el que estructura su discurso con una intención comunicativa determinada."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Describe las características históricas y sociales de la literatura del realismo en América utilizando organizadores gráficos al sistematizar la información."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Analiza las obras literarias del realismo en América relacionándolas con el contexto de producción."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Interpreta las obras literarias del realismo en América a partir de las características presentes en los textos que lee."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Usa adecuadamente el paréntesis y las comillas en los textos que escribe y corrige."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Redacta una reseña crítica sobre novelas del realismo estudiadas en clase, aplicando la estructura de este tipo de textos."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Identifica la estructura del ensayo académico y la función de las citas y referencias bibliográficas en los textos que lee."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Elabora un ensayo en el que incorpora citas y razonamientos claros, aplicando un plan de redacción."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Revisa y corrige textos que lee y produce aplicando las normas de uso de las preposiciones."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Diferencia los tipos de reportajes periodísticos, a partir de su estructura, estilo e intención comunicativa del autor. crítico y social en América. periodísticos y ensayos académicos."
+     }
+    ]
+   },
+   {
+    "unidad": 7,
+    "nombre": "El boom latinoamericano",
+    "objetivos": [
+     "Participar en la expresión de discursos persuasivos, atendiendo a su estructura, elementos e intención comunicativa, al promocionar un producto o solicitar una beca o empleo, con el fin de fortalecer sus habilidades de comunicación frente al público.",
+     "Interpretar obras literarias representativas del realismo mágico en Latinoamérica, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios como: cartas de motivación, llenado de formularios, curriculum vitae y organigramas, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección, a fin de fortalecer su dominio de la lengua escrita."
+    ],
+    "indicadores": [
+     {
+      "codigo": "7.1",
+      "texto": "Expresa adecuadamente discursos persuasivos previamente planificados, atendiendo a su estructura y sus características."
+     },
+     {
+      "codigo": "7.2",
+      "texto": "Describe las características del realismo mágico usando organizadores de la información."
+     },
+     {
+      "codigo": "7.3",
+      "texto": "Reconoce y comenta las técnicas narrativas usadas por los autores en estudio."
+     },
+     {
+      "codigo": "7.4",
+      "texto": "Identifica características y diferentes técnicas narrativas presentes en los textos que lee y analiza."
+     },
+     {
+      "codigo": "7.5",
+      "texto": "Interpreta obras pertenecientes al boom latinoamericano a partir de la lectura y análisis de textos."
+     },
+     {
+      "codigo": "7.6",
+      "texto": "Distribuye la información en un organigrama, respetando la jerarquía de la información."
+     },
+     {
+      "codigo": "7.7",
+      "texto": "Redacta cartas de motivación para solicitud de empleo siguiendo un proceso de escritura."
+     },
+     {
+      "codigo": "7.8",
+      "texto": "Elabora un curriculum vitae siguiendo un modelo."
+     },
+     {
+      "codigo": "7.9",
+      "texto": "Elabora y completa diferentes tipos de formularios atendiendo a las características de este tipo de textos."
+     },
+     {
+      "codigo": "7.10",
+      "texto": "Sustituye con efectividad las perífrasis verbales que aparecen en un texto, por sus respectivas formas simples o compuestas cuando la situación y el contexto lo ameriten."
+     },
+     {
+      "codigo": "7.11",
+      "texto": "Redacta ensayos siguiendo un plan de redacción. en Latinoamérica. de solicitud, curriculum vitae y"
+     }
+    ]
+   },
+   {
+    "unidad": 8,
+    "nombre": "La vanguardia en Latinoamérica",
+    "objetivos": [
+     "Participar en el análisis crítico del discurso cotidiano, atendiendo a su estructura, elementos e intención comunicativa para fortalecer sus habilidades de comunicación.",
+     "Interpretar obras literarias representativas de la literatura de vanguardia en Latinoamérica, valorando oralmente y por escrito los recursos expresivos, los elementos del género textual, las situaciones comunicativas imaginarias y reales; construyendo, además, los significados y el sentido de cada muestra, con el fin de desarrollar habilidades para analizar críticamente toda clase de discursos.",
+     "Comprender y producir diferentes tipos de textos literarios y no literarios, como editoriales, y comentarios críticos de noticias, atendiendo a sus características y estructura, respetando las propiedades de coherencia, cohesión, adecuación y corrección a fin de fortalecer su dominio de la lengua escrita."
+    ],
+    "indicadores": [
+     {
+      "codigo": "8.1",
+      "texto": "Participa en discursos improvisados aplicando una serie de recomendaciones."
+     },
+     {
+      "codigo": "8.2",
+      "texto": "Explica las transformaciones y conflictos sociales del siglo XX y su incidencia en la cultura y la vanguardia literaria."
+     },
+     {
+      "codigo": "8.3",
+      "texto": "Interpreta textos literarios del vanguardismo a partir del análisis y aplicación de las características de este tipo de textos."
+     },
+     {
+      "codigo": "8.4",
+      "texto": "Identifica y analiza los diferentes elementos que forman parte de una narración."
+     },
+     {
+      "codigo": "8.5",
+      "texto": "Redacta un cuento en el que atiende a las características propias de la literatura de vanguardia, siguiendo un plan de redacción."
+     },
+     {
+      "codigo": "8.6",
+      "texto": "Aplica correctamente las reglas de acentuación estudiadas en clase."
+     },
+     {
+      "codigo": "8.7",
+      "texto": "Analiza y comenta editoriales periodísticos a partir de las características y la finalidad de este tipo de textos."
+     },
+     {
+      "codigo": "8.8",
+      "texto": "Redacta un editorial en el que brinda su opinión sobre acontecimientos actuales. de vanguardia."
+     }
+    ]
+   }
+  ]
+ },
+ "Ciudadanía y Valores": {
+  "Séptimo": [
+   {
+    "unidad": 1,
+    "nombre": "Recursos naturales y desafíos globales",
+    "objetivos": [
+     "Interpretar las consecuencias sociales y ambientales que resultan de la administración de los recursos en las distintas regiones y territorios."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Explica el calentamiento global, a partir del impacto de las actividades productivas de las regiones (emisiones de carbono)."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Identifica las problemáticas de la región relacionadas con el calentamiento global, mediante situaciones concretas de riesgo y vulnerabilidad ambiental."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Identifica y explica iniciativas globales para la sostenibilidad ambiental orientadas a la disminución de gases, control de residuos y reservas de parques forestales."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Explica los desafíos de los Estados y la ciudadanía para la sostenibilidad del recurso hídrico."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Describe las propuestas estatales orientadas a la sostenibilidad del recurso hídrico."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Explica los conflictos por el agua considerando las desigualdades en la administración y el abastecimiento del recurso hídrico."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Relaciona las áreas de especialización agrícola, ganadera, pesquera y forestal con las condiciones geográficas y económicas particulares de las regiones."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Vincula las cadenas de suministro con las cadenas globales de valor, en un contexto de globalización económica."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Describe las relaciones económicas, a partir de las cooperaciones y conflictos entre regiones y Estados. y territorios del mundo. regiones y territorios del mundo. económicas."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Dinámicas poblacionales en el siglo XXI",
+    "objetivos": [
+     "Identificar las dinámicas de crecimiento poblacional del mundo con el propósito de tener una visión integral de la geografía humana."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Explica el crecimiento poblacional a partir de las dinámicas de natalidad, mortalidad, fertilidad y fecundidad en las poblaciones mundiales."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Identifica programas sociales y económicos de los Estados en las regiones más pobladas; con base en la natalidad, mortalidad, emigración e inmigración."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Explica la relación entre la urbanización mundial y la explotación de los recursos naturales en las regiones."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Describe la relación de la degradación ambiental con las condiciones de vida de las poblaciones."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Identifica patrones, etapas y lugares de origen, trayecto y destino de las poblaciones migrantes; mediante casos concretos de migración regional."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Describe las condiciones de vida de los migrantes, a partir de sus contextos sociales y económicos."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Explica la dimensión social y espacial de las enfermedades endémicas y pandémicas del s. XXI en un contexto global."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Identifica y explica el aporte del paisaje cultural al desarrollo social y económico de los territorios."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Edades, ideas e industrialización",
+    "objetivos": [
+     "Caracterizar los diferentes períodos históricos en que se divide la historia mundial mediante la interpretación de fuentes primarias y secundarias."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Determina los rasgos sociales, culturales, económicos y políticos de la Edad Antigua y su vinculación con períodos históricos específicos, a partir de fuentes históricas variadas."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Determina los rasgos sociales, culturales, económicos y políticos de la Edad Media y su vinculación con períodos históricos específicos, a partir de fuentes históricas variadas."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Competencias de la asignatura Para dar sentido al enfoque por competencias se ha establecido un nivel de gradualidad entre los tres tipos de competencias que se presentan, teniendo como base el alcance o complejidad de estas, partiendo desde las macros hasta las microcompetencias , de la siguiente manera: Competencias Contienen las capacidades o procesos transversales de de pensamiento y actuación que se la asignatura esperan fortalecer a partir del proceso formativo de la asignatura. Establecen los procesos y habilidades Competencias que se fortalecerán en un período dede grado terminado. Se orientan a la realización de una serie de acciones, con el fin de obteCompetencias ner un resultado concreto. de unidad"
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Identifica elementos de la política y la economía en el contexto del liberalismo e Ilustración a partir de fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Describe el contexto histórico de la primera industrialización a través de fuentes iconográficas."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Evalúa fuentes iconográficas sobre las condiciones de la primera industrialización."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Caracteriza la primera industrialización tomando en cuenta sus alcances globales y conflictos generados en el proceso, mediante el uso de fuentes primarias y secundarias. secundarias. procesos históricos."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Independencias, revoluciones y luchas",
+    "objetivos": [
+     "Analizar las causas, consecuencias, continuidades y rupturas de las revoluciones atlánticas a través de la interpretación de fuentes primarias y secundarias."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Describe el contexto político y económico que hizo posible la independencia de las trece colonias a partir de fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Identifica las causas de la Revolución francesa utilizando fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Identifica el ideario político y filosófico de la Revolución francesa a través de fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Identifica el rol de las mujeres en la Revolución francesa a partir de la Declaración de los derechos de la mujer y la ciudadana, y de otras fuentes históricas variadas."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Valora el legado de la Revolución francesa enfatizando los aportes en derechos humanos hasta el presente."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "La pregunta como herramienta pedagógica El uso de la pregunta es fundamental para el desarrollo del pensamiento crítico, ya que permite debatir, reflexionar y argumentar basándose en fuentes variadas sobre las distintas problemáticas y actores que convergen en la sociedad. Paulo Freire en su libro La pedagogía de la pregunta, sostiene que «tanto los docentes como el estudiantado se reúnen en el aula de clase para plantearse preguntas acerca de los problemas prácticos de sus vidas, de sus comunidades y del conocimiento que esperan construir» (Zuleta Araújo, 2005). En el campo de los Ciudadanía y Valores, la pregunta se convierte en un eje medular para la activación del pensamiento geográfico e histórico y a la vez conlleva a la reflexión y práctica de la ciudadanía integral."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "La Tecnología de la Información y la Comunicación (TIC) como herramienta pedagógica Ante las transformaciones sociales y tecnológicas es necesario que cada docente desarrolle competencias, es decir, un conjunto integrado de capacidades, actitudes y valores que les permitan el fortalecimiento de las habilidades tecnológicas y así, hacer uso de los recursos educativos digitales de forma efectiva, por lo que la tarea profesional se torna más compleja, ya que poniendo en práctica estas habilidades y recursos, el docente deberá planificar, acompañar y fortalecer los procesos de aprendizaje del estudiantado en su trayectoria de formación como ciudadanos autónomos y responsables."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Analiza los principales elementos identitarios de los Estados nacionales utilizando fuentes primarias."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Identifica las relaciones de poder entre lo local y lo nacional en el proceso de construcción de los Estados nacionales."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Caracteriza la Segunda Revolución Industrial a partir de fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Compara características de la primera y la segunda industrialización a partir de fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Analiza la consolidación de la economía global y la época bella a partir de fuentes históricas variadas."
+     },
+     {
+      "codigo": "4.13",
+      "texto": "Identifica las dinámicas fundamentales de los movimientos laborales a partir de las continuidades y rupturas hasta la actualidad. francesa, a través de la interpretación de los Estados nación."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Interculturalidad y derechos humanos",
+    "objetivos": [
+     "Reconocer la importancia de la interculturalidad y los derechos humanos en contextos globales con el propósito de fomentar una ciudadanía integral y responsable."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Regula las emociones frente a situaciones sociales favorables y desfavorables a partir de la interpretación de las variables que influyen en el ejercicio ciudadano."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Interpreta diferentes estrategias para gestionar sus emociones, a partir de la mediación de sus emociones en los diferentes ámbitos de desarrollo socioemocional."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Identifica elementos culturales que son comunes y que difieren a nivel mundial a partir del reconocimiento de la mismidad y otredad para la convivencia intercultural."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Valora elementos comunes y diferencias entre las culturas del continente como componentes que orientan a la convivencia intercultural."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Determina la influencia de personajes y acontecimientos relevantes en la formulación de los proyectos de vida."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Establece las aspiraciones y procesos para alcanzar metas y propósitos personales."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Identificación de mecanismos para equiparar las oportunidades entre hombres y mujeres en los espacios de participación del contexto local."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Identifica los mecanismos legales para la protección de los derechos humanos partiendo del reconocimiento de la dignidad humana."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Valora el funcionamiento de la institucionalidad para el cumplimiento de los derechos humanos en El Salvador."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Identifica los mecanismos legales para la defensa de los derechos colectivos y específicos. una ciudadanía participativa y responsable. ciudadanía participativa y responsable."
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Participación ciudadana en los espacios públicos",
+    "objetivos": [
+     "Analizar los componentes que debe desarrollar una ciudadanía integral por medio de la ciberseguridad, la sostenibilidad, la gestión de riesgos y la cultura fiscal."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Vincula la institucionalidad y las nuevas formas de participación en los espacios de ejercicio ciudadano por medio del análisis de las conquistas democráticas."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Gestiona la actividad en el ciberespacio para la prevención de riesgos a partir de prácticas de ciberseguridad principalmente en las redes sociales."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Identificación de retos locales para la sostenibilidad y gestión de riesgos en la localidad y el país."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Interpreta los desafíos de la ciudadanía para abonar a la sostenibilidad por medio del análisis de situaciones que afectan el equilibrio ambiental y social."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Diseña estrategias para la gestión de riesgos a través de planes de acción viables en el contexto."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Analiza la participación ciudadana en el fomento de una cultura fiscal a partir de la comprensión del sistema de impuestos y la administración de estos. de fortalecer la participación ciudadana. integral."
+     }
+    ]
+   }
+  ],
+  "Octavo": [
+   {
+    "unidad": 1,
+    "nombre": "Territorios, Estados y dinámicas ambientales",
+    "objetivos": [
+     "Analizar el rol de los Estados en el contexto de la administración y organización política, económica, social y cultural entre territorios, en la gobernanza local y nacional."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Interpreta la huella ecológica mediante la incidencia de las actividades humanas sobre los territorios."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Analiza los desafíos para la conservación de los diferentes ecosistemas del mundo."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Explica los mecanismos de apropiación política, social y simbólica de un territorio para la consolidación del poder estatal."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Analiza los criterios de un Estado para dividir su territorio en unidades administrativas para la gobernanza local y nacional."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Interpreta las relaciones de poder económi co y político entre la esfera local y nacional, en el contexto de la administración territor ial del Estado."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Puntualiza las características de la gestión social, económica y cultural de un territorio."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Interpreta el rol de los Estados ante los flujos migratorios; mediante la identificación de políticas, programas y proyectos para contrarrestar el fenómeno migratorio. las actividades productivas, con los como parte de la gobernanza local y"
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Retos ambientales, alimenticios y de sostenibilidad",
+    "objetivos": [
+     "Analizar el impacto ambiental causado por el extractivismo a partir de la identificación de las dinámicas de crecimiento poblacional y los procesos de urbanización mundial."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Describe el impacto ambiental del extractivismo en las regiones productivas especializadas."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Vincula el acceso y consumo básico de los alimentos producidos industrialmente, con los desafíos de la seguridad alimentaria de las poblaciones."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Analiza las problemáticas ambientales ocasionadas por la explotación de recursos naturales, para la elaboración de productos industriales y alimentarios."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Describe las dinámicas de crecimiento demográfico en el mundo y las estructuras poblacionales, a partir de las transiciones demográficas."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Vincula los cambios estructurales de la población con su ubicación geográfica y condición socioeconómica."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Analiza los riesgos de las megaciudades y megalópolis, mediante la asociación de amenazas físico-naturales por emplazamientos y estaciones del año."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Identifica las propuestas de desarrollo turístico, económico y patrimonial a nivel nacional y local, de los paisajes culturales del país. de urbanización mundial con el"
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Transformaciones políticas, económicas y culturales en los siglos XIX y XX",
+    "objetivos": [
+     "Interpretar las transformaciones políticas, económicas y culturales en los siglos xix y xx; con el propósito de identificar procesos, dinámicas, cambios y continuidades a través del uso de fuentes históricas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Define y caracteriza el imperialismo y la expansión colonial en los siglos y xx, xix a partir de fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Identifica formas de resistencia frente al imperialismo en los siglos y a xix xx partir de fuentes históricas variadas."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Caracteriza y describe el imperialismo europeo en el continente africano a partir de fuentes históricas variadas."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Identifica características propias sobre el imperialismo estadounidense en América Latina: doctrina Monroe, gran garrote, diplomacia del dólar; a partir de fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Identifica las formas de antiimperialismo en América Latina en los siglos y xx, a partir de fuentes históricas xix variadas."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Analiza el imperialismo en América Central a partir de fuentes históricas variadas."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Caracteriza el contexto de la Primera Guerra Mundial a través de fuentes históricas variadas."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Identifica y analiza las diferentes perspectivas de personajes históricos en el contexto de la Primera Guerra Mundial, a partir de fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Identifica cambios y continuidades en diferentes momentos históricos de las mujeres y la política en occidente, a partir de fuentes históricas variadas."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Analiza y describe los motivos de las luchas de las mujeres por los derechos civiles y políticos en los siglos xix y xx, a partir de fuentes históricas variadas. y xx. través del uso de fuentes históricas."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Período entre guerras y el Holocausto",
+    "objetivos": [
+     "Analizar las causas, consecuencias, experiencias y diferentes perspectivas frente al nazismo en Europa antes de la Segunda Guerra Mundial, con la finalidad de fomentar habilidades de pensamiento histórico."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Caracteriza a la sociedad europea después de la Primera Guerra Mundial."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Reconoce rasgos característicos de la cultura y la sociedad en la República de Weimar, a través de fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Identifica aspectos de la economía en la República de Weimar con fuentes históricas variadas."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Interpreta las causas de la consolidación del partido nazi comparando fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Identifica estereotipos en la propaganda producida durante en el régimen nazi a través de fuentes primarias."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Identifica y analiza diferentes perspectivas dentro de la Alemania nazi, a través de fuentes históricas variadas."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Analiza las experiencias, resistencias y diferentes respuestas ante el Holocausto a partir de diferentes fuentes históricas."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Analiza y secuencia los acontecimientos que llevaron al Holocausto a partir de diferentes fuentes históricas."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Analiza las memorias y los procesos de justicia del Holocausto a partir de fuentes históricas variadas. y XX. a través del uso de fuentes históricas."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Convivencia intercultural y derechos humanos",
+    "objetivos": [
+     "Participar en espacios de convivencia intercultural con el propósito de fomentar el respeto al pluralismo cultural y el cumplimiento de los derechos humanos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Diseña propuestas para la gestión de las emociones en las manifestaciones sociales a partir del análisis de situaciones colectivas."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Promueve los espacios que fomentan la interculturalidad favoreciendo la convivencia."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Analiza los principales desafíos para la convivencia intercultural identificando estrategias que la fomenten."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Participa en espacios de participación juvenil en diferentes ámbitos de desarrollo, con la finalidad de promover la búsqueda de superación personal."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Justifica la importancia del proyecto de vida partiendo de la historia personal e integrando los diferentes ámbitos de la personalidad."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Comprende la importancia de garantizar el cumplimiento de los derechos humanos para abonar al desarrollo de una vida digna."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Analiza las luchas sociales para el reconocimiento y cumplimiento de los derechos humanos de las poblaciones vulnerables a partir del análisis de situaciones concretas. ciudadanía integral. de una sociedad democrática e juvenil como parte del desarrollo pleno en"
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Ciudadanía digital y ambiental para el siglo XXI",
+    "objetivos": [
+     "Proponer acciones de compromiso ambiental y uso responsable de las nuevas tecnologías; para el ejercicio de la ciudadanía digital y ambiental."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Explica la importancia del uso de los mecanismos de acceso a la información pública y la contraloría ciudadana para abonar al fomento de la transparencia en la gestión pública."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Argumenta la importancia de la contraloría ciudadana en el fortalecimiento de la transparencia institucional a partir de la valoración de los espacios de participación ciudadana."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Determina las ventajas y desventajas de las tecnologías, especialmente del Internet, haciendo uso responsable de las redes sociales y espacios de expresión."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Analiza oportunidades formativas y laborales para la superación personal posibilitadas por las nuevas tecnologías."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Ejerce compromiso ambiental mediante acciones que favorezcan la sostenibilidad."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Evalúa las consecuencias de la acción humana sobre el ambiente."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Explica la importancia de la participación ciudadana en la protección del ambiente, partiendo del análisis de situaciones concretas."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Participa en las iniciativas para la protección ambiente a través de la comprensión de la legislación ambiental e institucionalidad vigente."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Argumenta la importancia del cumplimiento de las obligaciones tributarias de la ciudadanía y el aporte de estas a la administración pública. como parte del ejercicio de la ciudadanía el ejercicio de la ciudadanía digital."
+     }
+    ]
+   }
+  ],
+  "Noveno": [
+   {
+    "unidad": 1,
+    "nombre": "Tierra, recursos hídricos y seguridad alimentaria",
+    "objetivos": [
+     "Valorar el rol de los Estados y otros actores, en la preservación y sostenibilidad de los recursos naturales rumbo a una gobernanza efectiva."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Identifica y explica las dificultades de los bosques tropicales, a partir de los procesos de deforestación y las características particulares de las regiones afectadas."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Explica los conflictos por el uso y tenencia de la tierra, considerando los procesos de reforma agraria en distintas partes del mundo."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Explica el rol de los gobiernos en la sostenibilidad de los recursos hídricos, a partir de proyectos e iniciativas en contextos locales, nacionales y regionales."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Describe el papel fundamental de los actores políticos en la preservación de los recursos energéticos no renovables en el planeta."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Explica los desafíos de los Estados y las poblaciones orientadas a la sustentabilidad de los recursos naturales y la seguridad alimentaria a escala mundial."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Analiza propuestas orientadas a la sustentabilidad de los recursos naturales y la seguridad alimentaria mundial."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Describe las políticas económicas vinculadas con la industria alimentaria del mundo, para solventar los problemas nutricionales de los grupos más vulnerables en el mundo. y sostenibilidad de los recursos naturales."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Dinámicas poblacionales",
+    "objetivos": [
+     "Identificar factores demográficos que inciden en las condiciones de vida de las poblaciones, destacando poblaciones vulnerables."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Explica el bono demográfico a partir de la clasificación de pirámides poblacionales, según las oportunidades de desarrollo productivo de la población."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Describe las condiciones de vida del grupo etario mayor de 60 años entre regiones desarrolladas y en vías de desarrollo, partiendo de casos específicos."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Comprende los factores sociales, económicos y políticos que inciden en las aglomeraciones, segregación socioespacial y dispersión de las poblaciones en el mundo."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Interpreta iniciativas sociales para la protección del ambiente, en el contexto de conflictos experimentados en distintas regiones del mundo."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Analiza las dinámicas de las movilizaciones humanas que ocasionan conflictos regionales."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Explica los conflictos y resistencias de poblaciones indígenas y afrodescendientes, partiendo del contexto económico y cultural. vulnerables. contextos."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "La Segunda Guerra Mundial y la Guerra Fría",
+    "objetivos": [
+     "Analizar la Segunda Guerra Mundial y la Guerra Fría considerando diferentes perspectivas de los bloques en conflicto a través de diferentes fuentes históricas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Analiza las causas, dinámicas políticas y militares y la cronología de la Segunda Guerra Mundial partiendo de su contexto histórico."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Interpreta el fin de la Segunda Guerra Mundial y la reconfiguración del mundo basándose en fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Explica las diferentes perspectivas de los protagonistas de la Segunda Guerra Mundial por medio de fuentes primarias."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Analiza las principales causas de la Guerra Fría, el rol de la propaganda y el surgimiento de las Naciones Unidas."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Caracteriza a los bloques capitalista y comunista, enfrentados en la Guerra Fría, a través de fuentes históricas variadas."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Explica los conflictos específicos en el contexto de la Guerra Fría, considerando los aspectos geográficos, sociales y políticos."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Explica acontecimientos históricos en el contexto de la Guerra Fría en América Latina, a través de fuentes históricas variadas."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Caracteriza los procesos de descolonización e independencia de Egipto y la India, en el contexto de la Guerra Fría."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Analiza el contexto del surgimiento de la Declaración de los Países No Alineados, a través de fuentes primarias y secundarias. tomando en cuenta procesos sociales, Guerra Fría a través de diferentes fuentes"
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Cambios y permanencias en el siglo XX y XXI",
+    "objetivos": [
+     "Comparar cambios y permanencias en diferentes periodos históricos con el fin de comprender la relación entre pasado, presente y futuro, a partir de la interpretación de fuentes históricas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Analiza las características del Movimiento por los Derechos Civiles en Estados Unidos a través de fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Analiza el contexto y los motivos de los movimientos juveniles del siglo xx, a través de fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Contrasta las diferentes características de los movimientos juveniles en el siglo xx: El Mayo francés, La Primavera de Praga y Tlatelolco, a través de fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Compara cambios y continuidades con relación a los muros, límites y fronteras, en diferentes momentos históricos del mundo."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Analiza la vida cotidiana de las personas en Berlín durante la Guerra Fría a través de fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Analiza las principales causas y consecuencias de la caída del Bloque Socialista a partir de fuentes primarias y secundarias."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Interpreta las perspectivas actuales y futuras relacionadas con el muro fronterizo entre Estados Unidos y México, a partir fuentes primarias y secundarias. fomentando el pensamiento en el contexto pos-Guerra Fría."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "La interculturalidad, derechos humanos y participación ciudadana",
+    "objetivos": [
+     "Analizar la importancia de la interculturalidad en los procesos económicos, sociales y culturales con el propósito de fortalecer la agencia ciudadana global."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Explica la importancia que tienen las emociones en los diferentes contextos de la vida pública."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Aplica estrategias socioemocionales para el manejo o gestión de las emociones en contextos complejos de su entorno."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Explica maneras de convivir en espacios presenciales y virtuales en contextos culturales variados, respetando la pluralidad."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Identifica y comenta prácticas globales para el fomento de la interculturalidad mediante el estudio de casos concretos."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Explica la importancia de construir un proyecto de vida en un contexto social desafiante."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Interpreta y comenta las circunstancias económicas, sociales e históricas que pueden limitar el proyecto de vida de los jóvenes en contextos complejos."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Identifica espacios legales y de participación ciudadana para la promoción y defensa de los derechos humanos."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Participa en espacios que promueven el desarrollo integral de las personas, contribuyendo en la defensa de los derechos humanos en sus esferas de actuación. y el cumplimiento de los derechos"
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Ciudadanía digital, medioambiente y sostenibilidad",
+    "objetivos": [
+     "Analizar la ciudadanía digital considerando los diferentes mecanismos y espacios de participación haciendo uso de las nuevas tecnologías con el propósito de desarrollar habilidades comunicativas y de empatía."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Describe los tipos de tecnologías, tomando en cuenta las ventajas prácticas que ofrecen a los ciudadanos."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Participa en diálogos virtuales promovidos por instituciones gubernamentales para fortalecer la gobernanza nacional e internacional."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Utiliza las nuevas tecnologías para fortalecer el desarrollo de habilidades sociales y comunicativas en diferentes contextos lingüísticos y culturales."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Aplica estrategias de ciberseguridad partiendo de un marco legal vigente."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Participa en proyectos e iniciativas ciudadanas orientadas a la sostenibilidad ambiental en el país."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Participa en actividades a favor del ambiente con la finalidad de construir sostenibilidad ambiental comunitaria."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Analiza avances y retos para lograr un sistema tributario justo y equitativo que fortalezca la administración pública en la función ciudadana. tecnologías para desarrollar habilidades comunicativas y de empatía."
+     }
+    ]
+   }
+  ],
+  "Primer año": [
+   {
+    "unidad": 1,
+    "nombre": "El territorio salvadoreño: oportunidades y desafíos",
+    "objetivos": [
+     "unidad Comprender la organización territorial de El Salvador, reconociendo la interrelación entre sus diferentes dimensiones y proponiendo soluciones sostenibles para los desafíos actuales."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Describe las interrelaciones entre las dimensiones política, social, económica y cultural para la configuración del territorio salvadoreño, explicando cómo influyen en la vida cotidiana de la población."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Evalúa la efectividad de la estructura y organización territorial de El Salvador, argumentando cómo estos aspectos influyen en la eficiencia de la gestión territorial."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Determina la relación entre el desarrollo y el ordenamiento territorial para mejorar la calidad de vida y reducir la desigualdad en el acceso a recursos básicos. Contenido actitudinal territorial de El Salvador. reducir el impacto de los desastres naturales."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Describe la forma en que la organización y la administración de las ciudades influye en las condiciones de vida de la población y en la gestión de recursos."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Implementa acciones para la movilidad segura promoviendo la seguridad vial desde sus espacios de incidencia."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Analiza las transformaciones en los paisajes, las actividades económicas y las condiciones sociales de la población en áreas rurales."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Identifica las amenazas y los riesgos ambientales a partir de las condiciones de vulnerabilidad en El Salvador."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Diseña estrategias de prevención y mitigación de riesgos para reducir el impacto en la población. territorial de El Salvador. el impacto de los desastres naturales."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Recursos naturales y gobernanza ambiental en El Salvador",
+    "objetivos": [
+     "Analizar las problemáticas ambientales que afectan la disponibilidad y calidad de recursos esenciales, relacionándolas con sus consecuencias para la población salvadoreña."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Analiza el uso de los ecosistemas en el territorio salvadoreño identificando las prácticas que contribuyen a la restauración y sostenibilidad."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Explica el impacto de las problemáticas ambientales en la cobertura y acceso a recursos esenciales en el país, a partir del análisis de casos locales."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Argumenta la importancia de implementar medidas de mitigación y resiliencia frente a problemáticas ambientales en El Salvador, utilizando datos sobre los impactos actuales."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Evalúa las condiciones del recurso hídrico y las políticas para su sostenibilidad en El Salvador y en la región centroamericana comparando la accesibilidad, saneamiento y calidad del agua."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Evalúa la efectividad del marco legal y la implementación de estrategias para la gestión de recursos naturales mediante el análisis de su impacto en la preservación del ambiente."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Determina la importancia de la gobernanza ambiental para la sostenibilidad en El Salvador, interpretando casos de políticas implementadas en diferentes regiones del país. en el territorio salvadoreño. en la gobernanza ambiental."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "El proceso de independencia y la República Federal de Centroamérica",
+    "objetivos": [
+     "Comprender los procesos vinculados a la independencia, la anexión a México y la República Federal considerando cambios y continuidades en aspectos políticos, económicos y sociales, a través de la interpretación de fuentes primarias y secundarias."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Explica las condiciones políticas y económicas que propiciaron la independencia en Centroamérica."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Analiza el proceso de Independencia de Centroamérica considerando los sectores sociales y políticos involucrados y las causas y consecuencias."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Competencias de la asignatura Para dar sentido al enfoque por competencias se ha establecido un nivel de gradualidad entre los tres tipos de competencias que se presentan, teniendo como base el alcance o complejidad de estas, partiendo desde las macro hasta las micro competencias, de la siguiente manera: Competencias Contienen las capacidades o procesos transversales de de pensamiento y actuación que se la asignatura esperan fortalecer a partir del proceso formativo de la asignatura. Establecen los procesos y habilidades Competencias que se fortalecerán en un período dede grado terminado. Se orientan a la realización de una Competencias serie de acciones, con el fin de obtener un resultado concreto. de unidad"
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Explica las características políticas, económicas y sociales de la República Federal de Centroamérica."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Explica las causas del levantamiento indígena de 18321833."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Analiza los acontecimientos del levantamiento de 1832 a partir de fuentes históricas."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Evalúa la multiplicidad de causas que llevaron a la ruptura de la República Federal."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Explica las consecuencias de la ruptura de la República Federal para los Estados centroamericanos. imperio mexicano y la República Federal de"
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "La conformación y consolidación del Estado de El Salvador durante el siglo XIX e inicios del siglo XX",
+    "objetivos": [
+     "Analizar la conformación y consolidación del Estado de El Salvador durante la segunda mitad del siglo XIX por medio de la interpretación de fuentes primarias y secundarias."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Evalúa las principales dificultades en el proceso de conformación del Estado."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Analiza las dinámicas políticas, económicas y sociales en el proceso de conformación del Estado."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Explica el proceso de consolidación del Estado a partir de las Reformas Liberales."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Rol del docente: mediador Los docentes son entes mediadores y facilitadores en la construcción de los procesos educativos, por lo que deben diseñar situaciones educativas que posibiliten la participación activa del estudiantado. De igual manera, se recomienda al equipo docente aplicar estrategias metodológicas que conlleven al desarrollo de habilidades relacionadas al pensamiento geográfico, pensamiento histórico y la práctica de la ciudadanía, con el propósito de garantizar el aprendizaje según la propuesta curricular."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Atención a las distintas formas de aprendizaje Cada estudiante es parte de un contexto social, económico, cultural y geográfico distinto, que incide directamente en las necesidades e intereses de aprendizaje, esto obliga al docente a implementar estrategias didácticas variadas, con el fin de dar una respuesta que permita atender de forma adecuada a cada estudiante, sin perder de vista que los mismos aprenden de diferentes maneras y con distintos ritmos."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "La pregunta como herramienta pedagógica El uso de la pregunta es fundamental para el desarrollo del pensamiento crítico, ya que permite debatir, reflexionar y argumentar basándose en fuentes variadas sobre las distintas problemáticas y actores que convergen en la sociedad. Paulo Freire, en su libro La pedagogía de la pregunta, sostiene: «Tanto los docentes como el estudiantado se reúnen en el aula de clase para plantearse preguntas acerca de los problemas prácticos de sus vidas, de sus comunidades y del conocimiento que esperan construir»"
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Analiza los primeros gobiernos reformistas de El Salvador a partir de las políticas implementadas en el ámbito social."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Analiza las perspectivas de los diferentes sectores en la vida política y económica de El Salvador a inicios del siglo XX."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Sistema democrático y derechos humanos",
+    "objetivos": [
+     "Comprender la importancia de la democracia en la construcción de sociedades justas y participativas, así como la relevancia del cumplimiento de los derechos humanos para la dignidad humana."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Describe las características de los sistemas políticos enfatizando en la democracia como sistema de gobierno que fomenta la participación de la ciudadanía."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Interpreta las implicaciones del Estado de Derecho para la construcción de una sociedad democrática y justa."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Analiza los retos del sistema político salvadoreño y la institucionalidad para el fomento de la democracia."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Analiza los derechos humanos como conquistas sociales que defienden la dignidad y el valor de la persona en diferentes contextos."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Argumenta la importancia del cumplimiento de los derechos humanos para garantizar la dignidad humana y el bien común."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Analiza los mecanismos legales y de participación ciudadana para garantizar el cumplimiento de los derechos humanos."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Interpreta la legislación vigente para la defensa de los derechos humanos a nivel nacional e internacional aplicando su contenido en situaciones concretas. orientada al desarrollo y bienestar de la"
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Participación ciudadana y realización personal",
+    "objetivos": [
+     "Participar activamente en los espacios de actuación ciudadana gestionando las emociones en diferentes situaciones y buscando la realización personal."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Determina las oportunidades que la sociedad del conocimiento posibilita para el desarrollo humano."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Argumenta sobre la importancia del cumplimiento de los derechos humanos en la era digital."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Se involucra de forma activa en los espacios de participación ciudadana para promover el cuidado del medio ambiente y el fomento de la conciencia ambiental."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Analiza los impactos de la producción y uso de las tecnologías en el medio ambiente para la búsqueda de acciones orientadas a la sostenibilidad ambiental."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Participa en diferentes espacios aportando al desarrollo de la sociedad desde su nivel de incidencia."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Describe las iniciativas para el fomento de la convivencia valorando las formas de vida y expresiones culturales en El Salvador."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Desarrolla elementos de inteligencia emocional y aplica estrategias para la mediación de conflictos a partir de la gestión de las emociones en situaciones concretas."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Determina la importancia de la formación profesional, la gestión del tiempo y de la autonomía para la realización personal."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Gestiona sus recursos económicos considerando la planificación financiera para lograr el bienestar económico individual y colectivo. y cultura de paz en sus entornos. autonomía."
+     }
+    ]
+   }
+  ],
+  "Segundo año": [
+   {
+    "unidad": 1,
+    "nombre": "Geografía económica de El Salvador",
+    "objetivos": [
+     "Caracterizar la situación económica de El Salvador, a partir de la interrelación entre los sectores productivos y la estructura macroeconómica, para evaluar sus efectos en la calidad de vida de la población."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Evalúa el impacto de las actividades económicas del sector primario y secundario en las condiciones de vida de El Salvador a partir del estudio de casos."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Determina el impacto del sector terciario y cuaternario en las condiciones de vida de El Salvador a partir del estudio de casos."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Explica la estructura económica de El Salvador, relacionando los indicadores macroeconómicos con los aspectos microeconómicos para comprender la dinámica familiar, local y nacional."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Comprende las ventajas y desventajas de la globalización para el crecimiento económico de El Salvador."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Explica los desafíos de la economía salvadoreña y comprende sus consecuencias para la calidad de vida de la población. del país."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Dinámicas poblacionales y Desarrollo Humano",
+    "objetivos": [
+     "Comprender las condiciones de vida de la población salvadoreña mediante el análisis de los indicadores de desarrollo humano, las desigualdades sociales y el impacto de las políticas públicas."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Comprende las tendencias demográficas y los patrones de distribución poblacional en El Salvador examinando las oportunidades y desafíos que estas representan para mejorar las condiciones de vida de la población."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Explica las causas y consecuencias de la pobreza en El Salvador, relacionando factores históricos, sociales, económicos y políticos."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Evalúa las políticas y programas implementados en El Salvador para reducir la pobreza, proponiendo mejoras."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Explica las características de las condiciones laborales y los mercados de trabajo en El Salvador a partir del análisis de distintos indicadores y de la diferenciación socioespacial."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Analiza el fenómeno migratorio en El Salvador, mediante el reconocimiento de causas, principales rutas migratorias y perfil de los migrantes, evaluando sus efectos."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Evalúa los impactos de las estrategias de prevención de la migración y de gestión de conflictos migratorios tomando en cuenta las perspectivas de los diferentes actores involucrados."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Evalúa las políticas públicas orientadas a la mejora de la calidad de vida en El Salvador. de vida de la población salvadoreña."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "El Salvador a inicios del siglo XX",
+    "objetivos": [
+     "Analizar los procesos políticos y sociales a inicios del siglo XX, mediante fuentes primarias y secundarias."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Analiza el contexto político y social a inicios del siglo XX."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Analiza los acontecimientos ocurridos antes, durante y después del levantamiento de 1932, a partir de la interpretación de diferentes fuentes históricas."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Explica las características del gobierno del general Martínez con énfasis en las políticas económicas y culturales."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Interpreta las causas del derrocamiento del martinato."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Analiza diferentes perspectivas y narrativas sobre 1932 desarrolladas por diferentes grupos sociales y políticos posteriores al levantamiento. y las narrativas posteriores que surgieron de inicios del siglo XX."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "El Salvador a mediados del siglo XX",
+    "objetivos": [
+     "Evaluar los aspectos políticos, económicos y sociales a mediados del siglo XX, incorporando la interpretación de fuentes primarias y secundarias."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Analiza el proyecto político impulsado a partir de la constitución de 1950, la modernización del sistema político y sus instituciones."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Evalúa el desarrollo y crisis del modelo económico ISI (Industrialización por Sustitución de Importaciones) y la diversificación de la agricultura de exportación."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Explica la implementación de la reforma educativa en el contexto de modernización del Estado considerando los desafíos y oportunidades de este proceso."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Evalúa las condiciones de vida de los ciudadanos durante el proceso de reformas y modernización."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Evalúa las condiciones de participación de los países en el Mercado Común Centroamericano."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Explica las causas y consecuencias de la guerra con Honduras a corto y largo plazo. y secundarias. de vida de la población."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Los derechos humanos: aportes y desafíos",
+    "objetivos": [
+     "Valorar el rol de los diferentes actores en el cumplimiento de los derechos humanos y en la consolidación de la democracia en El Salvador."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Interpreta la importancia de la institucionalidad para garantizar la democracia en El Salvador."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Determina la participación ciudadana y la institucionalización como elementos fundamentales en la construcción de procesos democráticos."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Evalúa el rol del Estado como garante del cumplimiento de los derechos humanos y promotor de condiciones para la dignidad humana."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Analiza los desafíos de las sociedades actuales para garantizar el cumplimiento de los derechos humanos de todas las personas y grupos poblacionales."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Asume el compromiso por la defensa de los derechos humanos como agente de transformación social y promoción del bien común. del sistema democrático. de los derechos humanos como principios"
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "La sociedad del conocimiento y espacios para el desarrollo de la juventud",
+    "objetivos": [
+     "Promover las oportunidades de desarrollo de la juventud mediante la participación y el desarrollo de habilidades de la sociedad de la información para el cumplimiento del proyecto de vida."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Describe las oportunidades del uso de las tecnologías para la participación de la juventud fomentando la ciudadanía digital en El Salvador."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Se involucra de forma activa en los espacios de participación ciudadana para promover el cuidado del medio ambiente y el fomento de la conciencia ambiental."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Promueve iniciativas para la construcción de la ciudadanía ambiental utilizando las nuevas tecnologías como espacios de participación ciudadana."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Identifica las fortalezas y oportunidades para la juventud en América Latina y El Salvador como herramientas para el cumplimiento de las proyecciones de futuro."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Fomenta la convivencia intercultural respetando las diferentes expresiones culturales que se dan en el país y en la localidad."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Rechaza cualquier tipo de violencia y propone formas de convivencia a partir del diálogo y escucha activa."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Emplea mecanismos para la promoción de la cultura de paz gestionando las emociones en diferentes situaciones."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Participa en espacios para el desarrollo de la juventud asumiendo compromisos personales relacionados con el cumplimiento del proyecto de vida."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Aplica elementos de responsabilidad financiera para el cumplimiento de metas personales y sociales. personal y colectiva. proyecto de vida."
+     }
+    ]
+   }
+  ]
+ },
+ "Educación Física": {
+  "Séptimo": [
+   {
+    "unidad": 1,
+    "nombre": "Estilos de vida saludables y fundamentos del movimiento",
+    "objetivos": [
+     "Analiza y argumenta la importancia de la actividad física, la higiene, la alimentación y el descanso como componentes esenciales de un estilo de vida saludable, valorando su impacto en la prevención del sedentarismo y en su bienestar integral.",
+     "Reconoce y aplica pruebas simples para evaluar sus capacidades físicas básicas, interpretando sus resultados y comprendiendo su relación con la salud y la eficiencia en el movimiento en la vida diaria.",
+     "Ejecuta y adapta formas básicas de desplazamiento, salto y lanzamiento del atletismo, así como acciones fundamentales y reglas básicas del softbol, participando activamente en juegos y actividades recreativas, con respeto por las normas, el entorno y los compañeros."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Identifica y argumenta, con base en su vivencia, cómo la actividad física, la higiene, la alimentación y el descanso contribuyen a un estilo de vida saludable y a prevenir el sedentarismo."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Reconoce las capacidades físicas básicas a través de la ejecución y registro de pruebas simples, valorando su importancia para la salud y el movimiento cotidiano."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Reconoce y ejecuta formas básicas de desplazamiento, salto y lanzamiento del atletismo, valorando su aplicación en actividades recreativas y juegos adaptados al entorno escolar."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Ejes transversales Los ejes transversales constituyen principios rectores que orientan, articulan y enriquecen la práctica educativa en todos los niveles y áreas del currículo. En el área de Educación Física, estos ejes no solo guían la planificación y ejecución pedagógica, sino que también favorecen una formación integral del estudiantado desde una perspectiva biopsicosocial. La transversalidad implica que estos principios deben estar presentes de forma continua, coherente e intencionada en las actividades de enseñanzaaprendizaje, evaluaciones y procesos de mediación docente. Estos ejes aseguran la pertinencia y actualidad de los programas de estudio, permitiendo la adaptación contextual, la promoción de valores y la vinculación con los desafíos contemporáneos de salud, convivencia, ciudadanía y sostenibilidad. Los siguientes son los ejes transversales definidos para el área de Educación Física: Salud e higiene corporal Este eje promueve el desarrollo de hábitos que favorezcan el bienestar físico y la prevención de enfermedades, integrando conocimientos y prácticas de higiene personal, cuidado corporal, posturas saludables, hidratación, prevención de lesiones y respeto por el entorno de práctica. En el marco escolar, se busca formar"
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Articulación de los ejes temáticos, contenidos procedimentales y ejes transversales en las unidades didácticas La planificación de la asignatura debe integrar de forma coherente los contenidos disciplinares, los contenidos procedimentales y los ejes transversales, favoreciendo aprendizajes significativos y funcionales. Esta articulación se concreta mediante secuencias didácticas que vinculen el saber con el hacer y el ser, desarrollando competencias que trascienden lo motriz para impactar en la vida cotidiana y la convivencia social. El rol docente es clave para garantizar que esta articulación ocurra de manera efectiva, diseñando experiencias formativas en las que se promueva la participación activa, la reflexión crítica y la incorporación de valores. Los ejes transversales no deben tratarse como elementos accesorios, sino como componentes esenciales que enriquecen y dan sentido a la práctica educativa."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Iniciación deportiva y cooperación en el juego",
+    "objetivos": [
+     "Desarrolla y aplica las capacidades físicas de fuerza general y velocidad mediante ejercicios y juegos adaptados, reconociendo su utilidad en la vida cotidiana y en la mejora del rendimiento físico.",
+     "Comprende y aplica de forma básica reglas, técnicas y roles fundamentales en juegos modificados de balonmano y voleibol, demostrando actitud cooperativa y respeto a las normas.",
+     "Participa activamente en actividades físicas recreativas, cooperativas y deportivas, demostrando disposición para colaborar, resolver conflictos y promover la convivencia."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Aplica ejercicios básicos para mejorar la fuerza general utilizando su propio cuerpo, reconociendo su importancia en la vida diaria y en la práctica de la actividad física."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Realiza ejercicios y juegos que desarrollan la velocidad de reacción y desplazamiento, comprendiendo su importancia y adaptándolos a su entorno escolar."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Reconoce y aplica de forma básica las reglas, posiciones y objetivos del balonmano en situaciones de juego adaptadas al entorno escolar."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Reconoce y aplica las reglas básicas del voleibol, ejecutando, con actitud cooperativa, pases y desplazamientos en juegos adaptados al entorno escolar."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Participa activamente en actividades físicas recreativas y cooperativas demostrando disposición para colaborar con sus compañeros, respetando reglas básicas y promoviendo la convivencia."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Habilidades motrices y fundamentos estratégicos en el juego",
+    "objetivos": [
+     "Aplica ejercicios de flexibilidad y actividades físicas de baja y moderada intensidad como parte de su preparación física, reconociendo sus beneficios para la salud, el bienestar y el autocuidado corporal.",
+     "Reconoce y aplica fundamentos técnicos básicos del baloncesto y del fútbol en juegos adaptados, demostrando respeto por las reglas y disposición cooperativa en situaciones de juego.",
+     "Participa en actividades lúdicas con elementos del ajedrez, identificando piezas, reglas básicas y turnos de juego, fortaleciendo la atención, la toma de decisiones y la convivencia pacífica."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Reconoce la importancia de la flexibilidad y ejecuta ejercicios básicos de estiramiento de forma segura, como parte de su preparación física y autocuidado corporal."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Participa activamente en actividades físicas continuas de baja y moderada intensidad, reconociendo los beneficios de la resistencia para la salud y el bienestar general."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Reconoce y aplica de forma básica los fundamentos técnicos del baloncesto en actividades lúdicas adaptadas, respetando normas elementales del juego."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Reconoce y ejecuta de forma básica técnicas elementales del fútbol en juegos y actividades adaptadas, respetando normas esenciales del juego en un ambiente cooperativo."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Reconoce las piezas del ajedrez, su ubicación inicial, movimientos básicos, y participa en juegos o simulaciones que favorezcan la atención, el respeto a turnos y la resolución pacífica de conflictos."
+     }
+    ]
+   }
+  ],
+  "Octavo": [
+   {
+    "unidad": 1,
+    "nombre": "Bienestar integral y rendimiento físico en la adolescencia",
+    "objetivos": [
+     "Explica la relación entre alimentación, ejercicio y descanso como base para prevenir enfermedades y afrontar los cambios físicos y emocionales propios de la adolescencia.",
+     "Aplica pruebas físicas para valorar su condición física general, registrando y comparando sus resultados con el fin de identificar avances personales y orientar su mejora continua.",
+     "Ejecuta técnicas básicas de atletismo y softbol en juegos y actividades adaptadas, respetando normas básicas y demostrando esfuerzo por mejorar su desempeño."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Identifica y explica cómo el equilibrio entre alimentación, ejercicio y descanso ayuda a prevenir enfermedades y afrontar los cambios físicos y emocionales propios de la adolescencia."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Aplica pruebas de evaluación física para medir su fuerza, resistencia, velocidad y flexibilidad, registrando y comparando sus resultados para identificar avances personales."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Ejecuta técnicas básicas de carreras, saltos y lanzamientos, mejorando sus marcas personales en contextos adaptados al espacio y recursos disponibles."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Ejecuta técnicas básicas de lanzamiento, bateo y fildeo en situaciones de juego adaptado, respetando las normas del softbol escolar."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Técnicas deportivas y fortalecimiento de la cooperación",
+    "objetivos": [
+     "Diseña y ejecuta rutinas de fuerza-resistencia y ejercicios de velocidad con componentes de coordinación, utilizando el cuerpo y materiales alternativos, con conciencia de su importancia para el rendimiento físico y la prevención de lesiones.",
+     "Aplica técnicas básicas y principios tácticos elementales en juegos adaptados de balonmano y voleibol, respetando reglas esenciales y roles en situaciones de juego reducido.",
+     "Participa activamente en actividades físicas y recreativas, demostrando habilidades de comunicación, cooperación y resolución pacífica de conflictos para fortalecer la convivencia."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Desarrolla rutinas de fuerza-resistencia con base en el trabajo corporal y materiales alternativos, valorando su contribución para el rendimiento físico y la prevención de lesiones."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Aplica ejercicios variados para mejorar su velocidad de reacción y desplazamiento, integrando componentes de coordinación y adaptándolos a espacios limitados."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Aplica técnicas básicas de pase, recepción y lanzamiento en situaciones de juego adaptadas, demostrando comprensión táctica elemental y respeto por las normas del balonmano."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Ejecuta técnicas básicas de pase y saque en situaciones de juego reducido, comprendiendo la rotación y las reglas esenciales del voleibol escolar."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Aplica estrategias de cooperación y comunicación en actividades físicas recreativas, promoviendo la resolución pacífica de conflictos y el trabajo en equipo."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Desarrollo físico integral y práctica estratégica",
+    "objetivos": [
+     "Aplica rutinas de estiramiento y actividades de resistencia física con mayor duración e intensidad, autorregulando su esfuerzo y reconociendo su impacto en el rendimiento, la recuperación y el bienestar general.",
+     "Aplica fundamentos técnicos del baloncesto y del fútbol en situaciones lúdicas y juegos adaptados, demostrando coordinación, respeto por las reglas y comprensión de roles en el juego.",
+     "Aplica principios básicos del ajedrez en partidas o ejercicios guiados, desarrollando la toma de decisiones, el análisis de situaciones y la práctica del respeto y el juego limpio."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Aplica rutinas de estiramiento adaptadas a su condición física, reconociendo su aporte al rendimiento y bienestar en las actividades físicas."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Ejecuta actividades físicas de resistencia con mayor duración e intensidad, autorregulando su esfuerzo y aplicando estrategias para mantener un ritmo constante."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Aplica de forma coordinada los fundamentos técnicos del baloncesto en situaciones lúdicas y juegos adaptados, demostrando comprensión de roles y reglas básicas."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Aplica técnicas fundamentales del fútbol y demuestra nociones básicas de desplazamiento y cooperación en situaciones lúdicas o juegos adaptados, respetando las reglas y roles del juego."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Aplica principios básicos de apertura y conceptos tácticos elementales en partidas o ejercicios guiados de ajedrez, valorando el análisis y la toma de decisiones en un marco de respeto y juego limpio."
+     }
+    ]
+   }
+  ],
+  "Noveno": [
+   {
+    "unidad": 1,
+    "nombre": "Autogestión de la salud y condición física",
+    "objetivos": [
+     "Mantener una autoimagen y un autoconcepto satisfactorios, mediante la creación y ejecución de estrategias que integren la alimentación nutritiva y la ejercitación física constante, para un desarrollo socioemocional saludable.",
+     "Identificar y registrar signos fisiológicos que se manifiestan con la ejercitación física, para valorar el nivel de función del organismo en la actividad física.",
+     "Explicar y demostrar medidas básicas para proteger el organismo, antes, durante y después de la actividad física, así como procedimientos de atención primaria al sufrir lesiones en la práctica, para mantenerse activo y saludable."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Elabora propuestas personales y grupales para prevenir el sobrepeso y mejorar su bienestar físico, emocional y social, con base en la autoevaluación y el autocuidado."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Diseña y ejecuta un plan personal de entrenamiento físico con base en su autoevaluación, estableciendo metas realistas para mejorar su condición física y monitoreando su progreso."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Participa en pruebas adaptadas de atletismo, aplicando técnicas básicas y evaluando su progreso físico y técnico en carreras, saltos y lanzamientos."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Participa en juegos adaptados de softbol aplicando técnicas básicas y estrategias ofensivas y defensivas, mostrando responsabilidad y cooperación en el desarrollo del juego."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Estrategias colectivas y fortalecimiento del rendimiento",
+    "objetivos": [
+     "Planifica, ejecuta y ajusta rutinas personales de entrenamiento para fortalecer su condición física y mejorar su velocidad de reacción y desplazamiento, con base en objetivos definidos, el entorno disponible y la evaluación continua del progreso.",
+     "Aplica técnicas fundamentales y principios tácticos básicos del balonmano y del voleibol en situaciones de juego adaptado, demostrando comprensión del reglamento, cooperación, autonomía y capacidad de adaptación al contexto escolar.",
+     "Diseña y participa en actividades físicas cooperativas y recreativas que promuevan la inclusión, la solidaridad, el respeto a la diversidad y el bienestar grupal dentro del entorno escolar."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Planifica y ejecuta una rutina personal de fortalecimiento físico con base en objetivos definidos y adaptada a su contexto, evaluando su progreso y tomando decisiones para su mejora."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Diseña y ejecuta ejercicios para mejorar su velocidad de reacción y de desplazamiento, aplicando principios técnicos básicos y ajustando las actividades al entorno disponible."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Integra técnicas y principios tácticos básicos en situaciones de juego reducido, aplicando las reglas del balonmano con autonomía, cooperación y adaptabilidad al contexto escolar."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Integra técnicas y principios tácticos básicos del voleibol en juegos adaptados, demostrando comprensión del reglamento, rotación y cooperación en equipo."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Diseña y ejecuta actividades físicas recreativas y cooperativas que fomenten la inclusión, la solidaridad y el bienestar grupal en contextos escolares diversos."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Autogestión del rendimiento y aplicación táctica en el juego",
+    "objetivos": [
+     "Diseña, aplica y ajusta rutinas de flexibilidad y resistencia de forma individual o grupal, en función de sus necesidades personales, condiciones físicas y recursos disponibles, como parte de un estilo de vida activo y saludable.",
+     "Participa activamente en juegos y partidos adaptados de baloncesto y fútbol aplicando estrategias básicas ofensivas y defensivas, cooperando con el equipo, respetando las reglas y adecuando su desempeño al entorno escolar.",
+     "Participa con responsabilidad en juegos organizados aplicando estrategias simples, anticipando consecuencias y tomando decisiones con autocontrol, lógica y respeto por las normas del juego."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Diseña y ejecuta una rutina de flexibilidad ajustada a sus necesidades personales, incorporándola como parte de un estilo de vida saludable."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Diseña y aplica rutinas personales o grupales para mejorar su resistencia, ajustándolas a sus condiciones físicas y recursos disponibles del entorno escolar."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Participa activamente en juegos reducidos y actividades cooperativas de baloncesto aplicando estrategias básicas ofensivas y defensivas adaptadas a su entorno escolar."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Participa activamente en juegos reducidos o partidos adaptados de fútbol aplicando estrategias básicas de ataque y defensa y demostrando trabajo en equipo, respeto por las reglas y adecuación al entorno escolar."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Participa activamente en partidas organizadas de ajedrez aplicando estrategias simples, anticipando consecuencias de sus decisiones y mostrando autocontrol, pensamiento lógico y respeto por las reglas del juego."
+     }
+    ]
+   }
+  ],
+  "Primer año": [
+   {
+    "unidad": 1,
+    "nombre": "Salud integral y autogestión del entrenamiento",
+    "objetivos": [
+     "Analiza críticamente su condición física y hábitos de vida, estableciendo una línea base personal y diseñando estrategias de autorregulación que integren la actividad física regular y prácticas saludables para el bienestar integral.",
+     "Diseña, aplica y ajusta un plan de acondicionamiento físico basado en los principios del método FITT y la sobrecarga progresiva, integrando ejercicios de resistencia, fuerza funcional y flexibilidad, y explica los efectos fisiológicos del ejercicio en los sistemas corporales, relacionándolos con la salud y el rendimiento."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Analiza de manera crítica su condición física a partir de la aplicación de pruebas estandarizadas en contextos deportivos escolares, estableciendo una línea base para metas personales."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Diseña, aplica y ajusta un plan de acondicionamiento físico general fundamentado en los principios de frecuencia, intensidad, tiempo y tipo (FITT), integrando ejercicios aplicados a los deportes del currículo y registrando sus avances."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Explica los efectos fisiológicos del ejercicio físico regular sobre los principales sistemas corporales, utilizando lenguaje técnico y ejemplos contextualizados."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Evalúa hábitos de vida y plantea estrategias de autorregulación que integren la práctica regular de actividades deportivas, favoreciendo bienestar integral y prevención de riesgos."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Ejes transversales Los ejes transversales orientan la práctica pedagógica de la asignatura y se manifiestan en todas las unidades didácticas. Fortalecen la formación integral y la coherencia con los valores de la política educativa Mi Nueva Escuela. Educación en valores, ética y ciudadanía. Promueve el respeto, la responsabilidad, la cooperación y la convivencia democrática. Participación y equidad educativa. Garantiza la participación de todos los estudiantes, respetando sus capacidades y ritmos de aprendizaje. Salud y bienestar integral. Fomenta el autocuidado físico, mental y emocional mediante la práctica sistemática del ejercicio y hábitos saludables. Convivencia pacífica y prevención de la violencia. Fortalece el diálogo, la tolerancia y el juego limpio como medios para la convivencia. Cuidado del entorno y sostenibilidad. Promueve el uso responsable de recursos y el respeto por los espacios naturales y comunitarios."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Cuadro de articulación general entre ejes temáticos y ejes transversales Eje temático Ejes transversales Ejemplo de aplicación relacionados en unidades Autogestión de Salud y bienestar Diseño de planes la salud y entreintegral / Innovapersonales de ennamiento ción tecnológica trenamiento con / Educación en seguimiento digital y valores reflexión ética sobre la disciplina. Deporte, ética y Ética y ciudadanía Organización de liderazgo / Convivencia patorneos internos aplicífica / Identidad cando reglas, arbitranacional je justo y respeto al adversario. Actividad física, Participación y Proyectos comunitacomunidad y equidad / Cuidado rios de vida activa, sostenibilidad del entorno / campañas de salud y Salud integral jornadas ecológicas deportivas."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Principios técnicos y tácticos en deportes de invasión",
+    "objetivos": [
+     "Aplica principios tácticos ofensivos y defensivos en situaciones de juego reducido, transfiriendo estrategias entre diferentes deportes de invasión y evaluando su desempeño técnico-táctico mediante observación estructurada para identificar fortalezas y áreas de mejora.",
+     "Ejecuta combinaciones técnicas básicas bajo presión defensiva y diseña, dirige y participa en actividades integradoras que promuevan la cooperación, la equidad y el aprendizaje de principios tácticos básicos en contextos colectivos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Principios metodológicos promuevan la empatía, la comunicación y la corresponsabilidad. Centralidad del estudiante. El aprendizaje parte de los intereses, Integración tecnológica. Uso de aplicaciones o dispositivos móviles metas personales y contextos socioculturales de los jóvenes, para monitorear la frecuencia cardíaca, registrar progresos, fomentando la responsabilidad individual y colectiva. analizar videos de ejecución técnica o planificar entrenamientos. Aprendizaje experiencial y reflexivo. Las actividades deben Aprendizaje-servicio. Integrar proyectos de impacto comunitario vivenciar los contenidos desde la acción, el descubrimiento (como campañas de vida activa o ferias de salud) que conecten la Educación Física con la transformación social. guiado y la resolución de problemas reales del entorno deportivo o comunitario y acompañarse de espacios de análisis sobre el sentido del ejercicio, la ética deportiva y su impacto social y personal. Ambientes y recursos de aprendizaje Flexibilidad y contextualización. Las estrategias deben adaptarse a los recursos disponibles, las condiciones del entorno y características • Fomentar espacios seguros, integradores y participativos, individuales del estudiantado. donde se valore las diferencias individuales, la identidad y las diversas capacidades presentes en el grupo. Participación cooperativa y liderazgo compartido. Se promueve el trabajo en equipo, el respeto a las diferentes opiniones y la rotación • Promover el uso creativo del entorno local (parques, canchas de roles de liderazgo, de manera que todos tengan la oportunidad comunitarias, senderos, plazas) como escenarios educativos. de dirigir, colaborar y aprender a escuchar, fortaleciendo así la corresponsabilidad, la integracion y el sentido de comunidad. • Incorporar materiales alternativos y reciclados para la práctica motriz, incentivando la sostenibilidad y la innovación Estrategias metodológicas sugeridas: pedagógica. Aprendizaje basado en proyectos. Permite que los estudiantes Rol del docente diseñen y ejecuten proyectos deportivos, de salud o sostenibilidad física, articulando saberes científicos, técnicos y sociales. • Actúa como guía, facilitador y mentor, promoviendo la autonomía y la autorregulación del estudiante."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Ejecuta combinaciones técnicas básicas (conducción-pase, drible-lanzamiento) bajo presión defensiva en contextos de juego, adaptando su desempeño a reglas y dinámicas colectivas."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Evalúa su desempeño técnico-táctico en deportes de invasión mediante la observación estructurada, identificando fortalezas, debilidades y áreas de mejora"
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Diseña, dirige y ejecuta actividades que promuevan la enseñanza y aplicación de un principio táctico básico, garantizando participación activa, cooperación y equidad."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Principios técnicos y tácticos en deportes de red/muro",
+    "objetivos": [
+     "Aplica progresivamente los principios técnicos y las secuencias de juego de los deportes de red/muro, integrando roles ofensivos y defensivos, rotación y dinámica colectiva, demostrando comprensión de la construcción del punto y la flexibilidad táctica.",
+     "Analiza y compara los principios tácticos de los deportes de red/muro con los de invasión, argumentando diferencias y similitudes mediante ejemplos prácticos y reflexiones basadas en su práctica escolar."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Aplica de manera progresiva los principios básicos del juego de voleibol en situaciones de juego adaptado, demostrando comprensión de la fase de construcción del punto."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Ejecuta acciones técnicas ofensivas y defensivas, integrando la lógica de la rotación en el sistema de juego básico."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Asume distintos roles dentro del equipo en función de las necesidades colectivas, demostrando flexibilidad táctica y disposición colaborativa."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Argumenta las diferencias fundamentales entre los principios tácticos de los deportes de invasión y los de red/muro, utilizando ejemplos comparativos de su propia práctica escolar."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Habilidades cognitivas, ética y gestión básica",
+    "objetivos": [
+     "Aplica los principios básicos del ajedrez para fortalecer la anticipación, la planificación estratégica y la toma de decisiones, transfiriendo estas habilidades cognitivas a contextos deportivos y colectivos.",
+     "Aplica las reglas, realiza arbitrajes y utiliza herramientas de registro cuantitativo en actividades deportivas escolares, demostrando imparcialidad, responsabilidad y capacidad de análisis para mejorar el desempeño individual y grupal."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Aplica los principios básicos del ajedrez como recurso para fortalecer la capacidad de anticipación, la planificación estratégica y la toma de decisiones en contextos deportivos."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Aplica las reglas principales y realiza arbitrajes básicos en situaciones de juego escolar, demostrando imparcialidad, responsabilidad y conocimiento de la normativa correspondiente."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Utiliza herramientas simples de registro (cronometraje, conteo de puntuaciones) para organizar y analizar aspectos cuantitativos de su desempeño individual y colectivo en actividades deportivas."
+     }
+    ]
+   }
+  ],
+  "Segundo año": [
+   {
+    "unidad": 1,
+    "nombre": "Liderazgo, proyecto y salud comunitaria",
+    "objetivos": [
+     "Evalúa sus capacidades físicas y técnicas en un deporte de elección mediante pruebas e instrumentos de autoevaluación, estableciendo metas de mejora personal y argumentando la relación entre entrenamiento, nutrición y prevención de lesiones para optimizar su rendimiento y bienestar.",
+     "Diseña y presenta una propuesta de intervención comunitaria orientada a la promoción de estilos de vida activos, aplicando habilidades de liderazgo, organización y gestión, fomentando la participación y el impacto positivo en el entorno escolar o comunitario."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Evalúa sus capacidades físicas y técnicas en un deporte de elección, mediante pruebas e instrumentos de autoevaluación, estableciendo metas de mejora personal vinculadas a un estilo de vida activo."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Argumenta, con base en fundamentos científicos, la relación entre la metodología del entrenamiento, la nutrición equilibrada y la prevención de lesiones en el rendimiento deportivo."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Diseña y presenta una propuesta de intervención comunitaria (clínica deportiva, torneo escolar, feria de salud) orientada a la promoción de estilos de vida activos, aplicando habilidades de liderazgo, organización y gestión."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Estrategia en deportes de invasión",
+    "objetivos": [
+     "Aplica sistemas tácticos ofensivos y defensivos en deportes de invasión, analizando situaciones de juego y adaptando decisiones individuales y colectivas para optimizar el rendimiento durante minijuegos o simulaciones.",
+     "Asume roles rotativos de liderazgo en la conducción táctica del equipo y realiza análisis técnico-táctico de situaciones de juego, proponiendo planes de acción fundamentados para mejorar la ejecución y la cooperación grupal."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Aplica sistemas tácticos ofensivos y defensivos sencillos en un deporte de invasión, analizando situaciones de juego y adaptando decisiones tácticas durante minijuegos o simulaciones."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Asume de forma rotativa roles de liderazgo en la conducción táctica de un equipo durante fases específicas del juego (balón parado, transiciones rápidas), demostrando habilidades de mando, comunicación efectiva y toma de decisiones bajo supervisión docente."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Realiza un análisis técnico-táctico de una situación de juego específica, utilizando observación directa o registros básicos, y propone un plan de acción fundamentado en sus conclusiones."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Deportes de red/muro y optimización del rendimiento",
+    "objetivos": [
+     "Diseña y aplica ejercicios de preparación física específicos para deportes de red/muro, integrando aspectos técnicos y tácticos y aplicando medidas de prevención de lesiones para optimizar el rendimiento individual y colectivo.",
+     "Aplica sistemas básicos de juego en deportes de red/muro y adapta decisiones tácticas durante minijuegos o simulaciones, identificando riesgos de lesión y proponiendo estrategias preventivas para garantizar seguridad y eficiencia en la práctica deportiva."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Diseña y aplica un conjunto de ejercicios de preparación física orientados a la mejora del rendimiento en voleibol, integrando aspectos técnicos, tácticos y de prevención de lesiones."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Aplica sistemas de juego básicos en voleibol (4-2, 6-0) y adapta decisiones tácticas durante minijuegos o prácticas simuladas."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Identifica y evalúa de manera práctica los riesgos de lesión frecuentes en la práctica escolar, aplicando protocolos básicos de calentamiento y prevención adaptados a los deportes trabajados."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Ética, metacognición y proyecto de vida activa",
+    "objetivos": [
+     "Aplica principios estratégicos del ajedrez y juegos de resolución de problemas para analizar, planificar y tomar decisiones en contextos deportivos y de vida activa, considerando alternativas, riesgos y consecuencias.",
+     "Argumenta posturas éticas en el deporte y construye un portafolio de evidencias que documente su evolución física, técnica, cognitiva y ética, integrando reflexión metacognitiva para la planificación de un proyecto de vida activa y saludable."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Utiliza los principios estratégicos del ajedrez (planificación y valoración de alternativas) para analizar y resolver situaciones simuladas relacionadas con la toma de decisiones en deportes y proyectos de vida activa."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Argumenta y participa en debates guiados sobre dilemas éticos en el deporte (juego limpio, dopaje, violencia), formulando posturas críticas fundamentadas en evidencia."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Integra y presenta un portafolio de evidencias que documente de forma sistemática su evolución física, técnica, cognitiva y ética en la trayectoria escolar, argumentando su relevancia para la construcción de su proyecto de vida adulta."
+     }
+    ]
+   }
+  ]
+ },
+ "Proyecto de Vida y Carrera": {
+  "Primer año": [
+   {
+    "unidad": 1,
+    "nombre": "El autoconocimiento",
+    "objetivos": [
+     "Valorar los elementos de la identidad personal que contribuyen al autoconocimiento y al fortalecimiento de habilidades para el desarrollo personal y social."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Reconoce las características, fortalezas y debilidades a partir de un análisis sobre la formación de su autoconcepto como elementos clave para su desarrollo."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Describe los intereses personales y su influencia en la toma de decisiones."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Determina la importancia del diálogo para la resolución de conflictos y fomento de la convivencia en su entorno."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Analiza la importancia de la resolución de conflictos aplicando estrategias que promuevan la cultura de paz."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Reconoce las reacciones físicas y emocionales que surgen en el manejo de situaciones de su entorno."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Identifica estrategias de gestión de emociones para el manejo de diferentes situaciones. para contribuir a una cultura de paz."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Las habilidades sociales",
+    "objetivos": [
+     "Fomentar las habilidades sociales que le permiten desempeñarse como agente de cambio en las interacciones que se realizan en los diferentes contextos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Identifica las habilidades personales y sociales que definen su personalidad y permiten interactuar de manera efectiva con las demás personas."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Aplica estrategias que favorecen las relaciones sociales armoniosas (diálogo, inteligencia emocional, confianza y respeto, principio del bien común) a partir de casos en diferentes contextos."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Analiza el trabajo colaborativo como elemento para alcanzar metas colectivas en ámbitos sociales, educativos y laborales."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Valora los aportes de la juventud como agente de cambio y transformación en procesos sociales, políticos y culturales, por medio de iniciativas de participación activa, innovación, creatividad, entre otros."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "La exploración vocacional",
+    "objetivos": [
+     "Indagar los intereses vocacionales con la finalidad de orientar la toma de decisiones, de manera que permita prepararse y desempeñarse en un campo que le garantice la satisfacción personal, profesional y ocupacional."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Identifica los intereses vocacionales a partir de la valoración de los intereses personales y proyecciones de futuro como elementos clave para la satisfacción personal y laboral."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Describe las carreras, profesiones u ocupaciones relacionadas con los intereses vocacionales, identificando las áreas en las que desea desempeñarse en la vida laboral."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Evalúa las oportunidades y desafíos para la formación en la carrera, profesión u ocupación de interés y las posibilidades de éxito considerando las habilidades personales y el contexto económico, social y cultural (con la finalidad establecer un marco de actuación que permita aprovechar las oportunidades y superar los desafíos)."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Diseña un mapeo de ruta académica y profesional a partir de las carreras de interés, considerando los elementos necesarios para la profesionalización y satisfacción personal (metas profesionales, áreas de estudio, instituciones de educación, programas de becas y otros)."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Planificación y gestión del tiempo",
+    "objetivos": [
+     "Establecer los propósitos de vida considerando el perfil personal y profesional, considerando el potencial de desarrollo y trazando una ruta viable para alcanzar lo propuesto."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Define el propósito de vida considerando los elementos personales, académicos, profesionales, laborales y otros que le permitan lograr la realización personal."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Identifica los aspectos fundamentales para el logro del propósito de vida, tomando en cuenta el estudio, trabajo, áreas laborales de interés, entre otros."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Describe el perfil personal y profesional para el logro del propósito de vida, considerando el desarrollo integral y la autorrealización."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Elabora una ruta de actuación con las etapas y momentos de evaluación para alcanzar el propósito de vida. y compromiso por su cumplimiento para be-"
+     }
+    ]
+   }
+  ],
+  "Segundo año": [
+   {
+    "unidad": 1,
+    "nombre": "Autoconocimiento y desarrollo personal",
+    "objetivos": [
+     "Implementar estrategias de autocuidado y motivación que fomenten el desarrollo personal y permitan incidir de forma positiva en las relaciones interpersonales."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Determina los elementos que contribuyen al bienestar físico, mental y emocional que permitan el desarrollo integral."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Implementa acciones de autocuidado que propicien condiciones para una mejor calidad de vida."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Identifica los elementos de interés en diferentes ámbitos: personal, académico y social para fortalecer la motivación."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Establece estrategias de motivación para contribuir al bienestar y cumplimiento de las metas personales."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Analiza las variables que intervienen en un conflicto considerando las partes involucradas y las posturas de cada una a través de casos concretos."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Determina estrategias de solución pertinentes para diferentes situaciones de conflicto considerando mecanismos pacíficos."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Reconoce las características de las relaciones interpersonales saludables."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Valora las formas de convivencia con las personas que interactúa para establecer relaciones interpersonales saludables. construir relaciones interpersonales saluda-"
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Habilidades interpersonales y colaboración",
+    "objetivos": [
+     "Fortalecer las habilidades para el desarrollo social incidiendo en los espacios de participación como un agente de transformación y promotor de la cultura de paz."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Identifica la importancia del liderazgo y la motivación como medios para impulsar la transformación del entorno desde la participación activa, la cooperación y el desarrollo comunitario."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Valora la participación activa de la juventud para el desarrollo social basado en el bien común."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Identifica estrategias para la gestión de crisis en contextos sociales, basadas en la resiliencia, la empatía y el bienestar colectivo ante situaciones adversas."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Propone iniciativas orientadas a la transformación del entorno para generar espacios de desarrollo positivos y sostenibles. para la cooperación, la convivencia arcrisis, promoviendo iniciativas de cambio"
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Orientación vocacional y proyección para el desarrollo laboral",
+    "objetivos": [
+     "Analizar las oportunidades de formación y los espacios laborales afines a las aspiraciones vocacionales con la finalidad de tomar decisiones para su vida académica y laboral."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Describe los factores personales y contextuales que influyen en la elección de una carrera o profesión, así como del perfil personal con la finalidad de tomar decisiones informadas sobre el futuro académico y laboral."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Reconoce el proceso para elegir la carrera, profesión u ocupación considerando los factores que intervienen en la toma de decisiones sobre el futuro profesional."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Jerarquiza las carreras, profesiones u ocupaciones de interés, identificando su coherencia con las habilidades, intereses y valores personales, así como con la orientación vocacional."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Analiza los campos ocupacionales a nivel local y de país considerando las oportunidades laborales que ofrecen para las carreras de interés."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Diseña un plan de carrera y de desarrollo profesional orientado a la autorrealización y al logro de las metas de forma coherente con los intereses y el perfil personal. personal y contextual en la elección de una coherente con el perfil personal y las aspira-"
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Proyecto de vida y organización personal",
+    "objetivos": [
+     "Establecer un proyecto de vida considerando los elementos que intervienen para su cumplimiento, así como el camino a seguir para alcanzar con éxito la autorrealización."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Diseña un proyecto de vida considerando las habilidades personales, las aspiraciones académicas y laborales estableciendo los resultados y períodos de tiempo para lograrlo."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Establece metas para desarrollar el proyecto de vida, definiendo las acciones que posibilitan su consecución, considerando la satisfacción y el desarrollo personal."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Analiza las oportunidades y los desafíos para impulsar el proyecto de vida con garantías de éxito."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Elabora un plan de acción considerando las habilidades e intereses personales y profesionales, así como las variables del contexto económico, social y cultural. y laborales, valorando la planificación las habilidades, intereses y variables del con-"
+     }
+    ]
+   }
+  ]
+ },
+ "Ciencias de la Computación": {
+  "Primer año": [
+   {
+    "unidad": 1,
+    "nombre": "Introducción a las ciencias de la computación",
+    "objetivos": [
+     "Aplicar los conceptos fundamentales del pensamiento computacional, enfatizando en el reconocimiento de patrones, la abstracción y los algoritmos, para resolver problemas sencillos y comprender el funcionamiento básico de una computadora y su sistema operativo."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Explica el concepto y funciones principales de una computadora."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Ejemplifica problemas lógicos o de cálculo que han sido resueltos por las computadoras, según su generación."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Elabora un diagrama o lista de planificación con las tareas necesarias para abordar una situación cotidiana."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Reconoce un patrón simple formado por figuras, objetos naturales o números."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Representa objetos o conceptos cotidianos de forma abstracta, utilizando esquemas o textos simplificados."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Explica el concepto, características e importancia de los algoritmos."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Identifica la entrada, procesamiento y salida de un algoritmo."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Representa algoritmos empleando herramientas visuales como diagramas de fl ujo y pseudocódigo."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Desarrolla los conceptos de hardware y software brindando ejemplos."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Explica qué es un sistema operativo y su función en la computadora. digitales y sus aplicaciones. lógicos siguiendo una estructura secuenoperan mediante la integración de hardware y descomponer problemas y buscar patrones, nos de distinta generación con el tipo de"
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Lógica de programación",
+    "objetivos": [
+     "Diseñar algoritmos con estructuras de control, representándolos en pseudocódigo y diagramas de flujo, para resolver problemas lógicos y prácticos implementándolos en un entorno de programación visual."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Evalúa expresiones de verdad o falsedad utilizando operadores lógicos y relacionales."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Utiliza apropiadamente los operadores lógicos (AND, OR, NOT) y los operadores relacionales (<, >, ==, !=, <=, >=)."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Expresa problemas simples empleando estructuras secuenciales y sintaxis en lenguaje natural."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Escribe situaciones cotidianas empleando secuencias en pseudocódigo o bloques de código y viceversa."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Utiliza apropiadamente estructuras condicionales simples (if) y compuestas (if-else) en pseudocódigo y diagramas de flujo."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Implementa estructuras condicionales en un entorno de programación visual."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Explica el concepto de bucles y su importancia en la automatización de tareas repetitivas."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Aplica correctamente los tipos bucles for y while en pseudocódigo o diagramas de flujo."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Identifica errores en algoritmos dentro de un entorno de programación visual."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Explica la importancia de la depuración en la programación e identificación de errores en un algoritmo. para enfrentar problemas lógicos. permite afrontar problemas de manera sispara crear soluciones paso a paso. implementados en un entorno de progra-"
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Estructuras de datos",
+    "objetivos": [
+     "Implementar estructuras de datos básicas en un entorno de programación visual para organizar información y resolver problemas cotidianos aplicando métodos de búsqueda y algoritmos de ordenamiento."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Principio integrador Las tecnologías digitales son medios para desarrollar distintos tipos de pensamiento complejo, propiciar una mentalidad de innovación e incrementar la productividad. Su creciente diversidad e influencia está transformando todos los aspectos de la sociedad, siendo determinantes para abordar todo tipo de problemas, condicionar la forma en que nos relacionamos y adaptar los medios de producción en armonía con el ambiente. Las ciencias de la computación son la base de la revolución digital y proporcionan herramientas y conocimientos necesarios para comprender, crear y transformar nuestro mundo. Al cursar esta asignatura, los estudiantes desarrollarán habilidades de pensamiento crítico y lógico y de resolución de problemas y una mentalidad de innovación, lo que les permitirá asumir desafíos complejos y diseñar soluciones novedosas en un mundo cada vez más interconectado."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Objetivos a. General • Preparar al estudiantado para ser ciudadanos digitales creativos y críticos, equipados con las habilidades técnicas y el pensamiento computacional necesarios para innovar, resolver problemas y contribuir al desarrollo de las nuevas tecnologías, adaptándose así a un mundo en constante evolución."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Realiza operaciones básicas (agregar, eliminar y modificar) en una lista de al menos 5 elementos."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Implementa listas y arreglos para el almacenamiento y la manipulación dinámica de datos en un entorno de programación visual."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Habilidades, procesos y actitudes Como ya se mencionó, la aproximación IDI orienta los momentos didácticos en los cuales resulta más favorable potenciar las distintas habilidades, procesos y actitudes afines a la educación"
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Implementa pilas y colas en un entorno de programación visual mediante el uso de listas y estructuras condicionales."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Explica cómo acceder a un valor específico en una tabla o diccionario sencillo de elaboración propia."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Implementa estructuras de datos en un entorno de programación visual aplicando listas para simular tablas o diccionarios."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Diferencia entre los métodos de búsqueda lineal y binaria."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Implementa un algoritmo de búsqueda y ordenamiento en un entorno de programación visual aplicando estructuras de datos. almacenar información que resultan fundatanto en la programación como en la vida lectura en una aplicación de desarrollo propio."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Desarrollo básico de software",
+    "objetivos": [
+     "Desarrollar programas básicos utilizando estructuras de control, funciones y manejo de datos para implementar soluciones a problemas sencillos y explorar las posibilidades de la programación como herramienta de innovación."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Configura el entorno de desarrollo y aprendizaje integrado (IDLE)."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Configura un entorno de edición de código fuente para programar en Python."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Utiliza apropiadamente la sintaxis básica de Python para variables, operadores y comentarios."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Utiliza apropiadamente las sentencias if, else y elif (else if)."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Aplica estructuras condicionales en el desarrollo de una aplicación simple."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Implementa los bucles for y while para automatizar tareas repetitivas."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Integra bucles y condicionales en el desarrollo de una aplicación simple."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Ejecuta funciones estableciendo parámetros y valores de retorno."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Organiza una aplicación simple en dos o más módulos independientes y reutilizables."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Reconoce prácticas que facilitan la legibilidad y el mantenimiento del código."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Implementa cadenas, listas, tuplas y diccionarios para almacenar y manipular información."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Escribe archivos de texto aplicando operaciones de entrada/salida (E/S) para persistir datos."
+     },
+     {
+      "codigo": "4.13",
+      "texto": "Resuelve problemas simples mediante la implementación de una librería integrada para realizar operaciones matemáticas."
+     },
+     {
+      "codigo": "4.14",
+      "texto": "Resuelve problemas simples mediante la implementación de una librería integrada para generar números aleatorios o trabajar con fechas y horas. para que realice tareas. Es una hea problemas, permitiendo transformar ideas y compartir sus proyectos de programación."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Ciberseguridad y ciudadanía digital",
+    "objetivos": [
+     "Aplicar principios y herramientas de ciberseguridad para proteger la información personal, detectar y evitar ciberamenazas y navegar de forma segura y ética en internet."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Reconoce datos sensibles que no deberían compartirse en línea, cómo encontrarlos y verificarlos."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Ejemplifica prácticas que permiten mantener una buena reputación y presencia positiva en línea."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Identifica señales características de los ataques de phishing, malware y estafas en línea."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Evalúa la veracidad de información disponible en línea considerando la fiabilidad de sus fuentes."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Lista estrategias de seguridad útiles en la gestión de contraseñas y cuentas."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Ejemplifica los datos que pueden permanecer en línea dependiendo de las configuraciones de privacidad."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Reconoce situaciones que requieren acciones amables y empáticas durante la interacción en línea."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Reconoce situaciones en línea que requieren acciones de reporte, bloqueo de contenido o ayuda profesional. sean distintos a los propios. en línea. proteger la información personal y navegar para prevenir y responder ante ciberamede contraseñas para robustecer la seguri-"
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Fundamentos de inteligencia artificial (IA)",
+    "objetivos": [
+     "Explorar los fundamentos de la inteligencia artificial y sus aplicaciones, incluyendo el aprendizaje automático y la visión artificial, para comprender su impacto en la sociedad y proponer ideas innovadoras que utilicen estas tecnologías."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Describe las características, evolución y usos cotidianos de la inteligencia artificial (IA)."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Explica los conceptos fundamentales del aprendizaje automático (AA), incluyendo la diferencia entre IA fuerte e IA débil."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Escribe un algoritmo básico para visión artificial (VA) o clasificación de imágenes por IA empleando pseudocódigo."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Identifica los retos de formular instrucciones precisas para un algoritmo de generación de imágenes con IA."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Caracteriza el funcionamiento general de los chatbots basados en reglas y los chatbots de IA."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Identifica los retos en la programación de IA para comprender y generar textos en lenguaje natural."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Argumenta acerca del papel crucial de los datos en el AA y la eficiencia de los sistemas de IA."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Explica los conceptos fundamentales del modelado predictivo basado en AA."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Reconoce la aplicabilidad de un algoritmo básico de clasificación usado en IA para la toma de decisiones en situaciones cotidianas."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Describe la regresión lineal simple y su uso en el modelado predictivo por IA."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Explica los fundamentos del aprendizaje no supervisado a partir de un algoritmo de agrupamiento para el análisis de datos."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Describe la estructura y función de las redes neuronales, incluyendo su potencial generativo. generativas. la inteligencia humana, es un campo en automático (AA) y la visión artificial (VA), enrila sociedad. de un tema o contexto particular. IA generativa."
+     }
+    ]
+   }
+  ],
+  "Segundo año": [
+   {
+    "unidad": 1,
+    "nombre": "Introducción a las ciencias de la computación",
+    "objetivos": [
+     "Aplicar los conceptos fundamentales del pensamiento computacional, enfatizando en el reconocimiento de patrones, la abstracción y los algoritmos, para resolver problemas sencillos y comprender el funcionamiento básico de una computadora y su sistema operativo."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Explica el concepto y funciones principales de una computadora."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Ejemplifica problemas lógicos o de cálculo que han sido resueltos por las computadoras, según su generación."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Elabora un diagrama o lista de planificación con las tareas necesarias para abordar una situación cotidiana."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Reconoce un patrón simple formado por figuras, objetos naturales o números."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Representa objetos o conceptos cotidianos de forma abstracta, utilizando esquemas o textos simplificados."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Explica el concepto, características e importancia de los algoritmos."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Identifica la entrada, procesamiento y salida de un algoritmo."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Representa algoritmos empleando herramientas visuales como diagramas de fl ujo y pseudocódigo."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Desarrolla los conceptos de hardware y software brindando ejemplos."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Explica qué es un sistema operativo y su función en la computadora. digitales y sus aplicaciones. lógicos siguiendo una estructura secuenoperan mediante la integración de hardware y descomponer problemas y buscar patrones, nos de distinta generación con el tipo de"
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Lógica de programación",
+    "objetivos": [
+     "Diseñar algoritmos con estructuras de control, representándolos en pseudocódigo y diagramas de flujo, para resolver problemas lógicos y prácticos implementándolos en un entorno de programación visual."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Evalúa expresiones de verdad o falsedad utilizando operadores lógicos y relacionales."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Utiliza apropiadamente los operadores lógicos (AND, OR, NOT) y los operadores relacionales (<, >, ==, !=, <=, >=)."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Expresa problemas simples empleando estructuras secuenciales y sintaxis en lenguaje natural."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Escribe situaciones cotidianas empleando secuencias en pseudocódigo o bloques de código y viceversa."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Utiliza apropiadamente estructuras condicionales simples (if) y compuestas (if-else) en pseudocódigo y diagramas de flujo."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Implementa estructuras condicionales en un entorno de programación visual."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Explica el concepto de bucles y su importancia en la automatización de tareas repetitivas."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Aplica correctamente los tipos bucles for y while en pseudocódigo o diagramas de flujo."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Identifica errores en algoritmos dentro de un entorno de programación visual."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Explica la importancia de la depuración en la programación e identificación de errores en un algoritmo. para enfrentar problemas lógicos. permite afrontar problemas de manera sispara crear soluciones paso a paso. implementados en un entorno de progra-"
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Estructuras de datos",
+    "objetivos": [
+     "Implementar estructuras de datos básicas en un entorno de programación visual para organizar información y resolver problemas cotidianos aplicando métodos de búsqueda y algoritmos de ordenamiento."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Principio integrador Las tecnologías digitales son medios para desarrollar distintos tipos de pensamiento complejo, propiciar una mentalidad de innovación e incrementar la productividad. Su creciente diversidad e influencia está transformando todos los aspectos de la sociedad, siendo determinantes para abordar todo tipo de problemas, condicionar la forma en que nos relacionamos y adaptar los medios de producción en armonía con el ambiente. Las ciencias de la computación son la base de la revolución digital y proporcionan herramientas y conocimientos necesarios para comprender, crear y transformar nuestro mundo. Al cursar esta asignatura, los estudiantes desarrollarán habilidades de pensamiento crítico y lógico y de resolución de problemas y una mentalidad de innovación, lo que les permitirá asumir desafíos complejos y diseñar soluciones novedosas en un mundo cada vez más interconectado."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Objetivos a. General • Preparar al estudiantado para ser ciudadanos digitales creativos y críticos, equipados con las habilidades técnicas y el pensamiento computacional necesarios para innovar, resolver problemas y contribuir al desarrollo de las nuevas tecnologías, adaptándose así a un mundo en constante evolución."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Realiza operaciones básicas (agregar, eliminar y modificar) en una lista de al menos 5 elementos."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Implementa listas y arreglos para el almacenamiento y la manipulación dinámica de datos en un entorno de programación visual."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Habilidades, procesos y actitudes Como ya se mencionó, la aproximación IDI orienta los momentos didácticos en los cuales resulta más favorable potenciar las distintas habilidades, procesos y actitudes afines a la educación"
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Implementa pilas y colas en un entorno de programación visual mediante el uso de listas y estructuras condicionales."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Explica cómo acceder a un valor específico en una tabla o diccionario sencillo de elaboración propia."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Implementa estructuras de datos en un entorno de programación visual aplicando listas para simular tablas o diccionarios."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Diferencia entre los métodos de búsqueda lineal y binaria."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Implementa un algoritmo de búsqueda y ordenamiento en un entorno de programación visual aplicando estructuras de datos. almacenar información que resultan fundatanto en la programación como en la vida lectura en una aplicación de desarrollo propio."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "Desarrollo básico de software",
+    "objetivos": [
+     "Desarrollar programas básicos utilizando estructuras de control, funciones y manejo de datos para implementar soluciones a problemas sencillos y explorar las posibilidades de la programación como herramienta de innovación."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Configura el entorno de desarrollo y aprendizaje integrado (IDLE)."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Configura un entorno de edición de código fuente para programar en Python."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Utiliza apropiadamente la sintaxis básica de Python para variables, operadores y comentarios."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Utiliza apropiadamente las sentencias if, else y elif (else if)."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Aplica estructuras condicionales en el desarrollo de una aplicación simple."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Implementa los bucles for y while para automatizar tareas repetitivas."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Integra bucles y condicionales en el desarrollo de una aplicación simple."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Ejecuta funciones estableciendo parámetros y valores de retorno."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Organiza una aplicación simple en dos o más módulos independientes y reutilizables."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Reconoce prácticas que facilitan la legibilidad y el mantenimiento del código."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Implementa cadenas, listas, tuplas y diccionarios para almacenar y manipular información."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Escribe archivos de texto aplicando operaciones de entrada/salida (E/S) para persistir datos."
+     },
+     {
+      "codigo": "4.13",
+      "texto": "Resuelve problemas simples mediante la implementación de una librería integrada para realizar operaciones matemáticas."
+     },
+     {
+      "codigo": "4.14",
+      "texto": "Resuelve problemas simples mediante la implementación de una librería integrada para generar números aleatorios o trabajar con fechas y horas. para que realice tareas. Es una hea problemas, permitiendo transformar ideas y compartir sus proyectos de programación."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "Ciberseguridad y ciudadanía digital",
+    "objetivos": [
+     "Aplicar principios y herramientas de ciberseguridad para proteger la información personal, detectar y evitar ciberamenazas y navegar de forma segura y ética en internet."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Reconoce datos sensibles que no deberían compartirse en línea, cómo encontrarlos y verificarlos."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Ejemplifica prácticas que permiten mantener una buena reputación y presencia positiva en línea."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Identifica señales características de los ataques de phishing, malware y estafas en línea."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Evalúa la veracidad de información disponible en línea considerando la fiabilidad de sus fuentes."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Lista estrategias de seguridad útiles en la gestión de contraseñas y cuentas."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Ejemplifica los datos que pueden permanecer en línea dependiendo de las configuraciones de privacidad."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Reconoce situaciones que requieren acciones amables y empáticas durante la interacción en línea."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Reconoce situaciones en línea que requieren acciones de reporte, bloqueo de contenido o ayuda profesional. sean distintos a los propios. en línea. proteger la información personal y navegar para prevenir y responder ante ciberamede contraseñas para robustecer la seguri-"
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Fundamentos de inteligencia artificial (IA)",
+    "objetivos": [
+     "Explorar los fundamentos de la inteligencia artificial y sus aplicaciones, incluyendo el aprendizaje automático y la visión artificial, para comprender su impacto en la sociedad y proponer ideas innovadoras que utilicen estas tecnologías."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Describe las características, evolución y usos cotidianos de la inteligencia artificial (IA)."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Explica los conceptos fundamentales del aprendizaje automático (AA), incluyendo la diferencia entre IA fuerte e IA débil."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Escribe un algoritmo básico para visión artificial (VA) o clasificación de imágenes por IA empleando pseudocódigo."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Identifica los retos de formular instrucciones precisas para un algoritmo de generación de imágenes con IA."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Caracteriza el funcionamiento general de los chatbots basados en reglas y los chatbots de IA."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Identifica los retos en la programación de IA para comprender y generar textos en lenguaje natural."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Argumenta acerca del papel crucial de los datos en el AA y la eficiencia de los sistemas de IA."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Explica los conceptos fundamentales del modelado predictivo basado en AA."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Reconoce la aplicabilidad de un algoritmo básico de clasificación usado en IA para la toma de decisiones en situaciones cotidianas."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Describe la regresión lineal simple y su uso en el modelado predictivo por IA."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Explica los fundamentos del aprendizaje no supervisado a partir de un algoritmo de agrupamiento para el análisis de datos."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Describe la estructura y función de las redes neuronales, incluyendo su potencial generativo. generativas. la inteligencia humana, es un campo en automático (AA) y la visión artificial (VA), enrila sociedad. de un tema o contexto particular. IA generativa."
+     }
+    ]
+   }
+  ]
+ },
+ "Inglés": {
+  "Séptimo (PreA1)": [
+   {
+    "unidad": 1,
+    "nombre": "Hello, my name is…",
+    "objetivos": [
+     "Presentarse proporcionando información personal, a un ritmo pausado, al conocer a alguien por primera vez.",
+     "Expresar información personal básica, a un ritmo pausado, utilizando el vocabulario aprendido a lo largo de la unidad para simular situaciones de la vida real."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Sigue y utiliza adecuadamente expresiones básicas del aula."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Asocia instrucciones cortas y sencillas del aula como \"stop\", \"close the door\", \"sit down\", entre otras, con imágenes."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Reconoce y responde apropiadamente saludos sencillos en bienvenidas y despedidas."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Saluda a las personas, dice su nombre y se despide de manera sencilla."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Pronuncia con precisión los nombres de las vocales y consonantes."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Utiliza los nombres de las letras del alfabeto para deletrear correctamente palabras cortas y largas."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Cuenta del 0 al 20 en el orden correcto."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Intercambia números de teléfono en interacciones sociales diciendo correctamente los dígitos uno por uno."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Intercambia direcciones de correo electrónico usando con precisión la terminología de los símbolos, de forma oral y escrita."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Formula y responde con precisión preguntas básicas de información personal utilizando palabras interrogativas."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Se presenta exitosamente al conocer a alguien por primera vez."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Escribe diálogos coherentes intercambiando información personal básica al conocer a alguien por primera vez."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "My classroom",
+    "objetivos": [
+     "Describir útiles escolares mencionando su cantidad y colores, con el fin de sostener intercambios orales relacionados con la escuela.",
+     "Ilustrar su salón de clases señalando los útiles escolares, utilizando el nuevo idioma al interactuar con los demás."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Distingue adecuadamente los útiles escolares de forma oral y escrita."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Deletrea exitosamente los útiles escolares de forma oral y escrita."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Nombra los objetos del aula con la pronunciación correcta."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Identifica correctamente la forma singular y plural de los útiles escolares, de forma oral y escrita."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Deletrea con precisión la forma singular y plural de los útiles escolares."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Pronuncia correctamente los colores."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Asocia con precisión los útiles escolares con sus colores."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Señala un objeto y pregunta apropiadamente qué es."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Utiliza la forma correcta del verbo be con sustantivos en singular y plural."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Cuenta con precisión los útiles escolares."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Identifica con precisión los números del 21 al 100, de forma oral y escrita."
+     },
+     {
+      "codigo": "2.12",
+      "texto": "Pronuncia adecuadamente los números del 21 al 100."
+     },
+     {
+      "codigo": "2.13",
+      "texto": "Deletrea con precisión los números del 21 al 100."
+     },
+     {
+      "codigo": "2.14",
+      "texto": "Resuelve correctamente problemas sencillos de suma y resta con números del 21 al 100."
+     },
+     {
+      "codigo": "2.15",
+      "texto": "Discrimina exitosamente los sonidos corto /ɪ/ y largo /i:/ en this y these."
+     },
+     {
+      "codigo": "2.16",
+      "texto": "Pronuncia correctamente this y these."
+     },
+     {
+      "codigo": "2.17",
+      "texto": "Identifica la distancia de un objeto utilizando los pronombres demostrativos adecuados."
+     },
+     {
+      "codigo": "2.18",
+      "texto": "Pregunta y responde qué es algo utilizando el pronombre demostrativo adecuado."
+     },
+     {
+      "codigo": "2.19",
+      "texto": "Describe con precisión los útiles escolares utilizando pronombres demostrativos y mencionando su color."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "My family",
+    "objetivos": [
+     "Describir una representación de la familia indicando la relación entre sus miembros mediante adjetivos posesivos.",
+     "Presentar a un miembro de la familia proporcionando su información personal básica, con el propósito de expresar quién es su pariente favorito."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Reconoce exitosamente el vocabulario relacionado con los miembros de la familia, de forma oral y escrita."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Deduce satisfactoriamente el significado de una palabra relacionada con la familia a partir de la imagen o ícono que la acompaña."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Utiliza el vocabulario adecuado para identificar a los miembros de la familia en un árbol genealógico de familia nuclear."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Identifica con precisión el género y número de los pronombres personales."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Utiliza el pronombre personal correcto con la forma correspondiente del verbo be al construir oraciones y preguntas."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Intercambia información coherente sobre los miembros de la familia en diálogos cortos."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Nombra con precisión a los miembros de la familia extendida."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Identifica correctamente las relaciones familiares en imágenes o en un álbum de fotos."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Asocia los pronombres personales con su adjetivo posesivo correcto."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Produce frases cortas y precisas sobre los miembros de su familia, dando información personal básica como su nombre."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Describe a un miembro de la familia (nombre, edad y parentesco) utilizando adecuadamente palabras sencillas y expresiones aprendidas, siempre que pueda prepararse con anticipación."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Relaciona adjetivos comunes con sus apoyos visuales correspondientes."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Escribe oraciones precisas sobre la descripción física de los miembros de la familia."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Describe a un miembro de la familia utilizando diferentes adjetivos con la forma correcta del verbo be."
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Identifica con precisión las ocupaciones en imágenes."
+     },
+     {
+      "codigo": "3.16",
+      "texto": "Escribe adecuadamente las ocupaciones."
+     },
+     {
+      "codigo": "3.17",
+      "texto": "Utiliza adecuadamente los artículos indefinidos a/an antes de las ocupaciones."
+     },
+     {
+      "codigo": "3.18",
+      "texto": "Describe a su pariente favorito con los adjetivos apropiados y la forma correcta del verbo be."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "My house",
+    "objetivos": [
+     "Detallar las habitaciones de una casa enumerando sus muebles y electrodomésticos comunes, utilizando sustantivos en singular y plural.",
+     "Describir una casa ubicando sus muebles y electrodomésticos."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Identifica apropiadamente el vocabulario relacionado con las habitaciones y electrodomésticos de una casa."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Deletrea adecuadamente las habitaciones y electrodomésticos de una casa, de forma oral y escrita."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Reconoce exitosamente las reglas ortográficas de los sustantivos plurales regulares."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Escribe sustantivos plurales regulares siguiendo las reglas ortográficas apropiadas."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Ofrece de manera coherente una descripción breve y sencilla de lo que hay en una habitación."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Describe los objetos de una habitación utilizando apropiadamente there is y there are."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Describe con precisión la ubicación de muebles y electrodomésticos comunes de una casa utilizando preposiciones de lugar."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Formula preguntas adecuadas para averiguar los muebles y electrodomésticos que hay en las casas, utilizando los patrones Is there a/an...? Are there any...?"
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Intercambia adecuadamente información sobre las habitaciones de una casa."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Ofrece una descripción corta y precisa de las habitaciones y electrodomésticos de una casa, de forma oral y escrita."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "My day",
+    "objetivos": [
+     "Intercambiar información sobre la propia rutina, incluyendo actividades diarias y expresiones de frecuencia."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Reconoce exitosamente actividades diarias a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Deletrea con precisión las actividades diarias, de forma oral y escrita."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Asocia las rutinas diarias con sus imágenes o gestos correspondientes."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Pronuncia adecuadamente los días de la semana."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Escribe correctamente los días de la semana."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Expresa su rutina diaria en orden cronológico, de forma oral y escrita."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Escribe oraciones completas para expresar rutinas diarias en orden cronológico."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Formula y responde correctamente preguntas sobre rutinas diarias utilizando el patrón Do you...?"
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Describe con precisión las actividades que no realiza durante su día."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Dice correctamente los números del 1 al 100."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Deletrea números con precisión, de forma oral y escrita."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Dicta números a sus compañeros con precisión."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Toma dictado de números del 1 al 100 al escuchar a sus compañeros u otras fuentes."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Lee correctamente la hora en relojes analógicos y digitales."
+     },
+     {
+      "codigo": "5.15",
+      "texto": "Dice la hora apropiadamente."
+     },
+     {
+      "codigo": "5.16",
+      "texto": "Formula y responde adecuadamente preguntas sobre la hora en que realiza sus actividades diarias."
+     },
+     {
+      "codigo": "5.17",
+      "texto": "Identifica correctamente expresiones de frecuencia a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "5.18",
+      "texto": "Escribe oraciones precisas sobre rutinas diarias indicando la frecuencia con que se realizan."
+     },
+     {
+      "codigo": "5.19",
+      "texto": "Escribe ideas completas describiendo su rutina diaria utilizando conectores de secuencia."
+     },
+     {
+      "codigo": "5.20",
+      "texto": "Intercambia con sus compañeros información pertinente sobre sus rutinas diarias, a un ritmo pausado."
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "All about me",
+    "objetivos": [
+     "Expresar preferencias utilizando el presente simple, con el fin de intercambiar información sobre gustos y disgustos personales.",
+     "Expresar gustos y disgustos relacionados con la comida, la música y los pasatiempos, creando recursos visuales para apoyar las ideas escritas y orales."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Nombra apropiadamente diferentes tipos de comida, frutas, música, mascotas y pasatiempos."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Deletrea con precisión tipos de comida, géneros musicales, mascotas y pasatiempos."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Asocia correctamente diferentes tipos de comida, frutas, música, mascotas y pasatiempos con imágenes."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Expresa preferencias relacionadas con comida, frutas, música, pasatiempos y mascotas, a un ritmo pausado."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Formula preguntas sobre preferencias personales siguiendo un modelo."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Intercambia adecuadamente información sobre preferencias personales."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Ilustra sus preferencias personales elaborando un cartel."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Selecciona información adecuada sobre preferencias personales."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Expresa de manera coherente información sobre preferencias personales."
+     }
+    ]
+   }
+  ],
+  "Octavo (A1)": [
+   {
+    "unidad": 1,
+    "nombre": "This is me",
+    "objetivos": [
+     "Presentarse ante los demás proporcionando información personal básica al conocer a alguien por primera vez.",
+     "Interactuar en conversaciones colaborativas intercambiando información personal para completar un formulario.",
+     "Describir personas, lugares y cosas utilizando el verbo be para mencionar sus características."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Utiliza y responde apropiadamente saludos comunes según los diferentes contextos sociales."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Reconoce y nombra las letras del alfabeto en orden y en desorden, demostrando comprensión de sus formas y sonidos."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Produce palabras conocidas que comienzan con letras dadas, utilizando apoyos visuales u orales para reforzar la correspondencia sonido-letra."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Participa en diálogos cortos guiados para deletrear y confirmar con precisión palabras comunes cortas y largas en inglés."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Identifica y pronuncia con precisión los días de la semana en intercambios orales sencillos."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Ordena los días de la semana cronológicamente, demostrando comprensión de su secuencia."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Describe horarios escolares nombrando correctamente las asignaturas que se estudian cada día de la semana."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Intercambia con claridad información personal básica con sus compañeros mediante interacciones cortas y guiadas en contextos conocidos."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Completa con precisión formularios sencillos de registro utilizando sus datos personales."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Identifica con precisión el vocabulario relacionado con las ocupaciones utilizando apoyos visuales como imágenes o íconos."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Deletrea correctamente ocupaciones comunes en actividades orales y escritas."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Formula y responde con precisión preguntas básicas para obtener y compartir información sobre la ocupación de alguien."
+     },
+     {
+      "codigo": "1.13",
+      "texto": "Identifica con precisión los sonidos vocálicos y consonánticos en palabras habladas."
+     },
+     {
+      "codigo": "1.14",
+      "texto": "Reconoce y agrupa correctamente las ocupaciones según su sonido inicial vocálico o consonántico."
+     },
+     {
+      "codigo": "1.15",
+      "texto": "Aplica apropiadamente los artículos indefinidos a y an al describir ocupaciones."
+     },
+     {
+      "codigo": "1.16",
+      "texto": "Describe con claridad las ocupaciones de otras personas utilizando el vocabulario apropiado."
+     },
+     {
+      "codigo": "1.17",
+      "texto": "Formula con precisión oraciones afirmativas y negativas sobre ocupaciones con el verbo be en presente simple."
+     },
+     {
+      "codigo": "1.18",
+      "texto": "Participa activamente en intercambios cortos e interactivos para preguntar y responder apropiadamente sobre la ocupación de alguien, utilizando el verbo be en presente simple."
+     },
+     {
+      "codigo": "1.19",
+      "texto": "Presenta a sus compañeros sus datos personales —lugar de residencia, escuela y actividades de tiempo libre— de manera eficaz y con confianza, utilizando un cartel como apoyo visual."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "Countries of the world",
+    "objetivos": [
+     "Describir datos básicos de un país, incluyendo su nombre, nacionalidad y bandera, en intercambios culturales sencillos.",
+     "Detallar un recuerdo (souvenir) explicando sus características principales en intercambios sencillos relacionados con el turismo."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Identifica y pronuncia con precisión países y nacionalidades utilizando referencias visuales, aplica apropiadamente las reglas de mayúsculas en la forma escrita y participa con confianza en intercambios cortos demostrando ortografía y pronunciación correctas."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Identifica correctamente banderas del mundo nombrando y deletreando sus colores de forma oral y escrita, y participa con confianza en conversaciones breves para preguntar y responder sobre los colores de las banderas."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Clasifica con precisión y distingue con claridad recuerdos (souvenirs) comunes presentados en textos, videos, audios e imágenes."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Diferencia eficazmente sustantivos plurales regulares e irregulares mediante tareas orales, escritas y visuales."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Cuantifica con precisión diversos tipos de recuerdos (souvenirs) utilizando números y las formas plurales adecuadas."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Presenta recuerdos (souvenirs) aplicando el orden correcto de los adjetivos para indicar su tamaño, color y país de origen, interactuando de manera significativa en intercambios guiados."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "My leisure time",
+    "objetivos": [
+     "Expresar ideas sobre datos personales, hábitos diarios y pasatiempos comunes utilizando el presente simple en conversaciones informales con compañeros sobre actividades de tiempo libre."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Produce y enumera con precisión, de memoria, actividades comunes de tiempo libre, demostrando una articulación oral clara y una escritura correcta del vocabulario."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Identifica y extrae eficazmente el vocabulario de actividades de tiempo libre presentado en diversas modalidades, como audios, lecturas y materiales visuales."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Reconoce con precisión los componentes principales de las oraciones en presente simple."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Expresa de manera consistente actividades de tiempo libre mediante oraciones afirmativas en presente simple."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Construye apropiadamente oraciones negativas sobre actividades de tiempo libre siguiendo la estructura gramatical correcta."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Describe con claridad actividades de tiempo libre utilizando enunciados afirmativos y negativos."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Responde y formula con confianza preguntas de sí/no sobre actividades de tiempo libre en presente simple."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Comparte eficazmente información sobre sus actividades de tiempo libre para identificar intereses comunes con sus compañeros."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Utiliza con precisión las reglas ortográficas de los verbos en tercera persona del singular en presente simple."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Produce de manera consistente oraciones afirmativas en tercera persona del singular, de forma oral y escrita."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Distingue y pronuncia con precisión las terminaciones verbales de la tercera persona del singular /ɪz/, /s/, /z/, siguiendo las reglas de pronunciación."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Identifica con claridad la estructura y los componentes de las oraciones negativas en presente simple para la tercera persona del singular."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Construye apropiadamente enunciados negativos sobre actividades de tiempo libre en presente simple."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Formula y responde con confianza preguntas de sí/no sobre actividades de tiempo libre en presente simple."
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Interpreta textos cortos ilustrados sobre actividades de tiempo libre y los relaciona eficazmente con pasatiempos comunes al aire libre."
+     },
+     {
+      "codigo": "3.16",
+      "texto": "Genera e ilustra detalles sobre sus pasatiempos favoritos utilizando creativamente ejemplos, cuadros e imágenes como apoyo visual para una presentación oral."
+     },
+     {
+      "codigo": "3.17",
+      "texto": "Redacta párrafos descriptivos cortos sobre un pasatiempo favorito para estructurar eficazmente las ideas de una presentación oral autónoma."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "My family's and friends’ habits",
+    "objetivos": [
+     "Describir relaciones familiares mediante el uso de adjetivos y sustantivos posesivos para intercambiar información sobre los parientes.",
+     "Expresar la frecuencia de las actividades diarias utilizando adverbios y expresiones de frecuencia apropiados para compartir rutinas personales."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Identifica con precisión a los miembros de la familia nuclear y extendida mediante recursos visuales, audios y textos cortos."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Deletrea de manera consistente palabras relacionadas con la familia, de forma oral y escrita."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Utiliza apropiadamente los adjetivos posesivos para expresar posesión."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Describe con claridad las relaciones familiares utilizando adjetivos posesivos para mostrar los lazos familiares."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Formula y responde con confianza preguntas sobre las relaciones entre los miembros de la familia en un árbol genealógico."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Reconoce con precisión sustantivos posesivos en singular y plural en textos cortos o grabaciones de audio."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Construye apropiadamente oraciones con sustantivos posesivos para mostrar las relaciones familiares en un árbol genealógico."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Identifica eficazmente adverbios de frecuencia en recursos visuales, grabaciones de audio y textos cortos."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Asocia correctamente los adverbios de frecuencia con su grado de regularidad correspondiente."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Formula de manera consistente oraciones sencillas con adverbios de frecuencia siguiendo el orden correcto de las palabras."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Formula con precisión preguntas sencillas para indagar sobre la frecuencia de los hábitos diarios, utilizando el orden correcto de las palabras."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Intercambia eficazmente información sobre la frecuencia de las actividades personales y familiares mediante interacciones cortas."
+     },
+     {
+      "codigo": "4.13",
+      "texto": "Describe con claridad los hábitos de los miembros de la familia y parientes, de forma oral y escrita."
+     },
+     {
+      "codigo": "4.14",
+      "texto": "Redacta de manera coherente párrafos cortos sobre la información personal y los hábitos diarios de un pariente."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "My vacation",
+    "objetivos": [
+     "Describir acciones en progreso utilizando el presente continuo para indicar eventos que ocurren en el momento del habla.",
+     "Ilustrar atracciones turísticas identificando actividades bajo techo y al aire libre para crear una breve descripción de vacaciones."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Identifica y ordena con precisión los meses del año utilizando calendarios o textos cortos."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Deletrea y escribe con precisión los meses del año y los números ordinales, utilizando mayúsculas donde se requiere."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Construye apropiadamente los números ordinales agregando las terminaciones correctas."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Comparte con confianza información sobre cumpleaños mediante interacciones cortas."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Reconoce adecuadamente celebraciones significativas de El Salvador a partir de apoyos visuales o descripciones sencillas."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Menciona fechas siguiendo el orden correcto de las palabras y las preposiciones de tiempo."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Identifica los componentes de las oraciones afirmativas en presente continuo."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Escribe correctamente los verbos en su forma de participio presente durante actividades de ortografía y construcción de oraciones."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Describe con claridad acciones en progreso, de forma oral y escrita, utilizando imágenes o gestos como referencia."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Relaciona apropiadamente actividades vacacionales bajo techo y al aire libre con ilustraciones o gestos."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Transmite con precisión actividades vacacionales en progreso mostradas en apoyos visuales, utilizando los verbos de acción adecuados."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Reconoce correctamente la estructura y los componentes de las oraciones negativas y preguntas en presente continuo."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Construye de manera consistente oraciones negativas y preguntas en presente continuo para describir acciones observadas en apoyos visuales."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Genera y organiza ideas sobre atracciones turísticas populares, enumerando posibles actividades bajo techo y al aire libre relacionadas con cada destino."
+     },
+     {
+      "codigo": "5.15",
+      "texto": "Redacta una postal breve que retrate con claridad una experiencia de vacaciones, incluyendo detalles clave sobre una atracción turística."
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "My abilities",
+    "objetivos": [
+     "Compartir información sobre habilidades personales utilizando adverbios de modo para explicar cómo se realizan diferentes acciones."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Reconoce y deletrea con precisión el vocabulario relacionado con habilidades mediante ejercicios orales o escritos apoyados en recursos visuales."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Aplica apropiadamente can y can't para expresar habilidades personales, utilizando la estructura correcta de la oración en intercambios cortos orales o escritos."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Construye preguntas de sí/no con can y responde apropiadamente para intercambiar información sobre habilidades propias o de otros."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Produce diálogos cortos para transmitir información sobre habilidades utilizando can con estructura y pronunciación precisas."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Emplea eficazmente adverbios de modo para describir cómo se realizan las acciones, con apoyo de señales visuales o físicas."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Redacta un párrafo corto sobre habilidades, integrando adverbios de modo y demostrando coherencia y precisión."
+     }
+    ]
+   }
+  ],
+  "Noveno (A1+)": [
+   {
+    "unidad": 1,
+    "nombre": "My day yesterday",
+    "objetivos": [
+     "Proporcionar datos sobre el pasado de una persona para describir su historia personal.",
+     "Detallar actividades pasadas para ilustrar acciones utilizando verbos regulares e irregulares."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Reconoce correctamente adjetivos para describir personas a partir de fuentes orales o escritas y apoyos visuales."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Deletrea con precisión adjetivos comunes utilizados para describir personas."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Pronuncia apropiadamente adjetivos comunes."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Forma oraciones completas con was/were, respetando apropiadamente el orden de las palabras y la concordancia sujeto-verbo."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Proporciona con precisión datos personales sobre alguien utilizando was y were."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Reconoce con precisión expresiones de tiempo pasado a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Deletrea con precisión expresiones de tiempo pasado, de forma oral y escrita."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Pronuncia apropiadamente expresiones de tiempo pasado."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Escribe oraciones negativas con was/were siguiendo adecuadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Formula apropiadamente preguntas sobre datos de alguien utilizando was/were."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Identifica exitosamente verbos regulares comunes en pasado simple a partir de fuentes visuales y escritas."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Forma verbos regulares en pasado simple siguiendo las reglas ortográficas apropiadas."
+     },
+     {
+      "codigo": "1.13",
+      "texto": "Asocia adecuadamente verbos regulares con sus representaciones visuales o gestos correspondientes."
+     },
+     {
+      "codigo": "1.14",
+      "texto": "Clasifica correctamente los sonidos vocálicos y consonánticos como sonoros y sordos."
+     },
+     {
+      "codigo": "1.15",
+      "texto": "Pronuncia apropiadamente los sonidos /t/, /d/ e /ɪd/ al final de los verbos regulares."
+     },
+     {
+      "codigo": "1.16",
+      "texto": "Construye oraciones afirmativas en pasado simple utilizando verbos regulares y respetando apropiadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.17",
+      "texto": "Reconoce correctamente verbos irregulares comunes en pasado simple a partir de fuentes visuales y escritas."
+     },
+     {
+      "codigo": "1.18",
+      "texto": "Forma oraciones afirmativas en pasado simple utilizando verbos irregulares y respetando apropiadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.19",
+      "texto": "Escribe adecuadamente los verbos irregulares en pasado simple."
+     },
+     {
+      "codigo": "1.20",
+      "texto": "Ilustra con precisión y coherencia las actividades realizadas el día anterior utilizando verbos regulares e irregulares en pasado simple."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "People and life stories",
+    "objetivos": [
+     "Expresar fechas para describir un evento en el pasado.",
+     "Destacar datos sobre una persona importante en la historia de El Salvador para describir su trayectoria, siguiendo la organización básica de un texto biográfico."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Identifica con precisión ocupaciones a partir de apoyos visuales."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Pronuncia adecuadamente las ocupaciones."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Describe de manera coherente el trabajo de una persona utilizando verbos relacionados con las ocupaciones."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Produce enunciados negativos en pasado simple utilizando el orden correcto de la oración."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Nombra con precisión los días de la semana y los meses del año."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Identifica exitosamente números ordinales a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Pronuncia adecuadamente los números ordinales."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Deletrea correctamente los números ordinales."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Escribe fechas correctamente siguiendo los diferentes formatos estadounidenses."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Utiliza los patrones correctos para formular preguntas en pasado simple."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Intercambia información con precisión utilizando el pasado simple."
+     },
+     {
+      "codigo": "2.12",
+      "texto": "Reconoce apropiadamente la información clave de una biografía."
+     },
+     {
+      "codigo": "2.13",
+      "texto": "Selecciona cronológicamente información clave sobre la vida de un salvadoreño importante."
+     },
+     {
+      "codigo": "2.14",
+      "texto": "Organiza ideas para escribir una biografía utilizando adecuadamente el pasado simple."
+     },
+     {
+      "codigo": "2.15",
+      "texto": "Presenta de manera coherente una biografía detallada de un personaje salvadoreño."
+     },
+     {
+      "codigo": "2.16",
+      "texto": "Investiga con precisión información sobre una persona importante en la historia de El Salvador, señalando aspectos relevantes de su vida."
+     },
+     {
+      "codigo": "2.17",
+      "texto": "Escribe con claridad un párrafo biográfico sobre un personaje famoso de El Salvador."
+     },
+     {
+      "codigo": "2.18",
+      "texto": "Presenta de manera coherente la biografía de un salvadoreño famoso."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Going grocery shopping",
+    "objetivos": [
+     "Identificar los cinco grupos básicos de alimentos para describir comidas mencionando frutas, verduras, carnes, lácteos y granos.",
+     "Utilizar expresiones relacionadas con las compras para desarrollar lenguaje funcional y vocabulario al realizar compras."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Relaciona el vocabulario de alimentos con diferentes tipos de representaciones, como ilustraciones, descripciones o definiciones."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Pronuncia adecuadamente palabras relacionadas con los alimentos."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Clasifica correctamente los alimentos en los cinco grupos básicos."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Describe adecuadamente lo que suele consumir en sus comidas utilizando vocabulario relacionado con los alimentos."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Nombra adecuadamente sustantivos contables e incontables presentados en fuentes variadas."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Clasifica apropiadamente sustantivos contables e incontables."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Forma sustantivos plurales siguiendo sus reglas ortográficas correctas."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Clasifica adecuadamente los sustantivos que llevan los artículos indefinidos a o an."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Construye adecuadamente oraciones afirmativas y negativas sobre alimentos utilizando los cuantificadores a/an, some o any."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Demuestra comprensión del vocabulario de partitivos aportando ilustraciones apropiadas que representen con precisión cada palabra o frase (p. ej., a slice of bread, a piece of cake, a can of soup), asegurando que cada ilustración asocie claramente el término partitivo con su significado visual correcto."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Identifica con precisión alimentos y sus partitivos a partir de fuentes variadas."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Lee adecuadamente los precios."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Escribe correctamente los precios durante intercambios orales."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Reconoce apropiadamente expresiones básicas relacionadas con las compras a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Dramatiza situaciones de compra en una tienda o mercado utilizando las expresiones adecuadas relacionadas con las compras."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "My city",
+    "objetivos": [
+     "Dar direcciones utilizando preposiciones de lugar y verbos comunes para identificar lugares y edificios de la ciudad o el pueblo.",
+     "Describir una ciudad salvadoreña favorita para promover el turismo local, utilizando el vocabulario y las estructuras estudiadas a lo largo de la unidad."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Reconoce con precisión palabras relacionadas con lugares de la ciudad a partir de apoyos visuales."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Deletrea adecuadamente adjetivos utilizados para describir lugares, de forma oral y escrita."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Describe lugares mostrados en apoyos visuales utilizando los adjetivos apropiados."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Identifica con precisión preposiciones de lugar en apoyos visuales."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Responde correctamente preguntas sobre la ubicación de lugares utilizando preposiciones."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Identifica con precisión los verbos utilizados para dar direcciones."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Sigue con precisión las direcciones hacia distintos lugares."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Da direcciones utilizando correctamente el vocabulario de lugares y las expresiones comunes correspondientes."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Identifica con precisión gramatical las reglas ortográficas de los adjetivos comparativos y superlativos."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Forma apropiadamente los adjetivos en su grado comparativo y superlativo."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Realiza correctamente comparaciones sobre lugares de un pueblo o ciudad utilizando la forma comparativa o superlativa."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Escribe de manera coherente un párrafo corto describiendo una ciudad o pueblo de El Salvador, utilizando comparativos, superlativos y preposiciones de lugar."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "My favorite book/movie",
+    "objetivos": [
+     "Proporcionar datos generales sobre una película o libro para describir un resumen de este utilizando el vocabulario adecuado."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Deletrea con precisión el vocabulario relacionado con libros y películas."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Asocia el vocabulario relacionado con libros y películas con información de fuentes variadas."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Deletrea correctamente verbos regulares en participio pasado, de forma oral y escrita."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Pronuncia apropiadamente verbos regulares en participio pasado."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Reconoce apropiadamente verbos irregulares en participio pasado."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Deletrea con precisión verbos irregulares en participio pasado."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Reconoce el orden correcto de la estructura gramatical de oraciones afirmativas y negativas en presente perfecto."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Forma oraciones afirmativas y negativas en presente perfecto siguiendo el orden apropiado de las palabras."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Intercambia correctamente información sobre experiencias de vida utilizando oraciones afirmativas y negativas en presente perfecto."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Construye con precisión preguntas de sí/no en presente perfecto."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Indaga apropiadamente sobre las experiencias de vida de alguien utilizando el presente perfecto."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Contrasta de manera coherente experiencias de vida personales con sus compañeros en un intercambio oral sencillo."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Enumera eficazmente datos generales sobre una película o libro favorito."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Escribe descripciones sencillas y coherentes relacionadas con una película o libro favorito."
+     },
+     {
+      "codigo": "5.15",
+      "texto": "Intercambia satisfactoriamente información general con sus compañeros sobre un libro o película favorito."
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Life experiences",
+    "objetivos": [
+     "Destacar información significativa, encontrada en diferentes fuentes, para describir los logros de una persona famosa."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Identifica con precisión el vocabulario relacionado con experiencias de vida."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Identifica con precisión verbos relacionados con experiencias de vida en su forma de participio pasado."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Forma correctamente enunciados afirmativos, negativos y preguntas de sí/no en presente perfecto."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Habla sobre experiencias utilizando la forma correcta del presente perfecto."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Pronuncia con precisión los sonidos /t/, /d/ e /ɪd/ al final de los verbos regulares en participio pasado."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Discrimina exitosamente los sonidos de la terminación -ed al final de los verbos regulares en participio pasado, a partir de fuentes variadas."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Asocia expresiones de tiempo con for y since al describir la duración de las actividades."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Indaga la duración de una actividad construyendo correctamente preguntas precisas en presente perfecto."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Expresa correctamente la duración de una actividad utilizando el presente perfecto con for/since."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Identifica satisfactoriamente logros comunes en diferentes fuentes como revistas, libros y biografías, entre otras."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Describe de manera coherente sus logros personales."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Elabora una descripción breve y coherente sobre los logros de alguien."
+     },
+     {
+      "codigo": "6.13",
+      "texto": "Describe exitosamente los principales logros de una persona utilizando apoyos visuales para sustentar las ideas."
+     }
+    ]
+   }
+  ],
+  "Primer año (A1+)": [
+   {
+    "unidad": 1,
+    "nombre": "My day yesterday",
+    "objetivos": [
+     "Proporcionar datos sobre el pasado de una persona para describir su historia personal.",
+     "Detallar actividades pasadas para ilustrar acciones utilizando verbos regulares e irregulares."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Reconoce correctamente adjetivos para describir personas a partir de fuentes orales o escritas y apoyos visuales."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Deletrea con precisión adjetivos comunes utilizados para describir personas."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Pronuncia apropiadamente adjetivos comunes."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Forma oraciones completas con was/were, respetando apropiadamente el orden de las palabras y la concordancia sujeto-verbo."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Proporciona con precisión datos personales sobre alguien utilizando was y were."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Reconoce con precisión expresiones de tiempo pasado a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Deletrea con precisión expresiones de tiempo pasado, de forma oral y escrita."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Pronuncia apropiadamente expresiones de tiempo pasado."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Escribe oraciones negativas con was/were siguiendo adecuadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Formula apropiadamente preguntas sobre datos de alguien utilizando was/were."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Identifica exitosamente verbos regulares comunes en pasado simple a partir de fuentes visuales y escritas."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Forma verbos regulares en pasado simple siguiendo las reglas ortográficas apropiadas."
+     },
+     {
+      "codigo": "1.13",
+      "texto": "Asocia adecuadamente verbos regulares con sus representaciones visuales o gestos correspondientes."
+     },
+     {
+      "codigo": "1.14",
+      "texto": "Clasifica correctamente los sonidos vocálicos y consonánticos como sonoros y sordos."
+     },
+     {
+      "codigo": "1.15",
+      "texto": "Pronuncia apropiadamente los sonidos /t/, /d/ e /ɪd/ al final de los verbos regulares."
+     },
+     {
+      "codigo": "1.16",
+      "texto": "Construye oraciones afirmativas en pasado simple utilizando verbos regulares y respetando apropiadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.17",
+      "texto": "Reconoce correctamente verbos irregulares comunes en pasado simple a partir de fuentes visuales y escritas."
+     },
+     {
+      "codigo": "1.18",
+      "texto": "Forma oraciones afirmativas en pasado simple utilizando verbos irregulares y respetando apropiadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.19",
+      "texto": "Escribe adecuadamente los verbos irregulares en pasado simple."
+     },
+     {
+      "codigo": "1.20",
+      "texto": "Ilustra con precisión y coherencia las actividades realizadas el día anterior utilizando verbos regulares e irregulares en pasado simple."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "People and life stories",
+    "objetivos": [
+     "Expresar fechas para describir un evento en el pasado.",
+     "Destacar datos sobre una persona importante en la historia de El Salvador para describir su trayectoria, siguiendo la organización básica de un texto biográfico."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Identifica con precisión ocupaciones a partir de apoyos visuales."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Pronuncia adecuadamente las ocupaciones."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Describe de manera coherente el trabajo de una persona utilizando verbos relacionados con las ocupaciones."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Produce enunciados negativos en pasado simple utilizando el orden correcto de la oración."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Nombra con precisión los días de la semana y los meses del año."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Identifica exitosamente números ordinales a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Pronuncia adecuadamente los números ordinales."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Deletrea correctamente los números ordinales."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Escribe fechas correctamente siguiendo los diferentes formatos estadounidenses."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Utiliza los patrones correctos para formular preguntas en pasado simple."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Intercambia información con precisión utilizando el pasado simple."
+     },
+     {
+      "codigo": "2.12",
+      "texto": "Reconoce apropiadamente la información clave de una biografía."
+     },
+     {
+      "codigo": "2.13",
+      "texto": "Selecciona cronológicamente información clave sobre la vida de un salvadoreño importante."
+     },
+     {
+      "codigo": "2.14",
+      "texto": "Organiza ideas para escribir una biografía utilizando adecuadamente el pasado simple."
+     },
+     {
+      "codigo": "2.15",
+      "texto": "Presenta de manera coherente una biografía detallada de un personaje salvadoreño."
+     },
+     {
+      "codigo": "2.16",
+      "texto": "Investiga con precisión información sobre una persona importante en la historia de El Salvador, señalando aspectos relevantes de su vida."
+     },
+     {
+      "codigo": "2.17",
+      "texto": "Escribe con claridad un párrafo biográfico sobre un personaje famoso de El Salvador."
+     },
+     {
+      "codigo": "2.18",
+      "texto": "Presenta de manera coherente la biografía de un salvadoreño famoso."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Going grocery shopping",
+    "objetivos": [
+     "Identificar los cinco grupos básicos de alimentos para describir comidas mencionando frutas, verduras, carnes, lácteos y granos.",
+     "Utilizar expresiones relacionadas con las compras para desarrollar lenguaje funcional y vocabulario al realizar compras."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Relaciona el vocabulario de alimentos con diferentes tipos de representaciones, como ilustraciones, descripciones o definiciones."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Pronuncia adecuadamente palabras relacionadas con los alimentos."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Clasifica correctamente los alimentos en los cinco grupos básicos."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Describe adecuadamente lo que suele consumir en sus comidas utilizando vocabulario relacionado con los alimentos."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Nombra adecuadamente sustantivos contables e incontables presentados en fuentes variadas."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Clasifica apropiadamente sustantivos contables e incontables."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Forma sustantivos plurales siguiendo sus reglas ortográficas correctas."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Clasifica adecuadamente los sustantivos que llevan los artículos indefinidos a o an."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Construye adecuadamente oraciones afirmativas y negativas sobre alimentos utilizando los cuantificadores a/an, some o any."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Demuestra comprensión del vocabulario de partitivos aportando ilustraciones apropiadas que representen con precisión cada palabra o frase (p. ej., a slice of bread, a piece of cake, a can of soup), asegurando que cada ilustración asocie claramente el término partitivo con su significado visual correcto."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Identifica con precisión alimentos y sus partitivos a partir de fuentes variadas."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Lee adecuadamente los precios."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Escribe correctamente los precios durante intercambios orales."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Reconoce apropiadamente expresiones básicas relacionadas con las compras a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Dramatiza situaciones de compra en una tienda o mercado utilizando las expresiones adecuadas relacionadas con las compras."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "My city",
+    "objetivos": [
+     "Dar direcciones utilizando preposiciones de lugar y verbos comunes para identificar lugares y edificios de la ciudad o el pueblo.",
+     "Describir una ciudad salvadoreña favorita para promover el turismo local, utilizando el vocabulario y las estructuras estudiadas a lo largo de la unidad."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Reconoce con precisión palabras relacionadas con lugares de la ciudad a partir de apoyos visuales."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Deletrea adecuadamente adjetivos utilizados para describir lugares, de forma oral y escrita."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Describe lugares mostrados en apoyos visuales utilizando los adjetivos apropiados."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Identifica con precisión preposiciones de lugar en apoyos visuales."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Responde correctamente preguntas sobre la ubicación de lugares utilizando preposiciones."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Identifica con precisión los verbos utilizados para dar direcciones."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Sigue con precisión las direcciones hacia distintos lugares."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Da direcciones utilizando correctamente el vocabulario de lugares y las expresiones comunes correspondientes."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Identifica con precisión gramatical las reglas ortográficas de los adjetivos comparativos y superlativos."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Forma apropiadamente los adjetivos en su grado comparativo y superlativo."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Realiza correctamente comparaciones sobre lugares de un pueblo o ciudad utilizando la forma comparativa o superlativa."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Escribe de manera coherente un párrafo corto describiendo una ciudad o pueblo de El Salvador, utilizando comparativos, superlativos y preposiciones de lugar."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "My favorite book/movie",
+    "objetivos": [
+     "Proporcionar datos generales sobre una película o libro para describir un resumen de este utilizando el vocabulario adecuado."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Deletrea con precisión el vocabulario relacionado con libros y películas."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Asocia el vocabulario relacionado con libros y películas con información de fuentes variadas."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Deletrea correctamente verbos regulares en participio pasado, de forma oral y escrita."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Pronuncia apropiadamente verbos regulares en participio pasado."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Reconoce apropiadamente verbos irregulares en participio pasado."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Deletrea con precisión verbos irregulares en participio pasado."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Reconoce el orden correcto de la estructura gramatical de oraciones afirmativas y negativas en presente perfecto."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Forma oraciones afirmativas y negativas en presente perfecto siguiendo el orden apropiado de las palabras."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Intercambia correctamente información sobre experiencias de vida utilizando oraciones afirmativas y negativas en presente perfecto."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Construye con precisión preguntas de sí/no en presente perfecto."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Indaga apropiadamente sobre las experiencias de vida de alguien utilizando el presente perfecto."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Contrasta de manera coherente experiencias de vida personales con sus compañeros en un intercambio oral sencillo."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Enumera eficazmente datos generales sobre una película o libro favorito."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Escribe descripciones sencillas y coherentes relacionadas con una película o libro favorito."
+     },
+     {
+      "codigo": "5.15",
+      "texto": "Intercambia satisfactoriamente información general con sus compañeros sobre un libro o película favorito."
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Life experiences",
+    "objetivos": [
+     "Destacar información significativa, encontrada en diferentes fuentes, para describir los logros de una persona famosa."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Identifica con precisión el vocabulario relacionado con experiencias de vida."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Identifica con precisión verbos relacionados con experiencias de vida en su forma de participio pasado."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Forma correctamente enunciados afirmativos, negativos y preguntas de sí/no en presente perfecto."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Habla sobre experiencias utilizando la forma correcta del presente perfecto."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Pronuncia con precisión los sonidos /t/, /d/ e /ɪd/ al final de los verbos regulares en participio pasado."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Discrimina exitosamente los sonidos de la terminación -ed al final de los verbos regulares en participio pasado, a partir de fuentes variadas."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Asocia expresiones de tiempo con for y since al describir la duración de las actividades."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Indaga la duración de una actividad construyendo correctamente preguntas precisas en presente perfecto."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Expresa correctamente la duración de una actividad utilizando el presente perfecto con for/since."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Identifica satisfactoriamente logros comunes en diferentes fuentes como revistas, libros y biografías, entre otras."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Describe de manera coherente sus logros personales."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Elabora una descripción breve y coherente sobre los logros de alguien."
+     },
+     {
+      "codigo": "6.13",
+      "texto": "Describe exitosamente los principales logros de una persona utilizando apoyos visuales para sustentar las ideas."
+     }
+    ]
+   }
+  ],
+  "Segundo año (A1+)": [
+   {
+    "unidad": 1,
+    "nombre": "My day yesterday",
+    "objetivos": [
+     "Proporcionar datos sobre el pasado de una persona para describir su historia personal.",
+     "Detallar actividades pasadas para ilustrar acciones utilizando verbos regulares e irregulares."
+    ],
+    "indicadores": [
+     {
+      "codigo": "1.1",
+      "texto": "Reconoce correctamente adjetivos para describir personas a partir de fuentes orales o escritas y apoyos visuales."
+     },
+     {
+      "codigo": "1.2",
+      "texto": "Deletrea con precisión adjetivos comunes utilizados para describir personas."
+     },
+     {
+      "codigo": "1.3",
+      "texto": "Pronuncia apropiadamente adjetivos comunes."
+     },
+     {
+      "codigo": "1.4",
+      "texto": "Forma oraciones completas con was/were, respetando apropiadamente el orden de las palabras y la concordancia sujeto-verbo."
+     },
+     {
+      "codigo": "1.5",
+      "texto": "Proporciona con precisión datos personales sobre alguien utilizando was y were."
+     },
+     {
+      "codigo": "1.6",
+      "texto": "Reconoce con precisión expresiones de tiempo pasado a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "1.7",
+      "texto": "Deletrea con precisión expresiones de tiempo pasado, de forma oral y escrita."
+     },
+     {
+      "codigo": "1.8",
+      "texto": "Pronuncia apropiadamente expresiones de tiempo pasado."
+     },
+     {
+      "codigo": "1.9",
+      "texto": "Escribe oraciones negativas con was/were siguiendo adecuadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.10",
+      "texto": "Formula apropiadamente preguntas sobre datos de alguien utilizando was/were."
+     },
+     {
+      "codigo": "1.11",
+      "texto": "Identifica exitosamente verbos regulares comunes en pasado simple a partir de fuentes visuales y escritas."
+     },
+     {
+      "codigo": "1.12",
+      "texto": "Forma verbos regulares en pasado simple siguiendo las reglas ortográficas apropiadas."
+     },
+     {
+      "codigo": "1.13",
+      "texto": "Asocia adecuadamente verbos regulares con sus representaciones visuales o gestos correspondientes."
+     },
+     {
+      "codigo": "1.14",
+      "texto": "Clasifica correctamente los sonidos vocálicos y consonánticos como sonoros y sordos."
+     },
+     {
+      "codigo": "1.15",
+      "texto": "Pronuncia apropiadamente los sonidos /t/, /d/ e /ɪd/ al final de los verbos regulares."
+     },
+     {
+      "codigo": "1.16",
+      "texto": "Construye oraciones afirmativas en pasado simple utilizando verbos regulares y respetando apropiadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.17",
+      "texto": "Reconoce correctamente verbos irregulares comunes en pasado simple a partir de fuentes visuales y escritas."
+     },
+     {
+      "codigo": "1.18",
+      "texto": "Forma oraciones afirmativas en pasado simple utilizando verbos irregulares y respetando apropiadamente el orden de las palabras."
+     },
+     {
+      "codigo": "1.19",
+      "texto": "Escribe adecuadamente los verbos irregulares en pasado simple."
+     },
+     {
+      "codigo": "1.20",
+      "texto": "Ilustra con precisión y coherencia las actividades realizadas el día anterior utilizando verbos regulares e irregulares en pasado simple."
+     }
+    ]
+   },
+   {
+    "unidad": 2,
+    "nombre": "People and life stories",
+    "objetivos": [
+     "Expresar fechas para describir un evento en el pasado.",
+     "Destacar datos sobre una persona importante en la historia de El Salvador para describir su trayectoria, siguiendo la organización básica de un texto biográfico."
+    ],
+    "indicadores": [
+     {
+      "codigo": "2.1",
+      "texto": "Identifica con precisión ocupaciones a partir de apoyos visuales."
+     },
+     {
+      "codigo": "2.2",
+      "texto": "Pronuncia adecuadamente las ocupaciones."
+     },
+     {
+      "codigo": "2.3",
+      "texto": "Describe de manera coherente el trabajo de una persona utilizando verbos relacionados con las ocupaciones."
+     },
+     {
+      "codigo": "2.4",
+      "texto": "Produce enunciados negativos en pasado simple utilizando el orden correcto de la oración."
+     },
+     {
+      "codigo": "2.5",
+      "texto": "Nombra con precisión los días de la semana y los meses del año."
+     },
+     {
+      "codigo": "2.6",
+      "texto": "Identifica exitosamente números ordinales a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "2.7",
+      "texto": "Pronuncia adecuadamente los números ordinales."
+     },
+     {
+      "codigo": "2.8",
+      "texto": "Deletrea correctamente los números ordinales."
+     },
+     {
+      "codigo": "2.9",
+      "texto": "Escribe fechas correctamente siguiendo los diferentes formatos estadounidenses."
+     },
+     {
+      "codigo": "2.10",
+      "texto": "Utiliza los patrones correctos para formular preguntas en pasado simple."
+     },
+     {
+      "codigo": "2.11",
+      "texto": "Intercambia información con precisión utilizando el pasado simple."
+     },
+     {
+      "codigo": "2.12",
+      "texto": "Reconoce apropiadamente la información clave de una biografía."
+     },
+     {
+      "codigo": "2.13",
+      "texto": "Selecciona cronológicamente información clave sobre la vida de un salvadoreño importante."
+     },
+     {
+      "codigo": "2.14",
+      "texto": "Organiza ideas para escribir una biografía utilizando adecuadamente el pasado simple."
+     },
+     {
+      "codigo": "2.15",
+      "texto": "Presenta de manera coherente una biografía detallada de un personaje salvadoreño."
+     },
+     {
+      "codigo": "2.16",
+      "texto": "Investiga con precisión información sobre una persona importante en la historia de El Salvador, señalando aspectos relevantes de su vida."
+     },
+     {
+      "codigo": "2.17",
+      "texto": "Escribe con claridad un párrafo biográfico sobre un personaje famoso de El Salvador."
+     },
+     {
+      "codigo": "2.18",
+      "texto": "Presenta de manera coherente la biografía de un salvadoreño famoso."
+     }
+    ]
+   },
+   {
+    "unidad": 3,
+    "nombre": "Going grocery shopping",
+    "objetivos": [
+     "Identificar los cinco grupos básicos de alimentos para describir comidas mencionando frutas, verduras, carnes, lácteos y granos.",
+     "Utilizar expresiones relacionadas con las compras para desarrollar lenguaje funcional y vocabulario al realizar compras."
+    ],
+    "indicadores": [
+     {
+      "codigo": "3.1",
+      "texto": "Relaciona el vocabulario de alimentos con diferentes tipos de representaciones, como ilustraciones, descripciones o definiciones."
+     },
+     {
+      "codigo": "3.2",
+      "texto": "Pronuncia adecuadamente palabras relacionadas con los alimentos."
+     },
+     {
+      "codigo": "3.3",
+      "texto": "Clasifica correctamente los alimentos en los cinco grupos básicos."
+     },
+     {
+      "codigo": "3.4",
+      "texto": "Describe adecuadamente lo que suele consumir en sus comidas utilizando vocabulario relacionado con los alimentos."
+     },
+     {
+      "codigo": "3.5",
+      "texto": "Nombra adecuadamente sustantivos contables e incontables presentados en fuentes variadas."
+     },
+     {
+      "codigo": "3.6",
+      "texto": "Clasifica apropiadamente sustantivos contables e incontables."
+     },
+     {
+      "codigo": "3.7",
+      "texto": "Forma sustantivos plurales siguiendo sus reglas ortográficas correctas."
+     },
+     {
+      "codigo": "3.8",
+      "texto": "Clasifica adecuadamente los sustantivos que llevan los artículos indefinidos a o an."
+     },
+     {
+      "codigo": "3.9",
+      "texto": "Construye adecuadamente oraciones afirmativas y negativas sobre alimentos utilizando los cuantificadores a/an, some o any."
+     },
+     {
+      "codigo": "3.10",
+      "texto": "Demuestra comprensión del vocabulario de partitivos aportando ilustraciones apropiadas que representen con precisión cada palabra o frase (p. ej., a slice of bread, a piece of cake, a can of soup), asegurando que cada ilustración asocie claramente el término partitivo con su significado visual correcto."
+     },
+     {
+      "codigo": "3.11",
+      "texto": "Identifica con precisión alimentos y sus partitivos a partir de fuentes variadas."
+     },
+     {
+      "codigo": "3.12",
+      "texto": "Lee adecuadamente los precios."
+     },
+     {
+      "codigo": "3.13",
+      "texto": "Escribe correctamente los precios durante intercambios orales."
+     },
+     {
+      "codigo": "3.14",
+      "texto": "Reconoce apropiadamente expresiones básicas relacionadas con las compras a partir de diferentes fuentes."
+     },
+     {
+      "codigo": "3.15",
+      "texto": "Dramatiza situaciones de compra en una tienda o mercado utilizando las expresiones adecuadas relacionadas con las compras."
+     }
+    ]
+   },
+   {
+    "unidad": 4,
+    "nombre": "My city",
+    "objetivos": [
+     "Dar direcciones utilizando preposiciones de lugar y verbos comunes para identificar lugares y edificios de la ciudad o el pueblo.",
+     "Describir una ciudad salvadoreña favorita para promover el turismo local, utilizando el vocabulario y las estructuras estudiadas a lo largo de la unidad."
+    ],
+    "indicadores": [
+     {
+      "codigo": "4.1",
+      "texto": "Reconoce con precisión palabras relacionadas con lugares de la ciudad a partir de apoyos visuales."
+     },
+     {
+      "codigo": "4.2",
+      "texto": "Deletrea adecuadamente adjetivos utilizados para describir lugares, de forma oral y escrita."
+     },
+     {
+      "codigo": "4.3",
+      "texto": "Describe lugares mostrados en apoyos visuales utilizando los adjetivos apropiados."
+     },
+     {
+      "codigo": "4.4",
+      "texto": "Identifica con precisión preposiciones de lugar en apoyos visuales."
+     },
+     {
+      "codigo": "4.5",
+      "texto": "Responde correctamente preguntas sobre la ubicación de lugares utilizando preposiciones."
+     },
+     {
+      "codigo": "4.6",
+      "texto": "Identifica con precisión los verbos utilizados para dar direcciones."
+     },
+     {
+      "codigo": "4.7",
+      "texto": "Sigue con precisión las direcciones hacia distintos lugares."
+     },
+     {
+      "codigo": "4.8",
+      "texto": "Da direcciones utilizando correctamente el vocabulario de lugares y las expresiones comunes correspondientes."
+     },
+     {
+      "codigo": "4.9",
+      "texto": "Identifica con precisión gramatical las reglas ortográficas de los adjetivos comparativos y superlativos."
+     },
+     {
+      "codigo": "4.10",
+      "texto": "Forma apropiadamente los adjetivos en su grado comparativo y superlativo."
+     },
+     {
+      "codigo": "4.11",
+      "texto": "Realiza correctamente comparaciones sobre lugares de un pueblo o ciudad utilizando la forma comparativa o superlativa."
+     },
+     {
+      "codigo": "4.12",
+      "texto": "Escribe de manera coherente un párrafo corto describiendo una ciudad o pueblo de El Salvador, utilizando comparativos, superlativos y preposiciones de lugar."
+     }
+    ]
+   },
+   {
+    "unidad": 5,
+    "nombre": "My favorite book/movie",
+    "objetivos": [
+     "Proporcionar datos generales sobre una película o libro para describir un resumen de este utilizando el vocabulario adecuado."
+    ],
+    "indicadores": [
+     {
+      "codigo": "5.1",
+      "texto": "Deletrea con precisión el vocabulario relacionado con libros y películas."
+     },
+     {
+      "codigo": "5.2",
+      "texto": "Asocia el vocabulario relacionado con libros y películas con información de fuentes variadas."
+     },
+     {
+      "codigo": "5.3",
+      "texto": "Deletrea correctamente verbos regulares en participio pasado, de forma oral y escrita."
+     },
+     {
+      "codigo": "5.4",
+      "texto": "Pronuncia apropiadamente verbos regulares en participio pasado."
+     },
+     {
+      "codigo": "5.5",
+      "texto": "Reconoce apropiadamente verbos irregulares en participio pasado."
+     },
+     {
+      "codigo": "5.6",
+      "texto": "Deletrea con precisión verbos irregulares en participio pasado."
+     },
+     {
+      "codigo": "5.7",
+      "texto": "Reconoce el orden correcto de la estructura gramatical de oraciones afirmativas y negativas en presente perfecto."
+     },
+     {
+      "codigo": "5.8",
+      "texto": "Forma oraciones afirmativas y negativas en presente perfecto siguiendo el orden apropiado de las palabras."
+     },
+     {
+      "codigo": "5.9",
+      "texto": "Intercambia correctamente información sobre experiencias de vida utilizando oraciones afirmativas y negativas en presente perfecto."
+     },
+     {
+      "codigo": "5.10",
+      "texto": "Construye con precisión preguntas de sí/no en presente perfecto."
+     },
+     {
+      "codigo": "5.11",
+      "texto": "Indaga apropiadamente sobre las experiencias de vida de alguien utilizando el presente perfecto."
+     },
+     {
+      "codigo": "5.12",
+      "texto": "Contrasta de manera coherente experiencias de vida personales con sus compañeros en un intercambio oral sencillo."
+     },
+     {
+      "codigo": "5.13",
+      "texto": "Enumera eficazmente datos generales sobre una película o libro favorito."
+     },
+     {
+      "codigo": "5.14",
+      "texto": "Escribe descripciones sencillas y coherentes relacionadas con una película o libro favorito."
+     },
+     {
+      "codigo": "5.15",
+      "texto": "Intercambia satisfactoriamente información general con sus compañeros sobre un libro o película favorito."
+     }
+    ]
+   },
+   {
+    "unidad": 6,
+    "nombre": "Life experiences",
+    "objetivos": [
+     "Destacar información significativa, encontrada en diferentes fuentes, para describir los logros de una persona famosa."
+    ],
+    "indicadores": [
+     {
+      "codigo": "6.1",
+      "texto": "Identifica con precisión el vocabulario relacionado con experiencias de vida."
+     },
+     {
+      "codigo": "6.2",
+      "texto": "Identifica con precisión verbos relacionados con experiencias de vida en su forma de participio pasado."
+     },
+     {
+      "codigo": "6.3",
+      "texto": "Forma correctamente enunciados afirmativos, negativos y preguntas de sí/no en presente perfecto."
+     },
+     {
+      "codigo": "6.4",
+      "texto": "Habla sobre experiencias utilizando la forma correcta del presente perfecto."
+     },
+     {
+      "codigo": "6.5",
+      "texto": "Pronuncia con precisión los sonidos /t/, /d/ e /ɪd/ al final de los verbos regulares en participio pasado."
+     },
+     {
+      "codigo": "6.6",
+      "texto": "Discrimina exitosamente los sonidos de la terminación -ed al final de los verbos regulares en participio pasado, a partir de fuentes variadas."
+     },
+     {
+      "codigo": "6.7",
+      "texto": "Asocia expresiones de tiempo con for y since al describir la duración de las actividades."
+     },
+     {
+      "codigo": "6.8",
+      "texto": "Indaga la duración de una actividad construyendo correctamente preguntas precisas en presente perfecto."
+     },
+     {
+      "codigo": "6.9",
+      "texto": "Expresa correctamente la duración de una actividad utilizando el presente perfecto con for/since."
+     },
+     {
+      "codigo": "6.10",
+      "texto": "Identifica satisfactoriamente logros comunes en diferentes fuentes como revistas, libros y biografías, entre otras."
+     },
+     {
+      "codigo": "6.11",
+      "texto": "Describe de manera coherente sus logros personales."
+     },
+     {
+      "codigo": "6.12",
+      "texto": "Elabora una descripción breve y coherente sobre los logros de alguien."
+     },
+     {
+      "codigo": "6.13",
+      "texto": "Describe exitosamente los principales logros de una persona utilizando apoyos visuales para sustentar las ideas."
+     }
+    ]
+   }
+  ]
+ }
+};
