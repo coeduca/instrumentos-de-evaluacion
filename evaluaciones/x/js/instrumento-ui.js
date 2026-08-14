@@ -149,7 +149,7 @@
             <p class="text-sm text-slate">
               Pega aquí el contenido de tu rúbrica (formato <strong>JSON</strong> o <strong>tabla pegada</strong>).
             </p>
-            <button type="button" data-inst="import-prompt-btn" class="btn-secondary text-xs" title="Copiar prompt">📋</button>
+            <button type="button" data-inst="import-prompt-btn" class="btn-secondary prompt-copy-btn" title="Copiar prompt" aria-label="Copiar prompt">${ICON_COPY}</button>
           </div>
           <textarea data-inst="import-code" class="field-input font-mono text-xs" style="min-height: 200px;" placeholder='Ejemplo JSON:
 [
@@ -322,12 +322,13 @@ O pega directamente las filas de una tabla.'></textarea>
       
       try {
         await navigator.clipboard.writeText(promptText);
-        const originalText = promptBtn.textContent;
-        promptBtn.textContent = '✓ Prompt copiado';
-        promptBtn.classList.add('text-ok'); // Si tienes alguna clase verde
+        promptBtn.classList.add('is-copied');
+        promptBtn.title = 'Prompt copiado';
+        promptBtn.setAttribute('aria-label', 'Prompt copiado');
         setTimeout(() => {
-          promptBtn.textContent = originalText;
-          promptBtn.classList.remove('text-ok');
+          promptBtn.classList.remove('is-copied');
+          promptBtn.title = 'Copiar prompt';
+          promptBtn.setAttribute('aria-label', 'Copiar prompt');
         }, 2500);
       } catch (err) {
         alert('No se pudo copiar al portapapeles. Da permisos a tu navegador.');

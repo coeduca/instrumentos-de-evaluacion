@@ -1008,11 +1008,15 @@ async function handleImageFiles(files) {
   const file = files && files[0];
   if (!file) return;
   if (!file.type.startsWith('image/')) { alert('El archivo seleccionado no es una imagen.'); return; }
-  const targetId = currentImageActivityId;
+  const target = currentImageActivityId;
   try {
     const processed = await processImageFile(file);
-    const act = state.actividades.find((a) => a.id === targetId);
-    if (act) { act.imagen = { data: processed.data, w: processed.w, h: processed.h, caption: '', size: 'medium', position: 'default' }; saveState(); renderActivities(); }
+    if (typeof target === 'function') {
+      target(processed);
+    } else {
+      const act = state.actividades.find((a) => a.id === target);
+      if (act) { act.imagen = { data: processed.data, w: processed.w, h: processed.h, caption: '', size: 'medium', position: 'default' }; saveState(); renderActivities(); }
+    }
   } catch (e) {
     console.error('No se pudo procesar la imagen:', e); alert('No se pudo procesar la imagen. Intenta con otro archivo.');
   } finally { imageFileInput.value = ''; closeImageModal(); }
@@ -1027,6 +1031,15 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !imageMo
 ['dragenter', 'dragover'].forEach((evt) => imageDropzone.addEventListener(evt, (e) => { e.preventDefault(); e.stopPropagation(); imageDropzone.classList.add('dragover'); }));
 ['dragleave', 'dragend'].forEach((evt) => imageDropzone.addEventListener(evt, (e) => { e.preventDefault(); e.stopPropagation(); imageDropzone.classList.remove('dragover'); }));
 imageDropzone.addEventListener('drop', (e) => { e.preventDefault(); e.stopPropagation(); imageDropzone.classList.remove('dragover'); if (e.dataTransfer && e.dataTransfer.files) handleImageFiles(e.dataTransfer.files); });
+
+// API compartida para que otros generadores usen exactamente el mismo modal,
+// redimensionado y normalización de imágenes que las actividades de recuperación.
+window.ActividadMedia = {
+  seleccionarImagen(onSelected) {
+    if (typeof onSelected === 'function') openImageModal(onSelected);
+  },
+  aplicarTamanoPreview: applyPreviewSize,
+};
 
 let logoBase64 = null;
 async function loadLogo() {

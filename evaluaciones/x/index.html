@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Patrick+Hand&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/styles.css?v=47">
+<link rel="stylesheet" href="css/styles.css?v=48">
 
 <script>
   tailwind.config = {
@@ -353,7 +353,7 @@
             </div>
             <div>
               <label for="ord-ponderacion" class="field-label">
-                Porcentaje asignado a esta actividad (%)
+                Porcentaje asignado
                 <button type="button" class="info-btn" data-info-target="ord-ponderacion-info"
                         aria-label="Más información sobre la ponderación" aria-expanded="false">i</button>
               </label>
@@ -374,10 +374,60 @@
               <button type="button" data-ord-cmd="bold" class="format-btn" title="Negrita"><b>N</b></button>
               <button type="button" data-ord-cmd="italic" class="format-btn" title="Cursiva"><i>K</i></button>
               <button type="button" data-ord-cmd="underline" class="format-btn" title="Subrayado"><u>S</u></button>
+              <span class="w-px h-4 bg-navy/15 mx-1.5"></span>
+              <button type="button" id="ord-toggle-table" class="format-btn">+ Tabla</button>
+              <button type="button" id="ord-add-image" class="format-btn">+ Imagen</button>
             </div>
             <div id="ord-instrucciones" contenteditable="true" class="field-input rich-editor"
                  data-placeholder="Describe qué debe hacer el estudiante, condiciones y entrega..."></div>
           </div>
+
+          <div id="ord-table-controls" class="hidden items-end gap-2 pt-1 flex">
+            <div><label for="ord-table-rows" class="field-label">Filas</label><input id="ord-table-rows" type="number" min="1" max="20" value="3" class="field-input-sm"></div>
+            <div><label for="ord-table-cols" class="field-label">Columnas</label><input id="ord-table-cols" type="number" min="1" max="10" value="3" class="field-input-sm"></div>
+            <button type="button" id="ord-create-table" class="btn-secondary">Crear tabla</button>
+          </div>
+
+          <div id="ord-table-wrapper" class="hidden">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="field-label mb-0">Tabla de la actividad</span>
+              <button type="button" id="ord-remove-table" class="text-xs text-slate hover:text-alert underline underline-offset-2">Quitar tabla</button>
+            </div>
+            <div id="ord-table-container" data-field="table-container" class="overflow-x-auto border border-navy/10 rounded-sm"></div>
+          </div>
+
+          <div id="ord-image-wrapper" class="hidden">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="field-label mb-0">Imagen de la actividad</span>
+              <button type="button" id="ord-remove-image" class="text-xs text-slate hover:text-alert underline underline-offset-2">Quitar imagen</button>
+            </div>
+            <div class="flex flex-col sm:flex-row items-start gap-4">
+              <img id="ord-image-preview" class="activity-image-preview" alt="Vista previa de la imagen">
+              <div class="flex-1 space-y-2.5 w-full">
+                <div class="image-document-options">
+                  <div>
+                    <span class="field-label">Tamaño en el documento</span>
+                    <div class="flex items-center gap-1.5 flex-wrap">
+                      <button type="button" data-ord-image-size="xsmall" class="size-btn">Muy pequeño</button>
+                      <button type="button" data-ord-image-size="small" class="size-btn">Pequeño</button>
+                      <button type="button" data-ord-image-size="medium" class="size-btn">Mediano</button>
+                      <button type="button" data-ord-image-size="large" class="size-btn">Grande</button>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="field-label">Posición</span>
+                    <div class="flex items-center gap-1.5">
+                      <button type="button" data-ord-image-position="default" class="size-btn image-position-btn" title="Debajo del texto" aria-label="Imagen debajo del texto"><img src="assets/format_default.svg" alt=""></button>
+                      <button type="button" data-ord-image-position="left" class="size-btn image-position-btn" title="Imagen a la izquierda" aria-label="Imagen a la izquierda del texto"><img src="assets/format_image_left.svg" alt=""></button>
+                      <button type="button" data-ord-image-position="right" class="size-btn image-position-btn" title="Imagen a la derecha" aria-label="Imagen a la derecha del texto"><img src="assets/format_image_right.svg" alt=""></button>
+                    </div>
+                  </div>
+                </div>
+                <div><label for="ord-image-caption" class="field-label">Descripción (pie de imagen)</label><input id="ord-image-caption" type="text" class="field-input" placeholder="Aparecerá en cursiva pequeña bajo la imagen (opcional)"></div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
       </div><!-- .section-card -->
@@ -388,6 +438,10 @@
         <label class="switch-row">
           <span class="switch"><input type="checkbox" class="cfg-firmar-documentos"><span class="switch-track"><span class="switch-thumb"></span></span></span>
           <span class="switch-text"><span class="switch-title">Firmar documentos</span><span class="switch-desc">Agrega automáticamente la firma de José Eliseo cuando aparezca como firmante.</span></span>
+        </label>
+        <label for="ord-instrumento-pagina-separada" class="switch-row">
+          <span class="switch"><input type="checkbox" id="ord-instrumento-pagina-separada"><span class="switch-track"><span class="switch-thumb"></span></span></span>
+          <span class="switch-text"><span class="switch-title">Instrumento de evaluación en página diferente</span><span class="switch-desc">Actívalo para que la rúbrica o lista de cotejo comience en una página nueva; desactívalo para colocarla después de las indicaciones.</span></span>
         </label>
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
@@ -1164,15 +1218,15 @@
 <script src="js/curriculo.js?v=35"></script>
 <script src="js/documentos.js?v=34"></script>
 <script src="js/firmas.js?v=1"></script>
-<script src="js/pdfGenerator.js?v=45"></script>
-<script src="js/wordGenerator.js?v=45"></script>
+<script src="js/pdfGenerator.js?v=46"></script>
+<script src="js/wordGenerator.js?v=46"></script>
 <script src="js/curriculo-ui.js?v=36"></script>
-<script src="js/instrumento-ui.js?v=36"></script>
+<script src="js/instrumento-ui.js?v=37"></script>
 <script src="js/appscript-gen.js?v=35"></script>
 <script src="js/expediente.js?v=37"></script>
 <script src="js/procesos.js?v=35"></script>
-<script src="js/app.js?v=45"></script>
-<script src="js/ordinaria-ui.js?v=35"></script>
+<script src="js/app.js?v=46"></script>
+<script src="js/ordinaria-ui.js?v=36"></script>
 <script src="js/documentos-ui.js?v=34"></script>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="js/drive-sync.js?v=4"></script>

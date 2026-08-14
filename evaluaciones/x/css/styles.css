@@ -2282,6 +2282,24 @@ body.dark .gs-status-ok { color: #7FD1B9; }
   resize: vertical;
 }
 
+/* Botón compacto para copiar el prompt de IA: usa SVG, no emoji ni texto. */
+.prompt-copy-btn {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.prompt-copy-btn svg { width: 1rem; height: 1rem; display: block; }
+.prompt-copy-btn.is-copied {
+  color: #2F6F5E;
+  border-color: rgba(47, 111, 94, 0.45);
+  background: rgba(47, 111, 94, 0.1);
+}
+body.dark .prompt-copy-btn.is-copied { color: #7FD1B9; }
+
 /* ---------- Botón de información (mensaje al tocarlo) ---------- */
 .info-btn {
   display: inline-flex;
