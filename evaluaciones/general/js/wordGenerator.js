@@ -88,7 +88,7 @@
 
   function valueParagraph(text, opts = {}) {
     return new Paragraph({
-      spacing: { after: 80 },
+      spacing: { after: opts.after == null ? 80 : opts.after },
       children: [new TextRun({ text: text || '—', size: 18, color: opts.color || INK, bold: !!opts.bold })],
     });
   }
@@ -108,7 +108,10 @@
   }
 
   function buildConfigTable(config) {
-    const row = (cells, outerBorders) => new TableRow({ children: cells.map((c) => plainCell(c, 25, outerBorders)) });
+    const field = (label, value, outerBorders) => plainCell([
+      labelParagraph(label),
+      valueParagraph(value, { after: 0 }),
+    ], 25, outerBorders);
     return new Table({
       width: { size: 100, type: WidthType.PERCENTAGE },
       borders: {
@@ -117,10 +120,14 @@
         bottom: { style: BorderStyle.SINGLE, size: 4, color: 'E2E6EA' },
       },
       rows: [
-        row([labelParagraph('Institución'), labelParagraph('Código'), labelParagraph('Docente'), labelParagraph('Materia')], { top: true }),
-        row([valueParagraph(config.institucion), valueParagraph(config.codigo), valueParagraph(config.docente), valueParagraph(config.materia)]),
-        row([labelParagraph('Ubicación'), labelParagraph('Trimestre'), labelParagraph('Año'), labelParagraph('Fecha límite')]),
-        row([valueParagraph(config.ubicacion), valueParagraph(config.trimestre), valueParagraph(config.anio), valueParagraph(fmtFecha(config.fechaLimite))], { bottom: true }),
+        new TableRow({ children: [
+          field('Institución', config.institucion, { top: true }), field('Código', config.codigo, { top: true }),
+          field('Docente', config.docente, { top: true }), field('Materia', config.materia, { top: true }),
+        ] }),
+        new TableRow({ children: [
+          field('Ubicación', config.ubicacion, { bottom: true }), field('Trimestre', config.trimestre, { bottom: true }),
+          field('Año', config.anio, { bottom: true }), field('Fecha límite', fmtFecha(config.fechaLimite), { bottom: true }),
+        ] }),
       ],
     });
   }
