@@ -312,6 +312,9 @@ body.dark .drawer-icon { filter: invert(0.85); }
 .drive-switch input:focus-visible + .drive-switch-track { outline: 2px solid #60A5FA; outline-offset: 2px; }
 .drive-switch input:disabled + .drive-switch-track { opacity: 0.5; }
 .drive-conflict-hint { color: var(--color-slate); font-size: 0.7rem; text-align: center; }
+.drawer-history-icon { width: 2rem; height: 2rem; display: grid; place-items: center; flex: 0 0 auto; color: var(--color-navy); }
+.snapshot-option { text-align: left; }
+.snapshot-option time { display: block; color: var(--color-navy); font-size: 0.78rem; font-weight: 700; }
 
 .drive-save-modal-box { max-width: 38rem; }
 .drive-save-content { padding: 1.15rem; }

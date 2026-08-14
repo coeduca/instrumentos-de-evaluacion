@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Patrick+Hand&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/styles.css?v=48">
+<link rel="stylesheet" href="css/styles.css?v=49">
 
 <script>
   tailwind.config = {
@@ -162,6 +162,15 @@
         <span class="drawer-item-text">
           <span class="drawer-item-title">Restaurar</span>
           <span class="drawer-item-desc">Recupera un respaldo descargado previamente</span>
+        </span>
+      </button>
+      <button id="btn-drive-snapshots" type="button" class="drawer-item" aria-haspopup="dialog" aria-controls="drive-snapshots-modal">
+        <span class="drawer-history-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg>
+        </span>
+        <span class="drawer-item-text">
+          <span class="drawer-item-title">Copias de recuperación</span>
+          <span class="drawer-item-desc">Restaura un estado anterior guardado antes de sincronizar</span>
         </span>
       </button>
       <input type="file" id="import-backup-input" accept=".coeduca,.json,.gz,application/gzip,application/json" class="hidden">
@@ -1135,6 +1144,20 @@
   </div>
 </div>
 
+<!-- Copias locales creadas automáticamente antes de sincronizar -->
+<div id="drive-snapshots-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="drive-snapshots-title">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span id="drive-snapshots-title">Copias de recuperación</span>
+      <button type="button" id="drive-snapshots-close" class="modal-close" title="Cerrar" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="p-5 space-y-3">
+      <p class="text-sm text-slate">Se conservan automáticamente las últimas 10 copias creadas antes de reemplazar o combinar información.</p>
+      <div id="drive-snapshots-list" class="space-y-2.5"></div>
+    </div>
+  </div>
+</div>
+
 <!-- Conflicto de sincronización con Google Drive -->
 <div id="drive-conflict-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="drive-conflict-title">
   <div class="modal-box">
@@ -1143,7 +1166,7 @@
       <button type="button" id="drive-conflict-close" class="modal-close" title="Cerrar" aria-label="Cerrar">✕</button>
     </div>
     <div class="p-5 space-y-4">
-      <p id="drive-conflict-message" class="text-sm text-slate">Hay cambios sin sincronizar en esta computadora y también existe una versión diferente en Drive. Elige cuál conservar.</p>
+      <p id="drive-conflict-message" class="text-sm text-slate">No fue posible combinar automáticamente un cambio concreto. Tus copias siguen protegidas; elige cuál usar para continuar.</p>
       <div class="space-y-2.5">
         <button type="button" id="drive-conflict-use-cloud" class="restore-option">
           <span class="restore-option-title">Usar la versión de Google Drive</span>
@@ -1220,15 +1243,15 @@
 <script src="js/firmas.js?v=1"></script>
 <script src="js/pdfGenerator.js?v=46"></script>
 <script src="js/wordGenerator.js?v=46"></script>
-<script src="js/curriculo-ui.js?v=36"></script>
-<script src="js/instrumento-ui.js?v=37"></script>
+<script src="js/curriculo-ui.js?v=37"></script>
+<script src="js/instrumento-ui.js?v=38"></script>
 <script src="js/appscript-gen.js?v=35"></script>
-<script src="js/expediente.js?v=37"></script>
-<script src="js/procesos.js?v=35"></script>
-<script src="js/app.js?v=46"></script>
-<script src="js/ordinaria-ui.js?v=36"></script>
+<script src="js/expediente.js?v=38"></script>
+<script src="js/procesos.js?v=36"></script>
+<script src="js/app.js?v=47"></script>
+<script src="js/ordinaria-ui.js?v=37"></script>
 <script src="js/documentos-ui.js?v=34"></script>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
-<script src="js/drive-sync.js?v=4"></script>
+<script src="js/drive-sync.js?v=5"></script>
 </body>
 </html>

@@ -181,7 +181,9 @@ O pega directamente las filas de una tabla.'></textarea>
 
     const save = debounce(() => {
       try {
-        localStorage.setItem(storageKey, JSON.stringify(inst));
+        const serialized = JSON.stringify(inst);
+        if (localStorage.getItem(storageKey) === serialized) return;
+        localStorage.setItem(storageKey, serialized);
         if (window.COEducaDrive) window.COEducaDrive.markDirty('instrumento de evaluación');
       }
       catch (e) { console.error('No se pudo guardar el instrumento:', e); }

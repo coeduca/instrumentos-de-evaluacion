@@ -45,6 +45,7 @@
 
   async function guardar(rec) {
     rec.key = buildKey(rec);
+    rec.actualizado = new Date().toISOString();
     const db = await openDb();
     const tx = db.transaction(STORE, 'readwrite');
     tx.objectStore(STORE).put(rec);
@@ -67,6 +68,9 @@
     const tx = db.transaction(STORE, 'readwrite');
     tx.objectStore(STORE).delete(key);
     await txDone(tx, db);
+    if (window.COEducaDrive && typeof window.COEducaDrive.recordDeletion === 'function') {
+      window.COEducaDrive.recordDeletion('expediente', key);
+    }
     markDriveDirty('expediente');
   }
 

@@ -141,7 +141,9 @@ function compararEstudiantesTabla(a, b) {
 // ---------- Persistencia ultrarrápida (localStorage) ----------
 function saveStateRaw() {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    const serialized = JSON.stringify(state);
+    if (localStorage.getItem(STORAGE_KEY) === serialized) return;
+    localStorage.setItem(STORAGE_KEY, serialized);
     flashSaveIndicator();
     if (window.COEducaDrive) window.COEducaDrive.markDirty('datos del acta');
   } catch (e) {
@@ -1459,6 +1461,13 @@ themeRadios.forEach((radio) => { radio.addEventListener('change', () => { if (ra
 const BACKUP_FORMAT_LEGACY = 'actas-recuperacion-respaldo';
 const BACKUP_FORMAT_COMPRESSED = 'actas-recuperacion-respaldo-comprimido';
 const BACKUP_VERSION = 3;
+const BACKUP_DEVICE_LOCAL_KEYS = new Set([
+  'actas-recuperacion:theme',
+  'actas-recuperacion:fase',
+  'actas-recuperacion:proceso-activo',
+  'actas-recuperacion:proceso-activo-tipo',
+]);
+const BACKUP_PRESERVED_LOCAL_KEYS = new Set(['actas-recuperacion:theme', 'actas-recuperacion:fase']);
 function createBackupImageTokenPrefix() {
   const nonce = (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function')
     ? crypto.randomUUID().replace(/-/g, '')
@@ -1554,7 +1563,7 @@ async function collectBackupData() {
   const ls = {};
   for (let i = 0; i < localStorage.length; i++) {
     const k = localStorage.key(i);
-    if (k && k.startsWith('actas-recuperacion:')) ls[k] = localStorage.getItem(k);
+    if (k && k.startsWith('actas-recuperacion:') && !BACKUP_DEVICE_LOCAL_KEYS.has(k)) ls[k] = localStorage.getItem(k);
   }
   return {
     formato: BACKUP_FORMAT_LEGACY,
@@ -1566,8 +1575,8 @@ async function collectBackupData() {
   };
 }
 
-async function createBackupBlob() {
-  const data = await collectBackupData();
+async function createBackupBlob(dataOverride) {
+  const data = dataOverride || await collectBackupData();
   const hoy = new Date().toISOString().slice(0, 10);
   if (typeof CompressionStream === 'undefined') {
     return { data, blob: new Blob([JSON.stringify(data)], { type: 'application/json' }), filename: `Respaldo_COEDUCA_${hoy}.json` };
@@ -1640,22 +1649,52 @@ function resumenBackup(data) {
 function openRestoreModal(data) { pendingBackup = data; document.getElementById('restore-modal-summary').textContent = resumenBackup(data); document.getElementById('restore-modal').classList.remove('hidden'); }
 function closeRestoreModal() { document.getElementById('restore-modal').classList.add('hidden'); pendingBackup = null; }
 
+function validarDatosBackup(data) {
+  if (!data || data.formato !== BACKUP_FORMAT_LEGACY) throw new Error('Formato de respaldo no reconocido.');
+  if (!data.localStorage || typeof data.localStorage !== 'object' || Array.isArray(data.localStorage)) throw new Error('El almacenamiento del respaldo no es válido.');
+  if (!Array.isArray(data.expediente) || !Array.isArray(data.procesos)) throw new Error('Las colecciones del respaldo no son válidas.');
+  Object.entries(data.localStorage).forEach(([key, value]) => {
+    if (!key.startsWith('actas-recuperacion:') || typeof value !== 'string') throw new Error(`Dato local no válido: ${key}`);
+  });
+  return true;
+}
+
+async function aplicarDatosBackup(data, modo) {
+  if (modo === 'reemplazar') {
+    const deviceLocal = {};
+    BACKUP_PRESERVED_LOCAL_KEYS.forEach((key) => { const value = localStorage.getItem(key); if (value != null) deviceLocal[key] = value; });
+    for (let i = localStorage.length - 1; i >= 0; i--) { const k = localStorage.key(i); if (k && k.startsWith('actas-recuperacion:')) localStorage.removeItem(k); }
+    Object.entries(deviceLocal).forEach(([key, value]) => localStorage.setItem(key, value));
+    if (window.Expediente) await window.Expediente.clearAll();
+    if (window.Procesos) await window.Procesos.clearAll();
+  }
+  Object.entries(data.localStorage || {}).forEach(([k, v]) => { if (k.startsWith('actas-recuperacion:')) localStorage.setItem(k, v); });
+  const nDocs = data.expediente.length; const nProcs = data.procesos.length;
+  if (window.Expediente && nDocs) await window.Expediente.importAll(data.expediente);
+  if (window.Procesos && nProcs) await window.Procesos.importAll(data.procesos);
+}
+
 async function aplicarBackup(data, modo, options) {
   const opts = options || {};
+  let estadoAnterior = null;
   try {
+    validarDatosBackup(data);
     if (modo === 'reemplazar') {
-      for (let i = localStorage.length - 1; i >= 0; i--) { const k = localStorage.key(i); if (k && k.startsWith('actas-recuperacion:')) localStorage.removeItem(k); }
-      if (window.Expediente) await window.Expediente.clearAll(); if (window.Procesos) await window.Procesos.clearAll();
+      estadoAnterior = await collectBackupData();
+      if (!opts.skipSnapshot && window.COEducaDrive && typeof window.COEducaDrive.snapshotCurrent === 'function') {
+        await window.COEducaDrive.snapshotCurrent('Antes de restaurar un respaldo manual');
+      }
     }
-    Object.entries(data.localStorage || {}).forEach(([k, v]) => { if (k.startsWith('actas-recuperacion:')) localStorage.setItem(k, v); });
-    const nDocs = Array.isArray(data.expediente) ? data.expediente.length : 0; const nProcs = Array.isArray(data.procesos) ? data.procesos.length : 0;
-    if (window.Expediente && nDocs) await window.Expediente.importAll(data.expediente);
-    if (window.Procesos && nProcs) await window.Procesos.importAll(data.procesos);
+    await aplicarDatosBackup(data, modo);
     if (!opts.silent) alert('Respaldo restaurado. La página se recargará para aplicar los cambios.');
     if (opts.reload !== false) location.reload();
     return true;
   } catch (e) {
     console.error('No se pudo importar el respaldo:', e);
+    if (estadoAnterior) {
+      try { await aplicarDatosBackup(estadoAnterior, 'reemplazar'); }
+      catch (rollbackError) { console.error('No se pudo revertir la restauración fallida:', rollbackError); }
+    }
     if (!opts.silent) alert('Ocurrió un error al restaurar el respaldo. Revisa la consola.');
     throw e;
   }
@@ -1682,6 +1721,7 @@ window.COEducaBackup = {
   createBlob: createBackupBlob,
   parseFile: parseBackupFile,
   apply: aplicarBackup,
+  validate: validarDatosBackup,
 };
 
 document.getElementById('restore-modal-unir').addEventListener('click', () => { const data = pendingBackup; closeRestoreModal(); if (data) aplicarBackup(data, 'unir'); });

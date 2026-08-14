@@ -23,7 +23,9 @@
   function debounce(fn, ms) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; }
   const save = debounce(() => {
     try {
-      localStorage.setItem(KEY, JSON.stringify(ord));
+      const serialized = JSON.stringify(ord);
+      if (localStorage.getItem(KEY) === serialized) return;
+      localStorage.setItem(KEY, serialized);
       if (window.COEducaDrive) window.COEducaDrive.markDirty('actividad ordinaria');
     }
     catch (e) { console.error('No se pudo guardar la actividad ordinaria:', e); }

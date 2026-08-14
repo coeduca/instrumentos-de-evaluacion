@@ -129,6 +129,9 @@
     if (!id && !workspaceTieneDatos()) return;
 
     const data = snapshotWorkspace(); let rec = id ? await dbGet(id) : null;
+    // Navegar o pulsar un botón dentro del generador no debe crear una nueva
+    // versión del respaldo. Solo actualizamos el proceso si su contenido cambió.
+    if (rec && rec.tipo === tipo && JSON.stringify(rec.data || {}) === JSON.stringify(data)) return rec;
     if (!rec) { id = id || uid(); tipo = tipo || currentViewType; rec = { id, tipo, nombre: null, creado: new Date().toISOString() }; setActivoId(id, tipo); }
     
     rec.tipo = tipo; rec.data = data; rec.resumen = resumenDe(data); rec.actualizado = new Date().toISOString();
@@ -153,6 +156,9 @@
 
   async function eliminar(id) {
     await dbDel(id);
+    if (window.COEducaDrive && typeof window.COEducaDrive.recordDeletion === 'function') {
+      window.COEducaDrive.recordDeletion('procesos', id);
+    }
     if (getActivoId() === id) { setActivoId('', ''); WS_KEYS.forEach((k) => localStorage.removeItem(k)); location.reload(); return; }
     render();
   }

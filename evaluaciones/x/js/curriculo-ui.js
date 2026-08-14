@@ -124,7 +124,9 @@
     }
     const saveSel = debounce(() => {
       try {
-        localStorage.setItem(storageKey, JSON.stringify(seleccion));
+        const serialized = JSON.stringify(seleccion);
+        if (localStorage.getItem(storageKey) === serialized) return;
+        localStorage.setItem(storageKey, serialized);
         if (window.COEducaDrive) window.COEducaDrive.markDirty('selección curricular');
       }
       catch (e) { console.error('No se pudo guardar la selección de currículo:', e); }
