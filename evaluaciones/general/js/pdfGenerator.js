@@ -98,7 +98,13 @@ function buildConfigTable(config) {
         [valueCell(config.ubicacion), valueCell(config.trimestre), valueCell(config.anio), valueCell(fmtFecha(config.fechaLimite))],
       ],
     },
-    layout: 'noBorders',
+    layout: {
+      hLineWidth: (i, node) => (i === 0 || i === node.table.body.length ? 1 : 0),
+      vLineWidth: () => 0,
+      hLineColor: () => '#E2E6EA',
+      paddingTop: () => 4,
+      paddingBottom: () => 4,
+    },
     margin: [0, 0, 0, 8],
   };
 }
@@ -146,7 +152,7 @@ function buildStudentTable(est) {
       ],
     },
     layout: {
-      hLineWidth: (i) => (i === 0 ? 1 : 0),
+      hLineWidth: (i, node) => (i === 0 || i === node.table.body.length ? 1 : 0),
       vLineWidth: () => 0,
       hLineColor: () => '#E2E6EA',
       paddingTop: () => 4,
@@ -728,7 +734,7 @@ function buildActaIncumplimientoContent(est, config, actividades, fechaEmision, 
 
   const encabezado = [];
   if (logoBase64) {
-    encabezado.push({ image: logoBase64, width: 54, height: 54, alignment: 'center', margin: [0, 0, 0, 6] });
+    encabezado.push({ image: logoBase64, width: 48, height: 48, alignment: 'center', margin: [0, 0, 0, 6] });
   }
   encabezado.push(
     { text: (config.institucion || 'Institución educativa').toUpperCase(), style: 'incInst' },
@@ -789,7 +795,7 @@ const NIVEL_LABEL = { basica: 'Educación Básica', media: 'Educación Media' };
 function buildEncabezadoFormal(config, logoBase64) {
   const encabezado = [];
   if (logoBase64) {
-    encabezado.push({ image: logoBase64, width: 54, height: 54, alignment: 'center', margin: [0, 0, 0, 6] });
+    encabezado.push({ image: logoBase64, width: 48, height: 48, alignment: 'center', margin: [0, 0, 0, 6] });
   }
   encabezado.push(
     { text: (config.institucion || 'Institución educativa').toUpperCase(), style: 'incInst' },
@@ -1098,47 +1104,65 @@ function buildActividadOrdinariaContent(config, ordinaria, recup) {
   const content = [
     { text: 'CONSTANCIA E INSTRUCTIVO DE ACTIVIDAD DE EVALUACIÓN', style: 'actaTitle' },
     buildConfigTable(config),
+    { text: 'Datos de la actividad', style: 'sectionHeading', margin: [0, 4, 0, 5] },
+    { text: 'NOMBRE DE LA ACTIVIDAD', style: 'sectionLabel' },
+    { text: ordinaria.titulo || 'Actividad sin título', style: 'activityTitle', margin: [0, 1, 0, 8] },
     {
       columns: [
         { text: [{ text: 'Tipo de actividad: ', bold: true }, `${ordinaria.tipoLabel}`], style: 'fieldValue' },
         { text: [{ text: 'Ponderación: ', bold: true }, `${ordinaria.ponderacion}%`], style: 'fieldValue', alignment: 'right' },
       ],
-      margin: [0, 0, 0, 2],
+      margin: [0, 0, 0, 0],
     },
   ];
-
-  content.push({
-    text: 'La presente constancia e instructivo funciona asimismo como notificación de la actividad de evaluación, sus indicaciones, criterios e instrumento de evaluación.',
-    style: 'activityBody',
-    margin: [0, 0, 0, 8],
-  });
 
   if (ordinaria.fechaComunicacion) {
     content.push({
       text: [
-        'Actividad dada a conocer a los estudiantes de ',
+        { text: 'Fecha de comunicación: ', bold: true },
+        `${fmtFecha(ordinaria.fechaComunicacion)}`,
+        ' · Estudiantes de ',
         { text: (config.grado || '—').toLowerCase(), bold: true },
-        ` el ${fmtFecha(ordinaria.fechaComunicacion)}.`
       ],
-      style: 'fieldValueMuted', margin: [0, 0, 0, 10],
+      style: 'fieldValueMuted', margin: [0, 0, 0, 7],
     });
   }
 
-  content.push({ text: ordinaria.titulo || 'Actividad sin título', style: 'activityTitle', margin: [0, 4, 0, 6] });
+  content.push({
+    text: 'Este documento deja constancia de la comunicación de la actividad y reúne en un solo lugar sus objetivos, indicadores de logro, indicaciones e instrumento de evaluación.',
+    style: 'notificationNote',
+    margin: [0, 0, 0, 10],
+  });
 
   content.push(...buildObjetivosBlock(recup.objetivos));
   content.push(...buildIndicadoresBlock(recup.indicadores, 'Indicadores de logro a evaluar'));
 
-  const paragraphs = parseRichHtml(ordinaria.instrucciones);
-  if (paragraphs.length) {
-    content.push({ text: 'Indicaciones para el estudiante', style: 'sectionHeading' });
-    paragraphs.forEach((runs) => content.push({ text: runs, style: 'activityBody', margin: [0, 0, 0, 4] }));
+  content.push({ text: 'Indicaciones para el estudiante', style: 'sectionHeading' });
+  const textStack = buildActivityTextPdf(ordinaria);
+  const imagePosition = ordinaria.imagen && ['left', 'right'].includes(ordinaria.imagen.position)
+    ? ordinaria.imagen.position
+    : 'default';
+  const sideImage = imagePosition !== 'default' ? buildActivityImagePdf(ordinaria, true) : null;
+
+  if (sideImage) {
+    const textColumn = { width: '*', stack: textStack };
+    const imageColumn = { width: sideImage.widthPt, stack: sideImage.stack };
+    content.push({
+      columns: imagePosition === 'left' ? [imageColumn, textColumn] : [textColumn, imageColumn],
+      columnGap: 12,
+      margin: [0, 0, 0, 10],
+    });
+  } else {
+    content.push(...textStack);
   }
 
-  const instrumento = buildInstrumentoContent(recup.instrumento);
-  if (instrumento.length) {
-    content.push({ text: '', margin: [0, 6, 0, 0] });
-    content.push(...instrumento);
+  if (ordinaria.tabla && ordinaria.tabla.celdas && ordinaria.tabla.celdas.length) {
+    content.push(buildActivityTablePdf(ordinaria.tabla));
+  }
+
+  if (imagePosition === 'default') {
+    const imageBlock = buildActivityImagePdf(ordinaria, false);
+    if (imageBlock) content.push(...imageBlock.stack);
   }
 
   content.push({
@@ -1149,6 +1173,14 @@ function buildActividadOrdinariaContent(config, ordinaria, recup) {
     ],
     margin: [0, 16, 0, 0],
   });
+
+  const instrumento = buildInstrumentoContent(recup.instrumento);
+  if (instrumento.length) {
+    content.push(ordinaria.instrumentoPaginaSeparada
+      ? { text: '', pageBreak: 'before' }
+      : { text: '', margin: [0, 12, 0, 0] });
+    content.push(...instrumento);
+  }
 
   return content;
 }
@@ -1172,6 +1204,9 @@ function generarActividadOrdinariaPdf(state, ordinaria, logoBase64, recup, opts)
       fieldValueMuted: { fontSize: 8, color: COLOR_SLATE },
       activityTitle: { fontSize: 11, bold: true, color: COLOR_NAVY },
       activityBody: { fontSize: 8.5, color: COLOR_INK, lineHeight: 1.2 },
+      tableCell: { fontSize: 8.5, color: COLOR_INK },
+      imageCaption: { fontSize: 8, italics: true, color: COLOR_SLATE },
+      notificationNote: { fontSize: 8, color: COLOR_SLATE, italics: true, lineHeight: 1.15 },
       sectionHeading: { fontSize: 9.5, bold: true, color: COLOR_NAVY, margin: [0, 5, 0, 3] },
       listItem: { fontSize: 8.5, color: COLOR_INK, lineHeight: 1.15, margin: [0, 0, 0, 1] },
       instructivoTitle: { fontSize: 12, bold: true, color: COLOR_NAVY, margin: [0, 0, 0, 8] },

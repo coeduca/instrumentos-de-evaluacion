@@ -73,6 +73,7 @@
     insideHorizontal: NO_BORDER, insideVertical: NO_BORDER,
   };
   const CELL_BORDER = { style: BorderStyle.SINGLE, size: 4, color: LINE };
+  const INFO_BORDER = { style: BorderStyle.SINGLE, size: 4, color: 'E2E6EA' };
   const CELL_BORDERS = {
     top: CELL_BORDER, bottom: CELL_BORDER, left: CELL_BORDER, right: CELL_BORDER,
   };
@@ -92,11 +93,14 @@
     });
   }
 
-  function plainCell(children, widthPct) {
+  function plainCell(children, widthPct, outerBorders = {}) {
     return new TableCell({
       width: { size: widthPct, type: WidthType.PERCENTAGE },
       borders: {
-        top: NO_BORDER, bottom: NO_BORDER, left: NO_BORDER, right: NO_BORDER,
+        top: outerBorders.top ? INFO_BORDER : NO_BORDER,
+        bottom: outerBorders.bottom ? INFO_BORDER : NO_BORDER,
+        left: NO_BORDER,
+        right: NO_BORDER,
       },
       margins: { top: 30, bottom: 30, left: 30, right: 30 },
       children: Array.isArray(children) ? children : [children],
@@ -104,35 +108,40 @@
   }
 
   function buildConfigTable(config) {
-    const row = (cells) => new TableRow({ children: cells.map((c) => plainCell(c, 25)) });
-    return new Table({
-      width: { size: 100, type: WidthType.PERCENTAGE },
-      borders: NO_BORDERS,
-      rows: [
-        row([labelParagraph('Institución'), labelParagraph('Código'), labelParagraph('Docente'), labelParagraph('Materia')]),
-        row([valueParagraph(config.institucion), valueParagraph(config.codigo), valueParagraph(config.docente), valueParagraph(config.materia)]),
-        row([labelParagraph('Ubicación'), labelParagraph('Trimestre'), labelParagraph('Año'), labelParagraph('Fecha límite')]),
-        row([valueParagraph(config.ubicacion), valueParagraph(config.trimestre), valueParagraph(config.anio), valueParagraph(fmtFecha(config.fechaLimite))]),
-      ],
-    });
-  }
-
-  function buildStudentTable(est) {
-    const row = (cells) => new TableRow({ children: cells.map((c) => plainCell(c, 25)) });
+    const row = (cells, outerBorders) => new TableRow({ children: cells.map((c) => plainCell(c, 25, outerBorders)) });
     return new Table({
       width: { size: 100, type: WidthType.PERCENTAGE },
       borders: {
         ...NO_BORDERS,
         top: { style: BorderStyle.SINGLE, size: 4, color: 'E2E6EA' },
+        bottom: { style: BorderStyle.SINGLE, size: 4, color: 'E2E6EA' },
       },
       rows: [
-        row([labelParagraph('Estudiante'), labelParagraph('NIE'), labelParagraph('Grado'), labelParagraph('Nota actual')]),
+        row([labelParagraph('Institución'), labelParagraph('Código'), labelParagraph('Docente'), labelParagraph('Materia')], { top: true }),
+        row([valueParagraph(config.institucion), valueParagraph(config.codigo), valueParagraph(config.docente), valueParagraph(config.materia)]),
+        row([labelParagraph('Ubicación'), labelParagraph('Trimestre'), labelParagraph('Año'), labelParagraph('Fecha límite')]),
+        row([valueParagraph(config.ubicacion), valueParagraph(config.trimestre), valueParagraph(config.anio), valueParagraph(fmtFecha(config.fechaLimite))], { bottom: true }),
+      ],
+    });
+  }
+
+  function buildStudentTable(est) {
+    const row = (cells, outerBorders) => new TableRow({ children: cells.map((c) => plainCell(c, 25, outerBorders)) });
+    return new Table({
+      width: { size: 100, type: WidthType.PERCENTAGE },
+      borders: {
+        ...NO_BORDERS,
+        top: { style: BorderStyle.SINGLE, size: 4, color: 'E2E6EA' },
+        bottom: { style: BorderStyle.SINGLE, size: 4, color: 'E2E6EA' },
+      },
+      rows: [
+        row([labelParagraph('Estudiante'), labelParagraph('NIE'), labelParagraph('Grado'), labelParagraph('Nota actual')], { top: true }),
         row([
           valueParagraph(est.name),
           valueParagraph(est.nie),
           valueParagraph(est.grade),
           valueParagraph(est.calificacion != null ? `${est.calificacion}/10` : 'Sin registrar', { color: ALERT, bold: true }),
-        ]),
+        ], { bottom: true }),
       ],
     });
   }
@@ -144,13 +153,13 @@
   function buildInfoTable(fields, cols) {
     cols = cols || 3;
     const widthPct = Math.floor(100 / cols);
-    const row = (cells) => new TableRow({ children: cells.map((c) => plainCell(c, widthPct)) });
+    const row = (cells, outerBorders) => new TableRow({ children: cells.map((c) => plainCell(c, widthPct, outerBorders)) });
     const rows = [];
     for (let i = 0; i < fields.length; i += cols) {
       let slice = fields.slice(i, i + cols);
       while (slice.length < cols) slice = slice.concat([{ label: '', value: '' }]);
-      rows.push(row(slice.map((f) => labelParagraph(f.label))));
-      rows.push(row(slice.map((f) => valueParagraph(f.value))));
+      rows.push(row(slice.map((f) => labelParagraph(f.label)), { top: i === 0 }));
+      rows.push(row(slice.map((f) => valueParagraph(f.value)), { bottom: i + cols >= fields.length }));
     }
     return new Table({
       width: { size: 100, type: WidthType.PERCENTAGE },
@@ -874,7 +883,7 @@
           children: [new ImageRun({
             type: match[1] === 'jpeg' ? 'jpg' : match[1],
             data: match[2],
-            transformation: { width: 64, height: 64 },
+            transformation: { width: 56, height: 56 },
           })],
         }));
       }
@@ -967,7 +976,7 @@
           children: [new ImageRun({
             type: match[1] === 'jpeg' ? 'jpg' : match[1],
             data: match[2],
-            transformation: { width: 64, height: 64 },
+            transformation: { width: 56, height: 56 },
           })],
         }));
       }
@@ -1282,9 +1291,14 @@
         children: [new TextRun({ text: 'CONSTANCIA E INSTRUCTIVO DE ACTIVIDAD DE EVALUACIÓN', bold: true, size: 26, color: NAVY })],
       }),
       buildConfigTable(config),
-      new Paragraph({ spacing: { after: 40 }, children: [] }),
+      sectionHeading('Datos de la actividad'),
+      labelParagraph('Nombre de la actividad'),
       new Paragraph({
-        spacing: { after: 30 },
+        spacing: { after: 100 },
+        children: [new TextRun({ text: ordinaria.titulo || 'Actividad sin título', bold: true, size: 22, color: NAVY })],
+      }),
+      new Paragraph({
+        spacing: { after: 50 },
         children: [
           new TextRun({ text: 'Tipo de actividad: ', bold: true, size: 18, color: INK }),
           new TextRun({ text: ordinaria.tipoLabel, size: 18, color: INK }),
@@ -1294,41 +1308,68 @@
       }),
     ];
 
-    content.push(new Paragraph({
-      spacing: { after: 120 },
-      children: [new TextRun({
-        text: 'La presente constancia e instructivo funciona asimismo como notificación de la actividad de evaluación, sus indicaciones, criterios e instrumento de evaluación.',
-        size: 17,
-        color: INK,
-      })],
-    }));
-
     if (ordinaria.fechaComunicacion) {
       content.push(new Paragraph({
-        spacing: { after: 120 },
-        children: [new TextRun({ text: `Actividad dada a conocer a los estudiantes el ${fmtFecha(ordinaria.fechaComunicacion)}.`, size: 16, color: SLATE })],
+        spacing: { after: 80 },
+        children: [
+          new TextRun({ text: 'Fecha de comunicación: ', bold: true, size: 16, color: SLATE }),
+          new TextRun({ text: `${fmtFecha(ordinaria.fechaComunicacion)} · Estudiantes de ${(config.grado || '—').toLowerCase()}`, size: 16, color: SLATE }),
+        ],
       }));
     }
 
     content.push(new Paragraph({
-      spacing: { before: 40, after: 90 },
-      children: [new TextRun({ text: ordinaria.titulo || 'Actividad sin título', bold: true, size: 22, color: NAVY })],
+      spacing: { after: 140, line: 220 },
+      children: [new TextRun({
+        text: 'Este documento deja constancia de la comunicación de la actividad y reúne en un solo lugar sus objetivos, indicadores de logro, indicaciones e instrumento de evaluación.',
+        italics: true,
+        size: 16,
+        color: SLATE,
+      })],
     }));
 
     buildObjetivosBlockWord(recup.objetivos).forEach((p) => content.push(p));
     buildIndicadoresBlockWord(recup.indicadores, 'Indicadores de logro a evaluar').forEach((p) => content.push(p));
 
-    const paragraphs = parseRichHtml(ordinaria.instrucciones);
-    if (paragraphs.length) {
-      content.push(sectionHeading('Indicaciones para el estudiante'));
-      paragraphs.forEach((runs) => content.push(new Paragraph({ spacing: { after: 60, line: 235 }, children: runsToTextRuns(runs) })));
+    content.push(sectionHeading('Indicaciones para el estudiante'));
+    const textChildren = buildActivityTextWord(ordinaria);
+    const imagePosition = ordinaria.imagen && ['left', 'right'].includes(ordinaria.imagen.position)
+      ? ordinaria.imagen.position
+      : 'default';
+
+    if (imagePosition !== 'default') {
+      const sideBySide = buildActivitySideBySideWord(ordinaria, textChildren, imagePosition);
+      if (sideBySide) {
+        content.push(sideBySide);
+        content.push(new Paragraph({ spacing: { after: 80 }, children: [] }));
+      } else {
+        content.push(...textChildren);
+      }
+    } else {
+      content.push(...textChildren);
     }
 
-    buildInstrumentoContentWord(recup.instrumento).forEach((el) => content.push(el));
+    if (ordinaria.tabla && ordinaria.tabla.celdas && ordinaria.tabla.celdas.length) {
+      content.push(buildActivityTableDocx(ordinaria.tabla));
+      content.push(new Paragraph({ spacing: { after: 80 }, children: [] }));
+    }
+
+    if (imagePosition === 'default') {
+      const imageBlock = buildActivityImageWord(ordinaria, false);
+      if (imageBlock) content.push(...imageBlock.children);
+    }
 
     // Firma del docente
     content.push(sigGroupLabel(' '));
     content.push(sigRow([signatureCell('Docente', config.docente), emptySigCell(), emptySigCell()]));
+
+    const instrumento = buildInstrumentoContentWord(recup.instrumento);
+    if (instrumento.length) {
+      content.push(ordinaria.instrumentoPaginaSeparada
+        ? new Paragraph({ children: [new PageBreak()] })
+        : new Paragraph({ spacing: { before: 240 }, children: [] }));
+      instrumento.forEach((el) => content.push(el));
+    }
 
     return content;
   }
