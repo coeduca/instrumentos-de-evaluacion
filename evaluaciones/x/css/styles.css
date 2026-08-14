@@ -315,6 +315,10 @@ body.dark .drawer-icon { filter: invert(0.85); }
 .drawer-history-icon { width: 2rem; height: 2rem; display: grid; place-items: center; flex: 0 0 auto; color: var(--color-navy); }
 .snapshot-option { text-align: left; }
 .snapshot-option time { display: block; color: var(--color-navy); font-size: 0.78rem; font-weight: 700; }
+.drive-login-reminder-box { max-width: 34rem; }
+.drive-login-reminder-content { display: flex; align-items: flex-start; gap: 1rem; padding: 1.2rem 1.2rem 0.8rem; }
+.drive-login-reminder-logo { width: 3rem; height: 3rem; object-fit: contain; flex: 0 0 auto; }
+.drive-login-reminder-actions { display: flex; justify-content: flex-end; gap: 0.65rem; padding: 0.5rem 1.2rem 1.2rem; }
 
 .drive-save-modal-box { max-width: 38rem; }
 .drive-save-content { padding: 1.15rem; }
@@ -334,6 +338,9 @@ body.dark .drawer-icon { filter: invert(0.85); }
   .drive-save-grid { grid-template-columns: 1fr; }
   .drive-save-actions { flex-direction: column-reverse; }
   .drive-save-actions button { width: 100%; }
+  .drive-login-reminder-content { flex-direction: column; }
+  .drive-login-reminder-actions { flex-direction: column-reverse; }
+  .drive-login-reminder-actions button { width: 100%; }
 }
 
 .field-label {

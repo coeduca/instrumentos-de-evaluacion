@@ -93,14 +93,24 @@ function valueCell(text) {
 
 // ---------- Bloques reutilizables ----------
 function buildConfigTable(config) {
+  const configCell = (label, value) => ({
+    stack: [
+      headerCell(label),
+      { ...valueCell(value), margin: [0, 1, 0, 0] },
+    ],
+  });
   return {
     table: {
       widths: ['*', '*', '*', '*'],
       body: [
-        [headerCell('Institución'), headerCell('Código'), headerCell('Docente'), headerCell('Materia')],
-        [valueCell(config.institucion), valueCell(config.codigo), valueCell(config.docente), valueCell(config.materia)],
-        [headerCell('Ubicación'), headerCell('Trimestre'), headerCell('Año'), headerCell('Fecha límite')],
-        [valueCell(config.ubicacion), valueCell(config.trimestre), valueCell(config.anio), valueCell(fmtFecha(config.fechaLimite))],
+        [
+          configCell('Institución', config.institucion), configCell('Código', config.codigo),
+          configCell('Docente', config.docente), configCell('Materia', config.materia),
+        ],
+        [
+          configCell('Ubicación', config.ubicacion), configCell('Trimestre', config.trimestre),
+          configCell('Año', config.anio), configCell('Fecha límite', fmtFecha(config.fechaLimite)),
+        ],
       ],
     },
     layout: {

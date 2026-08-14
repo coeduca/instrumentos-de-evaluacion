@@ -842,6 +842,7 @@
           callback: async (response) => {
             if (response.error) return reportError(new Error(response.error_description || response.error));
             rememberSessionToken(response.access_token, response.expires_in);
+            closeLoginReminder();
             rootFolderId = '';
             backupFolderId = '';
             try {
@@ -1067,6 +1068,15 @@
 
   function closeSnapshotsModal() { if (ui.snapshotsModal) ui.snapshotsModal.classList.add('hidden'); }
 
+  function closeLoginReminder() { if (ui.loginReminderModal) ui.loginReminderModal.classList.add('hidden'); }
+
+  function openLoginReminder() {
+    if (!ui.loginReminderModal || hasValidToken()) return;
+    ui.loginReminderConnect.textContent = currentAccount ? 'Reanudar Drive' : 'Iniciar sesión con Drive';
+    ui.loginReminderModal.classList.remove('hidden');
+    requestAnimationFrame(() => ui.loginReminderConnect.focus());
+  }
+
   async function restoreSnapshot(snapshot) {
     if (!snapshot || !confirm('¿Restaurar esta copia? Antes se guardará una copia del estado actual y después se sincronizará con Drive.')) return;
     const current = await window.COEducaBackup.collect();
@@ -1121,6 +1131,8 @@
     ui.snapshotsButton = document.getElementById('btn-drive-snapshots');
     ui.snapshotsModal = document.getElementById('drive-snapshots-modal');
     ui.snapshotsList = document.getElementById('drive-snapshots-list');
+    ui.loginReminderModal = document.getElementById('drive-login-reminder-modal');
+    ui.loginReminderConnect = document.getElementById('drive-login-reminder-connect');
   }
 
   async function init() {
@@ -1133,6 +1145,10 @@
     ui.snapshotsButton.addEventListener('click', () => openSnapshotsModal().catch(reportError));
     document.getElementById('drive-snapshots-close').addEventListener('click', closeSnapshotsModal);
     ui.snapshotsModal.addEventListener('click', (event) => { if (event.target === ui.snapshotsModal) closeSnapshotsModal(); });
+    ui.loginReminderConnect.addEventListener('click', connect);
+    document.getElementById('drive-login-reminder-close').addEventListener('click', closeLoginReminder);
+    document.getElementById('drive-login-reminder-later').addEventListener('click', closeLoginReminder);
+    ui.loginReminderModal.addEventListener('click', (event) => { if (event.target === ui.loginReminderModal) closeLoginReminder(); });
     ui.indicator.addEventListener('click', () => document.getElementById('btn-drawer').click());
     document.getElementById('drive-conflict-close').addEventListener('click', () => closeConflict('cancel'));
     document.getElementById('drive-conflict-use-cloud').addEventListener('click', () => closeConflict('cloud'));
@@ -1156,6 +1172,7 @@
       if (event.key !== 'Escape') return;
       if (!ui.saveModal.classList.contains('hidden')) closeSaveModal(true);
       if (!ui.snapshotsModal.classList.contains('hidden')) closeSnapshotsModal();
+      if (!ui.loginReminderModal.classList.contains('hidden')) closeLoginReminder();
       if (missingModal && !missingModal.classList.contains('hidden')) clearPendingDocumentUpload();
     });
     window.addEventListener('online', () => { if (isDirty() && hasValidToken()) syncNow().catch(reportError); });
@@ -1172,6 +1189,7 @@
     } else {
       setStatus(isDirty() ? 'pending' : 'disconnected', isDirty() ? 'Guardado en este dispositivo' : 'Drive desconectado', 'Conecta tu cuenta para mantener un respaldo actualizado en la nube.');
     }
+    if (!hasValidToken()) setTimeout(openLoginReminder, 350);
   }
 
   window.COEducaDrive = {
