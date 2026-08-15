@@ -176,6 +176,57 @@
     validacion.confirmar(faltantes, descargar);
   }
 
+  function etiquetaPeriodo(trimestre) {
+    const t = norm(trimestre);
+    if (/\b(primer|primero|1)\b/.test(t)) return 'TRIMESTRE 1';
+    if (/\b(segundo|2)\b/.test(t)) return 'TRIMESTRE 2';
+    if (/\b(tercer|tercero|3)\b/.test(t)) return 'TRIMESTRE 3';
+    return String(trimestre || 'PERÍODO').toUpperCase();
+  }
+
+  function ordenPeriodo(trimestre) {
+    const label = etiquetaPeriodo(trimestre);
+    const n = Number((label.match(/\d+/) || [99])[0]);
+    return Number.isFinite(n) ? n : 99;
+  }
+
+  function prepararExpedientePeriodo(records) {
+    const relevantes = records.filter((rec) => ['refuerzo', 'paquete', 'resultado', 'incumplimiento'].includes(rec.tipo));
+    const porMateria = new Map();
+    relevantes.forEach((rec) => {
+      const materia = rec.materia || '—';
+      if (!porMateria.has(materia)) porMateria.set(materia, []);
+      porMateria.get(materia).push(rec);
+    });
+
+    const seleccionados = [];
+    const faltantes = new Set();
+    porMateria.forEach((mdocs) => {
+      const refuerzo = mdocs.find((rec) => rec.tipo === 'refuerzo');
+      const paquete = mdocs.find((rec) => rec.tipo === 'paquete');
+      const cierres = mdocs
+        .filter((rec) => rec.tipo === 'resultado' || rec.tipo === 'incumplimiento')
+        .sort((a, b) => String(b.actualizado || b.fecha || '').localeCompare(String(a.actualizado || a.fecha || '')));
+      if (refuerzo) seleccionados.push(refuerzo); else faltantes.add('constancia de refuerzo');
+      if (paquete) seleccionados.push(paquete); else faltantes.add('instructivo');
+      if (cierres[0]) seleccionados.push(cierres[0]); else faltantes.add('cierre');
+    });
+    if (!porMateria.size) faltantes.add('documentos del período');
+    return { records: seleccionados, faltantes: [...faltantes] };
+  }
+
+  function descargarExpedientePeriodo(records) {
+    const logo = (typeof window.AppLogo === 'function') ? window.AppLogo() : null;
+    if (!window.ActasPDF || typeof window.ActasPDF.generarExpedientePeriodo !== 'function') {
+      alert('No se pudo iniciar la generación del expediente completo.');
+      return;
+    }
+    Promise.resolve(window.ActasPDF.generarExpedientePeriodo(records, logo)).catch((e) => {
+      console.error('No se pudo generar el expediente completo:', e);
+      alert('No se pudo generar el PDF completo de este período.');
+    });
+  }
+
   const $ = (id) => document.getElementById(id);
 
   function fillFilter(select, values) {
@@ -291,6 +342,37 @@
                 card.appendChild(row);
               });
           });
+
+        const porPeriodo = new Map();
+        st.docs.forEach((d) => {
+          const key = `${d.trimestre || '—'}|${d.anio || '—'}`;
+          if (!porPeriodo.has(key)) porPeriodo.set(key, { trimestre: d.trimestre, anio: d.anio, docs: [] });
+          porPeriodo.get(key).docs.push(d);
+        });
+        const footer = document.createElement('div');
+        footer.className = 'exp-period-pdfs';
+        footer.innerHTML = '<span class="exp-period-title">PDFS COMPLETOS POR PERÍODO</span>';
+        const botones = document.createElement('div');
+        botones.className = 'exp-period-buttons';
+        [...porPeriodo.values()]
+          .sort((a, b) => Number(a.anio || 0) - Number(b.anio || 0) || ordenPeriodo(a.trimestre) - ordenPeriodo(b.trimestre))
+          .forEach((periodo) => {
+            const preparado = prepararExpedientePeriodo(periodo.docs);
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'exp-period-btn';
+            button.innerHTML = `<span>${esc(etiquetaPeriodo(periodo.trimestre))}</span><small>${esc(periodo.anio || '')}</small>`;
+            if (preparado.faltantes.length) {
+              button.disabled = true;
+              button.title = `Falta: ${preparado.faltantes.join(', ')}`;
+            } else {
+              button.title = `Descargar expediente completo de ${periodo.trimestre || 'este período'} ${periodo.anio || ''}`.trim();
+              button.addEventListener('click', () => descargarExpedientePeriodo(preparado.records));
+            }
+            botones.appendChild(button);
+          });
+        footer.appendChild(botones);
+        card.appendChild(footer);
 
         list.appendChild(card);
       });

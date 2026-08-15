@@ -2136,6 +2136,46 @@ body.dark .fase-tab.active .fase-check { color: #1F5744; }
 .exp-btn.danger { color: var(--color-slate); }
 .exp-btn.danger:hover { color: #B54708; border-color: #B54708; }
 
+.exp-period-pdfs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem 1rem;
+  padding: 0.8rem 1.25rem;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-hover);
+}
+
+.exp-period-title {
+  font-size: 0.68rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--color-navy);
+}
+
+.exp-period-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.exp-period-btn {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  color: var(--color-navy);
+  border: 1px solid var(--color-navy);
+  border-radius: 3px;
+  padding: 0.38rem 0.7rem;
+  background: var(--color-surface);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.exp-period-btn small { font-size: 0.62rem; font-weight: 400; color: var(--color-slate); }
+.exp-period-btn:hover:not(:disabled) { color: white; background: var(--color-navy); }
+.exp-period-btn:hover:not(:disabled) small { color: rgba(255, 255, 255, 0.75); }
+.exp-period-btn:disabled { cursor: not-allowed; opacity: 0.45; border-style: dashed; }
+
 /* ---------- Chip de Google Apps Script (instrumento de evaluación) ---------- */
 .gs-chip {
   display: inline-flex;

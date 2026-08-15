@@ -1107,6 +1107,90 @@ function generarConstanciaRefuerzoPdf(state, students, logoBase64, recup, opts) 
 }
 
 // =========================================================
+// EXPEDIENTE COMPLETO POR PERÍODO
+// Reúne los documentos archivados de un estudiante en el orden normativo:
+// constancia de refuerzo, instructivo/instrumento y acta de cierre.
+// =========================================================
+function expedientePeriodoStyles() {
+  return {
+    ...formalDocStyles(),
+    actaTitle: { fontSize: 13, bold: true, color: COLOR_NAVY, alignment: 'center', margin: [0, 0, 0, 12] },
+    sectionLabel: { fontSize: 7, bold: true, color: COLOR_SLATE, margin: [0, 0, 0, 1] },
+    fieldValue: { fontSize: 9, color: COLOR_INK, margin: [0, 0, 0, 6] },
+    fieldValueAlert: { fontSize: 10, bold: true, color: '#B54708', margin: [0, 0, 0, 6] },
+    fieldValueMuted: { fontSize: 8, color: COLOR_SLATE },
+    compromiseText: { fontSize: 9, color: COLOR_INK, lineHeight: 1.2, alignment: 'justify' },
+    signatureLabel: { fontSize: 7.5, color: COLOR_SLATE, alignment: 'center', margin: [0, 3, 0, 0] },
+    signatureName: { fontSize: 8.5, color: COLOR_INK, alignment: 'center' },
+    instructivoTitle: { fontSize: 12, bold: true, color: COLOR_NAVY, margin: [0, 0, 0, 8] },
+    activityTitle: { fontSize: 10, bold: true, color: COLOR_NAVY, margin: [0, 8, 0, 2] },
+    activityBody: { fontSize: 8.5, color: COLOR_INK, lineHeight: 1.2 },
+    tableCell: { fontSize: 8.5, color: COLOR_INK },
+    imageCaption: { fontSize: 8, italics: true, color: COLOR_SLATE },
+    sectionHeading: { fontSize: 9.5, bold: true, color: COLOR_NAVY, margin: [0, 3, 0, 3] },
+    listItem: { fontSize: 8.5, color: COLOR_INK, lineHeight: 1.15, margin: [0, 0, 0, 1] },
+    instCell: { fontSize: 8.5, color: COLOR_INK },
+    instCriterio: { fontSize: 8.5, bold: true, color: COLOR_INK },
+    instMark: { fontSize: 11, color: COLOR_SLATE, alignment: 'center' },
+  };
+}
+
+function generarExpedientePeriodoPdf(records, logoBase64) {
+  if (!Array.isArray(records) || !records.length) return;
+
+  const prioridad = { refuerzo: 1, paquete: 2, resultado: 3, incumplimiento: 3 };
+  const ordenados = records
+    .filter((rec) => prioridad[rec.tipo])
+    .sort((a, b) => prioridad[a.tipo] - prioridad[b.tipo]
+      || String(a.materia || '').localeCompare(String(b.materia || ''), 'es')
+      || String(a.fecha || '').localeCompare(String(b.fecha || '')));
+  if (!ordenados.length) return;
+
+  const body = [];
+  ordenados.forEach((rec) => {
+    const p = rec.payload || {};
+    const config = p.config || {};
+    const est = p.est || {};
+    const recup = p.recup || EMPTY_RECUP;
+    const fechaEmision = p.refuerzo && p.refuerzo.fechaEmision
+      ? fmtFechaLarga(p.refuerzo.fechaEmision)
+      : fechaHoyLarga();
+
+    if (body.length) body.push({ text: '', pageBreak: 'before' });
+    if (rec.tipo === 'refuerzo') {
+      body.push(...buildConstanciaRefuerzoContent(est, config, p.refuerzo || {}, recup, fechaEmision, logoBase64));
+    } else if (rec.tipo === 'paquete') {
+      body.push(...buildEncabezadoFormal(config, logoBase64));
+      body.push({ text: '', margin: [0, 0, 0, 10] });
+      body.push(...buildInstructivoContent(est, config, p.actividades || [], recup, {}));
+      const instrumento = buildInstrumentoContent(recup.instrumento);
+      if (instrumento.length) {
+        body.push(config.instrumentoMismaPagina
+          ? { text: '', margin: [0, 12, 0, 0] }
+          : { text: '', pageBreak: 'before' });
+        body.push(...instrumento);
+      }
+    } else if (rec.tipo === 'resultado') {
+      body.push(...buildActaResultadoContent(est, config, p.actividades || [], recup, fechaHoyLarga(), logoBase64));
+    } else if (rec.tipo === 'incumplimiento') {
+      body.push(...buildActaIncumplimientoContent(est, config, p.actividades || [], fechaHoyLarga(), logoBase64));
+    }
+  });
+
+  const primero = ordenados[0];
+  const config = (primero.payload && primero.payload.config) || {};
+  const est = (primero.payload && primero.payload.est) || {};
+  const filename = `Expediente completo - ${sanitizeFilename(est.name || primero.name)} - ${sanitizeFilename(primero.trimestre || config.trimestre)} - ${sanitizeFilename(primero.anio || config.anio)}.pdf`;
+  outputPdf({
+    pageSize: 'LETTER',
+    pageMargins: [50, 44, 50, 40],
+    content: body,
+    defaultStyle: { fontSize: 9, color: COLOR_INK },
+    styles: expedientePeriodoStyles(),
+  }, filename);
+}
+
+// =========================================================
 // CONSTANCIA E INSTRUCTIVO DE ACTIVIDAD DE EVALUACIÓN ORDINARIA
 // (Actividad Integradora / Cotidiana / Prueba)
 // =========================================================
@@ -1239,6 +1323,7 @@ window.ActasPDF = {
   generarResultado: generarActaResultadoPdf,
   generarCierre: generarActasCierrePdf,
   generarRefuerzo: generarConstanciaRefuerzoPdf,
+  generarExpedientePeriodo: generarExpedientePeriodoPdf,
   generarOrdinaria: generarActividadOrdinariaPdf,
   generarUltimoRecurso: generarUltimoRecursoPdf,
 };
