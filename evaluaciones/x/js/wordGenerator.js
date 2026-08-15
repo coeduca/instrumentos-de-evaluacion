@@ -1078,9 +1078,9 @@
           `técnicamente la calificación registrada.`;
     } else {
       tabla = buildNotasTableWord([
-        { label: 'Nota original de la actividad', valor: fmtNota(r.notaOriginal) },
+        { label: 'Nota original', valor: fmtNota(r.notaOriginal) },
         { label: 'Nota de recuperación', valor: fmtNota(r.notaRecuperacion) },
-        { label: 'Nota final de la actividad', valor: fmtNota(r.notaFinalActividad), destacar: true },
+        { label: 'Nota final', valor: fmtNota(r.notaFinalActividad), destacar: true },
         { label: 'Nota mínima', valor: minima },
       ]);
       parrafoRegla = r.sustituye
